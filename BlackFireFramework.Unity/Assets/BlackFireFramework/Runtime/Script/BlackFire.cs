@@ -4,16 +4,11 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using BlackFireFramework;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public sealed class BlackFire : MonoBehaviour 
 {
-    private static FrameworkInfo s_FrameworkInfo = new FrameworkInfo();
-    public static FrameworkInfo FrameworkInfo { get { return s_FrameworkInfo; } }
+
 
 }
 

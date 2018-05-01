@@ -4,19 +4,13 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using UnityEditor;
-
 namespace BlackFireFramework.Editor
 {
-    public abstract class EditorWindowBase<T>: EditorWindow where T: EditorWindow
+    public sealed class HttpDownloadInfo
     {
-
-        private void OnGUI()
-        {
-            OnDrawWindow();
-        }
-
-        protected abstract void OnDrawWindow();
-
+        public string Url;
+        public string SavePath;
+        public string TempFileExtension;
+        public int DownloadBufferUnit = 512;
     }
 }

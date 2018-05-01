@@ -11,10 +11,9 @@ namespace BlackFireFramework.Editor
 {
     public sealed class #ClassName# : EditorWindowBase<#ClassName#>
     {
-        [MenuItem(BlackFireFramework.Editor.Config.MenuBar.#ClassName#)]
-        private static void OnMenuItemClick()
+        protected override void OnDrawWindow()
         {
-
+            throw new System.NotImplementedException();
         }
-    }
+     }
 }

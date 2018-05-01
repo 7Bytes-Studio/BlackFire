@@ -33,7 +33,7 @@ namespace BlackFireFramework.Editor
             streamWriter.Write(text);
             streamWriter.Close();
 
-            Config.MenuBar.MakeWindowConfig(fileNameWithoutExtension); //创建Window配置文件。
+           // Config.MenuBar.MakeWindowConfig(fileNameWithoutExtension); //创建Window配置文件。
 
             AssetDatabase.ImportAsset(pathName);
             AssetDatabase.Refresh();

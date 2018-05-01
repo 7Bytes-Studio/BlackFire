@@ -4,19 +4,18 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using UnityEditor;
+using System;
 
 namespace BlackFireFramework.Editor
 {
-    public abstract class EditorWindowBase<T>: EditorWindow where T: EditorWindow
+    public sealed class HttpDownloaderProgressEventArgs : EventArgs
     {
-
-        private void OnGUI()
+        public HttpDownloaderProgressEventArgs(float progress)
         {
-            OnDrawWindow();
+            DownloadProgress=progress;
         }
 
-        protected abstract void OnDrawWindow();
-
+        public float DownloadProgress { get; private set; }
     }
+
 }

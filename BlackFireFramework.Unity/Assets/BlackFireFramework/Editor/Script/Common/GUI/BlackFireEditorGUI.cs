@@ -13,7 +13,7 @@ namespace BlackFireFramework.Editor
     /// <summary>
     /// Sparrow 的Editor GUI辅助类。
     /// </summary>
-	public static class BlackFireFrameworkEditorGUI
+	public static class BlackFireEditorGUI
     {
         #region Layout
 
@@ -152,7 +152,24 @@ namespace BlackFireFramework.Editor
         public static void Label(string label,Color color)
         {
             GUIStyle buttonStyle = new GUIStyle("Label");
+            buttonStyle.normal.textColor = color;          
+            GUILayout.Label(label, buttonStyle);
+        }
+
+        public static void Label(string label, Color color,int fontSize)
+        {
+            GUIStyle buttonStyle = new GUIStyle("Label");
             buttonStyle.normal.textColor = color;
+            buttonStyle.fontSize = fontSize;
+            GUILayout.Label(label, buttonStyle);
+        }
+
+        public static void Label(string label, Color color, int width, int fontSize)
+        {
+            GUIStyle buttonStyle = new GUIStyle("Label");
+            buttonStyle.normal.textColor = color;
+            buttonStyle.fixedWidth = width;
+            buttonStyle.fontSize = fontSize;
             GUILayout.Label(label, buttonStyle);
         }
 
@@ -172,7 +189,6 @@ namespace BlackFireFramework.Editor
                 text = GUILayout.TextField(text, GUILayout.Width(width));
             }
         }
-
 
         #endregion
 
@@ -265,11 +281,10 @@ namespace BlackFireFramework.Editor
             return foldOut;
         }
 
-        public static void FoldOut(string text,ref bool foldOut, bool endSpace = true)
+        public static void FoldOut(string text,ref bool foldOut,string color = "white", bool endSpace = true)
         {
-            FoldOut(text,ref foldOut,endSpace);
+            FoldOut(text,foldOut, color, endSpace);
         }
-
 
         #endregion
 

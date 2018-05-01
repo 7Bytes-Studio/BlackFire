@@ -15,14 +15,14 @@ namespace BlackFireFramework.Editor
 {
     public static class AssetsMenu 
     {
-        [MenuItem("Assets/BlackFire/Create/EditorWindowScript",false,0)]
+        [MenuItem("Assets/BlackFire/EditorWindowScript",false,0)]
         public static void OnMenuItemClick()
         {
            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
            ScriptableObject.CreateInstance<CreateEditorWindowScriptAsset>(),
            "/New EditorWindowScript.cs",
            null,
-           "Assets/"+Config.Assets.ScriptTemplatePath+ "EditorWindowScriptTemplate.cs");
+           "Assets/"+BlackFireEditor.ScriptTemplatePath+ "EditorWindowScriptTemplate.cs");
            
         }
 
