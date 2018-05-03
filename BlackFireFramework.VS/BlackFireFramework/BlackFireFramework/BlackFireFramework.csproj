@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0720C61-5E4B-4C27-A270-4C516810120C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlackFireFramework</RootNamespace>
+    <AssemblyName>BlackFireFramework</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS_EDITOR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Event\Event.Subscriber.partial.cs" />
+    <Compile Include="Common\Event\Event.Publisher.partial.cs" />
+    <Compile Include="Common\Event\Event.EventTopic.partial.cs" />
+    <Compile Include="Common\Event\Event.LifeCircle.partial.cs" />
+    <Compile Include="Common\Event\Event.cs" />
+    <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue.cs" />
+    <Compile Include="Core\MagicTree\EntityTree.cs" />
+    <Compile Include="Core\MagicTree\EntityTreeNode.cs" />
+    <Compile Include="Framework.Time.partial.cs" />
+    <Compile Include="Framework.Info.partial.cs" />
+    <Compile Include="Framework.LifeCircle.partial.cs" />
+    <Compile Include="Framework.cs" />
+    <Compile Include="Common\Extension\LinkedListExtension.cs" />
+    <Compile Include="Common\Pattern\ObjectPool\IRecyclable.cs" />
+    <Compile Include="Common\Pattern\ObjectPool\ObjectPool{T}.cs" />
+    <Compile Include="Common\Utility\Utility.cs" />
+    <Compile Include="Common\Log\Log.cs" />
+    <Compile Include="Common\Log\LogCallback.delegate.cs" />
+    <Compile Include="Common\Log\LogLevel.enum.cs" />
+    <Compile Include="Core\MagicTree\UserData.cs" />
+    <Compile Include="Common\Pattern\MutiwayTree\MultiwayTreeNode{T}.cs" />
+    <Compile Include="Common\Pattern\MutiwayTree\MultiwayTree{T}.cs" />
+    <Compile Include="Common\Pattern\MutiwayTree\TraversaType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
