@@ -6,6 +6,8 @@
 
 
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace BlackFireFramework
 {
@@ -14,6 +16,7 @@ namespace BlackFireFramework
     /// </summary>
     public static partial class Log
     {
+
         private static LogCallback s_LogCallback = null;
 
         #region SyncLog
@@ -42,8 +45,6 @@ namespace BlackFireFramework
 
         #endregion
 
-
-
         public static void SetLogCallback(LogCallback logCallback)
         {
             s_LogCallback = logCallback;
@@ -58,7 +59,6 @@ namespace BlackFireFramework
             }
             s_LogCallback.Invoke( LogLevel.Trace,message);
         }
-
 
         public static void Debug(object message, bool sync = false)
         {
@@ -109,5 +109,9 @@ namespace BlackFireFramework
             }
             s_LogCallback.Invoke(LogLevel.Fatal, message);
         }
+
+
+
+
     }
 }

@@ -15,6 +15,7 @@ namespace BlackFireFramework
             Framework.Time.OnOriginTime += Born;
             Framework.Time.OnActTime += Act;
             Framework.Time.OnEndTime += Die;
+
         }
 
 

@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\</OutputPath>
     <DefineConstants>TRACE;DEBUG;VS_EDITOR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -41,14 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\Log\Log.LogFile.partial.cs" />
     <Compile Include="Core\Event\Event.Subscriber.partial.cs" />
     <Compile Include="Core\Event\Event.Publisher.partial.cs" />
     <Compile Include="Core\Event\Event.EventTopic.partial.cs" />
     <Compile Include="Core\Event\Event.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.cs" />
     <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue.cs" />
-    <Compile Include="Core\MagicTree\EntityTree.cs" />
-    <Compile Include="Core\MagicTree\EntityTreeNode.cs" />
+    <Compile Include="Core\Job\Job.delegate.partial.cs" />
+    <Compile Include="Core\Job\Job.LifeCircle.partial.cs" />
+    <Compile Include="Core\Job\Job.State.partial.cs" />
+    <Compile Include="Core\Job\Job.Token.partial.cs" />
+    <Compile Include="Core\Job\Job.cs" />
+    <Compile Include="Core\EntityTree\EntityTree.cs" />
+    <Compile Include="Core\EntityTree\EntityTreeNode.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.cs" />
     <Compile Include="Framework\Framework.State.cs" />
     <Compile Include="Framework\Framework.Time.partial.cs" />
     <Compile Include="Framework\Framework.Info.partial.cs" />
@@ -59,7 +66,7 @@
     <Compile Include="Common\Log\Log.cs" />
     <Compile Include="Common\Log\LogCallback.delegate.cs" />
     <Compile Include="Common\Log\LogLevel.enum.cs" />
-    <Compile Include="Core\MagicTree\UserData.cs" />
+    <Compile Include="Core\EntityTree\UserData.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTreeNode{T}.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTree{T}.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\TraversaType.cs" />

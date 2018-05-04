@@ -232,8 +232,12 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackFireFramework.Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Test\Play\NewPlayModeTest.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\BlackFireFormatter.cs" />

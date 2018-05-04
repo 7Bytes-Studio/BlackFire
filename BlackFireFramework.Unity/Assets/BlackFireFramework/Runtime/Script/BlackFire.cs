@@ -4,10 +4,40 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using BlackFireFramework;
 using UnityEngine;
 
-public sealed class BlackFire : MonoBehaviour 
+/// <summary>
+/// BlackFireFramework主要程序入口类。
+/// </summary>
+public sealed partial class BlackFire : MonoBehaviour 
 {
+
+    private void Awake()
+    {
+        Log.SetLogFileMode("D://BlackFireLog.txt",1000);
+        Log.SetLogCallback(LogCallback);
+        Framework.Born(this,Time.unscaledDeltaTime,Time.deltaTime);
+    }
+
+    private void Update()
+    {
+        Framework.Act(this, Time.unscaledDeltaTime, Time.deltaTime);
+    }
+
+    private void OnDestroy()
+    {
+        Framework.Die(this, Time.unscaledDeltaTime, Time.deltaTime);
+    }
+
+
+
+    private void LogCallback(LogLevel logLevel,object message)
+    {
+        var logMessage = string.Format("{0}:{1}", logLevel, message);
+        Debug.Log(logMessage);
+        Log.EnLogFileQueue(logMessage);
+    }
 
 
 }

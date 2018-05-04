@@ -283,6 +283,9 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="BlackFireFramework.Unity.csproj">
@@ -297,6 +300,7 @@
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloaderProgressEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloadInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\GUI\BlackFireEditorGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Log\LogRedirection.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.Assets.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.Zip.cs" />
