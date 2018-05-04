@@ -12,7 +12,7 @@ namespace BlackFireFramework
     /// <summary>
     /// 日志类。
     /// </summary>
-    public static class Log
+    public static partial class Log
     {
         private static LogCallback s_LogCallback = null;
 

@@ -41,6 +41,7 @@ namespace BlackFireFramework
         static Framework()
         {
            Init_Info();
+           Init_State();
         }
 
         /// <summary>
@@ -51,6 +52,7 @@ namespace BlackFireFramework
         /// <param name="virsulElapsedDeltaTime">虚拟世界流逝的时间。</param>
         public static void Born(object who,float realElapsedDeltaTime, float virsulElapsedDeltaTime)
         {
+            State.Working = true;
             CheckWhoOrThrow(who);
             s_Who = who;
             Time.SetOriginTime(realElapsedDeltaTime,virsulElapsedDeltaTime); //设置时间轴的起点时间。
@@ -78,6 +80,7 @@ namespace BlackFireFramework
         {
             CheckWhoOrThrow(who);
             Time.SetEndTime(realElapsedDeltaTime, virsulElapsedDeltaTime); //设置时间轴的终点时间。
+            State.Working = false;
         }
 
     }

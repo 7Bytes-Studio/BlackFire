@@ -12,7 +12,6 @@ namespace BlackFireFramework
     public static partial class Event
     {
 
-
         public static void Fire(string topicName,object sender,EventArgs eventArgs, bool fireNow = true)
         {
             var eventTopic = CheckOrCreateEventTopic(sender,topicName);
@@ -43,7 +42,7 @@ namespace BlackFireFramework
             eventTopic.OnSubscrib(subscriber);
         }
 
-        public static void Off(object listener,string topicName)
+        public static void Off(string topicName, object listener)
         {
             var eventTopic = EventTopic.GetEventTopic(topicName);
             if (null!=eventTopic)

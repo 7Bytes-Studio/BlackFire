@@ -5,6 +5,8 @@ using NUnit.Framework;
 using System.Collections;
 using System.IO;
 using BlackFireFramework;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 public class FormatterEditModeTest
 {
@@ -23,6 +25,8 @@ public class FormatterEditModeTest
     {
         FileStream fs = new FileStream(@"D:\\Test.dat", FileMode.Open);
         var formatter = new BlackFireFormatter();
+        new BinaryFormatter();
+
         formatter.Deserialize(fs);
         fs.Close();
     }

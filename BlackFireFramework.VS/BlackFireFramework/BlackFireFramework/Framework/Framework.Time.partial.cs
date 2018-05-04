@@ -67,7 +67,6 @@ namespace BlackFireFramework
             {
                 RealElapsedTime += RealElapsedDeltaTime = realElapsedDeltaTime;
                 VirsulElapsedTime += VirsulElapsedDeltaTime = virsulElapsedDeltaTime;
-                Log.DeSyncQueue(); //轮询出日志队列。
                 if (null != OnActTime)
                 {
                     OnActTime.Invoke();
