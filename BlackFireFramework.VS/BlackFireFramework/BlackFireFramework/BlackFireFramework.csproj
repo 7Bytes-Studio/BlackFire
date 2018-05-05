@@ -56,6 +56,11 @@
     <Compile Include="Core\Job\Job.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
     <Compile Include="Core\EntityTree\EntityTreeNode.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.Object.partial.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.Pool.partial.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.PoolFactoryBinder.partial.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.delegate.partial.cs" />
+    <Compile Include="Core\ObjectPool\ObjectPool.Tpl.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.cs" />
     <Compile Include="Framework\Framework.State.cs" />
     <Compile Include="Framework\Framework.Time.partial.cs" />

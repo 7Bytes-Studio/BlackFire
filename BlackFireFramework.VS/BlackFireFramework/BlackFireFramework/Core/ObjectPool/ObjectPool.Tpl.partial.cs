@@ -8,14 +8,6 @@ namespace BlackFireFramework
 {
     public static partial class ObjectPool
     {
-        public static void SetObjectPool(ObjectPool.PoolBase poolImpl)
-        {
 
-        }
-
-        public static void GetPool()
-        {
-
-        }
     }
 }

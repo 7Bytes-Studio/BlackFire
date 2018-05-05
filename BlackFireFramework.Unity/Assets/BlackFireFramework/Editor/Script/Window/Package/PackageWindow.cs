@@ -199,6 +199,28 @@ namespace BlackFireFramework.Editor
 
         #endregion
 
+        #region Exception Handler
+
+        private void ShowExceptionMsgBox()
+        {
+            m_ShowExceptionMsgBoxFlag = true;
+        }
+
+        private bool m_ShowExceptionMsgBoxFlag = false;
+        private void WaitShowExceptionMsgBox()
+        {
+            if (m_ShowExceptionMsgBoxFlag)
+            {
+                EmbeddedMessageBoxWindow.Show("Exception",
+                    string.Format("Unable to connect to the server!\nPlease check if the interface \n'{0}' is correct.", m_ServerAPIUrl),
+                    Color.red
+                    );
+                m_ShowExceptionMsgBoxFlag = false;
+            }
+        }
+
+        #endregion
+
         #region Procedure
 
 
@@ -234,31 +256,6 @@ namespace BlackFireFramework.Editor
 
             });
         }
-
-
-
-        #region Exception Handler
-
-        private void ShowExceptionMsgBox()
-        {
-            m_ShowExceptionMsgBoxFlag = true;
-        }
-
-        private bool m_ShowExceptionMsgBoxFlag = false;
-        private void WaitShowExceptionMsgBox()
-        {
-            if (m_ShowExceptionMsgBoxFlag)
-            {
-                EmbeddedMessageBoxWindow.Show("Exception",
-                    string.Format("Unable to connect to the server!\nPlease check if the interface \n'{0}' is correct.", m_ServerAPIUrl),
-                    Color.red
-                    );
-                m_ShowExceptionMsgBoxFlag = false;
-            }
-        }
-
-        #endregion
-
 
         private void AddPackegInfo(string classify, List<ItemData> list)
         {
@@ -455,8 +452,6 @@ namespace BlackFireFramework.Editor
         #endregion
 
 
-
-
         #region Build-in Type
 
 
@@ -530,7 +525,7 @@ namespace BlackFireFramework.Editor
 
                         });
 
-                        BlackFireEditorGUI.Button("More", Color.white, ButtonWidth, () => {
+                        BlackFireEditorGUI.Button("More", Color.white, 50, () => {
 
                             if (!Lock && null != OnMoreButtonClickCallback)
                             {
@@ -542,7 +537,7 @@ namespace BlackFireFramework.Editor
                     });
 
 
-                    BlackFireEditorGUI.Label(Content, Color.cyan);
+                    BlackFireEditorGUI.Label(Content, Color.cyan,14);
 
                     BlackFireEditorGUI.Space(1);
                 });

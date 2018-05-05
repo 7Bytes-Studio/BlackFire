@@ -237,6 +237,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackFireFramework.Custom\Packages\UI\FuckingMsgBox\lyz.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Test\Play\NewPlayModeTest.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
