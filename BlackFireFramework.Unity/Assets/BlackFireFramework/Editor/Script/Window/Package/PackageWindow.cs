@@ -17,222 +17,270 @@ namespace BlackFireFramework.Editor
 {
     public sealed class PackageWindow : EditorWindowBase<PackageWindow>
     {
+        #region Property
+
+
         private Vector2 m_ScrollPosition;
-        
+
         private Dictionary<string, bool> m_FoldOutDic = new Dictionary<string, bool>();
 
-        private Dictionary<string,List<Item>> m_ItemDic = new Dictionary<string,List<Item>>();
+        private Dictionary<string, List<Item>> m_ItemDic = new Dictionary<string, List<Item>>();
 
-        private string m_ServerAPIUrl = "http://localhost/packages/api.json";
+        private List<Item> m_SearchItemList = new List<Item>();
 
+        private string m_ServerAPIUrl = "http://0x69h.com/packages/api.json";
 
+        private string m_PackageFolderPath; //异步要用到，必需主线程先获取。
 
-        private void DrawFoldOut(string text,Action callback)
-        {
-            if (!m_FoldOutDic.ContainsKey(text))
-            {
-                m_FoldOutDic.Add(text,false);
-            }
-            if (m_FoldOutDic[text] = BlackFireEditorGUI.FoldOut(text,m_FoldOutDic[text]))
-            {
-                if (null!= callback)
-                {
-                    callback.Invoke();
-                }
-            }
-        }
+        private bool m_HasDestroy = false;
 
-        private void AddPackegInfo(string classify,List<ItemData> list)
-        {
-            if (!m_ItemDic.ContainsKey(classify))
-            {
-                ExistsOrCreateFolder(BlackFireEditor.PackagePath+classify);
-                m_ItemDic.Add(classify, new List<Item>());
-            }
+        private bool m_RequestServerSucceed;
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                var item = new Item(classify,"Get", 50, Color.white,list[i]);
-                item.OnGetButtonClickCallback = Item_OnClickCallback;
-                m_ItemDic[classify].Add(item);
-            }
+        private string m_SearchStr = string.Empty;
 
-        }
-
-
-
+        #endregion
 
         #region Behaviour
 
         private void OnEnable()
         {
+            m_PackageFolderPath = BlackFireEditor.PackagePath;
             RequestServerAPI();
         }
 
+        private void Update()
+        {
+            WaitShowExceptionMsgBox();
+        }
+
+        private void OnDestroy()
+        {
+            m_HasDestroy = true;
+            foreach (var kv in m_ItemDic)
+            {
+                foreach (var item in kv.Value)
+                {
+                    if (null != item.HttpDownloader)
+                    {
+                        item.HttpDownloader.StopDownload();
+                    }
+                }
+            }
+        }
 
         protected override void OnDrawWindow()
         {
             m_ScrollPosition = GUILayout.BeginScrollView(m_ScrollPosition);
+            {
+                #region 导航项
 
-            #region 导航项
+                BlackFireEditorGUI.BoxHorizontalLayout(() =>
+                {
 
-            BlackFireEditorGUI.BoxHorizontalLayout(()=> {
+                    #region 导航栏目按钮
 
-                #region 导航栏目按钮
+                    BlackFireEditorGUI.BoxHorizontalLayout(() =>
+                    {
 
-                BlackFireEditorGUI.BoxHorizontalLayout(() => {
 
-                    BlackFireEditorGUI.Button("Fold", Color.white, 70, () => {
-
-                        List<string> mdfList = new List<string>();
-                        foreach (var kv in m_FoldOutDic)
-                        {
-                            mdfList.Add(kv.Key);
-                        }
-                        for (int i = 0; i < mdfList.Count; i++)
-                        {
-                            m_FoldOutDic[mdfList[i]] = false;
-                        }
+                        Fold();
+                        Unfold();
+                        Refresh();
 
                     });
-                    BlackFireEditorGUI.Button("Unfold", Color.white, 70, () => {
-
-                        List<string> mdfList = new List<string>();
-                        foreach (var kv in m_FoldOutDic)
-                        {
-                            mdfList.Add(kv.Key);
-                        }
-                        for (int i = 0; i < mdfList.Count; i++)
-                        {
-                            m_FoldOutDic[mdfList[i]] = true;
-                        }
-
-                    });
-                    BlackFireEditorGUI.Button("Update", Color.white, 70, () => {
-
-                        foreach (var kv in m_ItemDic)
-                        {
-                            foreach (var item in kv.Value)
-                            {
-                                if (null != item.HttpDownloader)
-                                {
-                                    item.HttpDownloader.StopDownload();
-                                }
-                            }
-                        }
-
-                        m_ItemDic.Clear();
-                        //请求服务器接口地址。
-
-                        RequestServerAPI();
-
-                    });
-
-                });
-               
-
-
-                #endregion
-
-                #region 服务器接口地址
-                BlackFireEditorGUI.Label("◉",Color.green,20,21);
-                BlackFireEditorGUI.Label(string.Format("Server: {0}", m_ServerAPIUrl), Color.grey,19);
-                #endregion
-            });
-
-            BlackFireEditorGUI.BoxHorizontalLayout(() => {
-
-                #region 搜索栏
-
-                BlackFireEditorGUI.HorizontalLayout(()=> {
-
-                    GUILayout.TextField(string.Empty);
-
-                    BlackFireEditorGUI.Button("Search", Color.white, 70);
-                    BlackFireEditorGUI.Button("Clear", Color.white, 70);
-
-                });
 
                     #endregion
 
-            });
+                    #region 服务器接口地址
+                    BlackFireEditorGUI.Label("◉", m_RequestServerSucceed ? Color.green : Color.red, 20, 21);
+                    BlackFireEditorGUI.Label(string.Format("Server: {0}", m_ServerAPIUrl), Color.grey, 19);
+                    #endregion
 
-            BlackFireEditorGUI.BoxHorizontalLayout(() => {
+                });
 
-                #region 搜索结果栏
-                BlackFireEditorGUI.BoxHorizontalLayout(()=> {
+                BlackFireEditorGUI.BoxHorizontalLayout(() =>
+                {
 
-                    BlackFireEditorGUI.HorizontalLayout(() => {
-                        BlackFireEditorGUI.Label("Result:", Color.white, 52, 13);
-                        BlackFireEditorGUI.Label("11 ", Color.green, 20, 13);
-                        BlackFireEditorGUI.Label("Records", Color.white, 70, 13);
+                    #region 搜索栏
+
+                    BlackFireEditorGUI.HorizontalLayout(() =>
+                    {
+
+                        m_SearchStr = GUILayout.TextField(m_SearchStr);
+
+                        BlackFireEditorGUI.Button("Search", Color.white, 70, () => { Search(m_SearchStr); });
+                        BlackFireEditorGUI.Button("Clear", Color.white, 70, () => { Clear(); });
+
                     });
 
+                    #endregion
+
                 });
 
-                #endregion
-            });
-
-            BlackFireEditorGUI.BoxVerticalLayout(() =>
-            {
-                BlackFireEditorGUI.BoxHorizontalLayout(() => {
-                    BlackFireEditorGUI.Label("Result............");
-                });
-
-                BlackFireEditorGUI.BoxHorizontalLayout(() => {
-                    BlackFireEditorGUI.Label("Result............");
-                });
-
-                BlackFireEditorGUI.BoxHorizontalLayout(() => {
-                    BlackFireEditorGUI.Label("Result............");
-                });
-            });
-
-            #endregion
-
-            #region 包选项
-
-            if (0<m_ItemDic.Count)
-                BlackFireEditorGUI.BoxVerticalLayout(()=> {
-
-                foreach (var kv in m_ItemDic)
+                if (0 < m_SearchItemList.Count)
                 {
-                    DrawFoldOut(kv.Key, () =>
+                    BlackFireEditorGUI.BoxHorizontalLayout(() =>
                     {
-                        for (int i = 0; i < kv.Value.Count; i++)
+
+                        #region 搜索结果栏
+                        BlackFireEditorGUI.BoxHorizontalLayout(() =>
                         {
-                            kv.Value[i].OnDraw();
+
+                            BlackFireEditorGUI.HorizontalLayout(() =>
+                            {
+                                BlackFireEditorGUI.Label("Result:", Color.white, 52, 13);
+                                BlackFireEditorGUI.Label(string.Format("{0} ", m_SearchItemList.Count), Color.green, 20, 13);
+                                BlackFireEditorGUI.Label("Records", Color.white, 70, 13);
+                            });
+
+                        });
+
+                        #endregion
+                    });
+
+                    BlackFireEditorGUI.BoxVerticalLayout(() =>
+                    {
+                        for (int i = 0; i < m_SearchItemList.Count; i++)
+                        {
+                            m_SearchItemList[i].OnDraw();
                         }
 
                     });
                 }
 
-            });
-            
-            #endregion
+                #endregion
 
+                #region 包选项
+
+                if (0 < m_ItemDic.Count)
+                    BlackFireEditorGUI.BoxVerticalLayout(() =>
+                    {
+
+                        foreach (var kv in m_ItemDic)
+                        {
+                            DrawFoldOut(kv.Key, () =>
+                            {
+                                for (int i = 0; i < kv.Value.Count; i++)
+                                {
+                                    kv.Value[i].OnDraw();
+                                }
+
+                            });
+                        }
+
+                    });
+
+                #endregion
+            }
             GUILayout.EndScrollView();
 
         }
 
-
         #endregion
 
+        #region Event
 
-        private void Item_OnClickCallback(Item item)
+
+        private void Item_OnGetButtonClickCallback(Item item)
         {
             if (!item.Lock)
             {
-                item.SetButton("Get",Color.white, 50);
+                item.SetButton("Get", Color.white, 50);
             }
 
             DownloadPackage(item); //下载
         }
 
+        private void Item_OnMoreButtonClickCallback(Item item)
+        {
+            EmbeddedMessageBoxWindow.Show("More",item.ItemData.More,Color.green);
+        }
+
+
+        #endregion
+
+        #region Procedure
+
+
+        private void RequestServerAPI()
+        {
+            ThreadPool.QueueUserWorkItem(token => {
+
+                try
+                {
+                    if (m_HasDestroy) return;
+                    var json = BlackFireFramework.Utility.Http.Get(m_ServerAPIUrl, string.Empty);
+                    m_RequestServerSucceed = true; //通讯成功。
+                    var packageInfoList = JsonUtility.FromJson<PackageInfoList>(json);
+
+                    for (int i = 0; i < packageInfoList.packages.Count; i++)
+                    {
+                        var classify = packageInfoList.packages[i].classify;
+                        var itemData = new List<ItemData>();
+                        for (int j = 0; j < packageInfoList.packages[i].packageInfos.Count; j++)
+                        {
+                            var item = packageInfoList.packages[i].packageInfos[j];
+                            itemData.Add(new ItemData(item.version, item.name, item.url, item.more));
+                        }
+                        AddPackegInfo(classify, itemData);
+                    }
+
+                }
+                catch (Exception)
+                {
+                    ShowExceptionMsgBox();
+                    // Debug.LogError(ex);
+                }
+
+            });
+        }
+
+
+
+        #region Exception Handler
+
+        private void ShowExceptionMsgBox()
+        {
+            m_ShowExceptionMsgBoxFlag = true;
+        }
+
+        private bool m_ShowExceptionMsgBoxFlag = false;
+        private void WaitShowExceptionMsgBox()
+        {
+            if (m_ShowExceptionMsgBoxFlag)
+            {
+                EmbeddedMessageBoxWindow.Show("Exception",
+                    string.Format("Unable to connect to the server!\nPlease check if the interface \n'{0}' is correct.", m_ServerAPIUrl),
+                    Color.red
+                    );
+                m_ShowExceptionMsgBoxFlag = false;
+            }
+        }
+
+        #endregion
+
+
+        private void AddPackegInfo(string classify, List<ItemData> list)
+        {
+            if (!m_ItemDic.ContainsKey(classify))
+            {
+                ExistsOrCreateFolder(m_PackageFolderPath + classify);
+                m_ItemDic.Add(classify, new List<Item>());
+            }
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                var item = new Item(classify, "Get", 50, Color.white, list[i]);
+                item.OnGetButtonClickCallback = Item_OnGetButtonClickCallback;
+                item.OnMoreButtonClickCallback = Item_OnMoreButtonClickCallback;
+                m_ItemDic[classify].Add(item);
+            }
+        }
+
         private void DownloadPackage(Item item)
         {
             item.Lock = true;
-            item.SetButton("↓...", Color.black,100);
+            item.SetButton("↓...", Color.black, 100);
 
             var saveDir = BlackFireEditor.PackageTempPath + item.ItemData.Name; //保存zip跟tmp文件的路径
             var extractPath = BlackFireEditor.PackagePath + item.Classify; //解压路径
@@ -240,18 +288,18 @@ namespace BlackFireFramework.Editor
             ExistsOrCreateFolder(extractPath);
 
             var savePath = saveDir + "/." + item.ItemData.Name + "_" + item.ItemData.Version + ".zip";
-         
+
             //如果下载文件已经存在
             if (File.Exists(savePath))
             {
                 item.Lock = false;
                 item.SetButton("Get", Color.white, 50);
-                Extract(item, savePath, extractPath); //继续解压。
+                ExtractPackage(item, savePath, extractPath); //继续解压。
                 return;
             }
 
             //下载
-            ThreadPool.QueueUserWorkItem(state=> {
+            ThreadPool.QueueUserWorkItem(state => {
                 item.HttpDownloader = new HttpDownloader(new HttpDownloadInfo()
                 {
                     Url = item.ItemData.Url,
@@ -261,15 +309,15 @@ namespace BlackFireFramework.Editor
                 }
                 );
 
-                item.HttpDownloader.OnDownloadProgress += (sender, args) => {  item.ButtonName = string.Format("↓ {0:00.00}%", args.DownloadProgress * 100f); };
-                item.HttpDownloader.OnDownloadSuccess += (sender, args) =>  {  Extract(item,savePath,extractPath); };
-                item.HttpDownloader.OnDownloadFailure += (sender, args) =>  {  item.ButtonColor = Color.red; item.ButtonName = "Failure"; item.Lock = false; };
+                item.HttpDownloader.OnDownloadProgress += (sender, args) => { item.ButtonName = string.Format("↓ {0:00.00}%", args.DownloadProgress * 100f); };
+                item.HttpDownloader.OnDownloadSuccess += (sender, args) => { ExtractPackage(item, savePath, extractPath); };
+                item.HttpDownloader.OnDownloadFailure += (sender, args) => { item.ButtonColor = Color.red; item.ButtonName = "Failure"; item.Lock = false; };
                 item.HttpDownloader.StartDownload();
             });
 
         }
 
-        private void Extract(Item item,string sourcePath,string targetExtractPath)
+        private void ExtractPackage(Item item, string sourcePath, string targetExtractPath)
         {
             item.SetButton("❖...", Color.gray, 100);
 
@@ -277,19 +325,19 @@ namespace BlackFireFramework.Editor
             {
                 item.ButtonName = string.Format("❖ {0:00.00}%", args.UnZipProgress * 100f);
 
-            },(sender,args)=> {
+            }, (sender, args) => {
 
                 item.ButtonColor = Color.green; item.ButtonName = "Success"; item.Lock = false;
                 if (Directory.Exists(targetExtractPath + "/" + item.ItemData.Name))
                 {
-                    Directory.Delete(targetExtractPath + "/" + item.ItemData.Name,true);
+                    Directory.Delete(targetExtractPath + "/" + item.ItemData.Name, true);
                 }
                 else
                 {
                     DirectoryInfo info = new DirectoryInfo(targetExtractPath + "/." + item.ItemData.Name);
                     info.MoveTo(targetExtractPath + "/" + item.ItemData.Name);
                 }
-               // RefreshAssets();
+                // RefreshAssets();
             });
 
         }
@@ -302,72 +350,111 @@ namespace BlackFireFramework.Editor
             }
         }
 
-        private void RefreshAssets()
+        private void Search(string searchStr)
         {
-            m_RefreshFlag = true;
-        }
-
-        private bool m_RefreshFlag;
-
-        private void UpdateRefreshAssetsInstruction()
-        {
-            if (m_RefreshFlag)
+            m_SearchItemList.Clear();
+            foreach (var v in m_ItemDic.Values)
             {
-                m_RefreshFlag = false;
-                AssetDatabase.Refresh();
+                for (int i = 0; i < v.Count; i++)
+                {
+                    if (v[i].ItemData.Name.Contains(searchStr))
+                    {
+                        m_SearchItemList.Add(v[i]);
+                    }
+                }
             }
-            
         }
 
-        private Job.Token m_Token = new Job.Token();
-
-        /// <summary>
-        /// 请求服务器。
-        /// </summary>
-        private void RequestServerAPI()
+        private void Clear()
         {
-            ThreadPool.QueueUserWorkItem(token=> {
+            m_SearchItemList.Clear();
+        }
 
-                Debug.Log("QueueUserWorkItem...");
+        private void Refresh()
+        {
+            BlackFireEditorGUI.Button("Refresh", Color.white, 70, () => {
 
-                var json = BlackFireFramework.Utility.Http.Get(m_ServerAPIUrl,string.Empty);
-
-                Debug.Log(json);
-
-            },m_Token);
-
-            AddPackegInfo("AI",
-                new List<ItemData>()
+                foreach (var kv in m_ItemDic)
                 {
-                        new ItemData("1.0.2", "Test", "http://p5gxertb0.bkt.clouddn.com/TestPackage.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
+                    foreach (var item in kv.Value)
+                    {
+                        if (null != item.HttpDownloader)
+                        {
+                            item.HttpDownloader.StopDownload();
+                        }
+                    }
+                }
 
-                });
+                m_ItemDic.Clear();
+                //请求服务器接口地址。
 
-            AddPackegInfo("UI",
-                new List<ItemData>()
+                RequestServerAPI();
+
+            });
+        }
+
+        private void Unfold()
+        {
+
+            BlackFireEditorGUI.Button("Unfold", Color.white, 70, () => {
+
+                List<string> mdfList = new List<string>();
+                foreach (var kv in m_FoldOutDic)
                 {
-                        new ItemData("1.0.2", "Test", "http://p5gxertb0.bkt.clouddn.com/TestPackage.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
-
-                });
-
-            AddPackegInfo("Json",
-                new List<ItemData>()
+                    mdfList.Add(kv.Key);
+                }
+                for (int i = 0; i < mdfList.Count; i++)
                 {
-                        new ItemData("1.0.2", "Test", "http://p5gxertb0.bkt.clouddn.com/TestPackage.zip"),
-                        new ItemData("1.0.0", "Test1", "http://p5gxertb0.bkt.clouddn.com/1.0.0.zip"),
+                    m_FoldOutDic[mdfList[i]] = true;
+                }
 
-                });
+            });
 
         }
+
+        private void Fold()
+        {
+            BlackFireEditorGUI.Button("Fold", Color.white, 70, () => {
+
+                List<string> mdfList = new List<string>();
+                foreach (var kv in m_FoldOutDic)
+                {
+                    mdfList.Add(kv.Key);
+                }
+                for (int i = 0; i < mdfList.Count; i++)
+                {
+                    m_FoldOutDic[mdfList[i]] = false;
+                }
+
+            });
+
+        }
+
+        #endregion
+
+        #region Draw
+
+
+        private void DrawFoldOut(string text, Action callback)
+        {
+            if (!m_FoldOutDic.ContainsKey(text))
+            {
+                m_FoldOutDic.Add(text, false);
+            }
+            if (m_FoldOutDic[text] = BlackFireEditorGUI.FoldOut(text, m_FoldOutDic[text]))
+            {
+                if (null != callback)
+                {
+                    callback.Invoke();
+                }
+            }
+        }
+
+
+
+        #endregion
+
+
 
 
         #region Build-in Type
@@ -375,11 +462,12 @@ namespace BlackFireFramework.Editor
 
         private sealed class ItemData
         {
-            public ItemData(string version, string name, string url) 
+            public ItemData(string version, string name, string url, string more)
             {
                 Version = version;
                 Name = name;
                 Url = url;
+                More = more;
             }
 
             public string Version { get; private set; }
@@ -388,7 +476,8 @@ namespace BlackFireFramework.Editor
 
             public string Url { get; private set; }
 
-           
+            public string More { get; private set; }
+
         }
 
         private sealed class Item
@@ -415,14 +504,14 @@ namespace BlackFireFramework.Editor
             public Action<Item> OnMoreButtonClickCallback;
 
 
-            public Item(string classify,string buttonName,int buttonWidth,Color buttonColor,ItemData itemData)
+            public Item(string classify, string buttonName, int buttonWidth, Color buttonColor, ItemData itemData)
             {
                 Classify = classify;
                 ButtonName = buttonName;
                 ButtonWidth = buttonWidth;
                 ButtonColor = buttonColor;
                 ItemData = itemData;
-                Content = string.Format(ItemContentFormat,itemData.Name,itemData.Version, itemData.Url);
+                Content = string.Format(ItemContentFormat, itemData.Name, itemData.Version, itemData.Url);
             }
 
 
@@ -430,7 +519,7 @@ namespace BlackFireFramework.Editor
             {
                 BlackFireEditorGUI.BoxHorizontalLayout(() => {
 
-                    BlackFireEditorGUI.BoxHorizontalLayout(()=> {
+                    BlackFireEditorGUI.BoxHorizontalLayout(() => {
 
                         BlackFireEditorGUI.Button(ButtonName, ButtonColor, ButtonWidth, () => {
 
@@ -459,7 +548,7 @@ namespace BlackFireFramework.Editor
                 });
             }
 
-            public void SetButton(string name,Color color,int width)
+            public void SetButton(string name, Color color, int width)
             {
                 ButtonName = name;
                 ButtonColor = color;
@@ -468,8 +557,39 @@ namespace BlackFireFramework.Editor
         }
 
 
+        public sealed class EmbeddedMessageBoxWindow : EditorWindowBase<EmbeddedMessageBoxWindow>
+        {
+            public static void Show(string title,string content,Color contentColor)
+            {
+                var window = EditorWindow.GetWindow(typeof(EmbeddedMessageBoxWindow), true, title) as EmbeddedMessageBoxWindow;
+                window.position = new Rect(860f,510f,440f,300f);
+                window.Content = content;
+                window.m_ContentColor = contentColor;
+            }
+
+            private string Content;
+
+            private Vector2 m_ScrollPosition;
+
+            private Color m_ContentColor;
+
+            protected override void OnDrawWindow()
+            {
+                m_ScrollPosition = GUILayout.BeginScrollView(m_ScrollPosition);
+                {
+
+                    BlackFireEditorGUI.VerticalLayout(() => {
+
+                        BlackFireEditorGUI.Label(Content, m_ContentColor,18);
+
+                    });
+                }
+                GUILayout.EndScrollView();
+            }
+
+        }
+
+
         #endregion
-
-
     }
 }

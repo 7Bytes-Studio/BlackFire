@@ -13,7 +13,15 @@ namespace BlackFireFramework
     [System.Serializable]
     public sealed class PackageInfoList
     {
-        public List<PackageInfo> packages;
+        public List<PackageInfoDic> packages;
+    }
+
+    [System.Serializable]
+    public sealed class PackageInfoDic
+    {
+        public string classify;
+
+        public List<PackageInfo> packageInfos;
     }
 
 

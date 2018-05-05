@@ -6,17 +6,24 @@ namespace BlackFireFramework.Server.Package
 {
     class Program
     {
-        private const string ServerDomain = "http://localhost/packages/";
+        private static string ServerDomain = "http://localhost";
 
-        private const string PackageAPIFileName = "api.json";
+        private static string ServerPackageUrl = "/packages/";
 
-        private const string ServerAPI = ServerDomain+ PackageAPIFileName;
+        private static string PackageAPIFileName = "api.json";
 
-        private const string PackageReadmeFileName = "Readme.json";
+        private static string ServerAPI = ServerDomain + ServerPackageUrl + PackageAPIFileName;
+
+        private static string PackageReadmeFileName = "readme.json";
 
 
         static void Main(string[] args)
         {
+            if (0<args.Length&&!string.IsNullOrEmpty(args[0]))
+            {
+                ServerDomain = args[0];
+            }
+
             var packageInfoList = MakePackageInfoList();
             BuildAPI(packageInfoList);
             Console.ForegroundColor = ConsoleColor.Green;
@@ -39,17 +46,27 @@ namespace BlackFireFramework.Server.Package
         {
             string currentDir = System.Environment.CurrentDirectory;
             PackageInfoList packageInfoList = new PackageInfoList();
-            packageInfoList.packages = new List<PackageInfo>();
+            packageInfoList.packages = new List<PackageInfoDic>();
 
             DirectoryInfo dirInfo = new DirectoryInfo(currentDir);
             foreach (var nextFolder in dirInfo.GetDirectories())
             {
                 var json = File.ReadAllText(nextFolder.FullName + "/" + PackageReadmeFileName);
                 PackageInfo packageInfo = SimpleJson.SimpleJson.DeserializeObject<PackageInfo>(json);
-                packageInfo.url = ServerDomain + nextFolder.Name + "/" + GetZipFileFullName(nextFolder.FullName);
-                packageInfoList.packages.Add(packageInfo);
+                packageInfo.url = ServerDomain + ServerPackageUrl + nextFolder.Name + "/" + GetZipFileFullName(nextFolder.FullName);
+
+                var result = packageInfoList.packages.Find(value=>value.classify== packageInfo.classify);
+                if (null != result)
+                {
+                    result.packageInfos.Add(packageInfo);
+                }
+                else
+                {
+                    packageInfoList.packages.Add(new PackageInfoDic() { classify = packageInfo.classify,packageInfos = new List<PackageInfo>() { packageInfo } });
+                }
                 Console.WriteLine(packageInfo.ToString()+"\n");
             }
+
             return packageInfoList;
         }
 
