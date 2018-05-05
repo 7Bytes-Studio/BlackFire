@@ -5,11 +5,13 @@
 //----------------------------------------------------
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace BlackFireFramework.Editor
 {
@@ -21,7 +23,7 @@ namespace BlackFireFramework.Editor
 
         private Dictionary<string,List<Item>> m_ItemDic = new Dictionary<string,List<Item>>();
 
-        private string m_ServerAPIUrl = "http://0x69h.com/fucking";
+        private string m_ServerAPIUrl = "http://localhost/packages/api.json";
 
 
 
@@ -317,11 +319,23 @@ namespace BlackFireFramework.Editor
             
         }
 
+        private Job.Token m_Token = new Job.Token();
+
         /// <summary>
         /// 请求服务器。
         /// </summary>
         private void RequestServerAPI()
         {
+            ThreadPool.QueueUserWorkItem(token=> {
+
+                Debug.Log("QueueUserWorkItem...");
+
+                var json = BlackFireFramework.Utility.Http.Get(m_ServerAPIUrl,string.Empty);
+
+                Debug.Log(json);
+
+            },m_Token);
+
             AddPackegInfo("AI",
                 new List<ItemData>()
                 {
@@ -354,7 +368,6 @@ namespace BlackFireFramework.Editor
                 });
 
         }
-
 
 
         #region Build-in Type

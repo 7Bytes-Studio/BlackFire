@@ -1,16 +1,1 @@
-{
-
-	"packages":[
-
-		{
-
-			"name":"FuckingMsgBox",
-			"version":"1.0.0",
-			"more":"一些详细信息。",
-			"url":"xxxx"
-		}
-
-
-	]
-
-}
+{"packages":[{"classify":"UI","name":"FuckingMsgBox","version":"1.0.0","url":"http://localhost/packages/adam/lyz.zip","more":"一些详细信息。"}]}

@@ -71,6 +71,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpTest.cs" />
     <Compile Include="JobTest.cs" />
     <Compile Include="LogTest.cs" />
     <Compile Include="FormatterTest.cs" />

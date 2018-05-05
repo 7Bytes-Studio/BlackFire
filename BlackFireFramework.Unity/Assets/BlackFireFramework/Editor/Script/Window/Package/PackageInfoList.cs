@@ -4,20 +4,17 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 
-
-namespace BlackFireFramework 
+namespace BlackFireFramework
 {
-	public sealed class UICommonBox : MonoBehaviour 
-	{
-        public void ShowNitice()
-        {
-            Debug.Log("Notice");
 
-        }
-	}
+
+    [System.Serializable]
+    public sealed class PackageInfoList
+    {
+        public List<PackageInfo> packages;
+    }
+
+
 }
