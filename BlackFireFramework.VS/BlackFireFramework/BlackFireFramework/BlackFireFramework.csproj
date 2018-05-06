@@ -35,9 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +50,14 @@
     <Compile Include="Core\Event\Event.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.cs" />
     <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue{T}.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\API\IBinder.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\API\ISparrowIoC.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Extension\IBinderExtension.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Extension\IoCBuildCallback.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Extension\ISparrowIoCExtension.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Impl\Binder.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Impl\IoCBindData.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Impl\SparrowIoC.cs" />
     <Compile Include="Core\Job\Job.delegate.partial.cs" />
     <Compile Include="Core\Job\Job.LifeCircle.partial.cs" />
     <Compile Include="Core\Job\Job.State.partial.cs" />
@@ -64,6 +70,10 @@
     <Compile Include="Core\ObjectPool\ObjectPool.PoolFactoryBinder.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.delegate.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Export\ExportedAssemblyBase.cs" />
+    <Compile Include="Export\ExportedAssemblyManager.cs" />
+    <Compile Include="Export\IExportedAssemblyManager.cs" />
+    <Compile Include="Framework\Framework.IoC.partial.cs" />
     <Compile Include="Framework\Framework.State.cs" />
     <Compile Include="Framework\Framework.Time.partial.cs" />
     <Compile Include="Framework\Framework.Info.partial.cs" />
@@ -78,10 +88,16 @@
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTreeNode{T}.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTree{T}.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\TraversaType.cs" />
+    <Compile Include="Core\Module\API\IModule.cs" />
+    <Compile Include="Core\Module\API\IModuleManager.cs" />
+    <Compile Include="Core\Module\API\ModuleBase.cs" />
+    <Compile Include="Core\Module\Extension\IModuleManagerExtension.cs" />
+    <Compile Include="Core\Module\Impl\ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Log\Log.LifeCircle.partial.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

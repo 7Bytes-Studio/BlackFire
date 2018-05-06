@@ -73,6 +73,11 @@ namespace BlackFireFramework.Test
             {
                 throw new NotImplementedException();
             }
+
+            protected override void OnDestroy()
+            {
+                throw new NotImplementedException();
+            }
         }
 
 
