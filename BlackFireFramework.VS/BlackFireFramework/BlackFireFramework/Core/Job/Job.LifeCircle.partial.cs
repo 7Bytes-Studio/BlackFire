@@ -15,9 +15,9 @@ namespace BlackFireFramework
         /// </summary>
         static Job()
         {
-            Framework.Time.OnOriginTime += Born;
-            Framework.Time.OnActTime += Act;
-            Framework.Time.OnEndTime += Die;
+            Framework.LifeCircle.OnBorn += Born;
+            Framework.LifeCircle.OnAct += Act;
+            Framework.LifeCircle.OnDie += Die;
         }
 
 

@@ -11,14 +11,17 @@ namespace BlackFireFramework
     /// </summary>
     public static partial class Event
     {
+
+
+
         /// <summary>
         /// Event静态类被使用。
         /// </summary>
         static Event()
         {
-            Framework.Time.OnOriginTime += Born;
-            Framework.Time.OnActTime    += Act;
-            Framework.Time.OnEndTime    += Die;
+            Framework.LifeCircle.OnBorn += Born;
+            Framework.LifeCircle.OnAct    += Act;
+            Framework.LifeCircle.OnDie    += Die;
         }
 
 

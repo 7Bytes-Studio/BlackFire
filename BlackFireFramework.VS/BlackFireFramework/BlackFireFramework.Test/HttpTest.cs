@@ -10,9 +10,10 @@ namespace BlackFireFramework.Test
         [TestMethod]
         public void TestMethod_Http_Get()
         {
-            var json = Utility.Http.Get("http://localhost/packages/api.json",string.Empty);
+            //此项目为了与外界解耦，不适合在发布的项目源码的时候拿第三方网站进行测试，请自行粘贴自己喜欢的网站来进行GET测试。
+            //var json = Utility.Http.Get("http://localhost/packages/api.json",string.Empty);
 
-            Debug.WriteLine(json);
+            //Debug.WriteLine(json);
         }
 
         [TestMethod]

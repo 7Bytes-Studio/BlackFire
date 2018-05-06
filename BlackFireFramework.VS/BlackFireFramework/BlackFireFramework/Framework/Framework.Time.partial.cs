@@ -35,13 +35,7 @@ namespace BlackFireFramework
 
             #endregion
 
-            #region 事件
 
-            internal static event Action OnOriginTime;
-            internal static event Action OnActTime;
-            internal static event Action OnEndTime;
-
-            #endregion
 
             #region 时间轴
 
@@ -56,10 +50,6 @@ namespace BlackFireFramework
                 OriginDateTime = DateTime.Now;
                 RealElapsedTime += RealElapsedDeltaTime = realElapsedDeltaTime;
                 VirsulElapsedTime += VirsulElapsedDeltaTime = virsulElapsedDeltaTime;
-                if (null != OnOriginTime)
-                {
-                    OnOriginTime.Invoke();
-                }
                 s_HasSetOriginTime = true;
             }
 
@@ -67,10 +57,6 @@ namespace BlackFireFramework
             {
                 RealElapsedTime += RealElapsedDeltaTime = realElapsedDeltaTime;
                 VirsulElapsedTime += VirsulElapsedDeltaTime = virsulElapsedDeltaTime;
-                if (null != OnActTime)
-                {
-                    OnActTime.Invoke();
-                }
             }
 
             internal static void SetEndTime(float realElapsedDeltaTime, float virsulElapsedDeltaTime)
@@ -79,10 +65,6 @@ namespace BlackFireFramework
                 RealElapsedTime += RealElapsedDeltaTime = realElapsedDeltaTime;
                 VirsulElapsedTime += VirsulElapsedDeltaTime = virsulElapsedDeltaTime;
                 EndDateTime = DateTime.Now;
-                if (null != OnEndTime)
-                {
-                    OnEndTime.Invoke();
-                }
                 s_HasSetEndTime = true;
             }
 

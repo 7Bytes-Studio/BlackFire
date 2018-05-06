@@ -14,6 +14,12 @@ namespace BlackFireFramework
         /// <summary>
         /// 框架IoC服务接口。
         /// </summary>
-        public static ISparrowIoC IoC { get { return s_IoC; } }
+        internal static ISparrowIoC IoC { get { return s_IoC; } }
+
+        /// <summary>
+        /// 创建一个IoC服务接口。
+        /// </summary>
+        /// <returns>IoC服务接口实例。</returns>
+        public static ISparrowIoC CreateIoC() { return new SparrowIoC(); }
     }
 }

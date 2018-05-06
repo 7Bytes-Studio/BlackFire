@@ -41,9 +41,12 @@
   <ItemGroup>
     <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
-    <Compile Include="Common\Log\Log.LogFile.partial.cs" />
+    <Compile Include="Core\EntityTree\EntityTree.cs" />
+    <Compile Include="Core\Log\Log.LogFile.partial.cs" />
+    <Compile Include="Common\Pattern\Singleton\Singleton{T}.cs" />
     <Compile Include="Common\Utility\Utility.Type.cs" />
     <Compile Include="Common\Utility\Utility.Http.cs" />
+    <Compile Include="Core\EntityTree\EntityTree.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.Subscriber.partial.cs" />
     <Compile Include="Core\Event\Event.Publisher.partial.cs" />
     <Compile Include="Core\Event\Event.EventTopic.partial.cs" />
@@ -63,7 +66,7 @@
     <Compile Include="Core\Job\Job.State.partial.cs" />
     <Compile Include="Core\Job\Job.Token.partial.cs" />
     <Compile Include="Core\Job\Job.cs" />
-    <Compile Include="Core\EntityTree\EntityTree.cs" />
+    <Compile Include="Core\EntityTree\EntityTree.FrameworkSingleInstance.partial.cs" />
     <Compile Include="Core\EntityTree\EntityTreeNode.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.Object.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.Pool.partial.cs" />
@@ -74,16 +77,17 @@
     <Compile Include="Export\ExportedAssemblyManager.cs" />
     <Compile Include="Export\IExportedAssemblyManager.cs" />
     <Compile Include="Framework\Framework.IoC.partial.cs" />
-    <Compile Include="Framework\Framework.State.cs" />
+    <Compile Include="Framework\Framework.State.partial.cs" />
+    <Compile Include="Framework\Framework.GlobalData.partial.cs" />
     <Compile Include="Framework\Framework.Time.partial.cs" />
     <Compile Include="Framework\Framework.Info.partial.cs" />
     <Compile Include="Framework\Framework.LifeCircle.partial.cs" />
     <Compile Include="Framework\Framework.cs" />
     <Compile Include="Common\Extension\LinkedListExtension.cs" />
     <Compile Include="Common\Utility\Utility.cs" />
-    <Compile Include="Common\Log\Log.cs" />
-    <Compile Include="Common\Log\LogCallback.delegate.cs" />
-    <Compile Include="Common\Log\LogLevel.enum.cs" />
+    <Compile Include="Core\Log\Log.cs" />
+    <Compile Include="Core\Log\LogCallback.delegate.cs" />
+    <Compile Include="Core\Log\LogLevel.enum.cs" />
     <Compile Include="Core\EntityTree\UserData.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTreeNode{T}.cs" />
     <Compile Include="Common\Pattern\MutiwayTree\MultiwayTree{T}.cs" />
@@ -96,7 +100,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Log\Log.LifeCircle.partial.cs" />
+    <Compile Include="Core\Log\Log.LifeCircle.partial.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

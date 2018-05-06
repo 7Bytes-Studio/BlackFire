@@ -7,15 +7,16 @@ namespace BlackFireFramework
 {
     public static partial class Log
     {
+
+
         /// <summary>
         /// Log静态类被使用。
         /// </summary>
         static Log()
         {
-            Framework.Time.OnOriginTime += Born;
-            Framework.Time.OnActTime += Act;
-            Framework.Time.OnEndTime += Die;
-
+            Framework.LifeCircle.OnBorn += Born;
+            Framework.LifeCircle.OnAct += Act;
+            Framework.LifeCircle.OnDie += Die;
         }
 
 

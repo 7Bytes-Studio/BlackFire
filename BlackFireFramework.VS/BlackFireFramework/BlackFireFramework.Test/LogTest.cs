@@ -19,13 +19,14 @@ namespace BlackFireFramework.Test
             Log.Error("This is Error Message.");
             Log.Fatal("This is Fatal Message.");
 
-
         }
 
         public void LogCallback(LogLevel logLevel, object message)
         {
             Debug.WriteLine(logLevel+":"+message);
         }
+
+
 
     }
 }

@@ -4,8 +4,6 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Collections;
-using System.Collections.Generic;
 
 namespace BlackFireFramework
 {
