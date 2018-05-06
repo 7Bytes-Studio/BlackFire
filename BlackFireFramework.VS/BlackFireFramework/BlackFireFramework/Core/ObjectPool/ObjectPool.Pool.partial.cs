@@ -13,12 +13,17 @@ namespace BlackFireFramework
     {
         public abstract class PoolBase
         {
-            public PoolBase()
+            public PoolBase(string name,int capacity)
             {
+                Name = name;
+                Capacity = capacity;
                 PoolFactoryBinder = new PoolFactoryBinder();
             }
 
-            public PoolFactoryBinder PoolFactoryBinder { get; protected set; }
+            public string Name { get; private set; }
+            public int Capacity { get; private set; }
+            public abstract int Count { get;}
+            public PoolFactoryBinder PoolFactoryBinder { get; private set; }
 
             public abstract void Lock(ObjectBase @object);
             public abstract void UnLock(ObjectBase @object);
@@ -30,6 +35,11 @@ namespace BlackFireFramework
             public abstract void ReleaseIn();
             public abstract void ReleaseOut();
 
+            internal void Destroy()
+            {
+                OnDestroy();
+            }
+            protected abstract void OnDestroy();
         }
 
 
@@ -38,24 +48,42 @@ namespace BlackFireFramework
         /// </summary>
         public class DefaultPool : PoolBase
         {
-            private object m_Lock = new object();
 
-            private LinkedList<ObjectBase> m_LinkedListObject_InPool = new LinkedList<ObjectBase>();
-            private LinkedList<ObjectBase> m_LinkedListObject_OutPool = new LinkedList<ObjectBase>();
-
-            private void SetObjectLockState(ObjectBase @object, bool lockState)
+            public DefaultPool(string name, int poolCapacity):base(name,poolCapacity)
             {
-                var targetNode = m_LinkedListObject_InPool.Find(@object);
-                if (null != targetNode)
-                {
-                    targetNode.Value.SetLockState(lockState);
-                }
+              
             }
 
 
 
+
+
+            private object m_Lock = new object();
+            private LinkedList<ObjectBase> m_LinkedListObject_InPool = new LinkedList<ObjectBase>();
+            private LinkedList<ObjectBase> m_LinkedListObject_OutPool = new LinkedList<ObjectBase>();
+            public override int Count { get { return m_LinkedListObject_InPool.Count + m_LinkedListObject_OutPool.Count; } }
+
+
+
+
+            private void SetObjectLockState(ObjectBase @object, bool lockState)
+            {
+                CheckObjectBaseArgsOrThrow(@object);
+                var targetInNode = m_LinkedListObject_InPool.Find(@object);
+                if (null != targetInNode)
+                {
+                    targetInNode.Value.SetLockState(lockState);
+                }
+                var targetOutNode = m_LinkedListObject_OutPool.Find(@object);
+                if (null != targetOutNode)
+                {
+                    targetOutNode.Value.SetLockState(lockState);
+                }
+            }
+
             public override void Lock(ObjectBase @object)
             {
+                CheckObjectBaseArgsOrThrow(@object);
                 lock (m_Lock)
                 {
                     SetObjectLockState(@object, true);
@@ -64,6 +92,7 @@ namespace BlackFireFramework
 
             public override void UnLock(ObjectBase @object)
             {
+                CheckObjectBaseArgsOrThrow(@object);
                 lock (m_Lock)
                 {
                     SetObjectLockState(@object, false);
@@ -72,9 +101,12 @@ namespace BlackFireFramework
 
             public override void Recycle(ObjectBase @object)
             {
+                CheckObjectLockStateOrLog(@object);
+
+                CheckObjectBaseArgsOrThrow(@object);
                 lock (m_Lock)
                 {
-                    if (m_LinkedListObject_OutPool.Contains(@object))
+                    if (!@object.Lock && m_LinkedListObject_OutPool.Contains(@object))
                     {
                         m_LinkedListObject_OutPool.Remove(@object);
                         m_LinkedListObject_InPool.AddLast(@object);
@@ -89,30 +121,39 @@ namespace BlackFireFramework
                 {
                     m_LinkedListObject_OutPool.Foreach(current=> {
 
+                       
                         if (null!=current.Value)
                         {
-                            current.Value.Recycle();
+                            CheckObjectLockStateOrLog(current.Value);
+                            if (!current.Value.Lock)
+                            {
+                                current.Value.Recycle();
+                                m_LinkedListObject_OutPool.Remove(current);
+                                m_LinkedListObject_InPool.AddLast(current.Value);
+                            }
                         }
-                        m_LinkedListObject_InPool.AddLast(current.Value);
 
-                    });
-                    m_LinkedListObject_OutPool.Clear();
+                        
+
+                    });                  
                 }
             }
 
-
             public override void Release(ObjectBase @object)
             {
+                CheckObjectLockStateOrLog(@object);
+
+                CheckObjectBaseArgsOrThrow(@object);
                 lock (m_Lock)
                 {
-                    if (m_LinkedListObject_InPool.Contains(@object))
+                    if (m_LinkedListObject_InPool.Contains(@object) && !@object.Lock)
                     {
                         m_LinkedListObject_InPool.Remove(@object);
                         @object.Release();
                         return;
                     }
 
-                    if (m_LinkedListObject_OutPool.Contains(@object))
+                    if (m_LinkedListObject_OutPool.Contains(@object) && !@object.Lock)
                     {
                         m_LinkedListObject_OutPool.Remove(@object);
                         @object.Release();
@@ -134,14 +175,17 @@ namespace BlackFireFramework
                 {
                     m_LinkedListObject_InPool.Foreach(current => {
 
-                        if (null != current.Value)
+                        if (null != current.Value )
                         {
-                            current.Value.Release();
+                            CheckObjectLockStateOrLog(current.Value);
+                            if (!current.Value.Lock)
+                            {
+                                current.Value.Release();
+                                m_LinkedListObject_InPool.Remove(current);
+                            }
                         }
 
                     });
-
-                    m_LinkedListObject_InPool.Clear();
                 }
             }
 
@@ -150,42 +194,47 @@ namespace BlackFireFramework
                 lock (m_Lock)
                 {
                     m_LinkedListObject_OutPool.Foreach(current => {
-
                         if (null != current.Value)
                         {
-                            current.Value.Release();
+                            CheckObjectLockStateOrLog(current.Value);
+                            if (!current.Value.Lock)
+                            {
+                                current.Value.Release();
+                                m_LinkedListObject_OutPool.Remove(current);
+                            }
                         }
-
                     });
-
-                    m_LinkedListObject_OutPool.Clear();
-
                 }
             }
 
             public override ObjectBase Spawn(Type objectType)
             {
+                CheckObjectTypeOrThrow(objectType);
                 var target = FindTypeInPool(objectType);
-                if (null != target)
+                if (null != target && !target.Lock)
                 {
                     return target;
                 }
                 else
                 {
+                    CheckCapacityOrThrow();
+                    ObjectBase ins = null;
                     var callback =  PoolFactoryBinder.GetBinding(objectType);
                     if (null != callback)
                     {
-                        var ins = callback.Invoke();
-                        m_LinkedListObject_OutPool.AddLast(ins);
-                        ins.SetPoolOwner(this);
-                        return ins;
+                        ins = callback.Invoke();
                     }
                     else
                     {
-                        throw new Exception(string.Format("没有获取到类型'{0}'的委托绑定！",objectType));
+                        //throw new Exception(string.Format("没有获取到类型'{0}'的委托绑定！",objectType));
+                        ins = Utility.Reflection.New(objectType) as ObjectBase;
                     }
+                    m_LinkedListObject_OutPool.AddLast(ins);
+                    ins.SetPoolOwnersName(Name);
+                    return ins;
                 }
             }
+
 
 
 
@@ -218,7 +267,62 @@ namespace BlackFireFramework
                 return null;
             }
 
+            private void CheckCapacityOrThrow()
+            {
+                if (Count>=Capacity)
+                {
+                    throw new Exception(string.Format("对象池'{0}'内可复用对象为0，当尝试用工厂生产对象时已超过对象池的容量上限{1},请回收或释放后再操作!", Name,Capacity));
+                }
+            }
 
+            private void CheckObjectTypeOrThrow(Type objectType)
+            {
+                if (!typeof(ObjectBase).IsAssignableFrom(objectType))
+                    throw new Exception(string.Format("The {0} is not the implementation type for the ObjectBase.", objectType));
+            }
+
+            private void CheckObjectBaseArgsOrThrow(ObjectBase @object)
+            {
+                if (null == @object) throw new ArgumentNullException("参数@object不能为空!");
+            }
+
+            private void CheckObjectLockStateOrLog(ObjectBase @object)
+            {
+                if (@object.Lock)
+                {
+                    Log.Warn(string.Format("对象'{0}'已被加锁!",@object),true);
+                    //throw new Exception(string.Format("对象'{0}'已被加锁!", @object));
+                }
+            }
+
+            protected override void OnDestroy()
+            {
+                lock (m_Lock)
+                {
+                    m_LinkedListObject_InPool.Foreach(current => {
+
+                        if (null != current.Value)
+                        {
+                            current.Value.Release();
+                            m_LinkedListObject_InPool.Remove(current);
+                        }
+
+                    });
+
+                    m_LinkedListObject_OutPool.Foreach(current => {
+
+                        if (null != current.Value)
+                        {
+                            current.Value.Release();
+                            m_LinkedListObject_OutPool.Remove(current);
+                        }
+
+                    });
+
+                    m_LinkedListObject_InPool.Clear();
+                    m_LinkedListObject_OutPool.Clear();
+                }
+            }
         }
     }
 }

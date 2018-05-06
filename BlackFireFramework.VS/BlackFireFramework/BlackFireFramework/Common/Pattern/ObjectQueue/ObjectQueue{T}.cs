@@ -14,6 +14,13 @@ namespace BlackFireFramework
     /// <typeparam name="T">池对象类型。</typeparam>
     public class ObjectQueue<T>
     {
+        /// <summary>
+        /// 构造方法。
+        /// </summary>
+        public ObjectQueue()
+        {
+            m_ObjectQueueFactoryCallback = ()=>Utility.Reflection.New<T>();
+        }
   
         /// <summary>
         /// 构造方法。
@@ -31,6 +38,11 @@ namespace BlackFireFramework
         private static Queue<T> m_ObjectQueue = new Queue<T>();
 
         private static object s_Lock = new object();
+
+        /// <summary>
+        /// 能否产出。
+        /// </summary>
+        public bool CanSpawn { get { return 0 < m_ObjectQueue.Count; } }
 
         /// <summary>
         /// 从池子或者设置的回调产出对象。

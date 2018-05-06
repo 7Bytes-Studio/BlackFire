@@ -71,6 +71,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RecyclableEventArgsTest.cs" />
+    <Compile Include="ObjectPoolTest.cs" />
     <Compile Include="HttpTest.cs" />
     <Compile Include="JobTest.cs" />
     <Compile Include="LogTest.cs" />

@@ -21,9 +21,9 @@ namespace BlackFireFramework
             public bool Lock { get; private set; }
 
             /// <summary>
-            /// 对象所属对象池。
+            /// 对象所属对象池名字。
             /// </summary>
-            public ObjectPool.PoolBase Pool { get; private set; }
+            public string PoolName { get; private set; }
 
             #endregion
 
@@ -32,9 +32,9 @@ namespace BlackFireFramework
                 Lock = lockState;
                 OnLock();
             }
-            internal void SetPoolOwner(PoolBase pool)
+            internal void SetPoolOwnersName(string poolName)
             {
-                Pool = pool;
+                PoolName = poolName;
             }
 
             internal virtual void Spawn()

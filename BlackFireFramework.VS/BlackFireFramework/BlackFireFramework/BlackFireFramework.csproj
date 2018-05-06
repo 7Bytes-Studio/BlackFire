@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
+    <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
     <Compile Include="Common\Log\Log.LogFile.partial.cs" />
+    <Compile Include="Common\Utility\Utility.Type.cs" />
     <Compile Include="Common\Utility\Utility.Http.cs" />
     <Compile Include="Core\Event\Event.Subscriber.partial.cs" />
     <Compile Include="Core\Event\Event.Publisher.partial.cs" />
     <Compile Include="Core\Event\Event.EventTopic.partial.cs" />
     <Compile Include="Core\Event\Event.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.cs" />
-    <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue.cs" />
+    <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue{T}.cs" />
     <Compile Include="Core\Job\Job.delegate.partial.cs" />
     <Compile Include="Core\Job\Job.LifeCircle.partial.cs" />
     <Compile Include="Core\Job\Job.State.partial.cs" />
@@ -60,7 +63,6 @@
     <Compile Include="Core\ObjectPool\ObjectPool.Pool.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.PoolFactoryBinder.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.delegate.partial.cs" />
-    <Compile Include="Core\ObjectPool\ObjectPool.Tpl.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.cs" />
     <Compile Include="Framework\Framework.State.cs" />
     <Compile Include="Framework\Framework.Time.partial.cs" />

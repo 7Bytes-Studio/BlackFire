@@ -18,9 +18,11 @@ namespace BlackFireFramework.Test
         [TestMethod]
         public void TestMethod_Http_Post()
         {
-            var result = Utility.Http.Post("http://0x69h.com/wp-admin/admin-ajax.php", "action=addLike&um_id=82&um_action=ding");
+            //此项目为了与外界解耦，不适合在发布的项目源码的时候拿第三方网站进行测试，请自行粘贴自己喜欢的网站来进行POST测试。
 
-            Debug.WriteLine(result);
+            //var result = Utility.Http.Post("http://0x69h.com/wp-admin/admin-ajax.php", "action=addLike&um_id=82&um_action=ding");
+
+            //Debug.WriteLine(result);
         }
 
     }
