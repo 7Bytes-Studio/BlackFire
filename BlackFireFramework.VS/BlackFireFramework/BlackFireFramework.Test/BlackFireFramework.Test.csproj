@@ -76,7 +76,7 @@
     <Compile Include="HttpTest.cs" />
     <Compile Include="JobTest.cs" />
     <Compile Include="LogTest.cs" />
-    <Compile Include="TestAssemblyTest.cs" />
+    <Compile Include="FrameworkTest.cs" />
     <Compile Include="EventTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +87,10 @@
     <ProjectReference Include="..\BlackFireFramework.TestAssembly\BlackFireFramework.TestAssembly.csproj">
       <Project>{089913ac-e680-492e-91fc-1787b09ecea9}</Project>
       <Name>BlackFireFramework.TestAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlackFireFramework.Unity\BlackFireFramework.Unity.csproj">
+      <Project>{5b0e0660-1004-4e0a-8f52-bd53d8920737}</Project>
+      <Name>BlackFireFramework.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlackFireFramework\BlackFireFramework.csproj">
       <Project>{b0720c61-5e4b-4c27-a270-4c516810120c}</Project>

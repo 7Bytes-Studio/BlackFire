@@ -1,0 +1,33 @@
+﻿//----------------------------------------------------
+//Copyright © 2008-2018 Mr-Alan. All rights reserved.
+//Mail: Mr.Alan.China@[outlook|gmail].com
+//Website: www.0x69h.com
+//----------------------------------------------------
+
+namespace BlackFireFramework.Unity
+{
+    internal sealed class ProcessModule : ModuleBase, IProcessModule
+    {
+        private ProcessBase m_BootProcess = null;
+
+        public void AddProcess(ProcessBase process)
+        {
+            CheckWorkingStateOrThrow();
+            if (null== m_BootProcess)
+            {
+                m_BootProcess = process;
+            }
+            AddChildNode(process);
+        }
+
+        public void StartProcess()
+        {
+            CheckWorkingStateOrThrow();
+            if (null != m_BootProcess)
+            {
+                Event.Fire(GlobalEvent.ChangeProcess, this, new ChangeProcessEventArgs() { FromProcessType = null, ToProcessType = m_BootProcess.GetType() });
+            }
+        }
+
+    }
+}

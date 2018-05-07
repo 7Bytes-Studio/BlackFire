@@ -27,7 +27,10 @@ namespace BlackFireFramework.Editor
 
         public static string PackagePath { get { return Application.dataPath + "/BlackFireFramework.Custom/Packages/"; } }
 
-      
+        public static string FrameworkCustomPath { get { return Application.dataPath + "/BlackFireFramework.Custom/"; } }
+        public static string FrameworkCustomRelativePath { get { return "Assets/BlackFireFramework.Custom/"; } }
+
+
 
         #endregion
 
@@ -44,28 +47,20 @@ namespace BlackFireFramework.Editor
             MakeUserTempFolder();
         }
 
-
-        private static void ExistsOrCreateFolder(string path)
-        {
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
-        }
         private static void MakeUserCustomFolder()
         {
             var results = AssetDatabase.FindAssets("BlackFireFramework.Custom");
             if (0 == results.Length)
             {
-                ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom");
-                ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom/Packages");
+                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom");
+                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom/Packages");
                 AssetDatabase.Refresh();
             }
         }
         private static void MakeUserTempFolder()
         {
-            ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp");
-            ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp/Packages");
+            Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp");
+            Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp/Packages");
         }
 
 

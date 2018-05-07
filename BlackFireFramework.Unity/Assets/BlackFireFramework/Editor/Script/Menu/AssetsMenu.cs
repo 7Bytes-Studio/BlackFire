@@ -15,7 +15,7 @@ namespace BlackFireFramework.Editor
 {
     public static class AssetsMenu 
     {
-        [MenuItem("Assets/BlackFire/EditorWindowScript",false,0)]
+        [MenuItem("Assets/Create/BlackFire/EditorWindowScript",false,0)]
         public static void OnMenuItemClick()
         {
            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,

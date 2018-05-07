@@ -14,12 +14,21 @@ namespace BlackFireFramework.Editor
 
         public const string Window = "Window/";
 
+
+        [MenuItem(TopMenuName + "Config")]
+        private static void OnMenuItemClickConfig()
+        {
+            var window = EditorWindow.GetWindow(typeof(ConfigWindow), true, "Config") as ConfigWindow;
+            window.position = new UnityEngine.Rect((1920f - 520f) / 2, (1080f - 136f) / 2, 520f, 136f);
+        }
+
         [MenuItem(TopMenuName+"Package")]
         private static void OnMenuItemClick_Package()
         {
            var window = EditorWindow.GetWindow(typeof(PackageWindow), false, "Package") as PackageWindow;
            window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,730f,650f);
         }
+
 
     }
 }

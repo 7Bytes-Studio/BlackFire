@@ -28,7 +28,7 @@ namespace BlackFireFramework.Editor
 
         private List<Item> m_SearchItemList = new List<Item>();
 
-        private string m_ServerAPIUrl = "http://0x69h.com/packages/api.json";
+        private string m_ServerAPIUrl = string.Empty;
 
         private string m_PackageFolderPath; //异步要用到，必需主线程先获取。
 
@@ -38,6 +38,8 @@ namespace BlackFireFramework.Editor
 
         private string m_SearchStr = string.Empty;
 
+        private BlackFireFrameworkConfig m_Configuration = null;
+
         #endregion
 
         #region Behaviour
@@ -46,6 +48,8 @@ namespace BlackFireFramework.Editor
         {
             m_PackageFolderPath = BlackFireEditor.PackagePath;
             RequestServerAPI();
+            m_Configuration = Resources.Load<BlackFireFrameworkConfig>("BlackFireFrameworkConfig");
+            m_ServerAPIUrl = m_Configuration.PackageServerAPIUrl;
         }
 
         private void Update()

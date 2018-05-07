@@ -5,30 +5,40 @@
 //----------------------------------------------------
 
 using BlackFireFramework;
+using BlackFireFramework.Unity;
 using UnityEngine;
 
 /// <summary>
 /// BlackFireFramework主要程序入口类。
 /// </summary>
-public sealed partial class BlackFire : MonoBehaviour 
+public sealed partial class BlackFire : FakeSingleton<BlackFire>
 {
+    #region LifeCircle
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Log.SetLogFileMode("D://BlackFireLog.txt",1000);
         Log.SetLogCallback(LogCallback);
         Framework.Born(this,Time.unscaledDeltaTime,Time.deltaTime);
+        ExportedAssemblyInit();
+        ModuleManageInit();
     }
 
-    private void Update()
+    protected override void Update()
     {
         Framework.Act(this, Time.unscaledDeltaTime, Time.deltaTime);
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        ExportedAssemblyDestroy();
         Framework.Die(this, Time.unscaledDeltaTime, Time.deltaTime);
     }
+
+    #endregion
+
+    #region Log
 
 
 
@@ -39,6 +49,47 @@ public sealed partial class BlackFire : MonoBehaviour
         Log.EnLogFileQueue(logMessage);
     }
 
+
+
+    #endregion
+
+    #region ExportedAssembly
+
+    private string[] m_ExtendedAssemblies = new string[] { "BlackFireFramework.Unity" };
+    private IExportedAssemblyManager m_ExportedAssemblyManager = null;
+
+    private void ExportedAssemblyInit()
+    {
+        m_ExportedAssemblyManager = (IExportedAssemblyManager)EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager));
+        for (int i = 0; i < m_ExtendedAssemblies.Length; i++)
+        {
+            m_ExportedAssemblyManager.LoadExportedAssembly(m_ExtendedAssemblies[i]);
+        }
+    }
+
+    private void ExportedAssemblyDestroy()
+    {
+        for (int i = 0; i < m_ExtendedAssemblies.Length; i++)
+        {
+            m_ExportedAssemblyManager.UnLoadExportAssembly(m_ExtendedAssemblies[i]);
+        }
+    }
+
+
+    #endregion
+
+    #region Module
+
+    private IModuleManager m_ModuleManager = null;
+
+    public static IModuleManager ModuleManager { get { return Instance.m_ModuleManager; } }
+
+    private void ModuleManageInit()
+    {
+        m_ModuleManager = (IModuleManager)EntityTree.GetEntityInChildren(typeof(IModuleManager));
+    }
+
+    #endregion
 
 }
 
