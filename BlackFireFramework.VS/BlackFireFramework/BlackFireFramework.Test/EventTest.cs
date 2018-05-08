@@ -25,6 +25,13 @@ namespace BlackFireFramework.Test
 
 
             Event.Fire("Test", "Sender:Alan", EventArgs.Empty);
+
+            Event.On("Fuck", "Listener:BeFucker", (sender, args) => { Debug.WriteLine("BeFucker: Hello world!"); Event.Off("Fuck", "Listener:BeFucker"); });
+
+            Event.Fire("Fuck", "Sender:Fucker", EventArgs.Empty);
+
+            Event.Fire("Fuck", "Sender:Fucker", EventArgs.Empty);
+
         }
     }
 }

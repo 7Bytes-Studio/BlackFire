@@ -83,7 +83,7 @@
     <Compile Include="Framework\Framework.Info.partial.cs" />
     <Compile Include="Framework\Framework.LifeCircle.partial.cs" />
     <Compile Include="Framework\Framework.cs" />
-    <Compile Include="Common\Extension\LinkedListExtension.cs" />
+    <Compile Include="Common\Extension\LinkedList.Extension.cs" />
     <Compile Include="Common\Utility\Utility.cs" />
     <Compile Include="Core\Log\Log.cs" />
     <Compile Include="Core\Log\LogCallback.delegate.cs" />
@@ -102,6 +102,8 @@
   <ItemGroup>
     <Compile Include="Core\Log\Log.LifeCircle.partial.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Common\Extension\String.Extension.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

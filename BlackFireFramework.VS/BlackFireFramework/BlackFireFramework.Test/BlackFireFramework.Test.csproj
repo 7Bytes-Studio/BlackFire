@@ -71,6 +71,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StringExtensionTest.cs" />
     <Compile Include="RecyclableEventArgsTest.cs" />
     <Compile Include="ObjectPoolTest.cs" />
     <Compile Include="HttpTest.cs" />
