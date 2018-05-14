@@ -5,16 +5,15 @@
 //----------------------------------------------------
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework
 {
+    using ILRuntime.CLR.TypeSystem;
     using ILRuntime.Runtime.Enviorment;
-    using System.IO;
+    using ILRuntime.Runtime.Intepreter;
 
     public sealed class ILRuntimeManager : MonoBehaviour 
 	{
@@ -28,83 +27,57 @@ namespace BlackFireFramework
             m_Appdomain = new AppDomain();
         }
 
+        #region 基础方法
 
-        public void LoadHotFixAssembly(IHotFixAssemblyLoader assemblyLoader,string assemblyPath, Action loadCompleteCallback)
+        public void LoadHotFixAssembly(IHotFixAssemblyLoader assemblyLoader, Action loadCompleteCallback)
         {
 
-            StartCoroutine(assemblyLoader.LoadHotFixAssembly(m_Appdomain,assemblyPath,loadCompleteCallback));
+            StartCoroutine(assemblyLoader.LoadHotFixAssembly(m_Appdomain,loadCompleteCallback));
 
         }
 
-       
-
-
-
-
-
-
-
-
-
-
-        public interface IHotFixAssemblyLoader
+        public object New(string typeName, params object[] ctorArgs)
         {
+            return m_Appdomain.Instantiate(string.Format("{0}.{1}", HotfixAssemblyName, typeName), ctorArgs);
+        }
 
-            IEnumerator LoadHotFixAssembly(AppDomain appDomain,string assemblyPath,Action loadCompleteCallback);
+        public object InvokeMethod(object iltIns,string methodName, params object[] args)
+        {
+            return m_Appdomain.Invoke( (iltIns as ILTypeInstance).Type.ToString() , methodName, iltIns, args);
+        }
 
+        public object InvokeMethod(string typeName, string methodName, params object[] args)
+        {
+            return m_Appdomain.Invoke(string.Format("{0}.{1}", HotfixAssemblyName, typeName), methodName, null, args);
         }
 
 
-        internal sealed class HotFixAssemblyLoader_FromDllFile : IHotFixAssemblyLoader
+        public object InvokeGenericMethod(Type[] genericTypes,object iltIns, string methodName, params object[] args)
         {
-            public IEnumerator LoadHotFixAssembly(AppDomain appDomain,string assemblyPath,Action loadCompleteCallback)
+            IType[] genericArguments = new IType[genericTypes.Length];
+            for (int i = 0; i < genericTypes.Length; i++)
             {
-#if UNITY_ANDROID
-        WWW www = new WWW(assemblyPath);
-#else
-                WWW www = new WWW("file:///" + assemblyPath);
-#endif
-                while (!www.isDone)
-                    yield return null;
-                if (!string.IsNullOrEmpty(www.error))
-                    UnityEngine.Debug.LogError(www.error);
-                byte[] dll = www.bytes;
-                www.Dispose();
-
-#if UNITY_EDITOR
-
-                var pdbPath = assemblyPath.Replace("-4:|.pdb");
-
-#if UNITY_ANDROID
-        www = new WWW(pdbPath);
-#else
-                www = new WWW("file:///" + pdbPath);
-#endif
-                while (!www.isDone)
-                    yield return null;
-                if (!string.IsNullOrEmpty(www.error))
-                    UnityEngine.Debug.LogError(www.error);
-                byte[] pdb = www.bytes;
-
-#endif
-
-                using (System.IO.MemoryStream fs = new MemoryStream(dll))
-                {
-#if UNITY_EDITOR
-                    using (System.IO.MemoryStream p = new MemoryStream(pdb))
-                    {
-                        appDomain.LoadAssembly(fs, p, new Mono.Cecil.Pdb.PdbReaderProvider());
-                    }
-#else
-                    appDomain.LoadAssembly(fs, null, new Mono.Cecil.Pdb.PdbReaderProvider());
-#endif
-                    if (null!=loadCompleteCallback)
-                    {
-                        loadCompleteCallback.Invoke();
-                    }
-                }
+                genericArguments[i] = m_Appdomain.GetType(genericTypes[i]);
             }
+
+           return m_Appdomain.InvokeGenericMethod((iltIns as ILTypeInstance).Type.ToString(), methodName, genericArguments, iltIns, args);
         }
+
+        public object InvokeGenericMethod(Type[] genericTypes, string typeName, string methodName, params object[] args)
+        {
+            IType[] genericArguments = new IType[genericTypes.Length];
+            for (int i = 0; i < genericTypes.Length; i++)
+            {
+                genericArguments[i] = m_Appdomain.GetType(genericTypes[i]);
+            }
+
+            return m_Appdomain.InvokeGenericMethod(string.Format("{0}.{1}", HotfixAssemblyName, typeName), methodName, genericArguments,null, args);
+        }
+
+
+
+
+        #endregion
 
 
 
