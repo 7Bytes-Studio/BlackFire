@@ -15,10 +15,10 @@ namespace BlackFireFramework
 	public sealed class ILRuntimeDemo : MonoBehaviour 
 	{
         [SerializeField] private ILRuntimeManager m_ILRuntimeManager = null;
-        private void Start()
+        private IEnumerator Start()
         {
             m_ILRuntimeManager.HotfixAssemblyName = "BlackFireFramework.Hotfix";
-            m_ILRuntimeManager.LoadHotFixAssembly(new HotFixAssemblyLoader_FromDllFile(Application.streamingAssetsPath + "/" + m_ILRuntimeManager.HotfixAssemblyName + ".dll"),()=> {
+            m_ILRuntimeManager.LoadHotfixAssembly(new HotFixAssemblyLoader_FromDllFile(Application.streamingAssetsPath + "/" + m_ILRuntimeManager.HotfixAssemblyName + ".dll"),()=> {
 
 
                 Debug.Log(m_ILRuntimeManager.HotfixAssemblyName+" 加载成功!");
@@ -46,10 +46,25 @@ namespace BlackFireFramework
                 Debug.Log(res3);
                 Debug.Log(res4);
 
+
+                
+
             });
+
+
+            BlackFireFramework.Event.On("TestDelegate","Alex:Listener",(sender,args)=> {
+
+                Debug.Log(sender);
+                Debug.Log(args);
+
+            });
+
+            yield return new WaitForSeconds(2f);
+
+            m_ILRuntimeManager.InvokeMethod("StaticClass", "TestStartEnumerator1");
+            yield return new WaitForSeconds(5f);
+            m_ILRuntimeManager.InvokeMethod("StaticClass", "TestStartEnumerator2");
         }
-
-
 
 
 
