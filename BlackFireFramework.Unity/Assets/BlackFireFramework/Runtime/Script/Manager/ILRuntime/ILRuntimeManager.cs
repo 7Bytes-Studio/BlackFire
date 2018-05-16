@@ -41,7 +41,7 @@ namespace BlackFireFramework
         public AppDomain Appdomain { get { return m_Appdomain; } }
 
         [SerializeField]private string m_HotfixAssemblyName="Your hotfix assembly!";
-        public string HotfixAssemblyName { get { return m_HotfixAssemblyName; } }
+        public string HotfixAssemblyName { get { return m_HotfixAssemblyName; } set { m_HotfixAssemblyName = value;  } }
 
         private static ILRuntimeManager s_Instance;
 
