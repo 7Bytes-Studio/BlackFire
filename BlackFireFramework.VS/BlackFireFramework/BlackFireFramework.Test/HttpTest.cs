@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
+using System.Threading;
 
 namespace BlackFireFramework.Test
 {
@@ -24,6 +25,29 @@ namespace BlackFireFramework.Test
             //var result = Utility.Http.Post("http://0x69h.com/wp-admin/admin-ajax.php", "action=addLike&um_id=82&um_action=ding");
 
             //Debug.WriteLine(result);
+        }
+
+        [TestMethod]
+        public void TestMethod_Http_Download()
+        {
+            //Thread httpDownloadThread = new Thread(() =>
+            //{
+
+            //    Utility.Http.DownLoad(new Utility.Http.HttpDownloadInfo(
+            //      url: "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/skin/820.jpg?2",
+            //      savePath: "D:\\image.jpg",
+            //      tempFileExtension: "tmp",
+            //      downloadBufferUnit: 1024,
+            //      onDownloadSuccess: (sender, args) => { Debug.WriteLine("下载成功。"); },
+            //      onDownloadFailure: (sender, args) => { Debug.WriteLine("下载失败。"); },
+            //      onDownloadProgress: (sender, args) => { Debug.WriteLine(args.DownloadProgress); }
+            //     ));
+
+
+            //});
+
+            //httpDownloadThread.Start();
+
         }
 
     }

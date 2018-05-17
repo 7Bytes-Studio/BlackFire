@@ -44,7 +44,7 @@
     <Compile Include="Core\EntityTree\EntityTree.cs" />
     <Compile Include="Core\Log\Log.LogFile.partial.cs" />
     <Compile Include="Common\Pattern\Singleton\Singleton{T}.cs" />
-    <Compile Include="Common\Utility\Utility.Type.cs" />
+    <Compile Include="Common\Utility\Utility.Reflection.cs" />
     <Compile Include="Common\Utility\Utility.Http.cs" />
     <Compile Include="Core\EntityTree\EntityTree.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.Subscriber.partial.cs" />

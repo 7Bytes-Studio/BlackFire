@@ -246,11 +246,16 @@
     <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessOne.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessTwo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Ugui\DoubleClickButtonDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework.Demo\Websocket\WebsocketDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Pattern\FakeSingleton.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Ugui\DoubleClickButton.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\BlackFireUtility.IO.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\DebuggerLogGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\IDebuggerModuleGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\ILRuntime\Adapter\CoroutineAdapter.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\ILRuntime\HotFixAssemblyLoader_FromDllFile.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\ILRuntime\IHotFixAssemblyLoader.cs" />

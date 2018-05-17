@@ -39,7 +39,6 @@ namespace BlackFireFramework
 
             #endregion
 
-
             #region Activator
 
             /// <summary>
@@ -65,8 +64,6 @@ namespace BlackFireFramework
 
 
             #endregion
-
-
 
         }
     }
