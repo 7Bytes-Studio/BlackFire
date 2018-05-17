@@ -20,83 +20,27 @@ namespace BlackFireFramework
 	{
 
         [SerializeField][Range(1f,3f)] private float m_WindowScale=1f;
+        public float WindowScale { get { return m_WindowScale; } set { m_WindowScale = value; } }
 
         private bool m_Minimize = true;
 
         private string m_SelectedModuleName = string.Empty;
 
-        private Dictionary<string, Action<DebuggerManager>> m_DrawModuleCallbackDic = new Dictionary<string, Action<DebuggerManager>>();
+        private Dictionary<string, Action> m_DrawModuleCallbackDic = new Dictionary<string, Action>();
+
+        private List<IDebuggerModuleGUI> m_DebuggerModuleGUIList = new List<IDebuggerModuleGUI>();
 
 
-        private void ReflectModuleGUIImpl()
+
+
+
+        private void Awake()
         {
-            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp",typeof(IDebuggerModuleGUI));
+            InitDebuggerModuleGUI();
 
-            for (int i = 0; i < types.Length; i++)
-            {
-                var ins = Utility.Reflection.New(types[i]);
-                if (null!=ins)
-                {
-                    RegisterModuleGUI(ins as IDebuggerModuleGUI);
-                }
-            }
-
-        }
+            #region Test
 
 
-
-        private void Start()
-        {
-            ReflectModuleGUIImpl();
-
-            //RegisterModuleGUI("Log",()=> {
-
-            //    BlackFireGUI.BoxHorizontalLayout(()=> {
-
-            //        GUILayout.Toggle(true, LogLevel.Trace.ToString());
-            //        GUILayout.Toggle(true, LogLevel.Debug.ToString());
-            //        GUILayout.Toggle(true, LogLevel.Info.ToString());
-            //        GUILayout.Toggle(true, LogLevel.Warn.ToString());
-            //        GUILayout.Toggle(true, LogLevel.Error.ToString());
-            //        GUILayout.Toggle(true, LogLevel.Fatal.ToString());
-
-            //    });
-
-            //    BlackFireGUI.BoxHorizontalLayout(() => {
-            //        BlackFireGUI.ScrollView(101, id => {
-
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-            //            GUILayout.Toggle(false, " Info:这里是一些调试信息 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。");
-
-            //        });
-
-            //    });
-
-            //    BlackFireGUI.BoxHorizontalLayout(() => {
-
-            //        BlackFireGUI.ScrollView(102, id => {
-
-            //            GUILayout.Label("11111111111111111111111111112222222222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222222222222222222222222222222222222");
-            //            GUILayout.Label("11111111111111111111111111112222222222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222221111111111111111111222222222222222222222222222222222222222");
-
-            //        }, GUILayout.MinHeight(50));
-
-            //    });
-
-            //});
 
             //RegisterModuleGUI("Process", () => {
 
@@ -146,40 +90,7 @@ namespace BlackFireFramework
 
             //});
 
-            //string settingText = string.Empty;
-            //RegisterModuleGUI("Setting", () => {
 
-            //    BlackFireGUI.HorizontalLayout(() => {
-
-            //        BlackFireGUI.BoxHorizontalLayout(()=> {
-
-            //            GUILayout.Label("Window Scale",GUILayout.Width(100));
-
-            //            settingText = GUILayout.TextField(settingText);
-            //            float scale = 1f;
-            //            if (float.TryParse(settingText,out scale))
-            //            {
-            //                if (3f >= scale && 1f <= scale)
-            //                {
-            //                    m_WindowScale = scale;
-            //                }
-            //            }
-
-            //            if (GUILayout.Button("-"))
-            //            {
-            //                m_WindowScale -= 0.1f;
-            //            }
-
-            //            if (GUILayout.Button("+"))
-            //            {
-            //                m_WindowScale += 0.1f;
-            //            }
-
-            //        });
-
-            //    });
-
-            //});
 
             //RegisterModuleGUI("Framework", () => {
 
@@ -193,6 +104,8 @@ namespace BlackFireFramework
 
             //});
 
+            #endregion
+
         }
 
 
@@ -200,14 +113,19 @@ namespace BlackFireFramework
         {
             if (m_Minimize)
             {
-                DrawMiniDebugger("DEBUGGER", "<color=green>FPS:100</color>");
+                DrawMiniDebugger("<b>DEBUGGER</b>", "<color=green>FPS:100</color>");
             }
             else
             {
-                DrawFullDebugger("BLACKFIRE FRAMEWORK DEBUGGER", 640f * m_WindowScale, 360f * m_WindowScale);
+                DrawFullDebugger("<b>BLACKFIRE FRAMEWORK DEBUGGER</b>", 640f * m_WindowScale, 360f * m_WindowScale);
             }
         }
 
+
+        private void OnDestroy()
+        {
+            DestroyDebuggerModuleGUI();
+        }
 
 
         private void DrawMiniDebugger(string title,string content)
@@ -283,7 +201,7 @@ namespace BlackFireFramework
 
                                         if (!string.IsNullOrEmpty(m_SelectedModuleName))
                                         {
-                                            m_DrawModuleCallbackDic[m_SelectedModuleName].Invoke(this);
+                                            m_DrawModuleCallbackDic[m_SelectedModuleName].Invoke();
                                         }
 
                                     });
@@ -300,6 +218,36 @@ namespace BlackFireFramework
                 });
 
             });
+        }
+
+        private void InitDebuggerModuleGUI()
+        {
+            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerModuleGUI));
+
+            for (int i = 0; i < types.Length; i++)
+            {
+                IDebuggerModuleGUI ins = (IDebuggerModuleGUI)Utility.Reflection.New(types[i]);
+                m_DebuggerModuleGUIList.Add(ins);
+            }
+
+            m_DebuggerModuleGUIList.Sort((x,y)=>x.Priority-y.Priority);
+
+            for (int i = 0; i < m_DebuggerModuleGUIList.Count; i++)
+            {
+                if (null != m_DebuggerModuleGUIList[i])
+                {
+                    m_DebuggerModuleGUIList[i].OnInit(this);
+                    RegisterModuleGUI(m_DebuggerModuleGUIList[i]);
+                }
+            }
+        }
+
+        private void DestroyDebuggerModuleGUI()
+        {
+            for (int i = 0; i < m_DebuggerModuleGUIList.Count; i++)
+            {
+                m_DebuggerModuleGUIList[i].OnDestroy();
+            }
         }
 
         public void RegisterModuleGUI(IDebuggerModuleGUI moduleGUIImpl)

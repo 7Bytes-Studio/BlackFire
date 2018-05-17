@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
+    <Compile Include="Common\Utility\Utility.Enum.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
     <Compile Include="Core\Log\Log.LogFile.partial.cs" />
     <Compile Include="Common\Pattern\Singleton\Singleton{T}.cs" />

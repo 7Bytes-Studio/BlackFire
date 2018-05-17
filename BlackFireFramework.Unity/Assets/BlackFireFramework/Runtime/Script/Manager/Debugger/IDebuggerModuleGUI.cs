@@ -6,24 +6,44 @@
 
 
 
+
 namespace BlackFireFramework
 {
     /// <summary>
-    /// 模块的GUI渲染接口。
+    /// Debugger模块的GUI渲染接口。
     /// </summary>
-    public interface IDebuggerModuleGUI 
-	{
-          
+    public interface IDebuggerModuleGUI
+    {
         /// <summary>
-        /// 模块的名字。
+        /// 在调试器上被绘制的优先级。
+        /// </summary>
+        int Priority { get; }
+
+        /// <summary>
+        /// Debugger模块的名字。
         /// </summary>
         string ModuleName { get; }
 
         /// <summary>
-        /// 模块的GUI被绘制事件。
+        /// Debugger模块初始化事件。
+        /// </summary>
+        /// <param name="debuggerManager"></param>
+        void OnInit(DebuggerManager debuggerManager);
+
+        /// <summary>
+        /// Debugger模块的GUI被绘制事件。
         /// </summary>
         /// <param name="debuggerManager">调试器管家。</param>
-        void OnModuleGUI(DebuggerManager debuggerManager);
+        void OnModuleGUI();
 
-	}
+        /// <summary>
+        /// Debugger模块被销毁事件。
+        /// </summary>
+        void OnDestroy();
+
+    }
+
+
+
+
 }
