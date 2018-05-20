@@ -2,6 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.Threading;
+using System.Collections.Generic;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace BlackFireFramework.Test
 {
@@ -16,15 +19,57 @@ namespace BlackFireFramework.Test
 
             //Debug.WriteLine(json);
         }
+        #region Json
+
+
+
+        [System.Serializable]
+        public sealed class Json_Instruction
+        {
+            public string instruction; //FireEvent,RemoveEventTopic and so on...
+
+            public Json_EventTopic eventTopic;
+        }
+        [System.Serializable]
+        public sealed class Json_EventTopic
+        {
+            public string topic;
+
+            public string sender;
+
+            public List<Json_Var> args;
+        }
+
+        [System.Serializable]
+        public sealed class Json_Var
+        {
+            public string type;
+            public string value;
+        }
+
+        #endregion
 
         [TestMethod]
         public void TestMethod_Http_Post()
         {
             //此项目为了与外界解耦，不适合在发布的项目源码的时候拿第三方网站进行测试，请自行粘贴自己喜欢的网站来进行POST测试。
 
-            //var result = Utility.Http.Post("http://0x69h.com/wp-admin/admin-ajax.php", "action=addLike&um_id=82&um_action=ding");
+            var jsonObject = new Json_Instruction()
+            {
+                instruction = "FireEvent",
+                eventTopic = new Json_EventTopic()
+                {
+                    topic = "TestTopic",
+                    sender = "Web",
+                    args = new List<Json_Var>()
+                    {
+                      new Json_Var(){ type = "int", value = "66666666666" }
+                    }
+                } };
 
-            //Debug.WriteLine(result);
+            var result = Utility.Http.Post("http://localhost:666", JsonConvert.SerializeObject(jsonObject));
+
+            Debug.WriteLine(result);
         }
 
         [TestMethod]

@@ -43,12 +43,11 @@ namespace BlackFireFramework
         }
 
 
-
         public void OnModuleGUI()
         {
 
 
-                BlackFireGUI.HorizontalLayout(() =>
+                BlackFireGUI.VerticalLayout(() =>
                 {
 
                     BlackFireGUI.BoxHorizontalLayout(() =>
@@ -75,6 +74,13 @@ namespace BlackFireFramework
                         {
                             m_DebuggerManager.WindowScale += 0.1f;
                         }
+
+                    });
+
+
+                    BlackFireGUI.BoxHorizontalLayout(()=> {
+
+                        Application.runInBackground = GUILayout.Toggle(Application.runInBackground, "RunInBackground");
 
                     });
 

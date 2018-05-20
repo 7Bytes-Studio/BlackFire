@@ -4,6 +4,10 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+
 namespace BlackFireFramework
 {
     public static class StringExtension
@@ -59,6 +63,7 @@ namespace BlackFireFramework
                 return new string(charArr);
             }
         }
+
 
 
         public static string Replace(this string str,string replaceOp)
@@ -124,6 +129,40 @@ namespace BlackFireFramework
                 return new string(strArr);
             }
         }
+
+
+
+
+        public static string Slice(this string str, char sliceLChar,char sliceRChar)
+        {
+            var arr = str.ToCharArray();
+            List<char> charArr = new List<char>();
+            bool startRead = false;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i]==sliceLChar)
+                {
+                    startRead = true;
+                    continue;
+                }
+                else if (arr[i] == sliceRChar)
+                {
+                    startRead = false;
+                    return new string(charArr.ToArray());
+                }
+
+                if (startRead)
+                {
+                    charArr.Add(arr[i]);
+                }
+            }
+            return string.Empty;
+        }
+
+
+
+    
+
 
     }
 }

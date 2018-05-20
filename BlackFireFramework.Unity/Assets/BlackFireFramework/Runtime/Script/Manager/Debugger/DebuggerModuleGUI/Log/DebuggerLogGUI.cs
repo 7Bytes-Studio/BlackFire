@@ -33,6 +33,7 @@ namespace BlackFireFramework
 
         private string m_InputLogCount = "99";
         private string m_FilePath=@"D:\\BlackFire.Log";
+        private bool m_HasSetLogFile;
 
         public int Priority
         {
@@ -114,8 +115,21 @@ namespace BlackFireFramework
 
                 BlackFireGUI.HorizontalLayout(() =>
                 {
-                    m_FilePath = GUILayout.TextField(m_FilePath);
-                    GUILayout.Button("Set",GUILayout.Width(50));
+
+                    if (!m_HasSetLogFile)
+                    {
+                        m_FilePath = GUILayout.TextField(m_FilePath);
+                        m_HasSetLogFile = GUILayout.Button("Set", GUILayout.Width(50));
+                        if (m_HasSetLogFile)
+                        {
+                            Log.SetLogFileMode(m_FilePath, 1000);
+                        }
+                    }
+                    else
+                    {
+                        GUILayout.TextField(m_FilePath);
+                    }
+                    
                 });
 
             });

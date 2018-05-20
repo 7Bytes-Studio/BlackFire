@@ -81,10 +81,10 @@ namespace BlackFireFramework
             public static HttpDownloader DownLoad(HttpDownloadInfo httpDownloadInfo)
             {
                 var httpDownloader = new HttpDownloader(httpDownloadInfo);
-                httpDownloader.StartDownload();
                 return httpDownloader;
             }
 
+            #region HttpDownloader
 
             /// <summary>
             /// HTTP协议支持断点续传的文件下载器。
@@ -271,6 +271,228 @@ namespace BlackFireFramework
 
                 public Exception Exception { get; private set; }
             }
+
+            #endregion
+
+
+
+            public static HttpServer CreateHttpServer(HttpServerInfo httpServerInfo)
+            {
+                var httpServer = new HttpServer(httpServerInfo);
+                return httpServer;
+            }
+
+
+            #region HTTP Server
+
+            public class HttpServerInfo
+            {
+                public int Port;
+
+                public string[] Prefixes;
+
+                public EventHandler OnStartSucceed;
+                public EventHandler<StartFailureEventArgs> OnStartFailure;
+
+                public Func<HttpListenerRequest,byte[]> GetHandler;
+                public Func<HttpListenerRequest,byte[]> PostHandler;
+                public Func<HttpListenerRequest, byte[]> DefaultHandler;
+            }
+
+            public sealed class StartFailureEventArgs : EventArgs
+            {
+                public StartFailureEventArgs(Exception exception)
+                {
+                    Exception = exception;
+                }
+
+                public Exception Exception { get; private set; }
+
+            }
+
+            public class LazyHttpServerInfo : HttpServerInfo
+            {
+                public LazyHttpServerInfo(Func<string, string> getLazyHandler, Func<string, string> postLazyHandler, Func<string, string> defaultLazyHandler)
+                {
+
+
+                    GetLazyHandler = getLazyHandler;
+                    PostLazyHandler = postLazyHandler;
+                    DefaultLazyHandler = defaultLazyHandler;
+
+
+
+
+
+                    GetHandler = request => {
+                        var handlerContent = string.Empty;
+                        if (null!= GetLazyHandler)
+                        {
+                            handlerContent = GetLazyHandler.Invoke(request.RawUrl);
+                        }
+                        return Encoding.UTF8.GetBytes(handlerContent);
+                    };
+
+                    PostHandler = request => {
+                        var handlerContent = string.Empty;
+                        if (null != PostLazyHandler)
+                        {
+                            using (StreamReader getPostParam = new StreamReader(request.InputStream, true))
+                            {
+                                var postData = getPostParam.ReadToEnd();
+                                handlerContent = PostLazyHandler.Invoke(postData);
+                            }
+                        }
+                        return Encoding.UTF8.GetBytes(handlerContent);
+                    };
+
+                    DefaultHandler = request => {
+                        var handlerContent = string.Empty;
+                        if (null != DefaultLazyHandler)
+                        {
+                            handlerContent = DefaultLazyHandler.Invoke(request.RawUrl);
+                        }
+                        return Encoding.UTF8.GetBytes(handlerContent);
+                    };
+
+
+
+
+                }
+
+                public Func<string,string> GetLazyHandler;
+                public Func<string,string> PostLazyHandler;
+                public Func<string, string> DefaultLazyHandler;
+            }
+
+
+
+            public class HttpServer
+            {
+                private HttpServerInfo m_HttpServerInfo = null;
+
+                public bool IsWorking { get; private set; }
+
+                public int Port { get; private set; }
+
+                public string Address { get; private set; }
+
+
+
+                public string[] Prefixes { get; private set; }
+
+
+                /// <summary>
+                /// 监听器
+                /// </summary>
+                private HttpListener m_HttpListener;
+
+
+                public HttpServer(HttpServerInfo httpServerInfo)
+                {
+                    if (null== httpServerInfo)
+                    {
+                        throw new ArgumentNullException(string.Format("构造方法的参数:{0}不能为空。", "httpServerInfo"));
+                    }
+                    m_HttpServerInfo = httpServerInfo;
+                    Port = httpServerInfo.Port;
+                    Address = string.Format("{0}:{1}", @"http://localhost", Port);
+                    Prefixes = httpServerInfo.Prefixes;
+                }
+
+
+                public void Start()
+                {
+                    if (IsWorking) return;
+
+                    try
+                    {
+                        m_HttpListener = new HttpListener();
+                        //监听的路径
+                        m_HttpListener.Prefixes.Add(Address + "/");
+                        for (int i = 0; i < Prefixes.Length; i++)
+                        {
+                            m_HttpListener.Prefixes.Add(Prefixes[i]);
+                        }
+                        //设置匿名访问
+                        m_HttpListener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
+                        m_HttpListener.Start();
+
+                        if (null != m_HttpServerInfo.OnStartSucceed)
+                        {
+                            m_HttpServerInfo.OnStartSucceed.Invoke(this, EventArgs.Empty);
+                        }
+
+                        IsWorking = true;
+
+                        while (IsWorking)
+                        {
+                            var context = m_HttpListener.GetContext();
+                            HttpListenerRequest request = context.Request;
+                            HttpListenerResponse response = context.Response;
+                            response.ContentEncoding = Encoding.UTF8;
+                            response.ContentType = "text/plain;charset=utf-8";
+                            byte[] handleContent = null;
+                            if (request.HttpMethod == "GET")
+                            {
+                                if (null != m_HttpServerInfo.GetHandler)
+                                {
+                                    handleContent = m_HttpServerInfo.GetHandler.Invoke(request);
+                                }
+
+                            }
+                            else if (request.HttpMethod == "POST")
+                            {
+                                if (null != m_HttpServerInfo.PostHandler)
+                                {
+                                    handleContent = m_HttpServerInfo.PostHandler.Invoke(request);
+                                }
+                            }
+                            else
+                            {
+                                if (null != m_HttpServerInfo.DefaultHandler)
+                                {
+                                    handleContent = m_HttpServerInfo.DefaultHandler.Invoke(request);
+                                }
+                            }
+
+                            response.AddHeader("Access-Control-Allow-Origin", "*"); //允许跨域请求。
+                            response.ContentLength64 = handleContent.Length;
+                            Stream output = response.OutputStream;
+                            output.Write(handleContent, 0, handleContent.Length);
+                            output.Close();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        IsWorking = false;
+                        if (null != m_HttpServerInfo.OnStartFailure)
+                        {
+                            m_HttpServerInfo.OnStartFailure.Invoke(this,new StartFailureEventArgs(ex));
+                        }
+                    }
+
+
+
+
+
+
+
+
+                }
+
+                public void Close()
+                {
+                    IsWorking = false;
+                }
+
+            }
+
+
+            #endregion
+
+
 
         }
 

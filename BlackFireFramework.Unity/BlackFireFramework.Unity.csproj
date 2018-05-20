@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -264,9 +266,13 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.IO.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Text.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\DebuggerEventGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\DebuggerLogGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\DebuggerSettingGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Event\DebuggerEventGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Event\Json_Response.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Event\Json_Instruction.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Event\Json_Var.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Event\Json_EventTopic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Log\DebuggerLogGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerModuleGUI\Setting\DebuggerSettingGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\IDebuggerModuleGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\ILRuntime\Adapter\CoroutineAdapter.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\ILRuntime\HotFixAssemblyLoader_FromDllFile.cs" />

@@ -18,7 +18,6 @@ public sealed partial class BlackFire : FakeSingleton<BlackFire>
     protected override void Awake()
     {
         base.Awake();
-        Log.SetLogFileMode("D://BlackFireLog.txt",1000);
         Log.SetLogCallback(LogCallback);
         Framework.Born(this,Time.unscaledDeltaTime,Time.deltaTime);
         ExportedAssemblyInit();
