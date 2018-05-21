@@ -1,2 +1,0 @@
-# BlackFireFramework
-One magical project.
