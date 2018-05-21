@@ -15,23 +15,47 @@ namespace Alan
 {
 	public sealed class DebuggerDemo : MonoBehaviour 
 	{
+        [SerializeField] private bool m_FireLog;
+
+
+        private void Start()
+        {
+            BlackFireFramework.Event.On("DebuggerTest",this,(sender,args)=> {
+                var cargs = args as DebuggerEventArgs;
+                Log.Info(cargs.Args.Length);
+                for (int i = 0; i < cargs.Args.Length; i++)
+                {
+                    Log.Info(cargs.Args[i]);
+                }
+            });
+        }
+
+
+
         private void Update()
         {
-            Log.Trace("Trace");
-            Log.Debug("Debug");
-            Log.Info("Info");
-            Log.Warn("Warn");
-            Log.Error("Error");
-            Log.Fatal("Fatal");
+            if (m_FireLog)
+            {
+                Log.Trace("Trace");
+                Log.Debug("Debug");
+                Log.Info("Info");
+                Log.Warn("Warn");
+                Log.Error("Error");
+                Log.Fatal("Fatal");
 
 
-            Debug.Log("Info:".HexColor("green")+ 66666666666);
-            Debug.Log(66666666666);
-            Debug.LogWarning("66666666666");
-            Debug.LogAssertion("66666666666");
-            Debug.LogError("66666666666");
-            Debug.LogException(new System.Exception("66666666666"));
+                Debug.Log("Info:".HexColor("green") + 66666666666);
+                Debug.Log(66666666666);
+                Debug.LogWarning("66666666666");
+                Debug.LogAssertion("66666666666");
+                Debug.LogError("66666666666");
+                Debug.LogException(new System.Exception("66666666666"));
+            }
+
         }
+
+
+
 
     }
 }

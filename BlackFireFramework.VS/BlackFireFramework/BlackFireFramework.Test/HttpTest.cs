@@ -28,6 +28,8 @@ namespace BlackFireFramework.Test
         {
             public string instruction; //FireEvent,RemoveEventTopic and so on...
 
+            public string platform; //platform...
+
             public Json_EventTopic eventTopic;
         }
         [System.Serializable]
@@ -54,22 +56,28 @@ namespace BlackFireFramework.Test
         {
             //此项目为了与外界解耦，不适合在发布的项目源码的时候拿第三方网站进行测试，请自行粘贴自己喜欢的网站来进行POST测试。
 
-            var jsonObject = new Json_Instruction()
-            {
-                instruction = "FireEvent",
-                eventTopic = new Json_EventTopic()
-                {
-                    topic = "TestTopic",
-                    sender = "Web",
-                    args = new List<Json_Var>()
-                    {
-                      new Json_Var(){ type = "int", value = "66666666666" }
-                    }
-                } };
+            //var jsonObject = new Json_Instruction()
+            //{
+            //    platform = "Web",
+            //    instruction = "FireEvent",
+            //    eventTopic = new Json_EventTopic()
+            //    {
+            //        topic = "TestTopic",
+            //        sender = "Web",
+            //        args = new List<Json_Var>()
+            //        {
+            //          new Json_Var(){ type = "int", value = "66666666666" },
+            //          new Json_Var(){ type = "float", value = "6666.6666666" },
+            //          new Json_Var(){ type = "double", value = "6666.6666666" },
+            //          new Json_Var(){ type = "decimal", value = "6.88888888888" },
+            //          new Json_Var(){ type = "char", value = "6" },
+            //          new Json_Var(){ type = "string", value = "66666666666" },
+            //        }
+            //    } };
 
-            var result = Utility.Http.Post("http://localhost:666", JsonConvert.SerializeObject(jsonObject));
+            //var result = Utility.Http.Post("http://localhost:666", JsonConvert.SerializeObject(jsonObject));
 
-            Debug.WriteLine(result);
+            //Debug.WriteLine(result);
         }
 
         [TestMethod]

@@ -19,6 +19,7 @@ namespace BlackFireFramework
         private static Dictionary<int,Vector2> s_ScrollViewVector2Dic = new Dictionary<int, Vector2>();
 
 
+
         #region ScrollView
 
         public static void ScrollView(int scrollId, Action<int> drawCallback,params GUILayoutOption[] gUILayoutOptions)
@@ -41,8 +42,9 @@ namespace BlackFireFramework
 
         #endregion
 
-
         #region Window
+
+        public static Rect GetWindowRect(int windowId) { return s_WindowRectDic.ContainsKey(windowId) ? s_WindowRectDic[windowId] : Rect.zero; }
 
         public static void Window(int windowId,string title,float x,float y,float width,float height,Action<int> drawWindowCallbak,float dragHeight=15f,Texture texture=null)
         {

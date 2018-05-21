@@ -4,6 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using BlackFireFramework.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,11 +19,31 @@ namespace BlackFireFramework
     /// </summary>
 	public sealed partial class DebuggerManager : MonoBehaviour 
 	{
+        #region Public
 
-        [SerializeField][Range(1f,3f)] private float m_WindowScale=1f;
         public float WindowScale { get { return m_WindowScale; } set { m_WindowScale = value; } }
 
-        private bool m_Minimize = true;
+        public DebuggerStyle DebuggerStyle { get { return m_DebuggerStyle; } set { m_DebuggerStyle = value; } }
+
+
+        public void RegisterModuleGUI(IDebuggerModuleGUI moduleGUIImpl)
+        {
+            if (null != moduleGUIImpl && !m_DrawModuleCallbackDic.ContainsKey(moduleGUIImpl.ModuleName))
+            {
+                m_DrawModuleCallbackDic.Add(moduleGUIImpl.ModuleName, moduleGUIImpl.OnModuleGUI);
+                if (string.IsNullOrEmpty(m_SelectedModuleName))
+                {
+                    m_SelectedModuleName = moduleGUIImpl.ModuleName;
+                }
+            }
+        }
+
+
+        #endregion
+
+
+        [SerializeField] private DebuggerStyle m_DebuggerStyle = DebuggerStyle.Hidden;
+        [SerializeField][Range(1f,3f)] private float m_WindowScale=1f;
 
         private string m_SelectedModuleName = string.Empty;
 
@@ -30,116 +51,109 @@ namespace BlackFireFramework
 
         private List<IDebuggerModuleGUI> m_DebuggerModuleGUIList = new List<IDebuggerModuleGUI>();
 
+        private string m_MiniDebuggerHexColor = "white";
+        private bool HasErrorOrException = false;
 
+        private Func<DebuggerManager, bool> m_PackUpCallback = null;
 
 
 
         private void Awake()
         {
+            CheckErrorOrException();
             InitDebuggerModuleGUI();
-
-            #region Test
-
-
-
-            //RegisterModuleGUI("Process", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Event", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("ObjectPool", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Network", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Job", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Process", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Info", () => {
-
-
-
-            //});
-
-            //RegisterModuleGUI("Monitor", () => {
-
-
-
-            //});
-
-
-
-            //RegisterModuleGUI("Framework", () => {
-
-            //    GUILayout.Label("Version:1.0.0");
-
-            //});
-
-            //RegisterModuleGUI("About", () => {
-
-            //    GUILayout.Label("BlackFire-Studio");
-
-            //});
-
-            #endregion
-
+            InitDebuggerPackUp();
         }
-
 
         private void OnGUI()
         {
-            if (m_Minimize)
+            switch (m_DebuggerStyle)
             {
-                DrawMiniDebugger("<b>DEBUGGER</b>", "<color=green>FPS:100</color>");
+                case DebuggerStyle.Hidden:
+                    //Todo...
+                    break;
+                case DebuggerStyle.Mini:
+                    DrawMiniDebugger("<b>DEBUGGER</b>");
+                    break;
+                case DebuggerStyle.Full:
+                    DrawFullDebugger("<b>BLACKFIRE FRAMEWORK DEBUGGER</b>", 640f * m_WindowScale, 360f * m_WindowScale);
+                    break;
+                default:
+                    break;
             }
-            else
+
+            if (null!= m_PackUpCallback && m_PackUpCallback.Invoke(this))
             {
-                DrawFullDebugger("<b>BLACKFIRE FRAMEWORK DEBUGGER</b>", 640f * m_WindowScale, 360f * m_WindowScale);
+                m_DebuggerStyle = DebuggerStyle.Mini;
             }
         }
-
 
         private void OnDestroy()
         {
             DestroyDebuggerModuleGUI();
         }
 
-
-        private void DrawMiniDebugger(string title,string content)
+        private void DrawMiniDebugger(string title)
         {
+            var fps = Unity.Utility.Game.Fps();
+            if (HasErrorOrException)
+            {
+                SetMiniDebuggerColor("#CC0000");
+            }
+            else if (60f <= fps)
+            {
+                SetMiniDebuggerColor("#009900");
+            }
+            else if (60f > fps)
+            {
+                SetMiniDebuggerColor("#00CCFF");
+            }
+            else if (50f > fps)
+            {
+                SetMiniDebuggerColor("#FFFFCC");
+            }
+            else if (40f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF99");
+            }
+            else if (30f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF66");
+            }
+            else if (20f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF33");
+            }
+            else if (10f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF00");
+            }
+
+            var fpsStr = string.Format("FPS : {0:00.00}", fps).HexColor(m_MiniDebuggerHexColor);
+
+            Rect rect = BlackFireGUI.GetWindowRect(1);
+            float x, y;
+            if (rect != Rect.zero)
+            {
+                x = rect.x;
+                y = rect.y;
+            }
+            else
+            {
+                x = 10;
+                y = 10;
+            }
+
             GUI.backgroundColor = Color.black;
-            BlackFireGUI.Window(0, title , 10, 10, 100, 50, id => {
+            BlackFireGUI.Window(0, title , x, y, 100, 50, id => {
                 GUILayout.Space(5);
                 GUILayout.BeginHorizontal();
                 {
 
                     GUI.backgroundColor = Color.black;
-                    if (GUILayout.Button(content, new GUIStyle("Button") { fontSize = 14, fixedHeight = 30 }))
+                    if (GUILayout.Button(fpsStr, new GUIStyle("Button") { fontSize = 14, fixedHeight = 30 }))
                     {
-                        m_Minimize = false;
+                        m_DebuggerStyle =  DebuggerStyle.Full;
                     }
                     
                     GUI.backgroundColor = Color.black;
@@ -153,10 +167,23 @@ namespace BlackFireFramework
 
         private void DrawFullDebugger(string title,float width,float height)
         {
+            Rect rect = BlackFireGUI.GetWindowRect(0);
+            float x, y;
+            if (rect != Rect.zero)
+            {
+                x = rect.x;
+                y = rect.y;
+            }
+            else
+            {
+                x = 10;
+                y = 10;
+            }
+
             BlackFireGUI.BackgroundColor(Color.black, () =>
             {
 
-                BlackFireGUI.Window(1, title, 10, 10, width, height, id => {
+                BlackFireGUI.Window(1, title, x, y, width, height, id => {
 
                     GUILayout.Space(10);
 
@@ -242,6 +269,39 @@ namespace BlackFireFramework
             }
         }
 
+        private void InitDebuggerPackUp()
+        {
+            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerPackUp));
+            List<IDebuggerPackUp> list = new List<IDebuggerPackUp>();
+            for (int i = 0; i < types.Length; i++)
+            {
+                IDebuggerPackUp ins = (IDebuggerPackUp)Utility.Reflection.New(types[i]);
+                list.Add(ins);
+            }
+
+            list.Sort((x, y) => x.Priority - y.Priority);
+
+            if (0<list.Count)
+            {
+                m_PackUpCallback = new Func<DebuggerManager, bool>(list[0].PackUp);
+            }
+        }
+
+        private void CheckErrorOrException()
+        {
+            Application.logMessageReceived += (msg, st, tp) =>
+            {
+                if (!HasErrorOrException)
+                {
+                    if (tp == LogType.Error || tp == LogType.Exception)
+                    {
+                        HasErrorOrException = true;
+                    }
+                }
+            };
+
+        }
+
         private void DestroyDebuggerModuleGUI()
         {
             for (int i = 0; i < m_DebuggerModuleGUIList.Count; i++)
@@ -250,16 +310,9 @@ namespace BlackFireFramework
             }
         }
 
-        public void RegisterModuleGUI(IDebuggerModuleGUI moduleGUIImpl)
+        private void SetMiniDebuggerColor(string hexColor)
         {
-            if (null!= moduleGUIImpl && !m_DrawModuleCallbackDic.ContainsKey(moduleGUIImpl.ModuleName))
-            {
-                m_DrawModuleCallbackDic.Add(moduleGUIImpl.ModuleName,moduleGUIImpl.OnModuleGUI);
-                if (string.IsNullOrEmpty(m_SelectedModuleName))
-                {
-                    m_SelectedModuleName = moduleGUIImpl.ModuleName;
-                }
-            }
+            m_MiniDebuggerHexColor = hexColor;
         }
 
 

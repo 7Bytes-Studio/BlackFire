@@ -23,6 +23,8 @@ namespace BlackFireFramework
 
         private LogInfo m_CurrentSelectedLogInfo = null;
 
+        private bool HasErrorOrException = false;
+
         private class LogInfo
         {
             public LogLevel LogLevel;
@@ -54,9 +56,10 @@ namespace BlackFireFramework
 
 
 
-
+        private DebuggerManager m_DebuggerManager = null;
         public void OnInit(DebuggerManager debuggerManager)
         {
+            m_DebuggerManager = debuggerManager;
 
             Application.logMessageReceived += Application_logMessageReceived;
 
@@ -134,9 +137,6 @@ namespace BlackFireFramework
 
             });
 
-
-
-
             BlackFireGUI.BoxHorizontalLayout(() =>
             {
                 BlackFireGUI.ScrollView(101, id =>
@@ -170,7 +170,6 @@ namespace BlackFireFramework
                     }
                 }, GUILayout.MinHeight(65));
             });
-
         }
 
         public void OnDestroy()
@@ -191,6 +190,7 @@ namespace BlackFireFramework
             {
                 case LogType.Error:
                     AddLogInfo(LogLevel.Error, condition, stackTrace);
+                    HasErrorOrException = true;
                     break;
                 case LogType.Assert:
                     AddLogInfo(LogLevel.Error, condition, stackTrace);
@@ -216,6 +216,7 @@ namespace BlackFireFramework
                     break;
                 case LogType.Exception:
                     AddLogInfo(LogLevel.Fatal, condition, stackTrace);
+                    HasErrorOrException = true;
                     break;
                 default:
                     break;

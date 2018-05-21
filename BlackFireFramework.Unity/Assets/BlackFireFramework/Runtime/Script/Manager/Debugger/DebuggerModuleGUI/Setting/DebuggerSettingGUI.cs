@@ -75,6 +75,11 @@ namespace BlackFireFramework
                             m_DebuggerManager.WindowScale += 0.1f;
                         }
 
+                        if (GUILayout.Button("Reset"))
+                        {
+                            m_DebuggerManager.WindowScale = 1f;
+                        }
+
                     });
 
 

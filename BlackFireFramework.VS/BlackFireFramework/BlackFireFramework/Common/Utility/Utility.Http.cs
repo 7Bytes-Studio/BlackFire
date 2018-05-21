@@ -463,6 +463,8 @@ namespace BlackFireFramework
                             output.Close();
                         }
 
+                        m_HttpListener.Close();
+                        m_HttpListener.Abort();
                     }
                     catch (Exception ex)
                     {

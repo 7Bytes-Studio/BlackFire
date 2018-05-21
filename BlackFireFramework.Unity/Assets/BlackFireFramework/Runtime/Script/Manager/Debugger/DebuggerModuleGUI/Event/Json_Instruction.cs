@@ -12,6 +12,8 @@ namespace BlackFireFramework
     {
         public string instruction; //FireEvent,RemoveEventTopic and so on...
 
+        public string platform; //platform...
+
         public Json_EventTopic eventTopic;
     }
 }

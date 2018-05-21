@@ -42,6 +42,7 @@
     <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
     <Compile Include="Common\Extension\Object.Extension.cs" />
+    <Compile Include="Common\Utility\Utility.IP.cs" />
     <Compile Include="Common\Utility\Utility.Convertor.cs" />
     <Compile Include="Common\Utility\Utility.Enum.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
