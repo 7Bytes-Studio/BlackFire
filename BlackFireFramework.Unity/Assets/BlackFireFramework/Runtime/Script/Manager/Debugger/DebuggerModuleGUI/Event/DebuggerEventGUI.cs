@@ -24,7 +24,7 @@ namespace BlackFireFramework
         {
             get
             {
-                return -1;
+                return 1;
             }
         }
 

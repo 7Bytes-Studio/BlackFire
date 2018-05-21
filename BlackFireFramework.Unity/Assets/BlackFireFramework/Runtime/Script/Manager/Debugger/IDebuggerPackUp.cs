@@ -4,17 +4,24 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 
-
-namespace BlackFireFramework 
+namespace BlackFireFramework
 {
+    /// <summary>
+    /// Debugger 由Full模式收起到Mini模式的事件接口。
+    /// </summary>
 	public interface IDebuggerPackUp
     {
+        /// <summary>
+        /// 事件接口排序的优先级。
+        /// </summary>
         int Priority { get; }
+
+        /// <summary>
+        /// 事件回调接口。
+        /// </summary>
+        /// <param name="debuggerManager">调试器管家实例。</param>
+        /// <returns>PackUp条件结果。</returns>
         bool PackUp(DebuggerManager debuggerManager);
 
     }
