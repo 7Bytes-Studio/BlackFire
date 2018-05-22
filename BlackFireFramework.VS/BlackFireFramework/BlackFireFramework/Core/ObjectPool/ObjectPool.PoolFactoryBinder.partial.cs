@@ -46,6 +46,21 @@ namespace BlackFireFramework
                 }
                 return null;
             }
+
+            /// <summary>
+            /// 获取所有的绑定类型。
+            /// </summary>
+            /// <returns></returns>
+            public Type[] GetBindingTypes()
+            {
+                List<Type> list = new List<Type>();
+                foreach (var k in m_BindDic.Keys)
+                {
+                    list.Add(k);
+                }
+                return list.ToArray();
+            }
+
         }
     }
 }

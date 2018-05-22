@@ -23,6 +23,8 @@ namespace BlackFireFramework
             public string Name { get; private set; }
             public int Capacity { get; private set; }
             public abstract int Count { get;}
+            public abstract int InCount { get;}
+            public abstract int OutCount { get; }
             public PoolFactoryBinder PoolFactoryBinder { get; private set; }
 
             public abstract void Lock(ObjectBase @object);
@@ -62,6 +64,8 @@ namespace BlackFireFramework
             private LinkedList<ObjectBase> m_LinkedListObject_InPool = new LinkedList<ObjectBase>();
             private LinkedList<ObjectBase> m_LinkedListObject_OutPool = new LinkedList<ObjectBase>();
             public override int Count { get { return m_LinkedListObject_InPool.Count + m_LinkedListObject_OutPool.Count; } }
+            public override int InCount { get { return m_LinkedListObject_InPool.Count; } }
+            public override int OutCount { get { return m_LinkedListObject_OutPool.Count; } }
 
 
 

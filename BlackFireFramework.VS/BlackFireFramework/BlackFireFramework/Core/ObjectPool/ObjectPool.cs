@@ -19,7 +19,11 @@ namespace BlackFireFramework
 
         private static LinkedList<PoolBase> s_LinkedListPoolBase = new LinkedList<PoolBase>();
 
-
+        /// <summary>
+        /// 返回所有的对象池。
+        /// </summary>
+        /// <returns></returns>
+        public static PoolBase[] GetPools() { return s_LinkedListPoolBase.ToArray(); }
 
         /// <summary>
         /// 创建对象池。

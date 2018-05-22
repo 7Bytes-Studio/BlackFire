@@ -24,7 +24,7 @@ namespace BlackFireFramework
         {
             get
             {
-                return 2;
+                return 10;
             }
         }
 
@@ -68,16 +68,22 @@ namespace BlackFireFramework
                         if (GUILayout.Button("-"))
                         {
                             m_DebuggerManager.WindowScale -= 0.1f;
+                            if (1.0f>=m_DebuggerManager.WindowScale)
+                            {
+                                m_DebuggerManager.WindowScale = 1.0f;
+                            }
                         }
 
                         if (GUILayout.Button("+"))
                         {
                             m_DebuggerManager.WindowScale += 0.1f;
+
                         }
 
                         if (GUILayout.Button("Reset"))
                         {
-                            m_DebuggerManager.WindowScale = 1f;
+                            m_DebuggerManager.WindowScale = 1.0f;
+                            settingText = string.Empty;
                         }
 
                     });

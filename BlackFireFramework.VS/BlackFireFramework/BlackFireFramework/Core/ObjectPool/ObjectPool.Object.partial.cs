@@ -30,7 +30,14 @@ namespace BlackFireFramework
             internal void SetLockState(bool lockState)
             {
                 Lock = lockState;
-                OnLock();
+                if (Lock)
+                {
+                    OnLock();
+                }
+                else
+                {
+                    OnUnlock();
+                }
             }
             internal void SetPoolOwnersName(string poolName)
             {
@@ -58,6 +65,7 @@ namespace BlackFireFramework
 
 
             protected virtual void OnLock() { }
+            protected virtual void OnUnlock() { }
             protected virtual void OnSpawn() { }
             protected virtual void OnRecycle() { }
             protected virtual void OnRelease() { }

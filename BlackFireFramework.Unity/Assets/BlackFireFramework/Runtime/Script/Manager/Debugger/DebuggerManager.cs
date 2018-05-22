@@ -54,7 +54,9 @@ namespace BlackFireFramework
         private string m_MiniDebuggerHexColor = "white";
         private bool HasErrorOrException = false;
 
-        private Func<DebuggerManager, bool> m_PackUpCallback = null;
+        private Func<DebuggerManager, bool> m_ChangeToHiddenStyleCallback = null;
+        private Func<DebuggerManager, bool> m_ChangeToMiniStyleCallback = null;
+        private Func<DebuggerManager, bool> m_ChangeToFullStyleCallback = null;
 
 
 
@@ -62,7 +64,23 @@ namespace BlackFireFramework
         {
             CheckErrorOrException();
             InitDebuggerModuleGUI();
-            InitDebuggerPackUp();
+            InitDebuggerStyleChange();
+        }
+
+        private void Update()
+        {
+            if (null != m_ChangeToHiddenStyleCallback && m_ChangeToHiddenStyleCallback.Invoke(this))
+            {
+                m_DebuggerStyle = DebuggerStyle.Hidden;
+            }
+            if (null != m_ChangeToMiniStyleCallback && m_ChangeToMiniStyleCallback.Invoke(this))
+            {
+                m_DebuggerStyle = DebuggerStyle.Mini;
+            }
+            if (null != m_ChangeToFullStyleCallback && m_ChangeToFullStyleCallback.Invoke(this))
+            {
+                m_DebuggerStyle = DebuggerStyle.Full;
+            }
         }
 
         private void OnGUI()
@@ -78,13 +96,9 @@ namespace BlackFireFramework
                 case DebuggerStyle.Full:
                     DrawFullDebugger("<b>BLACKFIRE FRAMEWORK DEBUGGER</b>", 640f * m_WindowScale, 360f * m_WindowScale);
                     break;
-                default:
+                default:                   
+                    //Todo...
                     break;
-            }
-
-            if (null!= m_PackUpCallback && m_PackUpCallback.Invoke(this))
-            {
-                m_DebuggerStyle = DebuggerStyle.Mini;
             }
         }
 
@@ -269,13 +283,13 @@ namespace BlackFireFramework
             }
         }
 
-        private void InitDebuggerPackUp()
+        private void InitDebuggerStyleChange()
         {
-            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerPackUp));
-            List<IDebuggerPackUp> list = new List<IDebuggerPackUp>();
+            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerStyleChangeCallback));
+            List<IDebuggerStyleChangeCallback> list = new List<IDebuggerStyleChangeCallback>();
             for (int i = 0; i < types.Length; i++)
             {
-                IDebuggerPackUp ins = (IDebuggerPackUp)Utility.Reflection.New(types[i]);
+                IDebuggerStyleChangeCallback ins = (IDebuggerStyleChangeCallback)Utility.Reflection.New(types[i]);
                 list.Add(ins);
             }
 
@@ -283,7 +297,9 @@ namespace BlackFireFramework
 
             if (0<list.Count)
             {
-                m_PackUpCallback = new Func<DebuggerManager, bool>(list[0].PackUp);
+                m_ChangeToHiddenStyleCallback = new Func<DebuggerManager, bool>(list[0].HiddenStylePredicate);
+                m_ChangeToMiniStyleCallback = new Func<DebuggerManager, bool>(list[0].MiniStylePredicate);
+                m_ChangeToFullStyleCallback = new Func<DebuggerManager, bool>(list[0].FullStylePredicate);
             }
         }
 

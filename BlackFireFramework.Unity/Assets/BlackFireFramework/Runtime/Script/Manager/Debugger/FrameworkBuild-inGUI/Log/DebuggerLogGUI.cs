@@ -19,6 +19,8 @@ namespace BlackFireFramework
         private Dictionary<LogLevel, bool> m_ToggleLogResDic = new Dictionary<LogLevel, bool>();
         private Dictionary<LogLevel, int> m_ToggleLogCountDic = new Dictionary<LogLevel, int>();
 
+        private string[] m_LogLevelHexColors = new string[] { "#AAAAAA", "white", "green", "yellow", "#FF3399" , "red" };
+
         private LinkedList<LogInfo> m_LogInfoLinkedList = new LinkedList<LogInfo>();
 
         private LogInfo m_CurrentSelectedLogInfo = null;
@@ -78,10 +80,11 @@ namespace BlackFireFramework
             {
                 BlackFireGUI.HorizontalLayout(() =>
                 {
+                    int i = 0;
                     Utility.Enum.Foreach<LogLevel>(e => {
 
 
-                        m_ToggleLogResDic[e] = GUILayout.Toggle(m_ToggleLogResDic[e], string.Format("{0}({1})", e , m_ToggleLogCountDic[e]));
+                        m_ToggleLogResDic[e] = GUILayout.Toggle(m_ToggleLogResDic[e], string.Format("{0}".HexColor(m_LogLevelHexColors[i])+"({1})", e , m_ToggleLogCountDic[e].ToString().HexColor(m_LogLevelHexColors[i++])));
 
                     });
                 });
