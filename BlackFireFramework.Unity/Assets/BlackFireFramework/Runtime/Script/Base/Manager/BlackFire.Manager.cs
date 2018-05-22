@@ -10,10 +10,7 @@ using System.Collections.Generic;
 
 public sealed partial class BlackFire
 {
-
     private static LinkedList<IManager> s_ManagerLinkedList = new LinkedList<IManager>();
-
-
 
     public static void RegisterManager(IManager manager)
     {
@@ -35,12 +32,11 @@ public sealed partial class BlackFire
         }
     }
 
-    [UnityEngine.RuntimeInitializeOnLoadMethod]
-    private static void InitManagers()
+    private static void InitManager(BlackFire instance)
     {
-        if (null != Instance)
+        if (null != instance)
         {
-            BlackFireFramework.Unity.Utility.Transform.TraverseChilds(Instance.transform, trans =>
+            BlackFireFramework.Unity.Utility.Transform.TraverseChilds(instance.transform, trans =>
             {
                 var manager = trans.GetComponent<IManager>();
                 if (null!=manager)
@@ -65,16 +61,6 @@ public sealed partial class BlackFire
         return default(T);
     }
 
-    private void UpdateManagers()
-    {
-        s_ManagerLinkedList.Foreach(current=> {
 
-            if (null!=current.Value)
-            {
-
-            }
-
-        });
-    }
 
 }

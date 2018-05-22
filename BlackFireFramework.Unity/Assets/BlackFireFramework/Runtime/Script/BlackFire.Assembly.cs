@@ -13,8 +13,7 @@ public sealed partial class BlackFire
     private static string[] m_ExtendedAssemblies = new string[] { "BlackFireFramework.Unity" };
     private static IExportedAssemblyManager m_ExportedAssemblyManager = null;
 
-    [UnityEngine.RuntimeInitializeOnLoadMethod]
-    private static void ExportedAssemblyInit()
+    private static void InitAssembly(BlackFire instance)
     {
         m_ExportedAssemblyManager = (IExportedAssemblyManager)EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager));
         for (int i = 0; i < m_ExtendedAssemblies.Length; i++)

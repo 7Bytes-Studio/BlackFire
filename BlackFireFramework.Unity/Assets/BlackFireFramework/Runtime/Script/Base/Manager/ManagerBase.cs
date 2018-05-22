@@ -12,23 +12,38 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework 
 {
+    /// <summary>
+    /// 管家抽象基类。
+    /// </summary>
+    [GameObjectIcon("Manager")]
 	public abstract class ManagerBase : MonoBehaviour , IManager
 	{
+        //是否在工作状态。
+        public virtual bool IsWorking
+        {
+            get
+            {
+                return enabled && gameObject.activeSelf;
+            }
+        }
+
         public virtual void InitManager()
         {
             //注册进BlackFire管家管理模块。
             BlackFire.RegisterManager(this);
         }
 
-        public virtual void UpdateManager()
+        protected virtual void Update()
         {
-            
+
+
         }
 
         public virtual void DestroyManager()
         { 
             //注销BlackFire管家管理模块。
             BlackFire.UnRegisterManager(this);
+            DestroyImmediate(gameObject);
         }
 
     }

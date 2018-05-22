@@ -14,10 +14,9 @@ public sealed partial class BlackFire
 
     public static IModuleManager ModuleManager { get { return s_ModuleManager; } }
 
-    [UnityEngine.RuntimeInitializeOnLoadMethod]
-    private static void ModuleManageInit()
+    private static void InitModule(BlackFire instance)
     {
-        if (null != Instance)
+        if (null != instance)
         {
             s_ModuleManager = (IModuleManager)EntityTree.GetEntityInChildren(typeof(IModuleManager));
         }

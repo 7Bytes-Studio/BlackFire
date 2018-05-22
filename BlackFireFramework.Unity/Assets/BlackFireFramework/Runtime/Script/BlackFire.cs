@@ -11,33 +11,80 @@ using UnityEngine;
 /// <summary>
 /// BlackFireFramework主要程序入口类。
 /// </summary>
-public sealed partial class BlackFire : FakeSingleton<BlackFire>
+[GameObjectIcon("BlackFire")]
+public sealed partial class BlackFire : MonoBehaviour
 {
     #region LifeCircle
 
-    protected override void Awake()
+    /// <summary>
+    /// 框架所有者。
+    /// </summary>
+    private static readonly object s_Unity = new object();
+
+    /// <summary>
+    /// BlackFire行为类唯一实例。
+    /// </summary>
+    private static object s_Instance = null;
+
+    /// <summary>
+    /// 场景加载之前事件。
+    /// </summary>
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void OnBeforeSceneLoad()
     {
-        base.Awake();
         Log.SetLogCallback(LogCallback);
-        Framework.Born(this,Time.unscaledDeltaTime,Time.deltaTime);
+        Framework.Born(s_Unity, Time.unscaledDeltaTime, Time.deltaTime);
     }
 
-    protected override void Update()
+    private void Awake()
     {
-        Framework.Act(this, Time.unscaledDeltaTime, Time.deltaTime);
+        DontDestroyOnLoad();
+        InitAssembly(this);
+        InitModule(this);
+        InitManager(this);
     }
 
-    protected override void OnDestroy()
+    /// <summary>
+    /// 轮询事件。
+    /// </summary>
+    private void Update()
+    {
+        Framework.Act(s_Unity, Time.unscaledDeltaTime, Time.deltaTime);
+    }
+
+    /// <summary>
+    /// 被销毁事件。
+    /// </summary>
+    private void OnDestroy()
     {
         ExportedAssemblyDestroy();
-        Framework.Die(this, Time.unscaledDeltaTime, Time.deltaTime);
+        Framework.Die(s_Unity, Time.unscaledDeltaTime, Time.deltaTime);
+
+        if (this.Equals(s_Instance))
+        {
+            s_Instance = null;
+        }
     }
+
+    private void DontDestroyOnLoad()
+    {
+        if (null == s_Instance)
+        {
+            s_Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+
 
     #endregion
 
-   
 
-    
+
+
 
 
 

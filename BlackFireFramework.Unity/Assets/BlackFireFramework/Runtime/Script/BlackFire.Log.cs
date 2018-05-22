@@ -11,7 +11,7 @@ public sealed partial class BlackFire
 {
     #region Log
 
-    private void LogCallback(LogLevel logLevel, object message)
+    private static void LogCallback(LogLevel logLevel, object message)
     {
         var logMessage = string.Empty;
         switch (logLevel)

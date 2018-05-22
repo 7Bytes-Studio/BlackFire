@@ -36,16 +36,16 @@ namespace BlackFireFramework
             m_ProcessModule =  BlackFire.ModuleManager.GetModule<IProcessModule>();
         }
 
-        public override void UpdateManager()
+        protected override void Update()
         {
-            base.UpdateManager();
-            Time.timeScale = GameSpeed;
+            base.Update();
+            Time.timeScale = m_GameSpeed;
         }
 
         /// <summary>
         /// 添加游戏流程。
         /// </summary>
-        /// <param name="process"></param>
+        /// <param name="process">流程。</param>
         public void AddProcess(ProcessBase process)
         {
             m_ProcessModule.AddProcess(process);

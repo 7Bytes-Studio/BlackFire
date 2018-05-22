@@ -23,6 +23,23 @@ namespace BlackFireFramework
 
             Debug.Log((args as DoubleClickButtonEventArgs).ClickDeltaTime);
         }
-	
-	}
+
+        //private void Awake()
+        //{
+        //    Debug.Log("Awake");
+        //}
+
+        //[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        //private static void TestInitAfterSceneLoad()
+        //{
+        //    Debug.Log("TestInitAfterSceneLoad");
+        //}
+
+        //[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        //private static void TestInitBeforeSceneLoad()
+        //{
+        //    Debug.Log("TestInitBeforeSceneLoad");
+        //}
+
+    }
 }
