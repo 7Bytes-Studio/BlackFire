@@ -4,6 +4,8 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace BlackFireFramework.Unity
 {
     internal sealed class ProcessModule : ModuleBase, IProcessModule
@@ -20,7 +22,17 @@ namespace BlackFireFramework.Unity
             AddChildNode(process);
         }
 
-        public void StartProcess()
+        public ProcessBase[] GetProcesses()
+        {
+            List<ProcessBase> list = new List<ProcessBase>();
+            foreach (ProcessBase node in this)
+            {
+                list.Add(node);
+            }
+            return list.ToArray();
+        }
+
+        public void StartFirstProcess()
         {
             CheckWorkingStateOrThrow();
             if (null != m_BootProcess)

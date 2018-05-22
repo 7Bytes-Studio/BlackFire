@@ -25,7 +25,7 @@ namespace BlackFireFramework
             var two = new ProcessTwo("Two");
             processModule.AddProcess(one);
             processModule.AddProcess(two);
-            processModule.StartProcess();
+            processModule.StartFirstProcess();
         }
 
     }

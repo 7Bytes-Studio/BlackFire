@@ -52,5 +52,37 @@ namespace BlackFireFramework
         }
 
 
+        public static void StartLongNew(WaitCallback waitCallback, Token token = null)
+        {
+            Thread thread = null;
+            thread = new Thread(state => {
+                if (null != waitCallback)
+                {
+                    JobState jobState = new JobState();
+                    jobState.Token = token ?? new Token();
+                    jobState.State = thread;
+                    waitCallback.Invoke(jobState);
+                }
+            });
+            thread.Start();
+        }
+
+        public static void StartLongNew(WaitCallback waitCallback, DoneSyncCallback doneSyncCallback, Token token = null)
+        {
+            Thread thread = null;
+            thread = new Thread(state => {
+                if (null != waitCallback)
+                {
+                    JobState jobState = new JobState();
+                    jobState.Token = token ?? new Token();
+                    jobState.State = thread;
+                    waitCallback.Invoke(jobState);
+                    EnSyncStateQueue(jobState, doneSyncCallback);
+                }
+            });
+            thread.Start();
+
+        }
+
     }
 }

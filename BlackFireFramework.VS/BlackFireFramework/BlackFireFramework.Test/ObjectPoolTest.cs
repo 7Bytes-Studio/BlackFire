@@ -29,6 +29,10 @@ namespace BlackFireFramework.Test
 
             public override int Count => throw new NotImplementedException();
 
+            public override int InCount => throw new NotImplementedException();
+
+            public override int OutCount => throw new NotImplementedException();
+
             public override void Lock(ObjectPool.ObjectBase @object)
             {
                 throw new NotImplementedException();

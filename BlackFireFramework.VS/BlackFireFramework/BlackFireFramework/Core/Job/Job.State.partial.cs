@@ -14,7 +14,7 @@ namespace BlackFireFramework
         public sealed class JobState
         {
             /// <summary>
-            /// 底层ThreadPool的State。
+            /// 异步状态量。
             /// </summary>
             public object State { get; internal set; }
 
@@ -24,7 +24,7 @@ namespace BlackFireFramework
             public Token Token { get; internal set; }
 
             /// <summary>
-            /// 同步状态类。
+            /// 同步状态量。
             /// </summary>
             public object SyncState { get; set; }
         }

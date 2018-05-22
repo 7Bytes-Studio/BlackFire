@@ -21,37 +21,52 @@ namespace BlackFireFramework
         {
             Log.Info(Thread.CurrentThread.ManagedThreadId);
 
-            Job.StartNew(state =>
-            {
+            //Job.StartNew(state =>
+            //{
 
-                for (int i = 0; i < 20000; i++)
-                {
-                    Log.Info(i);
-                    if (state.Token.IsCancellationRequested)
-                    {
-                        break;
-                    }
-                }
+            //    for (int i = 0; i < 20000; i++)
+            //    {
+            //        Log.Info(i);
+            //        if (state.Token.IsCancellationRequested)
+            //        {
+            //            break;
+            //        }
+            //    }
 
-                state.SyncState = 66666;
+            //    state.SyncState = 66666;
 
-            },syncState =>
-            {
+            //},syncState =>
+            //{
 
-                GetComponent<Transform>().gameObject.name = syncState.SyncState.ToString();
-                Log.Info(syncState.SyncState);
+            //    GetComponent<Transform>().gameObject.name = syncState.SyncState.ToString();
+            //    Log.Info(syncState.SyncState);
 
-            }, m_Token);
+            //}, m_Token);
 
+            Job.StartLongNew(state=> {
 
+                m_HttpServer = Utility.Http.CreateHttpServer(new Utility.Http.LazyHttpServerInfo(getData => {
+
+                    Debug.Log(getData);
+                    state.SyncState = getData;
+                    return JsonUtility.ToJson(new Json_Response() { code = 200, msg = "server is working!" });
+
+                },null,null)
+                { Port = 1000, Prefixes = new string[] { }, OnStartSucceed = (sender, args) => { Log.Info("server is working!。"); }, OnStartFailure = (sender, args) => { Log.Warn("server is not working! \n" + args.Exception); } });
+
+                m_HttpServer.Start();
+
+            });
 
 
 
         }
 
+        private Utility.Http.HttpServer m_HttpServer;
 
         private void OnDestroy()
         {
+            m_HttpServer.Close();
             m_Token.Cancel();
         }
     }

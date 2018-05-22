@@ -67,6 +67,16 @@ namespace BlackFireFramework.Unity
             }
         }
 
+        protected void ChangeProcess<T>()where T:ProcessBase
+        {
+            if (typeof(T) != GetType())
+            {
+                IsWorking = false;
+                OnProcessExit();
+                Event.Fire(GlobalEvent.ChangeProcess, this, new ChangeProcessEventArgs() { FromProcessType = GetType(), ToProcessType = typeof(T) });
+            }
+        }
+
 
     }
 }

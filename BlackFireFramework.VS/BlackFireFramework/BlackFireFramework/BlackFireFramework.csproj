@@ -77,6 +77,10 @@
     <Compile Include="Core\ObjectPool\ObjectPool.PoolFactoryBinder.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.delegate.partial.cs" />
     <Compile Include="Core\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Core\Timer\Timer.cs" />
+    <Compile Include="Core\Timer\TimerTaskCallback.cs" />
+    <Compile Include="Core\Timer\TimeTask.cs" />
+    <Compile Include="Core\Timer\TimeTaskType.cs" />
     <Compile Include="Export\ExportedAssemblyBase.cs" />
     <Compile Include="Export\ExportedAssemblyManager.cs" />
     <Compile Include="Export\IExportedAssemblyManager.cs" />

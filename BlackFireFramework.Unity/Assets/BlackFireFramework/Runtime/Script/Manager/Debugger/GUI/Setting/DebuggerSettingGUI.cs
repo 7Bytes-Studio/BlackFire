@@ -89,11 +89,11 @@ namespace BlackFireFramework
                     });
 
 
-                    BlackFireGUI.BoxHorizontalLayout(()=> {
+                    //BlackFireGUI.BoxHorizontalLayout(()=> {
 
-                        Application.runInBackground = GUILayout.Toggle(Application.runInBackground, "RunInBackground");
+                    //    Application.runInBackground = GUILayout.Toggle(Application.runInBackground, "RunInBackground");
 
-                    });
+                    //});
 
                 });
 
