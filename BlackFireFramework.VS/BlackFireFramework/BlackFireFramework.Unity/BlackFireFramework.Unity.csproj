@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\Unity\</OutputPath>
+    <OutputPath>..\..\..\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>

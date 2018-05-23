@@ -27,38 +27,37 @@ namespace BlackFireFramework
             }
         }
 
-       void IManager.StartManager()
+        void IManager.StartManager()
         {
             //注册进BlackFire管家管理模块。
             BlackFire.RegisterManager(this);
+            OnStart();
         }
+        private void Update()
+        {
+            OnUpdate();
+        }
+        void IManager.ShutdownManager()
+        {
+            //注销BlackFire管家管理模块。
+            BlackFire.UnRegisterManager(this);
+            OnShutdown();
+            DestroyImmediate(gameObject);
+        }
+
+
 
         protected virtual void OnStart()
         {
 
         }
-
-        private void Update()
-        {
-            OnUpdate();
-        }
-
         protected virtual void OnUpdate()
         {
 
         }
-
         protected virtual void OnShutdown()
         {
 
-        }
-
-        void IManager.ShutdownManager()
-        { 
-            //注销BlackFire管家管理模块。
-            BlackFire.UnRegisterManager(this);
-            OnShutdown();
-            DestroyImmediate(gameObject);
         }
 
     }

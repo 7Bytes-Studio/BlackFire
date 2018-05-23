@@ -39,12 +39,18 @@ namespace BlackFireFramework
             GUILayout.EndScrollView();
         }
 
+        public static void ScrollView(string scrollIdText, Action<int> drawCallback, params GUILayoutOption[] gUILayoutOptions)
+        {
+            ScrollView(Unity.Utility.Unique.GetId(scrollIdText),drawCallback, gUILayoutOptions);
+        }
+
 
         #endregion
 
         #region Window
 
         public static Rect GetWindowRect(int windowId) { return s_WindowRectDic.ContainsKey(windowId) ? s_WindowRectDic[windowId] : Rect.zero; }
+        public static Rect GetWindowRect(string windowIdText) { return GetWindowRect(Unity.Utility.Unique.GetId(windowIdText)); }
 
         public static void Window(int windowId,string title,float x,float y,float width,float height,Action<int> drawWindowCallbak,float dragHeight=15f,Texture texture=null)
         {
@@ -80,6 +86,13 @@ namespace BlackFireFramework
 
 
         }
+
+        public static void Window(string windowIdText, string title, float x, float y, float width, float height, Action<int> drawWindowCallbak, float dragHeight = 15f, Texture texture = null)
+        {
+            Window(Unity.Utility.Unique.GetId(windowIdText), title,x,y,width,height,drawWindowCallbak, dragHeight,texture);
+        }
+
+
 
         #endregion
 

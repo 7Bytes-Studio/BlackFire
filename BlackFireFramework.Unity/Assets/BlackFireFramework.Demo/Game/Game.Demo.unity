@@ -186,9 +186,52 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2041453649}
+  - {fileID: 652787616}
   m_Father: {fileID: 198395475}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &652787615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 652787616}
+  - component: {fileID: 652787617}
+  m_Layer: 0
+  m_Name: Debugger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652787616
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652787615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434819224}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &652787617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652787615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839e23f9211c57142ac67c9a0f21dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebuggerStyle: 0
+  m_WindowScale: 1
 --- !u!1 &859042699
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +387,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2041453649}
   - component: {fileID: 2041453650}
-  - component: {fileID: 2041453651}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -376,15 +418,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5028b9cde81694d86230b36b89145f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_GameSpeed: 0
---- !u!114 &2041453651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041453648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8609ed4af51d6f4c84a040a58b99007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_ApplyGameSpeedWhenInitialized: 1
+  m_GameSpeed: 1
+  m_ApplyFpsWhenInitialized: 1
+  m_Fps: 60
+  m_FirstProcess: BlackFireFramework.Unity.ProcessOne
+  m_AvailableProcesses:
+  - BlackFireFramework.Unity.ProcessOne
+  - BlackFireFramework.Unity.ProcessTwo
+  m_AllProcesses:
+  - BlackFireFramework.Unity.ProcessOne
+  - BlackFireFramework.Unity.ProcessTwo
+  m_StartFirstProcessWhenInitialized: 1
+  m_ProcessScrowFoldOut: 1

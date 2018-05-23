@@ -17,14 +17,13 @@ namespace BlackFireFramework
     /// <summary>
     /// 调试器管家。
     /// </summary>
-	public sealed partial class DebuggerManager : MonoBehaviour 
+	public sealed partial class DebuggerManager : ManagerBase 
 	{
         #region Public
 
         public float WindowScale { get { return m_WindowScale; } set { m_WindowScale = value; } }
 
         public DebuggerStyle DebuggerStyle { get { return m_DebuggerStyle; } set { m_DebuggerStyle = value; } }
-
 
         public void RegisterModuleGUI(IDebuggerModuleGUI moduleGUIImpl)
         {
@@ -59,16 +58,20 @@ namespace BlackFireFramework
         private Func<DebuggerManager, bool> m_ChangeToFullStyleCallback = null;
 
 
+        #region LifeCircle
 
-        private void Awake()
+
+        protected override void OnStart()
         {
+            base.OnStart();
             CheckErrorOrException();
             InitDebuggerModuleGUI();
             InitDebuggerStyleChange();
         }
 
-        private void Update()
+        protected override void OnUpdate()
         {
+            base.OnUpdate();
             if (null != m_ChangeToHiddenStyleCallback && m_ChangeToHiddenStyleCallback.Invoke(this))
             {
                 m_DebuggerStyle = DebuggerStyle.Hidden;
@@ -82,6 +85,13 @@ namespace BlackFireFramework
                 m_DebuggerStyle = DebuggerStyle.Full;
             }
         }
+
+        protected override void OnShutdown()
+        {
+            base.OnShutdown();
+            DestroyDebuggerModuleGUI();
+        }
+
 
         private void OnGUI()
         {
@@ -102,10 +112,13 @@ namespace BlackFireFramework
             }
         }
 
-        private void OnDestroy()
-        {
-            DestroyDebuggerModuleGUI();
-        }
+
+        #endregion
+
+
+
+        #region Private
+
 
         private void DrawMiniDebugger(string title)
         {
@@ -332,11 +345,7 @@ namespace BlackFireFramework
         }
 
 
-
-
-
-
-
+        #endregion
 
     }
 }

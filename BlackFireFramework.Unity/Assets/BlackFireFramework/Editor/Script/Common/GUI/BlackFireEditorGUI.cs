@@ -300,6 +300,10 @@ namespace BlackFireFramework.Editor
             selectedIndex = EditorGUILayout.Popup(text, selectedIndex, displayedOptions);
         }
 
+        public static int ArrayPopup(string text,int selectedIndex, string[] displayedOptions)
+        {
+            return EditorGUILayout.Popup(text, selectedIndex, displayedOptions);
+        }
 
 
 

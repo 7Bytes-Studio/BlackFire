@@ -160,8 +160,25 @@ namespace BlackFireFramework
         }
 
 
+        public static bool IsNullOrEmpty(this string str)
+        {
+            return string.IsNullOrEmpty(str);
+        }
 
-    
+        public static bool IsNullOrWhiteSpace(this string str)
+        {
+            if (null!= str)
+            {
+                for (int i = 0; i < str.Length; i++)
+                {
+                    if (!char.IsWhiteSpace(str[i]))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
 
     }

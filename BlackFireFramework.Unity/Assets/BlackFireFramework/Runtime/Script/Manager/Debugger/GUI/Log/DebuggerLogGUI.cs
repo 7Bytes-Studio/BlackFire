@@ -58,11 +58,8 @@ namespace BlackFireFramework
 
 
 
-        private DebuggerManager m_DebuggerManager = null;
         public void OnInit(DebuggerManager debuggerManager)
         {
-            m_DebuggerManager = debuggerManager;
-
             Application.logMessageReceived += Application_logMessageReceived;
 
             Utility.Enum.Foreach<LogLevel>(e => {
