@@ -10,7 +10,7 @@ namespace BlackFireFramework.TestAssembly
     /// <summary>
     /// TestAssembly 的导出类。
     /// </summary>
-    public sealed class ExportedAssembly : ExportedAssemblyBase
+    public sealed class Exported : ExportedAssemblyBase
     {
         /// <summary>
         /// 导出接口事件(该事件会被BlackFire核心程序集反射执行)。

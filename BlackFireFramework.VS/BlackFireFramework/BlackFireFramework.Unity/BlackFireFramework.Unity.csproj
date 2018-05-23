@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\</OutputPath>
+    <OutputPath>..\..\..\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\Unity\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExportedAssembly.cs" />
+    <Compile Include="Export.cs" />
     <Compile Include="ProcessModule\ChangeProcessEventArgs.cs" />
     <Compile Include="ProcessModule\GlobalEvent.cs" />
     <Compile Include="ProcessModule\IProcessModule.cs" />
