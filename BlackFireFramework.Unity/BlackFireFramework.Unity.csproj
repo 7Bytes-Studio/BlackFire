@@ -223,6 +223,12 @@
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/Unity/BlackFireFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackFireFramework.Unity">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/Unity/BlackFireFramework.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -235,24 +241,9 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="BlackFireFramework">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/Unity/BlackFireFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework.Unity">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/Unity/BlackFireFramework.Unity.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlackFireFramework.Demo\Debugger\DebuggerDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Game\GameDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\ILRuntime\ILRuntimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Job\JobDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\ObjectPool\ObjectPoolDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessOne.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessTwo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework.Demo\Ugui\DoubleClickButtonDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Assembly\IAssemblyProvider.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\ManagerBase.cs" />
