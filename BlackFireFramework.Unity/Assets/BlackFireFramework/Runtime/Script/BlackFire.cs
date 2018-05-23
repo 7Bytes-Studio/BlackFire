@@ -39,9 +39,9 @@ public sealed partial class BlackFire : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad();
-        InitAssembly(this);
-        InitModule(this);
-        InitManager(this);
+        StartAssemblyManager(this);
+        StartModuleManager(this);
+        StartUnityManager(this);
     }
 
     /// <summary>
@@ -57,7 +57,9 @@ public sealed partial class BlackFire : MonoBehaviour
     /// </summary>
     private void OnDestroy()
     {
-        ExportedAssemblyDestroy();
+        ShutdownAssemblyManager();
+        ShutdownUnityManager(this);
+
         Framework.Die(s_Unity, Time.unscaledDeltaTime, Time.deltaTime);
 
         if (this.Equals(s_Instance))
@@ -66,6 +68,9 @@ public sealed partial class BlackFire : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 过场景不销毁。
+    /// </summary>
     private void DontDestroyOnLoad()
     {
         if (null == s_Instance)

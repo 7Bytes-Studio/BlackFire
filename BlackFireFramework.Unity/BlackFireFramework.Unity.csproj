@@ -254,13 +254,13 @@
     <Compile Include="Assets\BlackFireFramework.Demo\Timer\TimeDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Ugui\DoubleClickButtonDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Assembly\IAssemblyProvider.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\BlackFire.Manager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\ManagerBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.Assembly.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.Log.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.Module.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Assembly.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Log.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Manager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Module.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Extension\String.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\GUI\BlackFireGUI.cs" />

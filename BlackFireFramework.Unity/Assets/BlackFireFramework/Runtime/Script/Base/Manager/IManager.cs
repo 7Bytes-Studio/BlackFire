@@ -19,14 +19,14 @@ namespace BlackFireFramework
         bool IsWorking { get; }
 
         /// <summary>
-        /// 初始化管家。
+        /// 启动管家。
         /// </summary>
-        void InitManager();
+        void StartManager();
 
         /// <summary>
-        /// 销毁管家。
+        /// 关闭管家。
         /// </summary>
-        void DestroyManager();
+        void ShutdownManager();
 	}
 
 }

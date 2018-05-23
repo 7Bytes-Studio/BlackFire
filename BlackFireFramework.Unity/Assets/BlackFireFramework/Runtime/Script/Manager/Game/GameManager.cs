@@ -20,26 +20,28 @@ namespace BlackFireFramework
 
         public bool RunInBackground { get { return Application.runInBackground; } set { Application.runInBackground = value; } }
 
-
-
-
         /// <summary>
         /// 流程模块接口。
         /// </summary>
         private IProcessModule m_ProcessModule = null;
 
 
-        public override void InitManager()
+        protected override void OnStart()
         {
-            base.InitManager();
+            base.OnStart();
             BlackFire.ModuleManager.Register<IProcessModule>();
             m_ProcessModule =  BlackFire.ModuleManager.GetModule<IProcessModule>();
         }
 
-        protected override void Update()
+        protected override void OnUpdate()
         {
-            base.Update();
+            base.OnUpdate();
             Time.timeScale = m_GameSpeed;
+        }
+
+        protected override void OnShutdown()
+        {
+            base.OnShutdown();
         }
 
         /// <summary>

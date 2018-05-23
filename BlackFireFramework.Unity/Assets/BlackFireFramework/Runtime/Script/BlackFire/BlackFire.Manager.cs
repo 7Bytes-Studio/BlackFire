@@ -32,7 +32,7 @@ public sealed partial class BlackFire
         }
     }
 
-    private static void InitManager(BlackFire instance)
+    private static void StartUnityManager(BlackFire instance)
     {
         if (null != instance)
         {
@@ -41,7 +41,22 @@ public sealed partial class BlackFire
                 var manager = trans.GetComponent<IManager>();
                 if (null!=manager)
                 {
-                    manager.InitManager();
+                    manager.StartManager();
+                }
+            });
+        }
+    }
+
+    private static void ShutdownUnityManager(BlackFire instance)
+    {
+        if (null != instance)
+        {
+            BlackFireFramework.Unity.Utility.Transform.TraverseChilds(instance.transform, trans =>
+            {
+                var manager = trans.GetComponent<IManager>();
+                if (null != manager)
+                {
+                    manager.ShutdownManager();
                 }
             });
         }

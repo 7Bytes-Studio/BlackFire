@@ -14,7 +14,7 @@ public sealed partial class BlackFire
 
     public static IModuleManager ModuleManager { get { return s_ModuleManager; } }
 
-    private static void InitModule(BlackFire instance)
+    private static void StartModuleManager(BlackFire instance)
     {
         if (null != instance)
         {

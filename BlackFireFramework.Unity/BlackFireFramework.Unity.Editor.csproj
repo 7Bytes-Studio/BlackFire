@@ -314,6 +314,8 @@
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.Zip.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Config\BlackFireFrameworkConfig.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Hierachy\GameObjectIconHierachy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\Script\Inspector\InspectorBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\Script\Inspector\InspectorSetting.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\AssetsMenu.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\ScriptAsset\Base\EndNameEditActionBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\ScriptAsset\CreateEditorWindowScriptAsset.cs" />
@@ -324,6 +326,7 @@
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfoList.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageWindow.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Editor\Lib\DotNetZip\DotNetZip.xml" />
