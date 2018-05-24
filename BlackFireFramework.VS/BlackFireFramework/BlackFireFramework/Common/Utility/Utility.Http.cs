@@ -457,6 +457,8 @@ namespace BlackFireFramework
                             }
 
                             response.AddHeader("Access-Control-Allow-Origin", "*"); //允许跨域请求。
+                            response.AddHeader("Access-Control-Allow-Headers", "X-Requested-With"); //允许跨域请求。
+                            response.AddHeader("Access-Control-Allow-Methods", "POST,GET"); //允许跨域请求。
                             response.ContentLength64 = handleContent.Length;
                             Stream output = response.OutputStream;
                             output.Write(handleContent, 0, handleContent.Length);

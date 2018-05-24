@@ -11,5 +11,1213 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
-  m_assets: []
+  m_assets:
+  - m_assetDatabaseId: 11cd75004d5b84ef08d52cd8912277d3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/BatchBuildConfig.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8fa5510b36b74f07866af115e2c45d6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/UnityPackages
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6d6cf7100d6f3475b8905f2f6383bbca
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/NodeDataImporter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f7957320f633f4c71bc0d6f744410738
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1/ConnectionData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 64253c20cf541461ab2e8099d2025732
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/ShaderImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4eb34d40a86f34e39b58f21bfa24fa14
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node_images_source.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3d9db06067b4d4af5a0622f149725e5a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/AssetGenerateInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04cb0660197e64f278791d91a18431a0
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializableGroups.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65072170869d44a69a6dcc814a0cb197
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/TextureImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 346bda70af48240ecbace0e785adc937
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ConnectionGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4e9e9880c451546738ed613faeda6c89
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/AddGameObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b8034c807692d4dc8975b8b0df202123
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node5@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a25d0a90608db4dc58c635afb9963abc
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 391178b0da267493d9ee22c8f353b40b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetBundleBuildReport.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9b376e058dcb4ba1a06fc3718529127
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Filters/FilterUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 907baae0102874dd49e7f5b2c9dbd168
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node0.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dafa50f058c614ce9804e30388d6aa17
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/Test/PathTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2ba48f0005dc45778cbd15a7e1b92f6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetPostprocessorContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5a609f059ca9f24680366ff8afd4276
+    m_importFrom: Assets/BlackFireFramework/Runtime/Script/Common/Base/Manager
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d8821411df2f495479aee0db3c0f985f
+    m_importFrom: Assets/Asset Graph.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a9b2fb219b0a847f6a705de8223b87df
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/FileUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be312e4110688470990b1596df3dfa61
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Error.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 19f44f51e63d849839580c465de537a1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Libs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ffc89771dc707404180484a695606239
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/Editor/AssetBundles-Browser/GraphToolABDataSource.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 76fc1281e9e0349bfa3740ff8ffce865
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/SetReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1e80978168993489ea03c2ffbccaf928
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/LoaderBySearch.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a50575a181d034e50b6cbad0c798a66e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders/PrefabBuildInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c5196e122b8e46d3aef4164c81252e8
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.ttf
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a68de7e1271fb487c85fbb75941f9b17
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ConnectionGUIEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d98578e11c3b84590a32d4b988609228
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders/ReplaceGameObjectByName.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ad9b7be1ce5884bc292a5ba51184b915
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/BundleConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c1d46f12fd01c74fbf13ebfe48eeb1e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9291133251fa94285b90b7ea1ab5ae4f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyPostprocess.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 72ed3432ab4644eb59375981e4a7fe59
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Filters
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fd83f78206d344ebebc090b37a2dd114
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GroupView
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dafe4c82ebed44b81bb48ef142b5386a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/Settings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f2e3edb2e315041c8981dea915573b24
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/AssetLog/AssetProcessEventLogWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: da4f50d25854f40a284136aeb3f72c39
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/AssetGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 35b63dd2d8c5149979e69dd21178b6c8
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1/Settings.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5367ed2f72994b55af0964b29a5134a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node7.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 654df1f201fe549d8a354a69681f632e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 57e5b4f272c13400db25084f10fea6a1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/readme.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7a61cdf230c0a4ddba68a0a707d58525
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/ExtractSharedAssets.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8f7ecdf2556ad4d3a820aba90522fab4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node7@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9699bb034e3d543dea089ed1168ce619
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializableMultiTargetInt.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b48a2f13c40b045f9b2205828dbd7fc4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/ConfigGraphIcon.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4828dd530e30e4fa6ad842215386a139
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/SaveScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cd10f53451414f35b4a646f7d58558c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d8730a30170c42c1924ef148010adb5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/ComponentMenuUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 459682b384b2b49bf9ab32341ad85637
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/AttachComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4dff96b374bd7441c8ad7f91fc6a3591
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node1.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0bf674c3f0a4e42228c87053bedac19e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/ConnectionPoint.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a9f0dbc38109742b8b169ab66e8172d2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e4c82d3e76e64c5f9c64cf0c38aaf42
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/SetProperty.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7cc57ee31ef3a44389458141063b7b71
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/PlayerBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7576b8f317a11494eae65b2335689272
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/OutputBG.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 03eaacf3cb3e642a3a137ead7d9debba
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node3@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 11599b042eeda438193915d6d4b2e25e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1/SaveData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 995c7b348de57438c891b65236c1d7b2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.m4v
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f9d22c34b09544790a895928c8472805
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/UserPreference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dc3edc4496b6745b1a650261e54f33dd
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/AssetGraphUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9464586463c434f4a9ca322dc0df1350
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node2@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1725dd748a705450ea972f3fe0826119
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/GroupingByFile.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e22056847ad1c4bc39e69087388296b0
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/Test/ImporterTest.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e85ee2947fe44422d90dab56e1efdd91
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node4.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82f81cb4192dc4e1d9714dd03ea84ad1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/JSONGraphUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2b4b92c4019054aee96cde27365b8394
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GroupView/GroupAssetListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f67e8d4b6cec4c3fbbcbf34acfabebd
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/Square.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2bc0d9d4d7b8e478c831da74cdf06151
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/LineDraw.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d5d679e462d4f4ab084e50d088f51a44
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d7cfce4400474688aa803f13d8eb448
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/EditorRuntimeSupport/AssetBundleBuildMap.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 90f369f416671475d86e05b86c9d8139
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/PrefabBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ee4bc21567f434b598a3c96ba4946372
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/AssetReferenceDatabase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 207f0a157f97848d7ac7a9009b66e802
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyModifier.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ebffcf253e899ee4eb795ad410e234fb
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d1b3dc357d1344cc5801bb6d5cb46625
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetReferenceStreamManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 220bd545cb0f64493b48cad989fd4fae
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Exception/NodeException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 736b0a4506b3e4d9cafbaf59961d22a9
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1/NodeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1970fb55c77154021a4cd5e4a72d89eb
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Label.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e7593765c5f3448889247c3e3f0e8ff5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Loader.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8154e1953b67f400cb8a7ecf91490326
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d00d589513e244e05b12dce92ddf25e4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyFilter.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2396a89559dfd474e9f16d864bc7481a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders/PrefabBuilderUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2beb27d59eec84f3eaa90e2394236032
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GroupView/GroupListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dab20ed5a5e3e40d8a69e2f6cee60fe2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/CustomScriptUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a1db7ee549d5147d4b42adf1b7396354
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/InputBG.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d9a4cee567dcf46fc919420c7d668c2e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/AssetLog/AssetProcessEventListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bb6c03f5afc23481cb01e7c813d06e48
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphBackground.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 026474f5e29544af185a526bd1aebdf6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node4@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 89baa4f52fa38496e8d0d6808762034f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node5.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e3a3bf53490948d1ad369577a66b263
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Exception
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 76f42306b205543bf8fd126dd531dd99
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node8.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c7eb706cff9343ddb45ab11a673231f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ProjectSettings/ProjectSettingsWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ce553c06e42d7431d862637ca1e18e57
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b1bc2d26162184521b3d75065fcd5667
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/GraphCollectionDetailTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09bd7246e12c44caeb1c3e4dc76fbd68
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/NodeBuildContext.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 009ae346a3f1b42eb864a151c39805d3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node6@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cdd13946d6c38b64fb424d2782501bd2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a41d2c466f24e42bc8aea8a0a0a45eb4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Exception/AssetReferenceException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 406e7a664cf5b47b8bea6929347c3122
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node6.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7894a5761247a462097d180e2cf09a54
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/GroupingBySize.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65c22f76b77044875a46f653f516c019
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/NodeGUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c72e9896ca732448296aaec689e29fcf
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/IModifier.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b74ea960fdf3432c9764eeb4f29c397
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/RecordUndoScope.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ecebe0a6795bf4a00a89a1b2db87734d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/CreateMaterialFromTexture.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cbe63ca6fd848854e9c2ecf1fd44cfc6
+    m_importFrom: Assets/BlackFireFramework/Runtime/Script/Common/Base
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6838d1c6be001444ab0dfe90e45b087e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/BatchBuildWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7f876bd6f2c4343308d812b7ff184217
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/BundleBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a2445fd6934ad4e88a4dbd7c02db6940
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Imported.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 928b290746aa740428fdb3021b136b4c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node6@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b917b90729a84a345a6838c6450bef97
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f8dd2517b608b4a7ea9098574b4e6969
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node1.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 490188172e6e14f5b88e2b03b107b2aa
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/EditorRuntimeSupport
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8d9a5f17c54584a67b7fe58665965f15
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetProcessEventRecord.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: be72e827636b84babac7fe6b7fc282f6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Filters/FilterTypeUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5da08927eb8a84276b34742adde1b11f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ProjectSettings/AssetBundleSettingsTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb428e679ba4945b382b08d1e15bdbd9
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyPrefabBuilder.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5f2454976b5ed4e628d9e910951d08d7
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyNode.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e6f1bb79354d4d14a965de286d966d5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node6.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5c75fed7a116640d1b5c78c11883ff89
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/AssertUnwantedAssetsInBundle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 413464e71470e48cea3073a1ea418f7e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/AssetGraphEditorWindow.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a58617e7f893049179cb9ed32310dbfc
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/LogUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c13fae742fa24ea9beb76b5cdc2bf5b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GroupView/GroupViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 67b4de080f56845a09dfdbf9742a16e5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node3.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cb8c96287a087455ab5f02f76f764c10
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node8@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18678a28cef624aeb89c5717c46be35b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5e95c6380691441ec902f183f790521e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializedComponent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20dd03585482b4892a07d6dd5adb3ecc
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/d_AssetGraphWindow.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae32c06838424447c9cfb208bc0b7aba
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders/IPrefabBuilder.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 789b30787cfac4b3b8367b94262f68b2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/Editor/AssetBundles-Browser
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fbf1bb8889d9649978dd5d2efe02cd48
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/TrueTypeFontImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6f8d4698d81ba4878b54b15cff6f852a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ProjectSettings/ExecutionOrderSettingsTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04e668989dcf2499eb5662cb399f5f44
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Modifier.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c63d12b8197e0466bb01427f0f4d999b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node_images_source@2x.psd
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5fa5a4d85cee44cc3a050e131b9b6098
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node3@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c03100996df84ff1a8e32ffca7213a4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/GraphCollectionExecuteTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4ff65a093e87f482b91a6ccf343a1f76
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/ConnectionData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 327cf429aa28d4cd29d4b1ac70fc99e0
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/ExecuteResultTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ef2ab0393a5b4416eac5b085ee3e00a9
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae91ca49976fe49178d41acfea7af334
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e37e335925e27435baa014373861de89
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/AssetLog
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 90c319597e27f4efc898a09d71c4aafb
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/GraphCollectionManageTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 65ec3f597ff024afa8b9a0ce8c69f9d5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyImportSettingsConfigurator.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 672797698ae4a441abfef0263c6d3e6c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetGraphController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8adf019998f124b7d8692b8083b72505
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5d0b03a948ad545f691a9d4213bfe810
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/AssetLog/AssetProcessEventLogViewController.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f006d9a9c7507460d9ab6f36cbdb7794
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetGraphPostprocessor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0773a8d9b59e749e8a5f73efa45919b4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4043dad9a38a8409a899553f3c5cd7ad
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ProjectSettings
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b59656e937e034d1fa0af1f755d7ddf1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders/ReplaceWithIncomingGameObject.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3706d7e9bff914014a8c0d30e8f854e6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fbc295f9fd7874aef834ba4d3abd555b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/NodeGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2a0d850aaeed24132954c8ccb9b7d238
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cc9d051a7aa1d4dbbbe99c67526af874
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/IAssetGenerator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e68d922aabe4948a2af68d46db95d4a9
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node2@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8a0a5b2a9f6674dccae5da7df81e5a98
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 186be03abcfd84b539b9b8cc418ae65d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers/SetSpritesToAnimation.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c0ef623add767445284d290e629624fe
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/Node.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae3ba93a359be43028ab177bfbf6af50
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 20b1b37a2183e4f4eb443dc216e58e1e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/AssetProcessEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 403f9a7a077a74263bab6b89198eaf4c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node0@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0d21ca7a30faf461381a8cc734ab6a8a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1/ConnectionPointData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b929608ac59544de3a587ffc4080d2fd
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/ConnectionPointData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e92b488a6e4e44b0ba8022885f55f087
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/NodeData.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b199839a9e8f347ada0d93a4bb32bea5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/Duplicator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b45ce3caafd734a08b4ecc1f882ee67c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/GraphCollectionTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ddfceca50d66489dbc1b6285a804190
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/VideoClipImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2ac42cda7ec314ba4a292c8ef1da0b2e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a58aa8ea0dc1b47c3a51105ef2252237
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/AudioImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2134a1fa3afdb4b909185365e52219d1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/ScriptTemplate/MyGenerator.cs.template
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75ce4a2b9ce8e45f9bcb12d38ed95952
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeStyle.guiskin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b08ede5b430e28e4a8275af7d141ebcd
+    m_importFrom: Assets/BlackFireFramework.Custom/Packages
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 92eea56b5faca4df497ebe801de67f1f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/EditorRuntimeSupport/AssetGraphBasePath.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3cc36a7b9a2cc410080d519bcdbaea0a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild/BuildTargetTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 114e958bf42b545c8887933d4e78b6db
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/UnityPackages/AssetBundleManager.unitypackage
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3ab1bcbb000bd41018384e565c288604
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node5.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7e74ddcb4e22c4cfc94b454f0aeb1573
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node0.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ac5a4eb1d8da482694ba467cd1fc34f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/ImportSetting.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f28a97eb9f6b84cc2b6879387333e1c7
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/ModelImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fdc9a4fb30f6f48c3b5f1f38a2ffb2b5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializableMultiTargetInstance.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 523eb70c378aa40b68c2874d02d485ed
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/MirrorDirectory.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b25a542caf7ff40f58e6cf517affcf47
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V1
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7322e72cf9fd147ec8957c7c99d578e5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/PrefabBuilders
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 78ce924c1536e4fb88d91fff535a384b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node8@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a5b60c4c9c31a48de997f40e86fce8dd
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node0@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1cc4426cea05e4d9a92364da039f01b7
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node4@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 82a0f18c397f74c78afb86c98d2f8694
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/NodeGUIEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 519a7d8c957b74d4796e109c00242ce0
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node8.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4edd7b9c0708c41c394a7eccef5710f3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node1@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c6b3bac846ff402eadc1eb18359ddf3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/TextureScaler.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 408083dc9c2f74c62aabd45e865483d4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Exporter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4b51c3dc205df425bb581cfc489b2380
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node1@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 357dba0de306645a3992bbd2621d71bc
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 04e83e1d064b147fc97851b317d0a292
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/CUIUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 68a8222d3f84e43fc99a00702bd91e8f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializedInstance.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 02e5822d3f4d04f41b5e9ffc9c85e280
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/SystemDataUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eec4882d68a9346b3b5f8ecf1e38a534
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/V2/ConfigGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6061cd2dc44bc4639976b2ca7abe755d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Filter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d123776dddc2d44d7a26dcefb59f3595
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 92eb5dcde0e0343c2a063849d7a86b93
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ConfigGraphEditor.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e0afaedd72b2d48c89c437ea34dba208
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/BatchBuild
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4824831e124564254aea49f66a81cbad
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/AssetReferenceUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fea4e72e0941e42bdb611e8fa916dd2c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7136d73e8820d4135bcd6720bf5f3721
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a621b3eb315745c8b95a9e354708dd4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/TypeUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: cd98027e9703d4feead80e890f5e2fd7
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Modifiers
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a073337e5a6474ad2bc1d344d9ce8211
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ConnectionGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4188ec7e6ce3549bca02d5a372758f36
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Importers/IAssetImporterConfigurator.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81b3d18ee905544b988d58249996f11f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/AssetGenerators/DuplicateRefererenceAsset.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ed27888e1684140fe8f6cb05957e5b6b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node3.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0e179c9e7e4094b6cacb7dec874f7144
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/NodeEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 55796f9e6ac6b4b938413481d8242df5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/AssetReference.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c24f23aec48884c6f93304a648ae269f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/Test
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 785a88dedbaea4eb5b50019325ee54b1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Libs/MiniJSONForAssetGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9957afe4f6df4fba8f8e329a47b30cb
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/BuildTargetUtility.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f4afbfedc128456c8531368b170d036
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Exception/AssetGraphException.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7b36421f668d647d3a0f7a8be7f5e5aa
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/SerializableMultiTargetString.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4235bf1f6608b4e5dae5965f02fc21ee
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Core/PerformGraph.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f33a802fc0ec143fe9a84025d6fbc6ee
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Integration/UnityPackages/AssetBundles-Browser.unitypackage
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5b4de33f65ec448ec9085f9c0bf149db
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node2.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b9ba3c3f58d8248e5b038dc004496686
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c8e784f9942d804d80b3edadb817806
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb70905fec4ff495e9ab036174bef78d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/IPostprocess.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bcb0c45f124e843669cb245a2c43f67d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Filters/IFilter.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: bfe3797fca69b44589c23dbbdb59ee52
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node7.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 07689e8f3a2194ffeb25946bde9b4f46
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Model/ObjectReferenceBase.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: afc3569f912a446bc839b0acf18ac47c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/node7@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fa2529bf9209243c48e658c607b0c8f2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node5@2x.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 46e082cff6afc4be8815e6b86e62dc45
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Node/Buitin/Grouping.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d6beecfb0c514c9782641af7bdbe9ba
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/AssetGraphWindow.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 207962df4115f4a73bc381985e110fd4
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/ConnectionEvent.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6a1337df6f2e1467499697f89b4b7393
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Filters/FilterByNameAndType.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c99f06ff0dde241d1a363bbd8ef932a2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeImage/on_node4.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 30521dff08ef15c49ae0896ece522f48
+    m_importFrom: Assets/BlackFireFramework.Demo/Game/Game.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 070625d13f8ccb34fae05784d538b034
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Generated/CUI/buildassetbundle.bat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c938f048f4c4df40be295303642c091
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Generated/CUI
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9626206a3d2395e40be76538ffff4183
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Generated
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ce667028159ed24aa4b58639fbdb0e6
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/AssetBundles/dd217c0e-da20-42f1-9583-5d7329314395
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 861fe36372d261545907530e3c496bda
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/AssetBundles
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8d4dcbb50ae543e4c91353af1f9f2893
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/AssetBundles/5e268646-2191-4501-aa4a-03ec4a866d2d
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 25241cfbf6b1b404eab36cb3d5d33812
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/AssetBundles/dd217c0e-da20-42f1-9583-5d7329314395/2147483647(deprecated)
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb168d5d629458c4f8205cd89dc5a3e8
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/UnityEngine.AssetGraph/Cache/AssetBundles/5e268646-2191-4501-aa4a-03ec4a866d2d/2147483647(deprecated)
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 627d718f684af694988a0b24f798c501
+    m_importFrom: Assets/BlackFireFramework/Runtime/Script/BlackFire.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e55920e1222a35644a6fc35133f1349b
+    m_importFrom: Assets/AssetsTest
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 331a6de1378c1f34093cdfb8242a8a6c
+    m_importFrom: "Assets/AssetsTest/Video/1.\u5F00\u59CB\u6210\u4E3A\u4E00\u540D\u6E38\u620F\u5F00\u53D1\u8005.mp4"
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c77780a96e71d154a8e28d343b7fdb48
+    m_importFrom: "Assets/AssetsTest/Texture/M&K_\u7334\u5B50\u8BF4_4.jpg"
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a45f5c2db44b2754981aa74fb034a3df
+    m_importFrom: Assets/AssetsTest/Texture/Trifect_Sky_4.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0c7d98167e21b4246995950629184478
+    m_importFrom: Assets/BlackFireFramework/Editor/Lib/DotNetZip/DotNetZip.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f815de066ed423541872ae38d7424687
+    m_importFrom: Assets/BlackFireFramework/Editor/Lib/DotNetZip/DotNetZip.xml
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7788a4c6a9b30e247817971629fb7a87
+    m_importFrom: Assets/BlackFireFramework/Editor/Resources/BlackFire.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1370940c35a73e3478c9063d3dc8553e
+    m_importFrom: Assets/BlackFireFramework/Editor/Resources/Manager.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c5f1ce93869db3459d2ff7ad5c52051
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.pdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b8cf78143378da49b1fadcf1b3fd0d7
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 53de4153e2db729479e1041f13227399
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75bc9af4cc857b244a55e3d810eb1077
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Unity.pdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8e6a5ecc1f14bb944adc1b0507b0b996
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Unity.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 566d8a81738bd134596a660c866d1ea1
+    m_importFrom: Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Unity.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a2633b33b1330b4eb006c025bd0d5f1
+    m_importFrom: Assets/BlackFireFramework.Custom/Resources/BlackFireFrameworkConfig.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9499a40b4ee5d3740b0d043fd47c607e
+    m_importFrom: Assets/BlackFireFramework.Demo/[BlackFire].prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a97285def530ff54cb1566f36f94c038
+    m_importFrom: Assets/BlackFireFramework.Demo/Debugger/Debugger.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e80dee9e16df2644eb939b7757425e3f
+    m_importFrom: Assets/BlackFireFramework.Demo/Job/Job.demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7d651d11a8d848e4d803cf4320adbff1
+    m_importFrom: Assets/BlackFireFramework.Demo/ObjectPool/ObjectPool.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 42cd68abe4900214b8dbb859583f269d
+    m_importFrom: Assets/BlackFireFramework.Demo/Process/Process.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f3b77a3f1aa20d47aeb9478701b0616
+    m_importFrom: Assets/BlackFireFramework.Demo/Timer/Timer.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d4d368629997146429ee69acf11aebfd
+    m_importFrom: Assets/BlackFireFramework.Demo/Ugui/Ugui.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 744a34f9370b1624b9be6d3ef6e12308
+    m_importFrom: Assets/StreamingAssets/Assembly-CSharp.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e3d0a4783f45ed14c8dd6a3e6084f6eb
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f64e3b445e19d90499ba15e48d61fa39
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.pdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ddb7e25d6dc6cf9428dcdc38407469c9
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 8ed558a8104c99a43a6398ebc6c5e1cc
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.Hotfix.pdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9ece0bda605de7c4fb5512686b6d2767
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.Hotfix.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00074352bc0666b4ca1cf65da1926332
+    m_importFrom: Assets/StreamingAssets/BlackFireFramework.Hotfix.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 58b185a6661b78a4381d6d628fcee24b
+    m_importFrom: Assets/StreamingAssets/UnityEngine.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1dfd72d5f204d8d4ba695f613423a384
+    m_importFrom: Assets/StreamingAssets/UnityEngine.CoreModule.dll
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9d3438c07ebaae348b04ae5600a2c90f
+    m_importFrom: Assets/AssetsTest/Video
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 81c63bcd7d3a27b4c931b9508a344d7d
+    m_importFrom: Assets/AssetsTest/Texture
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 16f967d0656794a2b87ade351894232b
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/Icons
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 528bbf11b1f8343df8684e3afe2262c8
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleModel/ABModelAssetInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7d70e731df813402b861a395fd9dbc6c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/LICENSE
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6016eb61f8dab4cb48f5ea13d9d7609a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e904a4447a8a44af9800d6f46c8736d3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: eb18c854130ed4d81b6b25fae2598e71
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleModel/ABModel.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6fb7d6948fce64639afba0b7c2aa6930
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleDataSource/ABDataSourceProvider.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 285b42862e70e4e45a68a0d26630b391
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetListTree.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: dbffb41799c5a41108dfd8bbb450839f
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleBrowserMain.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b368407754fbe4f1ca713de77ab9a675
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleManageTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: efa181783119249138b151b2f7c70dbd
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/MessageList.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0412eae8c76fd47d288c04edf27e7e5e
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/Icons/ABundleBrowserIconY1756Basic.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c5b6d59993414f52a8478e0d47ec4b2
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/BundleDetailList.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d4313a99eb0074614a5749441ad8f54d
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleModel
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 48fd7d1b33b27467cb4c3f7dc8e38ac5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleDataSource
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d893e85b751554741ad676a29557c266
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleModel/ABModelBundleInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 24f1466b174814bfca4ce2c53d15a5b5
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2be1dd7bed65a4621a87d20c8ec65084
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleBuildTab.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 398e8dcb2842643c18e34ef333c8d8f1
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/README.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: e25b0dccef8a240cab85732bac8274ec
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6bc83ebde74564d21bba3d6df69b382c
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/Icons/ABundleBrowserIconY1756Scene.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4469e4ddba4d79045bb8eb0a39b0ad39
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f89bb2ae32e844acea2d4f965ffaafd9
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleDataSource/ABDataSource.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 727e4daee7abc4894be37fb521648ade
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/AssetBundleDataSource/AssetDatabaseABDataSource.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c000a2af43b7f49bb81125a2e23953e3
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/MANUAL.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c9c3edf8de154d67a80fa8a5eaf051a
+    m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/MessageSystem.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
