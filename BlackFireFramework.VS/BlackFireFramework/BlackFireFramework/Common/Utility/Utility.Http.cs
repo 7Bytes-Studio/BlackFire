@@ -287,6 +287,7 @@ namespace BlackFireFramework
 
             public class HttpServerInfo
             {
+                public string Ip;
                 public int Port;
 
                 public string[] Prefixes;
@@ -297,6 +298,8 @@ namespace BlackFireFramework
                 public Func<HttpListenerRequest,byte[]> GetHandler;
                 public Func<HttpListenerRequest,byte[]> PostHandler;
                 public Func<HttpListenerRequest, byte[]> DefaultHandler;
+
+                public Action<HttpListenerResponse> OnBeforeResponse;
             }
 
             public sealed class StartFailureEventArgs : EventArgs
@@ -312,6 +315,7 @@ namespace BlackFireFramework
 
             public class LazyHttpServerInfo : HttpServerInfo
             {
+
                 public LazyHttpServerInfo(Func<string, string> getLazyHandler, Func<string, string> postLazyHandler, Func<string, string> defaultLazyHandler)
                 {
 
@@ -319,9 +323,6 @@ namespace BlackFireFramework
                     GetLazyHandler = getLazyHandler;
                     PostLazyHandler = postLazyHandler;
                     DefaultLazyHandler = defaultLazyHandler;
-
-
-
 
 
                     GetHandler = request => {
@@ -373,6 +374,7 @@ namespace BlackFireFramework
 
                 public bool IsWorking { get; private set; }
 
+                public string Ip { get; private set; }
                 public int Port { get; private set; }
 
                 public string Address { get; private set; }
@@ -395,8 +397,9 @@ namespace BlackFireFramework
                         throw new ArgumentNullException(string.Format("构造方法的参数:{0}不能为空。", "httpServerInfo"));
                     }
                     m_HttpServerInfo = httpServerInfo;
+                    Ip = httpServerInfo.Ip;
                     Port = httpServerInfo.Port;
-                    Address = string.Format("{0}:{1}", @"http://localhost", Port);
+                    Address = string.Format("{0}:{1}", @"http://"+ Ip, Port);
                     Prefixes = httpServerInfo.Prefixes;
                 }
 
@@ -425,13 +428,16 @@ namespace BlackFireFramework
 
                         IsWorking = true;
 
+
+
                         while (IsWorking)
                         {
                             var context = m_HttpListener.GetContext();
                             HttpListenerRequest request = context.Request;
                             HttpListenerResponse response = context.Response;
                             response.ContentEncoding = Encoding.UTF8;
-                            response.ContentType = "text/plain;charset=utf-8";
+                            response.AddHeader("Access-Control-Allow-Origin", "*"); //允许跨域请求。
+
                             byte[] handleContent = null;
                             if (request.HttpMethod == "GET")
                             {
@@ -456,7 +462,11 @@ namespace BlackFireFramework
                                 }
                             }
 
-                            response.AddHeader("Access-Control-Allow-Origin", "*"); //允许跨域请求。
+                            if (null!= m_HttpServerInfo.OnBeforeResponse)
+                            {
+                                m_HttpServerInfo.OnBeforeResponse.Invoke(response);
+                            }
+
                             response.ContentLength64 = handleContent.Length;
                             Stream output = response.OutputStream;
                             output.Write(handleContent, 0, handleContent.Length);

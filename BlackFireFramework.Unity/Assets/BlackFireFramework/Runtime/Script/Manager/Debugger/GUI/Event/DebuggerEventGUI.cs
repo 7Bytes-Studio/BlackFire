@@ -190,23 +190,34 @@ namespace BlackFireFramework
         {
             m_HttpServerThread = new Thread(state => {
 
-                m_HttpServer = Utility.Http.CreateHttpServer(new Utility.Http.LazyHttpServerInfo(getData => {
+                m_HttpServer = Utility.Http.CreateHttpServer(
 
-                    Debug.Log(getData);
-                    return JsonUtility.ToJson(new Json_Response() { code = 200, msg = "event server is working!" });
+                        new Utility.Http.LazyHttpServerInfo(getData => {
 
-                }, postData =>
-                {
-                    Debug.Log(postData);
-                    Json_Instruction instruction = JsonUtility.FromJson<Json_Instruction>(postData.Trim());
-                    return InstructionHandler(instruction);
+                            Debug.Log(getData);
+                            return JsonUtility.ToJson(new Json_Response() { code = 200, msg = "event server is working!" });
 
-                }, defaultData => {
+                        }, postData =>
+                        {
+                            Debug.Log(postData);
+                            Json_Instruction instruction = JsonUtility.FromJson<Json_Instruction>(postData.Trim());
+                            return InstructionHandler(instruction);
 
-                    return JsonUtility.ToJson(new Json_Response() { code = 404, msg = "404" });
+                        }, defaultData => {
 
-                })
-                { Port = port, Prefixes = new string[] { }, OnStartSucceed = (sender, args) => { Log.Info("event server is working!。"); }, OnStartFailure = (sender, args) => { Log.Error("event server is not working! \n" + args.Exception); } });
+                            return JsonUtility.ToJson(new Json_Response() { code = 404, msg = "404" });
+
+                        })
+                        {
+                            Ip = Utility.IP.GetRealPublicIP(),
+                            Port = port,
+                            Prefixes = new string[] { },
+                            OnStartSucceed = (sender, args) => { Log.Info("event server is working!。"); },
+                            OnStartFailure = (sender, args) => { Log.Error("event server is not working! \n" + args.Exception); },
+                            OnBeforeResponse = (response) => { response.ContentType = "application/json;charset=utf-8"; }
+                        }
+                        
+                        );
 
                 m_HttpServer.Start();
 

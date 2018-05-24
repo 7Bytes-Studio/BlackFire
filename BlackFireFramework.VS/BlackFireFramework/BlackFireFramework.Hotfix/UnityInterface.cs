@@ -12,7 +12,7 @@ namespace BlackFireFramework.Hotfix
     {
         public static void StartCoroutine(IEnumerator enumerator)
         {
-            ILRuntimeManager.StartHoxfixCoroutine(enumerator);
+           // ILRuntimeManager.StartHoxfixCoroutine(enumerator);
         }
     }
 }
