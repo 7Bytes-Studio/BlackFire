@@ -7,13 +7,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{AE6A4A7F-B1D3-2FA9-EA58-50C09FDE22B9}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp-Editor.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
@@ -50,214 +51,217 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEditor">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WebModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StyleSheetsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticlesLegacyModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Networking">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Timeline">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TreeEditor">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIAutomation">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UIAutomation">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.GoogleAudioSpatializer">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.HoloLens">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.VR">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Graphs">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
@@ -267,6 +271,9 @@
     </Reference>
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackFireFramework.Unity">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Unity.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -289,8 +296,11 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="BlackFireFramework.Unity">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Unity.dll</HintPath>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +310,136 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\AssetGraphEditorWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\AssetLog\AssetProcessEventListTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\AssetLog\AssetProcessEventLogViewController.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\AssetLog\AssetProcessEventLogWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\BatchBuildWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\BuildTargetTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\ExecuteResultTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\GraphCollectionDetailTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\GraphCollectionExecuteTab.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\GraphCollectionManageTab.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\BatchBuild\GraphCollectionTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ConfigGraphEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ConnectionEvent.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ConnectionGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ConnectionGUIEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ConnectionGUIUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphBackground.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GroupView\GroupAssetListTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GroupView\GroupListTree.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GroupView\GroupViewController.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\NodeEvent.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\NodeGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\NodeGUIEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\NodeGUIUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ProjectSettings\AssetBundleSettingsTab.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ProjectSettings\ExecutionOrderSettingsTab.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\ProjectSettings\ProjectSettingsWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\RecordUndoScope.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\UserPreference.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\AssetGenerateInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\CreateMaterialFromTexture.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\DuplicateRefererenceAsset.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\Duplicator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\IAssetGenerator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\AssetGenerators\TextureScaler.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetBundleBuildReport.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetGraphController.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetGraphPostprocessor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetPostprocessorContext.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetProcessEvent.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetProcessEventRecord.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\AssetReferenceStreamManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\PerformGraph.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Core\SystemDataUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Exception\AssetGraphException.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Exception\AssetReferenceException.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Exception\NodeException.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Filters\FilterByNameAndType.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Filters\FilterTypeUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Filters\FilterUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Filters\IFilter.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\AudioImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\IAssetImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\ModelImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\ShaderImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\TextureImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\TrueTypeFontImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Importers\VideoClipImporterConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Libs\MiniJSONForAssetGraph.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\AssetReference.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\AssetReferenceDatabase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\BatchBuildConfig.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\Node.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\NodeBuildContext.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\ObjectReferenceBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializableGroups.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializableMultiTargetInstance.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializableMultiTargetInt.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializableMultiTargetString.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializedComponent.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\SerializedInstance.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V1\ConnectionData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V1\ConnectionPointData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V1\NodeData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V1\SaveData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V1\Settings.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\ConfigGraph.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\ConnectionData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\ConnectionPointData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\NodeData.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\NodeDataImporter.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Model\V2\Settings.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\AddGameObject.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\AttachComponent.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\IModifier.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\SetProperty.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\SetReference.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Modifiers\SetSpritesToAnimation.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\AssertUnwantedAssetsInBundle.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\AssetGenerator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\BundleBuilder.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\BundleConfigurator.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Error.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Exporter.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\ExtractSharedAssets.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Filter.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Grouping.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\GroupingByFile.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\GroupingBySize.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Imported.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\ImportSetting.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Label.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Loader.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\LoaderBySearch.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\MirrorDirectory.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\Modifier.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\PlayerBuilder.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\Buitin\PrefabBuilder.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Node\IPostprocess.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\PrefabBuilders\IPrefabBuilder.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\PrefabBuilders\PrefabBuilderUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\PrefabBuilders\PrefabBuildInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\PrefabBuilders\ReplaceGameObjectByName.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\PrefabBuilders\ReplaceWithIncomingGameObject.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\AssetGraphUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\AssetReferenceUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\BuildTargetUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\ComponentMenuUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\CUIUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\CustomScriptUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\FileUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\JSONGraphUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\LogUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\SaveScope.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\System\Utility\TypeUtility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\Test\ImporterTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\Test\PathTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\EditorRuntimeSupport\AssetBundleBuildMap.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\EditorRuntimeSupport\AssetGraphBasePath.cs" />
+    <Compile Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Integration\Editor\AssetBundles-Browser\GraphToolABDataSource.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\BlackFireEditor.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloader.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloaderProgressEventArgs.cs" />
@@ -326,6 +466,9 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphicResources\LineDraw.shader" />
+    <None Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\SettingTemplate\readme.txt" />
+    <None Include="Assets\BlackFireFramework\Editor\3rd\UnityEngine.AssetGraph\Editor\SettingTemplate\setting.shader" />
     <None Include="Assets\BlackFireFramework\Editor\Lib\DotNetZip\DotNetZip.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
