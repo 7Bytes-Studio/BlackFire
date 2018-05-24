@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button class="aaa">POST</button>
+    <script>
+        var bb = {
+            "instruction": "FireEvent", 
+            "platform": "Web", 
+            "eventTopic": {
+                "topic": "TestTopic", 
+                "sender": "Web", 
+                "args": [
+                    {
+                        "type": "int", 
+                        "value": "66666666666"
+                    }, 
+                    {
+                        "type": "float", 
+                        "value": "6666.6666666"
+                    }, 
+                    {
+                        "type": "double", 
+                        "value": "6666.6666666"
+                    }, 
+                    {
+                        "type": "decimal", 
+                        "value": "6.88888888888"
+                    }, 
+                    {
+                        "type": "char", 
+                        "value": "6"
+                    }, 
+                    {
+                        "type": "string", 
+                        "value": "66666666666"
+                    }
+                ]
+            }
+        }
+        $(".aaa").click(function(){
+            $.ajax({
+                url: "http://localhost:666",
+                type: "post",
+                //contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                data: JSON.stringify(bb),
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
