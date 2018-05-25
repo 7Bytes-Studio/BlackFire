@@ -993,11 +993,11 @@ MonoBehaviour:
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: c77780a96e71d154a8e28d343b7fdb48
-    m_importFrom: "Assets/AssetsTest/Texture/M&K_\u7334\u5B50\u8BF4_4.jpg"
+    m_importFrom: Assets/AssetsTest/Texture/platform_0/platform_0_0.jpg
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: a45f5c2db44b2754981aa74fb034a3df
-    m_importFrom: Assets/AssetsTest/Texture/Trifect_Sky_4.jpg
+    m_importFrom: Assets/AssetsTest/Texture/platform_0/platform_0_1.jpg
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 0c7d98167e21b4246995950629184478
@@ -1218,6 +1218,94 @@ MonoBehaviour:
     m_variantName: 
   - m_assetDatabaseId: 6c9c3edf8de154d67a80fa8a5eaf051a
     m_importFrom: Assets/BlackFireFramework/Editor/3rd/AssetBundleBrowser/UnityEngine.AssetBundles/Editor/AssetBundleBrowser/MessageSystem.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 96dc3a04933c7be4b9e058162bca0839
+    m_importFrom: Assets/BlackFireFramework/Runtime/Script/Manager/Debugger/GUI/Event/DebuggerEventGUI.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c1916ee07a4dbf48bb1fa6ecc9981a9
+    m_importFrom: Assets/AssetsTest/Texture/platform_0
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000004000000000000000
+    m_importFrom: ProjectSettings/ProjectSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: b508d301822c09743909fcc13a273b5f
+    m_importFrom: Assets/AssetsTest/Texture/platform_1/platform_1_1.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a931d814b96abe4b8f8aa436f9e3604
+    m_importFrom: Assets/AssetsTest/Texture/platform_1
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 56b3cb8e1222af643a8880f2b9f7bb01
+    m_importFrom: Assets/AssetsTest/Texture/platform_1/platform_1_0.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 323886d7e1b6ee942acd0c24963d6894
+    m_importFrom: Assets/AssetsTest/Texture/platform_2/platform_2_0.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: db19797af3d7bd24792105a31ce18236
+    m_importFrom: Assets/AssetsTest/Texture/platform_2/platform_2_1.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2e05e74bea692fc45ac6de7be7898936
+    m_importFrom: Assets/AssetsTest/Texture/platform_2
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a6235af4f25cd6845bb647f5484c4c13
+    m_importFrom: Assets/AssetsTest/Prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d2fd39062c2e41e47984aa4235199e2d
+    m_importFrom: Assets/AssetsTest/Prefab/platform_0
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5a759a7a1a3368f41814996c33936c67
+    m_importFrom: Assets/AssetsTest/Material
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 41ff44d5682d8ff4b9b0072996ceb153
+    m_importFrom: Assets/AssetsTest/Material/platform_0
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0ca1c5103f75e7d4cbd05e19bd6cf613
+    m_importFrom: Assets/AssetsTest/Material/platform_1
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5679d5d7847b0904cadf73d78fa3c02f
+    m_importFrom: Assets/AssetsTest/Material/platform_2
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2926a2dcae253c8459c752c64c07c44a
+    m_importFrom: Assets/AssetsTest/Prefab/platform_1
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 97f0d725a627c7c43b497e8840e3ed0e
+    m_importFrom: Assets/AssetsTest/Prefab/platform_2
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9b6f036639b495b4c93c4dbb46992564
+    m_importFrom: Assets/AssetsTest/Prefab/platform_0/platform_0_0.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 041cdad8438e4084590d4edb6f9df2f3
+    m_importFrom: Assets/AssetsTest/Prefab/platform_1/platform_1_1.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: a526ebb54d2e54b41b2a57afc9670398
+    m_importFrom: Assets/AssetsTest/Prefab/platform_2/platform_2_2.prefab
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 283bb77a0e47a944db0d51471d56013d
+    m_importFrom: Assets/AssetsTest/Material/platform_0/platform_0_0.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7a9e5e0ca78c2dd4498d6ef2b5677614
+    m_importFrom: Assets/AssetsTest/Material/platform_0/platform_0_1.mat
     m_exportTo: 
     m_variantName: 
   m_version: 2

@@ -11,29 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec4882d68a9346b3b5f8ecf1e38a534, type: 3}
   m_Name: Asset Graph
   m_EditorClassIdentifier: 
-  m_allNodes:
-  - m_name: Load from AssetsTest
-    m_id: 5dad772d-c9f7-4c58-b64d-4cdbe2e612f5
-    m_x: 192
-    m_y: 228
-    m_nodeInstance:
-      m_className: UnityEngine.AssetGraph.Loader, Assembly-CSharp-Editor, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      m_instanceData: B64|eyJtX2xvYWRQYXRoIjp7Im1fdmFsdWVzIjpbeyJ0YXJnZXRHcm91cCI6MCwidmFsdWUiOiJBc3NldHNUZXN0L1ZpZGVvIn1dfSwibV9sb2FkUGF0aEd1aWQiOnsibV92YWx1ZXMiOlt7InRhcmdldEdyb3VwIjowLCJ2YWx1ZSI6IjlkMzQzOGMwN2ViYWFlMzQ4YjA0YWU1NjAwYTJjOTBmIn1dfSwibV9pZ25vcmVQYXR0ZXJucyI6W3sibV9maWxlVHlwZU1hc2siOjEsIm1faWdub3JlUGF0dGVybiI6IiJ9XSwibV9yZXNwb25kVG9Bc3NldENoYW5nZSI6ZmFsc2V9
-    m_inputPoints: []
-    m_outputPoints:
-    - id: 26cf538f-c38a-4f81-b86e-f3d0af9ea101
-      label: +
-      parentId: 5dad772d-c9f7-4c58-b64d-4cdbe2e612f5
-      isInput: 0
-      buttonRect:
-        serializedVersion: 2
-        x: 166
-        y: 32.5
-        width: 10
-        height: 23
+  m_allNodes: []
   m_allConnections: []
-  m_lastModified: 131716132482330864
+  m_lastModified: 131716865408863413
   m_version: 2
   m_graphDescription: 
   m_useAsAssetPostprocessor: 0
