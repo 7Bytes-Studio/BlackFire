@@ -1,61 +1,211 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<title>Unity 3D</title>
+	<style>
+		*{
+			padding: 0;
+			bottom: 0;
+		}
+		body,html{
+			font-size: 14px;
+			width: 100%;
+			height: 100%;
+			/* font-family: serif; */
+		}
+		.unity-page{
+			width: 100%;
+			height: 100%;
+		}
+		.unity-page-container{
+			width: 500px;
+			background-color: #aaa;
+			border: 1px solid #aaa;
+			box-shadow: 0 0 2px 1px;
+			margin: 0 auto;
+			margin-top: 150px;
+		}
+		.wrapper{
+			font-size: 0;
+			padding: 20px;
+		}
+		.both{
+			margin-bottom: 20px;
+		}
+		.title{
+			display: inline-block;
+			width: 18%;
+			font-size: 16px;
+			vertical-align: middle;
+			text-align: right;
+			color: #555;
+		}
+		.common{
+			display: inline-block;
+			width: 80%;
+			margin-left: 2%;
+			vertical-align: middle;
+		}
+		input{
+			height: 22px;
+			border: 1px solid #555;
+			padding: 4px;
+			vertical-align: middle;
+		}
+		.message{
+			display: block;
+			width: calc(100% - 8px);
+		}
+		.msg{
+			width: 50px;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+		.com-btn{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 6px;
+			border: 1px solid #555;
+			border-radius: 5px;
+			margin-right: 3px;
+			color: #f0f0f0;
+			cursor: pointer;
+		}
+		.add{
+			background-color: #009FCC;
+		}
+		.del{
+			background-color: burlywood;
+		}
+		.del-all{
+			background-color: chocolate;
+		}
+		#console, #logs{
+			width: calc(100% - 8px);
+			height: 120px;
+			border: 1px solid #555;
+			padding: 4px;
+		}
+		.ip{
+			width: calc(50% - 20px);
+			margin-right: 10px;
+		}
+		.port{
+			width: calc(20% - 20px);
+			margin-right: 10px;
+		}
+		.send-btn{
+			width: calc(30% - 2px);
+			margin-right: 0;
+			vertical-align: middle;
+			background-color: #00AA55;
+		}
+	</style>
 </head>
 <body>
-    <button class="aaa">POST</button>
-    <script>
-        var bb = {
-            "instruction": "FireEvent", 
-            "platform": "Web", 
-            "eventTopic": {
-                "topic": "TestTopic", 
-                "sender": "Web", 
-                "args": [
-                    {
-                        "type": "int", 
-                        "value": "66666666666"
-                    }, 
-                    {
-                        "type": "float", 
-                        "value": "6666.6666666"
-                    }, 
-                    {
-                        "type": "double", 
-                        "value": "6666.6666666"
-                    }, 
-                    {
-                        "type": "decimal", 
-                        "value": "6.88888888888"
-                    }, 
-                    {
-                        "type": "char", 
-                        "value": "6"
-                    }, 
-                    {
-                        "type": "string", 
-                        "value": "66666666666"
-                    }
-                ]
-            }
-        }
-        $(".aaa").click(function(){
-            $.ajax({
-                url: "http://localhost:666",
-                type: "post",
-                //contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                data: JSON.stringify(bb),
-                success: function (data) {
-                    console.log(data);
-                }
-            });
-        });
-    </script>
+	<div class="unity-page">
+		<div class="unity-page-container">
+			<div class="wrapper">
+				<div class="event-topic both">
+					<span class="title">EventTopic</span>
+					<div class="title-input common">
+						<input type="text" class="message topicVal">
+					</div>
+				</div>
+				<div class="sender both">
+					<span class="title">Sender</span>
+					<div class="title-input common">
+						<input type="text" class="message senderVal">
+					</div>
+				</div>
+				<div class="args both">
+					<span class="title">Args</span>
+					<div class="title-input common">
+						<input type="text" class="msg initVal">
+						<input type="text" class="msg portVal">
+						<button class="add com-btn">添加参数</button>
+						<button class="del com-btn">移除参数</button>
+						<button class="del-all com-btn">移除所有参数</button>
+					</div>
+				</div>
+				<div class="text both">
+					<span class="title"></span>
+					<div class="title-input common">
+						<textarea name="console" id="console"></textarea>
+					</div>
+				</div>
+				<div class="msg-send both">
+					<span class="title"></span>
+					<div class="title-input common">
+						<input type="text" class="ip">
+						<input type="text" class="port">
+						<button class="send-btn com-btn" id="send">发送</button>
+					</div>
+				</div>
+				<div class="logs">
+					<span class="title"></span>
+					<div class="title-input common">
+						<textarea name="logs" id="logs"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	var topicVal = $('.topicVal'),
+			senderVal = $('.senderVal'),
+			initVal = $('.initVal'),
+			portVal = $('.portVal'),
+			logs = $('#console').val()
+	var params = {
+		"instruction": "FireEvent", 
+		"platform": "Web", 
+		"eventTopic": {
+			"topic": topicVal, 
+			"sender": senderVal, 
+			"args": [
+				{
+					"type": initVal, 
+					"value": portVal
+				}, 
+				{
+					"type": "float", 
+					"value": "6666.6666666"
+				}, 
+				{
+					"type": "double", 
+					"value": "6666.6666666"
+				}, 
+				{
+					"type": "decimal", 
+					"value": "6.88888888888"
+				}, 
+				{
+					"type": "char", 
+					"value": "6"
+				}, 
+				{
+					"type": "string", 
+					"value": "66666666666"
+				}
+			]
+		}
+	}
+	$("#send").click(function(){
+		$.ajax({
+			url: "http://192.168.199.194:666",
+			type: "post",
+			dataType: "json",
+			data: JSON.stringify(params),
+			success: function (data) {
+				console.log(losg)
+			}
+		});
+	});
+</script>
 </body>
 </html>
