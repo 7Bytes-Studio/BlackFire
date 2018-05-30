@@ -5,28 +5,34 @@
 //----------------------------------------------------
 
 using BlackFireFramework;
+using UnityEngine;
 
 public sealed partial class BlackFire
 {
     #region ExportedAssembly
 
-    private static string[] m_ExtendedAssemblies = new string[] { "BlackFireFramework.Unity" };
+    [SerializeField] private string[] m_AssemblyList;
+
+    /// <summary>
+    /// 被导出的程序集列表。
+    /// </summary>
+    public static string[] ExtendedAssemblies { get { return null!=s_Instance?s_Instance.m_AssemblyList:null; } }
     private static IExportedAssemblyManager m_ExportedAssemblyManager = null;
 
     private static void StartAssemblyManager(BlackFire instance)
     {
         m_ExportedAssemblyManager = (IExportedAssemblyManager)EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager));
-        for (int i = 0; i < m_ExtendedAssemblies.Length; i++)
+        for (int i = 0; i < ExtendedAssemblies.Length; i++)
         {
-            m_ExportedAssemblyManager.LoadExportedAssembly(m_ExtendedAssemblies[i]);
+            m_ExportedAssemblyManager.LoadExportedAssembly(ExtendedAssemblies[i]);
         }
     }
 
     private static void ShutdownAssemblyManager()
     {
-        for (int i = 0; i < m_ExtendedAssemblies.Length; i++)
+        for (int i = 0; i < ExtendedAssemblies.Length; i++)
         {
-            m_ExportedAssemblyManager.UnLoadExportAssembly(m_ExtendedAssemblies[i]);
+            m_ExportedAssemblyManager.UnLoadExportAssembly(ExtendedAssemblies[i]);
         }
     }
 

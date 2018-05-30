@@ -3,6 +3,9 @@
 //Mail: Mr.Alan.China@[outlook|gmail].com
 //Website: www.0x69h.com
 //----------------------------------------------------
+
+
+
 using UnityEditor;
 
 namespace BlackFireFramework.Editor
@@ -31,7 +34,6 @@ namespace BlackFireFramework.Editor
         /// 渲染Inspector面板后的事件。
         /// </summary>
         protected virtual void OnEndDrawInspector() { serializedObject.ApplyModifiedProperties(); }
-
         /// <summary>
         /// 编译开始事件。
         /// </summary>
@@ -39,7 +41,6 @@ namespace BlackFireFramework.Editor
         {
 
         }
-
         /// <summary>
         /// 编译完成事件。
         /// </summary>
@@ -58,6 +59,7 @@ namespace BlackFireFramework.Editor
         /// <summary>
         /// 检查设置或者绘制提示框。
         /// </summary>
+        /// https://github.com/GarfieldJiang
         /// <returns>检查结果。</returns>
         private bool CheckSettingOrDrawHelpBox()
         {

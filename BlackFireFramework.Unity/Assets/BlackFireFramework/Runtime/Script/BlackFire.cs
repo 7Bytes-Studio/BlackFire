@@ -24,7 +24,12 @@ public sealed partial class BlackFire : MonoBehaviour
     /// <summary>
     /// BlackFire行为类唯一实例。
     /// </summary>
-    private static object s_Instance = null;
+    private static BlackFire s_Instance = null;
+
+    /// <summary>
+    /// 放到DontDestroyOnLoad场景。
+    /// </summary>
+    [SerializeField] private bool m_DontDestroy=true;
 
     /// <summary>
     /// 场景加载之前事件。
@@ -38,7 +43,8 @@ public sealed partial class BlackFire : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad();
+        if(m_DontDestroy)
+            DontDestroyOnLoad();
         StartAssemblyManager(this);
         StartModuleManager(this);
         StartUnityManager(this);
