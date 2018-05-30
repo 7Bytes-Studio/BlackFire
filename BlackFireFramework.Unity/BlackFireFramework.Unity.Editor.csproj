@@ -296,6 +296,9 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework.TestAssembly">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.TestAssembly.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:/Workspace/Develop/Unity/2017.4.1f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -332,6 +335,7 @@
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfoList.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\Editor\BlackFireInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>

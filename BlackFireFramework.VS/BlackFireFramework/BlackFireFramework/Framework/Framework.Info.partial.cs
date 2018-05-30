@@ -8,6 +8,9 @@ using System.Threading;
 
 namespace BlackFireFramework
 {
+    /// <summary>
+    /// 框架信息。
+    /// </summary>
     public static partial class Framework
     {
         private static void Init_Info()

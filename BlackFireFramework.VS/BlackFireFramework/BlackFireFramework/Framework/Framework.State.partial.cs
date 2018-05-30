@@ -7,7 +7,7 @@
 namespace BlackFireFramework
 {
     /// <summary>
-    /// 框架。
+    /// 框架状态。
     /// </summary>
     public static partial class Framework
     {

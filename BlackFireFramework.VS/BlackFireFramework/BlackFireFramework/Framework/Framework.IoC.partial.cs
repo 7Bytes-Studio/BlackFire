@@ -7,6 +7,9 @@
 
 namespace BlackFireFramework
 {
+    /// <summary>
+    /// 框架依赖倒置容器。
+    /// </summary>
     public static partial class Framework
     {
         private static ISparrowIoC s_IoC = new SparrowIoC();

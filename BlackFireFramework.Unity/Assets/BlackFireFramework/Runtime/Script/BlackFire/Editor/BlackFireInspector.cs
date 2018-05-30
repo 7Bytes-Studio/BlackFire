@@ -4,6 +4,9 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -11,10 +14,12 @@ using UnityEngine;
 namespace BlackFireFramework.Editor
 {
     [CustomEditor(typeof(BlackFire))]
-    internal sealed class BlackFireInspector : InspectorBase
+    public sealed class BlackFireInspector : InspectorBase
     {
         private float m_MinGameSpeed = 0f;
         private float m_MaxGameSpeed = 100f;
+        private bool m_FoldOutAbout = true;
+        private bool m_FoldOutSetting = true;
 
         private SerializedProperty m_DontDestroyProperty = null;
         private SerializedProperty m_LogoProperty = null;
@@ -33,7 +38,6 @@ namespace BlackFireFramework.Editor
             m_DontDestroyProperty = serializedObject.FindProperty("m_DontDestroy");
             m_LogoProperty = serializedObject.FindProperty("m_Logo");
             m_AssemblyListProperty = serializedObject.FindProperty("m_AssemblyList");
-            InitAssemblyList(); //初始化程序集可排序列表。
         }
 
         
@@ -58,11 +62,14 @@ namespace BlackFireFramework.Editor
 
             if (m_FoldOutAbout = BlackFireEditorGUI.FoldOut("About", m_FoldOutAbout,"yellow"))
             {
+
                 BlackFireEditorGUI.BoxVerticalLayout(() => {
+                    EditorGUILayout.Space();
                     EditorGUILayout.LabelField("BlackFire Framework Version 1.1.1.180428_beta.");
                     EditorGUILayout.LabelField("Copyright © 2008-2018 BlackFire-Studio. All Rights Reserved.");
                     EditorGUILayout.Space();
                 });
+
                 EditorGUILayout.Space();
                 EditorGUILayout.Space();
             }
@@ -74,9 +81,7 @@ namespace BlackFireFramework.Editor
                     BlackFireEditorGUI.Label("Mode", Color.green);
                     m_DontDestroyProperty.boolValue = EditorGUILayout.ToggleLeft("DontDestroy", m_DontDestroyProperty.boolValue);
                     BlackFireEditorGUI.Space(2);
-
                     DrawAssemblyList(); //绘制程序集列表
-
                 });
 
                 BlackFireEditorGUI.Space(2);
@@ -96,40 +101,51 @@ namespace BlackFireFramework.Editor
             serializedObject.ApplyModifiedProperties();//应用被修改的属性
         }
 
-        private bool m_FoldOutAbout= true;
-        private bool m_FoldOutSetting = true;
 
-        private void InitAssemblyList()
-        {
-            m_ReorderableList = new ReorderableList(serializedObject, m_AssemblyListProperty);
-            //提示内容
-            m_ReorderableList.drawHeaderCallback = (Rect rect) =>
-            {
-                GUI.Label(rect, "BlackFire Framework Extended Assemblies");
-            };
-
-            //绘制文本框
-            m_ReorderableList.drawElementCallback = (rect, index, isActive, isFocused) => {
-                SerializedProperty itemData = m_ReorderableList.serializedProperty.GetArrayElementAtIndex(index);
-                rect.y += 2;
-                rect.height = EditorGUIUtility.singleLineHeight;
-                EditorGUI.PropertyField(rect, itemData, GUIContent.none);
-            };
-        }
 
         private void DrawAssemblyList()
         {
             BlackFireEditorGUI.Label("Assemblies", Color.green);
+            m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject,m_AssemblyListProperty);
+            GUILayout.Space(2);
+            GUI.backgroundColor = Color.green;
+            if (GUILayout.Button("Reset"))
+            {
+                GetFrameworkReferencedAssemblies();
+            }
+            GUI.backgroundColor = Color.white;
+            GUI.backgroundColor = Color.cyan;
+            GUILayout.Space(2);
             m_ReorderableList.DoLayoutList();
+
+            GUI.backgroundColor = Color.white;
         }
 
-
-        private int m_AssemblyListIndex = 0;
-        private void DrawAssemblyPop()
+        private void GetFrameworkReferencedAssemblies()
         {
-            BlackFireFramework.Utility.Reflection.GetImplTypes(typeof(IExportedAssembly));
+            var fwAssemblyName = typeof(Framework).Assembly.GetName().Name;
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            List<string> assemblyList = new List<string>();
+            for (int i = 0; i < assemblies.Length; i++)
+            {
+                if (assemblies[i].GetName().Name.Contains("Assembly-CSharp")) continue; //过滤运行时项目程序集跟编辑器程序集。
 
-            BlackFireEditorGUI.ArrayPopup("AssemblyList",ref m_AssemblyListIndex,);
+                foreach (var assebly in assemblies[i].GetReferencedAssemblies())
+                {
+                    if (assebly.Name == fwAssemblyName)
+                    {
+                        assemblyList.Add(assemblies[i].GetName().Name);
+                        break;
+                    }
+                }
+            }
+
+            m_AssemblyListProperty.arraySize = assemblyList.Count;
+            for (int i = 0; i < assemblyList.Count; i++)
+            {
+                m_AssemblyListProperty.GetArrayElementAtIndex(i).stringValue = assemblyList[i];
+            }
+
         }
     }
 }

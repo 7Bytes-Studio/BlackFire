@@ -6,6 +6,7 @@
 
 using System;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace BlackFireFramework.Editor
@@ -313,5 +314,31 @@ namespace BlackFireFramework.Editor
 
 
         #endregion
+
+        #region ReorderableList
+
+        public static ReorderableList ReorderableList(string title, SerializedObject serializedObject, SerializedProperty elements)
+        {
+            var reorderableList = new ReorderableList(serializedObject, elements);
+
+            //提示内容
+            reorderableList.drawHeaderCallback = (Rect rect) =>
+            {
+                GUI.Label(rect, title);
+            };
+
+            //绘制文本框
+            reorderableList.drawElementCallback = (rect, index, isActive, isFocused) => {
+                SerializedProperty itemData = reorderableList.serializedProperty.GetArrayElementAtIndex(index);
+                rect.y += 2;
+                rect.height = EditorGUIUtility.singleLineHeight;
+                EditorGUI.PropertyField(rect, itemData, GUIContent.none);
+            };
+
+            return reorderableList;
+        }
+
+        #endregion
+
     }
 }

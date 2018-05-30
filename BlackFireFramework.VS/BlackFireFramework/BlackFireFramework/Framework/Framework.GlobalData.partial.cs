@@ -4,13 +4,12 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 
 namespace BlackFireFramework
 {
     /// <summary>
-    /// 框架时间类。
+    /// 框架全局数据。
     /// </summary>
     public static partial class Framework
     {

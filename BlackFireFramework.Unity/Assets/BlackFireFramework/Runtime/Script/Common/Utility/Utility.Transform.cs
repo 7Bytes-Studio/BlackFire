@@ -88,6 +88,40 @@ namespace BlackFireFramework.Unity
                 }
             }
 
+            /// <summary>
+            /// 遍历父亲节点并且如果满足回调的返回值的时候才会继续遍历他的父亲。
+            /// </summary>
+            public static void TraverseParents(UnityEngine.Transform trans, Func<UnityEngine.Transform,bool> callbackHandler)
+            {
+                var current = trans;
+                while (null!=current)
+                {
+                    if (null!= callbackHandler)
+                    {
+                        if (callbackHandler.Invoke(current))
+                        {
+                            break;
+                        }
+                    }
+                    current = current.parent;
+                }
+            }
+
+            /// <summary>
+            /// 遍历父亲节点并回调。
+            /// </summary>
+            public static void TraverseParents(UnityEngine.Transform trans, Action<UnityEngine.Transform> callbackHandler)
+            {
+                var current = trans;
+                while (null != current)
+                {
+                    if (null != callbackHandler)
+                    {
+                        callbackHandler.Invoke(current);
+                    }
+                    current = current.parent;
+                }
+            }
 
         }
 

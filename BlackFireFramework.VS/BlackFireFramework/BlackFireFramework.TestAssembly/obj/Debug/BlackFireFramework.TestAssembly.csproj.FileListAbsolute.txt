@@ -15,3 +15,5 @@ D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\Bla
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.TestAssembly\obj\Debug\BlackFireFramework.TestAssembly.csproj.CoreCompileInputs.cache
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.TestAssembly\obj\Debug\BlackFireFramework.TestAssembly.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.TestAssembly\obj\Debug\BlackFireFramework.TestAssembly.pdb
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.TestAssembly.dll
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.TestAssembly.pdb
