@@ -15,6 +15,9 @@ namespace BlackFireFramework
 {
 	public sealed partial class GameManager
     {
-       
+        private void InitState()
+        {
+
+        }
     }
 }

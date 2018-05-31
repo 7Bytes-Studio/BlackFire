@@ -31,6 +31,8 @@ namespace BlackFireFramework
             InitSetting();
 
             InitProcess();
+
+            InitState();
         }
 
 
