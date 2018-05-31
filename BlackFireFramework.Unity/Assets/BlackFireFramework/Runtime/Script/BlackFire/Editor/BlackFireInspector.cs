@@ -45,6 +45,7 @@ namespace BlackFireFramework.Editor
         protected override void OnDrawInspector()
         {
             serializedObject.Update(); //更新被序列化的对象上的数据
+            EditorGUILayout.Space();
 
             if ( null == m_LogoProperty.objectReferenceValue && null == m_Logo )
             {

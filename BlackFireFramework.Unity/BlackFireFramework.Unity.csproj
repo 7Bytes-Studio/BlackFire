@@ -301,6 +301,9 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.Editor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.Process.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Ugui\Ugui\Base\UguiBehaviourBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Ugui\Ugui\Base\UguiLogicBase.cs" />
