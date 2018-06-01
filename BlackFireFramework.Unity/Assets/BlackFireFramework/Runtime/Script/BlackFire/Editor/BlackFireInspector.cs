@@ -25,7 +25,7 @@ namespace BlackFireFramework.Editor
         private SerializedProperty m_LogoProperty = null;
         private SerializedProperty m_AssemblyListProperty = null;
         private Texture m_Logo=null;
-
+        private Texture m_LogoRes = null;
 
         private ReorderableList m_ReorderableList = null;
 
@@ -38,6 +38,7 @@ namespace BlackFireFramework.Editor
             m_DontDestroyProperty = serializedObject.FindProperty("m_DontDestroy");
             m_LogoProperty = serializedObject.FindProperty("m_Logo");
             m_AssemblyListProperty = serializedObject.FindProperty("m_AssemblyList");
+            m_LogoRes = Resources.Load<Texture>("BlackFire.Logo");
         }
 
         
@@ -47,15 +48,22 @@ namespace BlackFireFramework.Editor
             serializedObject.Update(); //更新被序列化的对象上的数据
             EditorGUILayout.Space();
 
-            if ( null == m_LogoProperty.objectReferenceValue && null == m_Logo )
+            if (null == m_LogoRes)
             {
-                m_Logo = EditorGUILayout.ObjectField(m_Logo, typeof(Texture), true) as Texture;
-                m_LogoProperty.objectReferenceValue = m_Logo;
+                if (null == m_Logo)
+                {
+                    m_Logo = EditorGUILayout.ObjectField(m_LogoProperty.objectReferenceValue, typeof(Texture), true) as Texture;
+                }
+                else
+                {
+                    m_LogoProperty.objectReferenceValue = m_Logo;
+                    BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
+                }
             }
             else
             {
-                m_Logo = m_LogoProperty.objectReferenceValue as Texture;
-                BlackFireEditorGUI.DrawTexture(m_Logo,15,2048,144);
+                m_Logo = Instantiate<Texture>(m_LogoRes);
+                BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
             }
 
             EditorGUILayout.Space();
@@ -110,7 +118,7 @@ namespace BlackFireFramework.Editor
             m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject,m_AssemblyListProperty);
             GUILayout.Space(2);
             GUI.backgroundColor = Color.green;
-            if (GUILayout.Button("Reset"))
+            if (GUILayout.Button("Update"))
             {
                 GetFrameworkReferencedAssemblies();
             }

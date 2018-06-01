@@ -22,7 +22,7 @@ namespace BlackFireFramework.Unity
 
             private static readonly object s_Lock = new object();
 
-            private static int s_CurrentId = 0;
+            private static int s_CurrentId = 999;
 
             public static int GetId(string text)
             {
