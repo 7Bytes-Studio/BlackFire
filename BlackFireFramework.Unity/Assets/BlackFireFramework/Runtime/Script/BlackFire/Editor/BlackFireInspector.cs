@@ -16,8 +16,6 @@ namespace BlackFireFramework.Editor
     [CustomEditor(typeof(BlackFire))]
     public sealed class BlackFireInspector : InspectorBase
     {
-        private float m_MinGameSpeed = 0f;
-        private float m_MaxGameSpeed = 100f;
         private bool m_FoldOutAbout = true;
         private bool m_FoldOutSetting = true;
 
@@ -39,6 +37,7 @@ namespace BlackFireFramework.Editor
             m_LogoProperty = serializedObject.FindProperty("m_Logo");
             m_AssemblyListProperty = serializedObject.FindProperty("m_AssemblyList");
             m_LogoRes = Resources.Load<Texture>("BlackFire.Logo");
+            m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject, m_AssemblyListProperty);
         }
 
         
@@ -115,7 +114,6 @@ namespace BlackFireFramework.Editor
         private void DrawAssemblyList()
         {
             BlackFireEditorGUI.Label("Assemblies", Color.green);
-            m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject,m_AssemblyListProperty);
             GUILayout.Space(2);
             GUI.backgroundColor = Color.green;
             if (GUILayout.Button("Update"))
