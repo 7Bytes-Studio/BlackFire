@@ -249,6 +249,7 @@
     <Compile Include="Assets\BlackFireFramework.Demo\Event\EventDemo_UIHandler.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Game\GameDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Job\JobDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework.Demo\KVS\KVSDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\ObjectPool\ObjectPoolDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Process\ProcessOne.cs" />
@@ -259,11 +260,6 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\ManagerBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Assembly.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Editor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Log.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Manager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\BlackFire.Module.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Extension\String.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Extension\Transform.Extension.cs" />
@@ -277,6 +273,12 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Text.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Transform.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Unique.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Log.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerStyle.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />

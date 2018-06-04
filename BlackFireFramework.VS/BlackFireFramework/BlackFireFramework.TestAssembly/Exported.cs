@@ -4,7 +4,6 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-
 namespace BlackFireFramework.TestAssembly
 {
     /// <summary>

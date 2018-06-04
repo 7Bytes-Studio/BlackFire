@@ -325,8 +325,8 @@
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfoList.cs" />
     <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageWindow.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire\Editor\BlackFireInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\Editor\BlackFireInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>
   <ItemGroup>
