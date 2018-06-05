@@ -43,14 +43,26 @@ namespace BlackFireFramework
                 KVS.SetValue<KVSPlayerPrefs>("KVS:Alan", "{ \"name\":\"KVS.alan\" }");
             }
 
+            if (GUILayout.Button("KVS存储"))
+            {
+                KVS.SetValue<KVSPlayerPrefs>("KVS:Alan2", "{ \"name\":\"KVS.alan2\" }");
+            }
+
+
+            if (GUILayout.Button("KVS存储"))
+            {
+                KVS.SetValue<KVSPlayerPrefs>("KVS:Alan3", "{ \"name\":\"KVS.alan3\" }");
+            }
+
+
             if (GUILayout.Button("KVS删除"))
             {
-                KVS.Remove<KVSPlayerPrefs>("KVS:Alan");
+                KVS.Del<KVSPlayerPrefs>("KVS:Alan");
             }
 
             if (GUILayout.Button("KVS全部删除"))
             {
-                KVS.RemoveAll<KVSPlayerPrefs>();
+                KVS.DelAll<KVSPlayerPrefs>();
             }
 
 

@@ -33,13 +33,13 @@ namespace BlackFireFramework
             return PlayerPrefs.HasKey(key);
         }
 
-        public void Remove(string key)
+        public void Del(string key)
         {
             PlayerPrefs.DeleteKey(key);
             RemoveRegister(key);
         }
 
-        public void RemoveAll()
+        public void DelAll()
         {
             var keys = GetAllKeys();
             for (int i = 0; i < keys.Length; i++)

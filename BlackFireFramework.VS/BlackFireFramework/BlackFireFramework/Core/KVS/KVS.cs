@@ -26,21 +26,21 @@ namespace BlackFireFramework
              return CheckImplOrReturn(typeof(T)).GetValue(key);
         }
 
-        public static void Remove<T>(string key) where T : IKeyValueStorage
+        public static void Del<T>(string key) where T : IKeyValueStorage
         {
-            CheckImplOrReturn(typeof(T)).Remove(key);
+            CheckImplOrReturn(typeof(T)).Del(key);
         }
 
-        public static void RemoveAll<T>() where T : IKeyValueStorage
+        public static void DelAll<T>() where T : IKeyValueStorage
         {
-            CheckImplOrReturn(typeof(T)).RemoveAll();
+            CheckImplOrReturn(typeof(T)).DelAll();
         }
 
-        public static void RemoveAll()
+        public static void DelAll()
         {
             foreach (var kv in s_ImplDic)
             {
-                kv.Value.RemoveAll();
+                kv.Value.DelAll();
             }
         }
 

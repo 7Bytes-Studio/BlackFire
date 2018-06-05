@@ -36,11 +36,11 @@ namespace BlackFireFramework
         /// 移除一条键值对记录。
         /// </summary>
         /// <param name="key">键。</param>
-        void Remove(string key);
+        void Del(string key);
 
         /// <summary>
         /// 移除存储器所有的键值对记录。
         /// </summary>
-        void RemoveAll();
+        void DelAll();
     }
 }
