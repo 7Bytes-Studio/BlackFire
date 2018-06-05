@@ -1,0 +1,6 @@
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Unity.dll
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Unity.pdb
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Unity\obj\Debug\BlackFireFramework.Unity.csprojResolveAssemblyReference.cache
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Unity\obj\Debug\BlackFireFramework.Unity.csproj.CoreCompileInputs.cache
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Unity\obj\Debug\BlackFireFramework.Unity.dll
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Unity\obj\Debug\BlackFireFramework.Unity.pdb

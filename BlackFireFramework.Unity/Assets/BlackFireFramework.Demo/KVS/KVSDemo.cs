@@ -106,7 +106,26 @@ namespace BlackFireFramework
                 Debug.Log(result);
             }
 
+            if (GUILayout.Button("Big Data Test"))
+            {
+                var testStr = "Start------";
+                for (int i = 0; i < 100; i++)
+                {
+                    testStr += "UnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnity";
+                }
+                testStr += "------End";
+                KVS.SetValue<KVSSqlite>("BigDataTest",testStr);
+            }
+
+            if (GUILayout.Button("Big Data Query"))
+            {
+                Debug.Log(KVS.GetValue<KVSSqlite>("BigDataTest"));
+            }
+
         }
+
+
+
 
     }
 }

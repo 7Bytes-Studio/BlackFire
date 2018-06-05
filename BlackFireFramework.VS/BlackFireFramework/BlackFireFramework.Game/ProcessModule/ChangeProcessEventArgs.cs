@@ -6,7 +6,7 @@
 
 using System;
 
-namespace BlackFireFramework.Unity
+namespace BlackFireFramework.Game
 {
     internal sealed class ChangeProcessEventArgs: EventArgs
     {

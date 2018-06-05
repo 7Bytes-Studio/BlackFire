@@ -1,4 +1,4 @@
-﻿namespace BlackFireFramework.Unity
+﻿namespace BlackFireFramework.Game
 {
     public interface IProcessModule:IModule
     {

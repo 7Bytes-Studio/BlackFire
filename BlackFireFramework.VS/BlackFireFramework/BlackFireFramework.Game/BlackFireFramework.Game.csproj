@@ -7,8 +7,8 @@
     <ProjectGuid>{5B0E0660-1004-4E0A-8F52-BD53D8920737}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BlackFireFramework.Unity</RootNamespace>
-    <AssemblyName>BlackFireFramework.Unity</AssemblyName>
+    <RootNamespace>BlackFireFramework.Game</RootNamespace>
+    <AssemblyName>BlackFireFramework.Game</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

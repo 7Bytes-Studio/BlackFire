@@ -5,7 +5,7 @@
 //----------------------------------------------------
 
 
-namespace BlackFireFramework.Unity
+namespace BlackFireFramework.Game
 {
     /// <summary>
     /// TestAssembly 的导出类。

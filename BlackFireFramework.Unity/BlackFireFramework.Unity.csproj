@@ -223,6 +223,9 @@
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework.Game">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Game.dll</HintPath>
+    </Reference>
     <Reference Include="BlackFireFramework.TestAssembly">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.TestAssembly.dll</HintPath>
     </Reference>

@@ -4,7 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-namespace BlackFireFramework.Unity
+namespace BlackFireFramework.Game
 {
     internal sealed partial class GlobalEvent
     {
