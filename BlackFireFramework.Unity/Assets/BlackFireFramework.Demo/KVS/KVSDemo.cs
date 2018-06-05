@@ -66,6 +66,46 @@ namespace BlackFireFramework
             }
 
 
+
+
+
+            if (GUILayout.Button("KVS Sqlite 查询 666"))
+            {
+                Debug.Log(KVS.GetValue<KVSSqlite>("666"));
+            }
+
+            if (GUILayout.Button("KVS Sqlite 查询 777"))
+            {
+                Debug.Log(KVS.GetValue<KVSSqlite>("777"));
+            }
+
+
+            if (GUILayout.Button("KVS Sqlite 存储 666"))
+            {
+                KVS.SetValue<KVSSqlite>("666", "666-------------");  
+            }
+
+            if (GUILayout.Button("KVS Sqlite 存储 777"))
+            {
+                KVS.SetValue<KVSSqlite>("777", "777-------------");
+            }
+
+            if (GUILayout.Button("KVS Sqlite 删除 777"))
+            {
+                KVS.Del<KVSSqlite>("777");
+            }
+
+            if (GUILayout.Button("KVS Sqlite 删除全部"))
+            {
+                KVS.DelAll<KVSSqlite>();
+            }
+
+            if (GUILayout.Button("Has Demo1"))
+            {
+                var result = KVS.HasKey<KVSSqlite>("Demo1");
+                Debug.Log(result);
+            }
+
         }
 
     }

@@ -261,6 +261,7 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Base\Manager\ManagerBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\BlackFire.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\DB\SQLite\SQLite.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Extension\String.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Extension\Transform.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\KVS\KVSSqlite\KVSSqlite.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerStyle.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />

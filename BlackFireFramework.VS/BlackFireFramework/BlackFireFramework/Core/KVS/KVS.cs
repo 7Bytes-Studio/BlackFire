@@ -16,6 +16,11 @@ namespace BlackFireFramework
     {
         private static Dictionary<Type,IKeyValueStorage> s_ImplDic = new Dictionary<Type,IKeyValueStorage>();
 
+        public static bool HasKey<T>(string key) where T : IKeyValueStorage
+        {
+           return CheckImplOrReturn(typeof(T)).HasKey(key);
+        }
+
         public static void SetValue<T>(string key,string value) where T : IKeyValueStorage
         {
             CheckImplOrReturn(typeof(T)).SetValue(key,value);
