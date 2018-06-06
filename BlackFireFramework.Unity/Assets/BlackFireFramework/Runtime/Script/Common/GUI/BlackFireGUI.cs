@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
 	public static class BlackFireGUI 
 	{

@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
 	public sealed class UguiManager : ManagerBase 
 	{

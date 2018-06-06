@@ -7,7 +7,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// Ugui的Canvas逻辑类。

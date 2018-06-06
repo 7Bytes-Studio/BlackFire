@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using BlackFireFramework.Unity;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     public sealed class DebuggerLogGUI : IDebuggerModuleGUI
     {
@@ -62,7 +62,7 @@ namespace BlackFireFramework
         {
             Application.logMessageReceived += Application_logMessageReceived;
 
-            Utility.Enum.Foreach<LogLevel>(e => {
+            BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
 
                 m_ToggleLogResDic.Add(e,false);
                 m_ToggleLogCountDic.Add(e,0);
@@ -78,7 +78,7 @@ namespace BlackFireFramework
                 BlackFireGUI.HorizontalLayout(() =>
                 {
                     int i = 0;
-                    Utility.Enum.Foreach<LogLevel>(e => {
+                    BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
 
 
                         m_ToggleLogResDic[e] = GUILayout.Toggle(m_ToggleLogResDic[e], string.Format("{0}".HexColor(m_LogLevelHexColors[i])+"({1})", e , m_ToggleLogCountDic[e].ToString().HexColor(m_LogLevelHexColors[i++])));
@@ -109,7 +109,7 @@ namespace BlackFireFramework
                     {
                         m_LogInfoLinkedList.Clear();
                         m_CurrentSelectedLogInfo = null;
-                        Utility.Enum.Foreach<LogLevel>(e => {
+                        BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
 
                             m_ToggleLogCountDic[e] = 0;
                         });

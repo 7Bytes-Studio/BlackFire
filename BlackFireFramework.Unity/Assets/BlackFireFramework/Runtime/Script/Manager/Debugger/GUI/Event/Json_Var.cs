@@ -4,7 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     [System.Serializable]
 	public sealed class Json_Var

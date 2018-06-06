@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// 管家抽象基类。

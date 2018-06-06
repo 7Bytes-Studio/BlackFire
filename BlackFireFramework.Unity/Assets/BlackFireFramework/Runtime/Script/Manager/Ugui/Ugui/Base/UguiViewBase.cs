@@ -7,7 +7,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// UGUI的显示层对象抽象类。

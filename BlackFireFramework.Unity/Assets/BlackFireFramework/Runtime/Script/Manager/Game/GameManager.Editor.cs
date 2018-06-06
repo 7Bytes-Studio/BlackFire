@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
 	public sealed partial class GameManager
     {

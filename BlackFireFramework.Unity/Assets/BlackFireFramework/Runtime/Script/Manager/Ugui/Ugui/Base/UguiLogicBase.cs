@@ -6,7 +6,7 @@
 
 using UnityEngine;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// Ugui逻辑对象抽象基类。

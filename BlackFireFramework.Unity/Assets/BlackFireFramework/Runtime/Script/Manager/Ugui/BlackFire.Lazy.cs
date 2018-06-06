@@ -4,7 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using BlackFireFramework;
+using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {

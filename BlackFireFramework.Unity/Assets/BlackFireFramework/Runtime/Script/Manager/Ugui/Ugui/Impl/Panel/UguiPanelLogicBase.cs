@@ -5,7 +5,7 @@
 //----------------------------------------------------
 
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     public abstract class UguiPanelLogicBase : UguiLogicBase 
 	{

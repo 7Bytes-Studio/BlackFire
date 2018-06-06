@@ -7,7 +7,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// UguiBehaviourBase inherited from UIBehaviour.

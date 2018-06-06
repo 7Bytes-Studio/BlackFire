@@ -10,8 +10,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using BlackFireFramework.Game;
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// GameManager/Process
@@ -82,13 +83,13 @@ namespace BlackFireFramework
         {
             CheckFirstProcessOrThrow();
 
-            AddProcess(Utility.Reflection.New(Type.GetType(m_FirstProcess), m_FirstProcess) as ProcessBase);
+            AddProcess(BlackFireFramework.Utility.Reflection.New(Type.GetType(m_FirstProcess), m_FirstProcess) as ProcessBase);
 
             for (int i = 0; i < m_AvailableProcesses.Length; i++)
             {
                 if (m_AvailableProcesses[i] != m_FirstProcess)
                 {
-                    AddProcess(Utility.Reflection.New(Type.GetType(m_AvailableProcesses[i]), m_AvailableProcesses[i]) as ProcessBase);
+                    AddProcess(BlackFireFramework.Utility.Reflection.New(Type.GetType(m_AvailableProcesses[i]), m_AvailableProcesses[i]) as ProcessBase);
                 }
             }
 

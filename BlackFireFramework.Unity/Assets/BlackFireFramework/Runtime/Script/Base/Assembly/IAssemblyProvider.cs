@@ -4,7 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// 框架子程序集提供者。

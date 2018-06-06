@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// Unity可回收对象的实现类。

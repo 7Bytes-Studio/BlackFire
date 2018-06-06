@@ -13,11 +13,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     public sealed class DebuggerEventGUI : IDebuggerModuleGUI
     {
-        private Utility.Http.HttpServer m_HttpServer = null;
+        private BlackFireFramework.Utility.Http.HttpServer m_HttpServer = null;
         private Thread m_HttpServerThread = null;
 
         public int Priority
@@ -61,7 +61,7 @@ namespace BlackFireFramework
 
                 if (null == m_HttpServer || !m_HttpServer.IsWorking)
                 {
-                    GUILayout.Label(string.Format("Event Server : ".HexColor("green") + " {0}:{1}".HexColor("#33CCFF"), m_Domain = Utility.IP.GetPublicIP(), m_ServerPort), new GUIStyle("Label") { alignment = TextAnchor.MiddleCenter, padding = new RectOffset(0, 0, 0, 0) });
+                    GUILayout.Label(string.Format("Event Server : ".HexColor("green") + " {0}:{1}".HexColor("#33CCFF"), m_Domain = BlackFireFramework.Utility.IP.GetPublicIP(), m_ServerPort), new GUIStyle("Label") { alignment = TextAnchor.MiddleCenter, padding = new RectOffset(0, 0, 0, 0) });
 
                     m_ServerPort = GUILayout.TextField(m_ServerPort);
 
@@ -72,7 +72,7 @@ namespace BlackFireFramework
                 }
                 else
                 {
-                    GUILayout.Label(string.Format("Event Server {0}:{1}".HexColor("green"), m_Domain = Utility.IP.GetPublicIP(), m_ServerPort), new GUIStyle("Label") { alignment = TextAnchor.MiddleCenter, padding = new RectOffset(0, 0, 0, 0) });
+                    GUILayout.Label(string.Format("Event Server {0}:{1}".HexColor("green"), m_Domain = BlackFireFramework.Utility.IP.GetPublicIP(), m_ServerPort), new GUIStyle("Label") { alignment = TextAnchor.MiddleCenter, padding = new RectOffset(0, 0, 0, 0) });
                     if (GUILayout.Button("Close", GUILayout.Width(50)))
                     {
                         m_HttpServer.Close();
@@ -132,7 +132,7 @@ namespace BlackFireFramework
                             object[] args = new object[m_EventArgs.Count];
                             int i=0;
                             m_EventArgs.Foreach(current=> {
-                                args[i++] = current.Value.value.To(Utility.Convertor.Convert( current.Value.type ));
+                                args[i++] = current.Value.value.To(BlackFireFramework.Utility.Convertor.Convert( current.Value.type ));
                             });
                             Event.Fire(m_EventTopic, m_EventSender, new DebuggerEventArgs(args));
                             AddEventEntry("Debugger",m_EventTopic, m_EventSender, m_EventArgs.ToArray());
@@ -190,9 +190,9 @@ namespace BlackFireFramework
         {
             m_HttpServerThread = new Thread(state => {
 
-                m_HttpServer = Utility.Http.CreateHttpServer(
+                m_HttpServer = BlackFireFramework.Utility.Http.CreateHttpServer(
 
-                        new Utility.Http.LazyHttpServerInfo(getData => {
+                        new BlackFireFramework.Utility.Http.LazyHttpServerInfo(getData => {
 
                             Debug.Log(getData);
                             return JsonUtility.ToJson(new Json_Response() { code = 200, msg = "event server is working!" });
@@ -209,7 +209,7 @@ namespace BlackFireFramework
 
                         })
                         {
-                            Ip = Utility.IP.GetRealPublicIP(),
+                            Ip = BlackFireFramework.Utility.IP.GetRealPublicIP(),
                             Port = port,
                             Prefixes = new string[] { },
                             OnStartSucceed = (sender, args) => { Log.Info("event server is working!。"); },
@@ -276,7 +276,7 @@ namespace BlackFireFramework
                 List<Var> listVar = new List<Var>();
                 for (int i = 0; i < json_Instruction.eventTopic.args.Count; i++)
                 {
-                    args[i] = json_Instruction.eventTopic.args[i].value.To(Utility.Convertor.Convert(json_Instruction.eventTopic.args[i].type));
+                    args[i] = json_Instruction.eventTopic.args[i].value.To(BlackFireFramework.Utility.Convertor.Convert(json_Instruction.eventTopic.args[i].type));
                     listVar.Add(new Var() { type = json_Instruction.eventTopic.args[i].type, value = json_Instruction.eventTopic.args[i].value });
                 }
 

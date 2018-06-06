@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     [RequireComponent(typeof(CanvasGroup))]
     public abstract class UguiPanelViewBase : UguiViewBase

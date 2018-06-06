@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using BlackFireFramework.Game;
 
 namespace BlackFireFramework.Editor
 {

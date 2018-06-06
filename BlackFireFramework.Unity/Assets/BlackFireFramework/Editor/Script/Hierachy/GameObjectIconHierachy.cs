@@ -4,6 +4,7 @@
 //Website: http://www.0x69h.com
 //----------------------------------------------------
 
+using BlackFireFramework.Unity;
 using System;
 using System.Collections.Generic;
 using UnityEditor;

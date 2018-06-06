@@ -12,7 +12,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     public class DoubleClickButton : Button 
 	{

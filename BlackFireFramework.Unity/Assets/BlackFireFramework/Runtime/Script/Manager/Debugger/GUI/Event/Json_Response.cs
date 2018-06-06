@@ -5,7 +5,7 @@
 //----------------------------------------------------
 
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     [System.Serializable]
 	public sealed class Json_Response

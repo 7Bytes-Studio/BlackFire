@@ -15,7 +15,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     public class KVSSqlite : IKeyValueStorage
     {

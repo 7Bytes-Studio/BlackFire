@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace BlackFireFramework 
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// 调试器管家。
@@ -276,11 +276,11 @@ namespace BlackFireFramework
 
         private void InitDebuggerModuleGUI()
         {
-            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerModuleGUI));
+            var types = BlackFireFramework.Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerModuleGUI));
 
             for (int i = 0; i < types.Length; i++)
             {
-                IDebuggerModuleGUI ins = (IDebuggerModuleGUI)Utility.Reflection.New(types[i]);
+                IDebuggerModuleGUI ins = (IDebuggerModuleGUI)BlackFireFramework.Utility.Reflection.New(types[i]);
                 m_DebuggerModuleGUIList.Add(ins);
             }
 
@@ -298,11 +298,11 @@ namespace BlackFireFramework
 
         private void InitDebuggerStyleChange()
         {
-            var types = Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerStyleChangeCallback));
+            var types = BlackFireFramework.Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerStyleChangeCallback));
             List<IDebuggerStyleChangeCallback> list = new List<IDebuggerStyleChangeCallback>();
             for (int i = 0; i < types.Length; i++)
             {
-                IDebuggerStyleChangeCallback ins = (IDebuggerStyleChangeCallback)Utility.Reflection.New(types[i]);
+                IDebuggerStyleChangeCallback ins = (IDebuggerStyleChangeCallback)BlackFireFramework.Utility.Reflection.New(types[i]);
                 list.Add(ins);
             }
 

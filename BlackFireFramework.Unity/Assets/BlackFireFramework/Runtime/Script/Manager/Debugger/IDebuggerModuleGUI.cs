@@ -7,7 +7,7 @@
 
 
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// Debugger模块的GUI渲染接口。

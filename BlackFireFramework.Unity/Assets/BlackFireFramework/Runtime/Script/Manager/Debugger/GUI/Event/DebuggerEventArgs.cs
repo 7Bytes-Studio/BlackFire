@@ -6,7 +6,7 @@
 
 using System;
 
-namespace BlackFireFramework
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// 调试器参数。
