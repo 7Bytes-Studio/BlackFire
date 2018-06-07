@@ -15,92 +15,42 @@ namespace BlackFireFramework
 {
 	public sealed class ObjectPoolDemo : MonoBehaviour 
 	{
+        [SerializeField] private BulletLogic m_BulletTemplate;
         private ObjectPool.PoolBase m_TestPool = null;
 
         private void Start()
         {
-            m_TestPool = ObjectPool.CreatePool("TestPool0");
+            //监听事件。
+            //子弹达到存活时间事件。
+            Event.On("Topic://TestBullet/BulletTimetoRecycle",this,(sender,args)=> {
 
-            m_TestPool.PoolFactoryBinder.AddBinding(typeof(TestObject),()=>new TestObject(new GameObject("Unlock  /  Spawn From Test Pool  "+System.DateTime.Now.ToLongTimeString())));
+                m_TestPool.Recycle((sender as BulletLogic).ObjectOwner);
 
-           ObjectPool.CreatePool("TestPool2",100);
-           ObjectPool.CreatePool("TestPool3");
-           ObjectPool.CreatePool("TestPool4");
-           ObjectPool.CreatePool("TestPool5");
-           ObjectPool.CreatePool("TestPool6");
-           ObjectPool.CreatePool("TestPool7");
-           ObjectPool.CreatePool("TestPool8");
-           ObjectPool.CreatePool("TestPool9");
-           ObjectPool.CreatePool("TestPool10");
-           ObjectPool.CreatePool("TestPool11");
-           ObjectPool.CreatePool("TestPool12");
+            });
+            //子弹打到物体事件。
+            Event.On("Topic://TestBullet/BulletHit", this, (sender, args) => {
 
+                m_TestPool.Recycle((sender as BulletLogic).ObjectOwner);
 
-
+            });
+            //对象池弹性增长的，这里设置池的容量为300。
+            m_TestPool = ObjectPool.CreatePool("TestPool",300);
+            //对象池设计可以存放不同子类类型对象，只要是继承自ObjectPool.Object。
+            //下面是给对象池的工厂绑定实例化回调。
+            m_TestPool.PoolFactoryBinder.AddBinding(typeof(BulletObject),()=>new BulletObject(GameObject.Instantiate<BulletLogic>(m_BulletTemplate)));
         }
 
-        private TestObject m_FirstSpawnObj;
-
-        private void OnGUI()
+        //界面UI点击FireBullet事件。
+        public void OnFireBullet()
         {
-            if (GUILayout.Button("产出对象"))
+            if (m_TestPool.Count<m_TestPool.Capacity)
             {
-                var obj = m_TestPool.Spawn(typeof(TestObject)) as TestObject;
-                m_FirstSpawnObj = m_FirstSpawnObj??obj;
+                var bulletObject = m_TestPool.Spawn(typeof(BulletObject));
             }
-
-            if (GUILayout.Button("回收对象"))
-            {
-                m_TestPool.Recycle(m_FirstSpawnObj);
-            }
-
-            if (GUILayout.Button("加锁对象"))
-            {
-                m_TestPool.Lock(m_FirstSpawnObj);
-            }
-
-            if (GUILayout.Button("解锁对象"))
-            {
-                m_TestPool.UnLock(m_FirstSpawnObj);
-            }
-
-            if (GUILayout.Button("释放对象"))
-            {
-                m_TestPool.Release(m_FirstSpawnObj);
-            }
-        }
-    }
-
-    public sealed class TestObject : UnityObject<GameObject>
-    {
-        public TestObject(GameObject target) : base(target) { }
-
-
-        protected override void OnSpawn()
-        {
-            base.OnSpawn();
-            Target.SetActive(true);
-        }
-
-        protected override void OnRecycle()
-        {
-            base.OnRecycle();
-            Target.SetActive(false);
-        }
-
-        protected override void OnLock()
-        {
-            base.OnLock();
-            Target.name = Target.name.Replace("0:|Lock  ");
-        }
-
-        protected override void OnUnlock()
-        {
-            base.OnUnlock();
-            Target.name = Target.name.Replace("0:|Unlock");
         }
 
     }
+
 
 
 }

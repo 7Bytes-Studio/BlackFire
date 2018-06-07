@@ -217,6 +217,12 @@ namespace BlackFireFramework
                 var target = FindTypeInPool(objectType);
                 if (null != target && !target.Lock)
                 {
+                    lock (m_Lock)
+                    {
+                        m_LinkedListObject_InPool.Remove(target);
+                        m_LinkedListObject_OutPool.AddLast(target);
+                    }
+                    target.Spawn();
                     return target;
                 }
                 else
@@ -233,8 +239,14 @@ namespace BlackFireFramework
                         //throw new Exception(string.Format("没有获取到类型'{0}'的委托绑定！",objectType));
                         ins = Utility.Reflection.New(objectType) as ObjectBase;
                     }
-                    m_LinkedListObject_OutPool.AddLast(ins);
+
+                    lock (m_Lock)
+                    {
+                        m_LinkedListObject_OutPool.AddLast(ins);
+                    }
+                    
                     ins.SetPoolOwnersName(Name);
+                    ins.Spawn();
                     return ins;
                 }
             }
