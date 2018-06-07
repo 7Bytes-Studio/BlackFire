@@ -48,6 +48,8 @@ namespace BlackFireFramework
 
         private static string s_LogFilePath = string.Empty;
 
+        public static string LogFilePath { get { return s_LogFilePath; } }
+
         private static int s_WritePeriod = 5000;
 
         private static System.Threading.Timer s_Timer = null;
@@ -56,7 +58,7 @@ namespace BlackFireFramework
 
         private static void CuttingLine()
         {
-            string logMessage = string.Format(":::::::::::::::::::::::::::::::::[ {0} ]:::::::::::::::::::::::::::::::\r\n", System.DateTime.Now.ToLongDateString());
+            string logMessage = string.Format(":::::::::::::::::::::::::::::::::[ {0} ]:::::::::::::::::::::::::::::::\r\n", System.DateTime.Now.ToLongTimeString()+", "+ System.DateTime.Now.ToLongDateString());
             EnLogFileQueue(logMessage);
             WritelogQueueToLogFile();
 

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using BlackFireFramework.Unity;
-
+using System.IO;
 
 namespace BlackFireFramework.Unity
 {
@@ -35,8 +35,6 @@ namespace BlackFireFramework.Unity
             public bool Selected;
         }
 
-        private string m_InputLogCount = "99";
-        private string m_FilePath=@"D:\\BlackFire.Log";
         private bool m_HasSetLogFile;
 
         public int Priority
@@ -58,13 +56,23 @@ namespace BlackFireFramework.Unity
 
 
 
+
+
+
+
+
+
+
+       
+
         public void OnInit(DebuggerManager debuggerManager)
         {
             Application.logMessageReceived += Application_logMessageReceived;
 
+            KVSInit();
+
             BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
 
-                m_ToggleLogResDic.Add(e,false);
                 m_ToggleLogCountDic.Add(e,0);
             });
 
@@ -121,16 +129,31 @@ namespace BlackFireFramework.Unity
 
                     if (!m_HasSetLogFile)
                     {
-                        m_FilePath = GUILayout.TextField(m_FilePath);
+                        m_FilePath = GUILayout.TextField(m_FilePath??@"D:\\BlackFire.Log");
                         m_HasSetLogFile = GUILayout.Button("Set", GUILayout.Width(50));
-                        if (m_HasSetLogFile)
+                        OpenLogFile();
+                        if (m_HasSetLogFile && !string.IsNullOrEmpty(m_FilePath))
                         {
-                            Log.SetLogFileMode(m_FilePath, 1000);
+                            try //捕捉文件路径异常。
+                            {
+                                if (!m_HasSetLogFileMode)
+                                {
+                                    Log.SetLogFileMode(m_FilePath, 1000);
+                                    m_HasSetLogFileMode = true;
+                                }
+                                KVS.SetValue<KVSPlayerPrefs>(m_FilePathHead, m_FilePath);
+                            }
+                            catch (System.Exception ex)
+                            {
+                                Log.Fatal(ex);
+                            }
+
                         }
                     }
                     else
                     {
                         GUILayout.TextField(m_FilePath);
+                        OpenLogFile();
                     }
                     
                 });
@@ -145,7 +168,7 @@ namespace BlackFireFramework.Unity
 
                         if (!m_ToggleLogResDic[current.Value.LogLevel]) return;
 
-                        if (GUILayout.Toggle(current.Value.Selected, current.Value.Message))
+                        if (current.Value.Selected = GUILayout.Toggle(current.Value.Selected, current.Value.Message))
                         {
                             if (null != m_CurrentSelectedLogInfo && !m_CurrentSelectedLogInfo.Equals(current.Value))
                             {
@@ -174,6 +197,7 @@ namespace BlackFireFramework.Unity
 
         public void OnDestroy()
         {
+            KVSDestroy();
             m_CurrentSelectedLogInfo = null;
             m_LogInfoLinkedList.Clear();
             m_LogInfoLinkedList = null;
@@ -182,7 +206,7 @@ namespace BlackFireFramework.Unity
         }
 
 
-        #region Handlers
+        #region Private
 
         private void Application_logMessageReceived(string condition, string stackTrace, LogType type)
         {
@@ -237,6 +261,68 @@ namespace BlackFireFramework.Unity
                 Message = message,
                 StackTrace = stackTrace,
                 Selected = false
+            });
+        }
+
+        private void OpenLogFile()
+        {
+#if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN //其他平台有待验证。
+            if (!string.IsNullOrEmpty(Log.LogFilePath) && m_HasSetLogFileMode && GUILayout.Button("Open", GUILayout.Width(50)))
+            {
+                if (File.Exists(Log.LogFilePath))
+                {
+                    System.Diagnostics.Process.Start(m_FilePath);
+                }
+            }
+#endif
+        }
+        private string m_FilePath = null;
+        private bool m_HasSetLogFileMode = false;
+        private string m_InputLogCount = "99";
+
+
+        //KVS...
+
+        private string m_LogOptionHead = "Log/ToggleLogOption/";
+        private string m_FilePathHead = "Log/FilePath";
+
+        //KVS...
+
+        private void KVSInit()
+        {
+            #region LogOption
+
+            BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
+
+                if (KVS.HasKey<KVSPlayerPrefs>(m_LogOptionHead + e))
+                {
+                    m_ToggleLogResDic.Add(e, bool.Parse(KVS.GetValue<KVSPlayerPrefs>(m_LogOptionHead + e)));
+                }
+                else
+                {
+                    KVS.SetValue<KVSPlayerPrefs>(m_LogOptionHead + e, false.ToString());
+                    m_ToggleLogResDic.Add(e, false);
+                }
+            });
+
+            #endregion
+
+            #region LogFilePath
+
+            if (KVS.HasKey<KVSPlayerPrefs>(m_FilePathHead))
+            {
+                m_FilePath = KVS.GetValue<KVSPlayerPrefs>(m_FilePathHead);
+                Log.SetLogFileMode(m_FilePath,1000);
+                m_HasSetLogFileMode = true;
+            }
+
+            #endregion
+        }
+
+        private void KVSDestroy()
+        {
+            BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
+                KVS.SetValue<KVSPlayerPrefs>(m_LogOptionHead + e, m_ToggleLogResDic[e].ToString());
             });
         }
 
