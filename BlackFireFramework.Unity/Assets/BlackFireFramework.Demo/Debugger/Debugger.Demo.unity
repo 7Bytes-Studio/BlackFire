@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114148219621340972, guid: 99f63c94b7f82484483d2e285ee78fd6,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4757193853496256, guid: 99f63c94b7f82484483d2e285ee78fd6, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -156,6 +161,11 @@ Prefab:
         type: 2}
       propertyPath: m_DebuggerStyle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114148219621340972, guid: 99f63c94b7f82484483d2e285ee78fd6,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.data[0]
+      value: BlackFireFramework.Game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99f63c94b7f82484483d2e285ee78fd6, type: 2}
@@ -236,6 +246,7 @@ GameObject:
   - component: {fileID: 1254143952}
   - component: {fileID: 1254143951}
   - component: {fileID: 1254143950}
+  - component: {fileID: 1254143954}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -306,3 +317,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1254143954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254143949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80379dff8a97ad943985594f094f8a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FireLog: 0
