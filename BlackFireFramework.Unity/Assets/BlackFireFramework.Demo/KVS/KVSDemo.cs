@@ -112,16 +112,52 @@ namespace BlackFireFramework
                 var testStr = "Start------";
                 for (int i = 0; i < 100; i++)
                 {
+                    //太长貌似不行。
                     testStr += "UnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnityUnity";
                 }
                 testStr += "------End";
-                KVS.SetValue<KVSSqlite>("BigDataTest",testStr);
+                KVS.SetValue<KVSSqlite>("BigDataTest", testStr);
             }
 
             if (GUILayout.Button("Big Data Query"))
             {
                 Debug.Log(KVS.GetValue<KVSSqlite>("BigDataTest"));
             }
+
+
+
+            if (GUILayout.Button("KVSText GetValue"))
+            {
+                Debug.Log(KVS.GetValue<KVSText>("Alan"));
+                Debug.Log(KVS.GetValue<KVSText>("Alex"));
+                Debug.Log(KVS.GetValue<KVSText>("Adam"));
+
+                Debug.Log(KVS.GetValue<KVSText>("666"));
+                Debug.Log(KVS.GetValue<KVSText>("777"));
+                Debug.Log(KVS.GetValue<KVSText>("888"));
+                Debug.Log(KVS.GetValue<KVSText>("Test"));
+
+                for (int i = 0; i < 1000; i++)
+                {
+                    Debug.Log(KVS.GetValue<KVSText>(i.ToString()));
+                }
+
+            }
+
+            if (GUILayout.Button("KVSText SetValue"))
+            {
+                KVS.SetValue<KVSText>("Test","TestLalalalala~");
+                KVS.SetValue<KVSText>("666","666Lalalalala~");
+                KVS.SetValue<KVSText>("777","777Lalalalala~");
+                KVS.SetValue<KVSText>("888","888Lalalalala~");
+
+                for (int i = 0; i < 1000; i++)
+                {
+                    KVS.SetValue<KVSText>(i.ToString(), i.ToString());
+                }
+
+            }
+
 
         }
 

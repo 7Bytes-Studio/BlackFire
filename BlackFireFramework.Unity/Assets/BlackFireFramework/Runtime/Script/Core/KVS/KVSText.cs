@@ -13,46 +13,118 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class KVSText : IKeyValueStorage
+    public class KVSText : IKeyValueStorage
     {
-        private string Path { get { return Application.streamingAssetsPath + "/kvs.txt"; } }
+        private string m_Path;
+
+        private SortedDictionary<string,string> m_KVDic = new SortedDictionary<string,string>();
+
+
 
         public KVSText()
         {
-            if (!File.Exists(Application.streamingAssetsPath + "/kvs.txt"))
+            m_Path = BlackFire.StreamingAssetsPath + "/kvs.txt";
+
+            if (!File.Exists(m_Path))
             {
-                File.CreateText(Path);
+                using (File.Create(m_Path)) { }
             }
             else
             {
-
+                StringReader sr = new StringReader(File.ReadAllText(m_Path));
+                string line;
+                string key;
+                string value;
+                while (null!=(line=sr.ReadLine()))
+                {
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i]=='=')
+                        {
+                            key = line.Substring(0,i);
+                            value = line.Substring(i+1,line.Length - i-1); 
+                            m_KVDic.Add(key,value);
+                            break;
+                        }
+                    }
+                }
+                sr.Close();
             }
+
+            BlackFire.ApplicationQuit += BlackFire_ApplicationQuit;
+
         }
+
+        ~KVSText()
+        {
+            SaveAtApplicationQuit();
+        }
+
+
+
+
+        private void BlackFire_ApplicationQuit()
+        {
+            SaveAtApplicationQuit();
+            BlackFire.ApplicationQuit -= BlackFire_ApplicationQuit;
+        }
+
+        private bool m_HasSave = false;
+        private void SaveAtApplicationQuit()
+        {
+            if (m_HasSave) return;
+            using (FileStream fs = new FileStream(m_Path, FileMode.Create, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    foreach (var kv in m_KVDic)
+                    {
+                        sw.WriteLine(string.Format("{0}={1}", kv.Key, kv.Value));
+                    }
+                    sw.Flush();
+                    sw.Close();
+                }
+                fs.Close();
+            }
+            m_HasSave = true;
+        }
+
 
 
         public void Del(string key)
         {
-            
+            if (m_KVDic.ContainsKey(key))
+            {
+                m_KVDic.Remove(key);
+            }
         }
 
         public void DelAll()
         {
-            
+            m_KVDic.Clear();
         }
 
         public string GetValue(string key)
         {
-            throw new System.NotImplementedException();
+            if (m_KVDic.ContainsKey(key))
+            {
+               return m_KVDic[key];
+            }
+            return string.Empty;
         }
 
         public bool HasKey(string key)
         {
-            throw new System.NotImplementedException();
+            return m_KVDic.ContainsKey(key);
         }
 
         public void SetValue(string key, string value)
         {
-           
+            if (!m_KVDic.ContainsKey(key))
+            {
+                m_KVDic.Add(key,string.Empty);
+            }
+            m_KVDic[key] = value;
         }
     }
 }

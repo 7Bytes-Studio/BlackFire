@@ -9,13 +9,10 @@ using UnityEngine;
 
 public sealed partial class BlackFire
 {
-
 #if UNITY_EDITOR
 
     [SerializeField] [HideInInspector] private Texture m_Logo;
 
 #endif
-
-
 
 }
