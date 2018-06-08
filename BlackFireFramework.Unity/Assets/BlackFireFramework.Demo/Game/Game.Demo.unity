@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114402036294796624, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AvailableProcesses.Array.size
@@ -171,6 +176,16 @@ Prefab:
         type: 2}
       propertyPath: m_AvailableProcesses.Array.data[1]
       value: BlackFireFramework.Unity.ProcessTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.data[0]
+      value: BlackFireFramework.Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.data[1]
+      value: BlackFireFramework.Unity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}

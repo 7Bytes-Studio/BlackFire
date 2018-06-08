@@ -119,44 +119,11 @@ namespace BlackFireFramework.Unity
 
         #region Private
 
+      
 
         private void DrawMiniDebugger(string title)
         {
-            var fps = Unity.Utility.Game.Fps();
-            if (HasErrorOrException)
-            {
-                SetMiniDebuggerColor("#CC0000");
-            }
-            else if (60f <= fps)
-            {
-                SetMiniDebuggerColor("#009900");
-            }
-            else if (60f > fps)
-            {
-                SetMiniDebuggerColor("#00CCFF");
-            }
-            else if (50f > fps)
-            {
-                SetMiniDebuggerColor("#FFFFCC");
-            }
-            else if (40f > fps)
-            {
-                SetMiniDebuggerColor("#FFFF99");
-            }
-            else if (30f > fps)
-            {
-                SetMiniDebuggerColor("#FFFF66");
-            }
-            else if (20f > fps)
-            {
-                SetMiniDebuggerColor("#FFFF33");
-            }
-            else if (10f > fps)
-            {
-                SetMiniDebuggerColor("#FFFF00");
-            }
-
-            var fpsStr = string.Format("FPS : {0:00.00}", fps).HexColor(m_MiniDebuggerHexColor);
+          
 
             Rect rect = BlackFireGUI.GetWindowRect(1);
             float x, y;
@@ -178,7 +145,7 @@ namespace BlackFireFramework.Unity
                 {
 
                     GUI.backgroundColor = Color.black;
-                    if (GUILayout.Button(fpsStr, new GUIStyle("Button") { fontSize = 14, fixedHeight = 30 }))
+                    if (GUILayout.Button(GetFpsString(), new GUIStyle("Button") { fontSize = 14, fixedHeight = 30 }))
                     {
                         m_DebuggerStyle =  DebuggerStyle.Full;
                     }
@@ -244,6 +211,7 @@ namespace BlackFireFramework.Unity
                             BlackFireGUI.BoxHorizontalLayout(()=> {
 
                                 GUILayout.Label(m_SelectedModuleName, new GUIStyle("Label") { padding=new RectOffset(0,0,0,0),alignment = TextAnchor.MiddleCenter,fontStyle = FontStyle.Bold});
+                                GUILayout.Label(GetFpsString(), new GUIStyle("Label") { padding = new RectOffset(0, 0, 0, 0), alignment = TextAnchor.MiddleRight, fontStyle = FontStyle.Bold });
 
                             });
 
@@ -343,7 +311,44 @@ namespace BlackFireFramework.Unity
         {
             m_MiniDebuggerHexColor = hexColor;
         }
+        private string GetFpsString()
+        {
+            var fps = Unity.Utility.Game.Fps();
+            if (HasErrorOrException)
+            {
+                SetMiniDebuggerColor("#CC0000");
+            }
+            else if (60f <= fps)
+            {
+                SetMiniDebuggerColor("#009900");
+            }
+            else if (60f > fps)
+            {
+                SetMiniDebuggerColor("#00CCFF");
+            }
+            else if (50f > fps)
+            {
+                SetMiniDebuggerColor("#FFFFCC");
+            }
+            else if (40f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF99");
+            }
+            else if (30f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF66");
+            }
+            else if (20f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF33");
+            }
+            else if (10f > fps)
+            {
+                SetMiniDebuggerColor("#FFFF00");
+            }
 
+            return string.Format("FPS : {0:00.00}", fps).HexColor(m_MiniDebuggerHexColor);
+        }
 
         #endregion
 
