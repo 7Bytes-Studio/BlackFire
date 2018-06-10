@@ -1,0 +1,7 @@
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Network.dll
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Network.pdb
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csprojAssemblyReference.cache
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CoreCompileInputs.cache
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CopyComplete
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.dll
+D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.pdb

@@ -16,8 +16,8 @@ namespace BlackFireFramework.Unity
     /// 管家抽象基类。
     /// </summary>
     [GameObjectIcon("Manager")]
-	public abstract class ManagerBase : MonoBehaviour , IManager
-	{
+    public abstract class ManagerBase : MonoBehaviour, IManager
+    {
         //是否在工作状态。
         public virtual bool IsWorking
         {
@@ -46,8 +46,22 @@ namespace BlackFireFramework.Unity
         }
 
 
+        protected T GetModule<T>() where T : IModule
+        {
+            return BlackFire.ModuleManager.GetModule<T>();
+        }
 
-        protected virtual void OnStart()
+        protected void RegisterModule<T>() where T : IModule
+        {
+            BlackFire.ModuleManager.Register<T>();
+        }
+
+        protected void UnRegisterModule<T>() where T : IModule
+        {
+            BlackFire.ModuleManager.UnRegister<T>();
+        }
+
+    protected virtual void OnStart()
         {
 
         }

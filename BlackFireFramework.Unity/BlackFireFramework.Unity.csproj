@@ -227,6 +227,9 @@
     <Reference Include="BlackFireFramework.Game">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Game.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework.Network">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -255,6 +258,7 @@
     <Compile Include="Assets\BlackFireFramework.Demo\Game\GameDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\KVS\KVSDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework.Demo\Network\Download\DownloadTest.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\ObjectPool\BulletLogic.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\ObjectPool\BulletObject.cs" />
     <Compile Include="Assets\BlackFireFramework.Demo\ObjectPool\ObjectPoolDemo.cs" />
@@ -281,6 +285,7 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Text.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Transform.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Utility\Utility.Unique.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
@@ -311,6 +316,12 @@
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\BlackFire.Lazy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\Download\Http\DownloadHandlerBigFile.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\NetworkManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\NetworkManager.Download.cs" />
+    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Network\NetworkManager.T.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Ugui\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Ugui\GUI\DebuggerUguiGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Ugui\Ugui\Base\UguiBehaviourBase.cs" />

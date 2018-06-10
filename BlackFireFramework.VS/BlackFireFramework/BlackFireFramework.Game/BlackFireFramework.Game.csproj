@@ -40,10 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Export.cs" />
-    <Compile Include="ProcessModule\ChangeProcessEventArgs.cs" />
-    <Compile Include="ProcessModule\GlobalEvent.cs" />
-    <Compile Include="ProcessModule\IProcessModule.cs" />
-    <Compile Include="ProcessModule\ProcessBase.cs" />
+    <Compile Include="ProcessModule\Base\ChangeProcessEventArgs.cs" />
+    <Compile Include="ProcessModule\Base\GlobalEvent.cs" />
+    <Compile Include="ProcessModule\Base\IProcessModule.cs" />
+    <Compile Include="ProcessModule\Base\ProcessBase.cs" />
     <Compile Include="ProcessModule\ProcessModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

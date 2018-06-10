@@ -37,6 +37,18 @@ namespace BlackFireFramework
                 return null;
             }
 
+            /// <summary>
+            /// 是否是指定的基类类型的实现类。
+            /// </summary>
+            /// <param name="baseType">指定的基类类型。</param>
+            /// <param name="implType">实现类类型。</param>
+            /// <returns>结果。</returns>
+            public static bool IsImplType(Type baseType,Type implType)
+            {
+                return baseType.IsAssignableFrom(implType);
+            }
+
+
             #endregion
 
             #region Activator

@@ -275,6 +275,9 @@
     <Reference Include="BlackFireFramework.Game">
       <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Game.dll</HintPath>
     </Reference>
+    <Reference Include="BlackFireFramework.Network">
+      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>

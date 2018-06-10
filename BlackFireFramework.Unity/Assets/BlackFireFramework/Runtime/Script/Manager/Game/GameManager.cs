@@ -52,8 +52,8 @@ namespace BlackFireFramework.Unity
 
         private void InitModule()
         {
-            BlackFire.ModuleManager.Register<IProcessModule>();
-            m_ProcessModule = BlackFire.ModuleManager.GetModule<IProcessModule>();
+            RegisterModule<IProcessModule>();
+            m_ProcessModule = GetModule<IProcessModule>();
         }
 
     }

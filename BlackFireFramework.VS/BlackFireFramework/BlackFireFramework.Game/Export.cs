@@ -8,7 +8,7 @@
 namespace BlackFireFramework.Game
 {
     /// <summary>
-    /// TestAssembly 的导出类。
+    /// BlackFireFramework.Game 的导出类。
     /// </summary>
     public sealed class Export : ExportedAssemblyBase
     {
