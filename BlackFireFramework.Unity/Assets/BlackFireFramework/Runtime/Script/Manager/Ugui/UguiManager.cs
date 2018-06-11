@@ -13,7 +13,10 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-	public sealed class UguiManager : ManagerBase 
+    /// <summary>
+    /// Ugui 管家。
+    /// </summary>
+	public sealed partial class UguiManager : ManagerBase 
 	{
         private UguiManagerGraphicRaycaster m_UguiManagerGraphicRaycaster = null;
 
@@ -21,6 +24,7 @@ namespace BlackFireFramework.Unity
         /// Ugui的事件流。
         /// </summary>
         public PointerEventData PointerEventData { get { return m_UguiManagerGraphicRaycaster.PointerEventData;  } }
+      
         /// <summary>
         /// 射线射击结果列表。
         /// </summary>
@@ -30,9 +34,6 @@ namespace BlackFireFramework.Unity
         protected override void OnStart()
         {
             base.OnStart();
-            //var go = new GameObject("EventData");
-            //go.transform.SetParent(transform);
-            //m_UguiManagerGraphicRaycaster = go.AddComponent<UguiManagerGraphicRaycaster>();
             m_UguiManagerGraphicRaycaster = gameObject.AddComponent<UguiManagerGraphicRaycaster>();
         }
 
