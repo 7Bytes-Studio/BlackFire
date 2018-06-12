@@ -14,12 +14,22 @@ namespace BlackFireFramework
 {
 	public sealed class ResourceDemo : MonoBehaviour 
 	{
-
+        private object m_Asset;
         private void OnGUI()
         {
+            if (GUILayout.Button("异步加载"))
+            {
+                BlackFire.Resource.LoadAsync("GameObject", ao => Debug.Log(ao.Asset.GetHashCode() + "   " + (m_Asset=ao.Asset) +"   "+ ao.AssetPath+"   "+ao.AssetType));
+            }
+
+            if (GUILayout.Button("卸载"))
+            {
+                BlackFire.Resource.UnloadAsset((Object)m_Asset);
+            }
+
             if (GUILayout.Button("测试"))
             {
-                
+                Debug.Log(m_Asset);
             }
         }
 

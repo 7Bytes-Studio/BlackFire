@@ -9,6 +9,7 @@ using System;
 namespace BlackFireFramework.Unity
 {
     using System.Collections;
+    using System.Collections.Generic;
     using UnityEngine;
     public sealed partial class ResourceManager
     {
@@ -29,6 +30,11 @@ namespace BlackFireFramework.Unity
         #endregion
 
         #region Sync Load
+
+        public Object Load(string path)
+        {
+            return Resources.Load(path);
+        }
 
         public Object Load(string path, Type systemTypeInstance)
         {
@@ -58,7 +64,22 @@ namespace BlackFireFramework.Unity
 
         public void UnloadAsset(Object assetToUnload)
         {
-            Resources.UnloadAsset(assetToUnload);
+            if (null == assetToUnload) throw new NullReferenceException("Parameters 'assetToUnload' cannot be null.");
+            bool isIndividualAssets = assetToUnload is Mesh || assetToUnload is Texture || assetToUnload is Material || assetToUnload is Shader;
+            if (isIndividualAssets)
+            {
+                Resources.UnloadAsset(assetToUnload);
+            }
+            else
+            {
+                var ao = HasAsset(assetToUnload);
+                if (null!= ao)
+                {
+                    m_AssetObjectLinkList.Remove(ao);
+                    ao = null;
+                    UnloadUnusedAssets();
+                }
+            }
         }
 
         #endregion
@@ -93,24 +114,80 @@ namespace BlackFireFramework.Unity
 
         #endregion
 
+        private LinkedList<AssetObject> m_AssetObjectLinkList = new LinkedList<AssetObject>();
 
+        private AssetObject HasAsset(string assetName)
+        {
+            var current = m_AssetObjectLinkList.First;
+            while (null!=current)
+            {
+                if (current.Value.AssetPath==assetName)
+                {
+                    return current.Value;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
+
+        private AssetObject HasAsset(Object asset)
+        {
+            var current = m_AssetObjectLinkList.First;
+            while (null != current)
+            {
+                if (current.Value.Asset.Equals(asset))
+                {
+                    return current.Value;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
 
         public void LoadAsync(string path,Action<AssetObject> loadComplete)
         {
-            var rr = LoadAsync(path);
-            rr.completed += asset => { if (null != loadComplete) loadComplete.Invoke(new AssetObject(path,asset,typeof(Object))); };
+            var assetObject = HasAsset(path);
+            if (null == assetObject)
+            {
+                var rr = LoadAsync(path);
+                rr.completed += ao => { if (null != loadComplete) loadComplete.Invoke( m_AssetObjectLinkList.AddLast(new AssetObject(path, rr.asset, typeof(Object))).Value ); };
+            }
+            else
+            {
+                if (null != loadComplete) loadComplete.Invoke(assetObject);
+            }
         }
 
         public void LoadAsync(string path,Type type, Action<AssetObject> loadComplete)
         {
-            var rr = LoadAsync(path,type);
-            rr.completed += asset => { if (null != loadComplete) loadComplete.Invoke(new AssetObject(path, asset, type)); };
+            var assetObject = HasAsset(path);
+            if (null == assetObject)
+            {
+                var rr = LoadAsync(path, type);
+                rr.completed += ao => { if (null != loadComplete) loadComplete.Invoke(m_AssetObjectLinkList.AddLast(new AssetObject(path, rr.asset, type)).Value); };
+            }
+            else
+            {
+                if (null != loadComplete) loadComplete.Invoke(assetObject);
+            }
         }
+
         public void LoadAsync<T>(string path, Action<AssetObject> loadComplete) where T : Object
         {
-            var rr = LoadAsync<T>(path);
-            rr.completed += asset => { if (null != loadComplete) loadComplete.Invoke(new AssetObject(path, asset,typeof(T))); };
+            var assetObject = HasAsset(path);
+            if (null == assetObject)
+            {
+                var rr = LoadAsync<T>(path);
+                rr.completed += ao => { if (null != loadComplete) loadComplete.Invoke(m_AssetObjectLinkList.AddLast(new AssetObject(path, rr.asset, typeof(T))).Value); };
+            }
+            else
+            {
+                if (null != loadComplete) loadComplete.Invoke(assetObject);
+            }
         }
+
+
+
 
     }
 }

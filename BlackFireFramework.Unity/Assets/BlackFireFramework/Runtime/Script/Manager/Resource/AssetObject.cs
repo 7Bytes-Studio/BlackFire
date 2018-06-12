@@ -12,12 +12,12 @@ namespace BlackFireFramework.Unity
     /// 资产对象。
     /// </summary>
     public sealed class AssetObject
-	{
-        
+    {
+
         /// <summary>
         /// 构造方法。
         /// </summary>
-        public AssetObject(string assetPath, Object asset,Type assetType)
+        public AssetObject(string assetPath, Object asset, Type assetType)
         {
             AssetPath = assetPath;
             Asset = asset;
@@ -28,7 +28,7 @@ namespace BlackFireFramework.Unity
         /// 资源路径。
         /// </summary>
         public string AssetPath { get; private set; }
-        
+
         /// <summary>
         /// 资源对象内存引用。
         /// </summary>
