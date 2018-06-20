@@ -4,6 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using BlackFireFramework.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,6 +41,8 @@ namespace BlackFireFramework.Editor
 
         private BlackFireFrameworkConfig m_Configuration = null;
 
+        private ActionQueue m_ActionQueue = new ActionQueue();
+
         #endregion
 
         #region Behaviour
@@ -55,6 +58,10 @@ namespace BlackFireFramework.Editor
         private void Update()
         {
             WaitShowExceptionMsgBox();
+            while (0 < m_ActionQueue.Count) //同步调用Action委托队列。
+            {
+                m_ActionQueue.Dequeue().Invoke();
+            }
         }
 
         private void OnDestroy()
@@ -338,11 +345,13 @@ namespace BlackFireFramework.Editor
                     DirectoryInfo info = new DirectoryInfo(targetExtractPath + "/." + item.ItemData.Name);
                     info.MoveTo(targetExtractPath + "/" + item.ItemData.Name);
                 }
-                // RefreshAssets(); //刷新资源。
-                EmbeddedMessageBoxWindow.Show("Info", "\nDownload finished!!!\n\nPlease refresh the project assets!!!", Color.green);
+
+                m_ActionQueue.Enqueue(()=> { AssetDatabase.Refresh(); }); //刷新资源。
+                //EmbeddedMessageBoxWindow.Show("Info", "\nDownload finished!!!\n\nPlease refresh the project assets!!!", Color.green);
             });
 
         }
+
 
         private void ExistsOrCreateFolder(string path)
         {
