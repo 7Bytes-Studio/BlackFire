@@ -11,17 +11,24 @@ namespace BlackFireFramework.Editor
 {
     public sealed class ConfigWindow : EditorWindowBase<ConfigWindow>
     {
-        private string m_PackageServerUrl = "http://0x69h.com/packages/api.json"; //默认测试路径。
+        private string m_PackageServerUrl = "http://0x69h.com/packages/API.json"; //默认测试路径。
 
         private BlackFireFrameworkConfig m_Configuration = null;
 
         private void OnEnable()
         {
             m_Configuration = Resources.Load<BlackFireFrameworkConfig>("BlackFireFrameworkConfig");
+#if BLACKFIRE_EDITOR
+            Debug.Log(m_PackageServerUrl);
+#endif
             if (null!= m_Configuration)
             {
                 m_PackageServerUrl = m_Configuration.PackageServerAPIUrl;
             }
+#if BLACKFIRE_EDITOR
+            Debug.Log(null != m_Configuration);
+            Debug.Log(m_PackageServerUrl);
+#endif
         }
 
 

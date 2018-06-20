@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9320fe7a0bc354c8e79384f797f548, type: 3}
   m_Name: BlackFireFrameworkConfig
   m_EditorClassIdentifier: 
-  PackageServerAPIUrl: http://0x69h.com/packages/api.json
+  PackageServerAPIUrl: http://0x69h.com/packages/API.json
