@@ -262,15 +262,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetZip">
-      <HintPath>Assets/BlackFireFramework/Editor/Lib/DotNetZip/DotNetZip.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework.Game">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Game.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -292,8 +283,17 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>Assets/BlackFireFramework/Build-In/Editor/Lib/DotNetZip/DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackFireFramework">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.dll</HintPath>
+    </Reference>
     <Reference Include="BlackFireFramework.Network">
-      <HintPath>Assets/BlackFireFramework/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="BlackFireFramework.Game">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.Game.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -303,34 +303,34 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\BlackFireEditor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloader.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloaderProgressEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Download\HttpDownloadInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\GUI\BlackFireEditorGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Log\LogRedirection.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.Assets.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Common\Utility\Utility.Zip.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Config\BlackFireFrameworkConfig.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Hierachy\GameObjectIconHierachy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Inspector\InspectorBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Inspector\InspectorSetting.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\AssetsMenu.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\ScriptAsset\Base\EndNameEditActionBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\ScriptAsset\CreateEditorWindowScriptAsset.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Menu\WindowMenu.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Base\EditorWindowBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Config\ConfigWindow.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageInfoList.cs" />
-    <Compile Include="Assets\BlackFireFramework\Editor\Script\Window\Package\PackageWindow.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Core\BlackFire\Editor\BlackFireInspector.cs" />
-    <Compile Include="Assets\BlackFireFramework\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\BlackFireEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Download\HttpDownloader.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Download\HttpDownloaderProgressEventArgs.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Download\HttpDownloadInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\GUI\BlackFireEditorGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Log\LogRedirection.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Utility\Utility.Assets.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Utility\Utility.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Common\Utility\Utility.Zip.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Config\BlackFireFrameworkConfig.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Hierachy\GameObjectIconHierachy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Inspector\InspectorBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Inspector\InspectorSetting.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Menu\AssetsMenu.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Menu\ScriptAsset\Base\EndNameEditActionBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Menu\ScriptAsset\CreateEditorWindowScriptAsset.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Menu\WindowMenu.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Base\EditorWindowBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Config\ConfigWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageInfoList.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\Editor\BlackFireInspector.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BlackFireFramework\Editor\Lib\DotNetZip\DotNetZip.xml" />
+    <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\DotNetZip\DotNetZip.xml" />
     <None Include="Assets\StreamingAssets\kvs.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

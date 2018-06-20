@@ -16,19 +16,34 @@ namespace BlackFireFramework.Editor
 	{
         #region Path
 
-
-        public const string AssetsPath = "BlackFireFramework/.Assets/";
-
+        /// <summary>
+        /// 框架内部资源路径。
+        /// </summary>
+        public const string AssetsPath = "BlackFireFramework/Build-In/.Assets/";
+        /// <summary>
+        /// 框架内部资源脚本模板路径。
+        /// </summary>
         public const string ScriptTemplatePath = AssetsPath + "Data/Resources/ScriptTemplates/";
-
+        /// <summary>
+        /// 框架内部临时文件夹路径。
+        /// </summary>
         public static string TempPath { get { return Application.dataPath + "/../Temp/BlackFireFramework.Temp/"; } }
-
+        /// <summary>
+        /// 框架内部临时包管理路径。
+        /// </summary>
         public static string PackageTempPath { get { return TempPath+"Packages/"; } }
-
-        public static string PackagePath { get { return Application.dataPath + "/BlackFireFramework.Custom/Packages/"; } }
-
-        public static string FrameworkCustomPath { get { return Application.dataPath + "/BlackFireFramework.Custom/"; } }
-        public static string FrameworkCustomRelativePath { get { return "Assets/BlackFireFramework.Custom/"; } }
+        /// <summary>
+        /// 框架内部包管理路径。
+        /// </summary>
+        public static string PackagePath { get { return Application.dataPath + "/BlackFireFramework/Custom/Packages/"; } }
+        /// <summary>
+        /// 框架自定义二次开发资源路径。
+        /// </summary>
+        public static string FrameworkCustomPath { get { return Application.dataPath + "/BlackFireFramework/Custom/"; } }
+        /// <summary>
+        /// 框架自定义二次开发资源的相对路径。
+        /// </summary>
+        public static string FrameworkCustomRelativePath { get { return "Assets/BlackFireFramework/Custom/"; } }
 
 
 
@@ -49,11 +64,11 @@ namespace BlackFireFramework.Editor
 
         private static void MakeUserCustomFolder()
         {
-            var results = AssetDatabase.FindAssets("BlackFireFramework.Custom");
+            var results = AssetDatabase.FindAssets("Custom");
             if (0 == results.Length)
             {
-                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom");
-                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework.Custom/Packages");
+                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom");
+                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom/Packages");
                 AssetDatabase.Refresh();
             }
         }

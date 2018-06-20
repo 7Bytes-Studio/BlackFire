@@ -14,7 +14,7 @@ using UnityEngine.UI;
 namespace BlackFireFramework.Unity 
 {
     /// <summary>
-    /// 文件Crc32校验协程指令。
+    /// 文件Crc32校验协程指令(主线程)。
     /// </summary>
     public sealed class CheckFileCrc32 : CustomYieldInstruction
     {
