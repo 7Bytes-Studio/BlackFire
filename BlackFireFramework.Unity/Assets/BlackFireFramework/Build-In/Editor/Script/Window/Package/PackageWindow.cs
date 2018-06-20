@@ -338,7 +338,8 @@ namespace BlackFireFramework.Editor
                     DirectoryInfo info = new DirectoryInfo(targetExtractPath + "/." + item.ItemData.Name);
                     info.MoveTo(targetExtractPath + "/" + item.ItemData.Name);
                 }
-                // RefreshAssets();
+                // RefreshAssets(); //刷新资源。
+                EmbeddedMessageBoxWindow.Show("Info", "\nDownload finished!!!\n\nPlease refresh the project assets!!!", Color.green);
             });
 
         }
@@ -454,7 +455,6 @@ namespace BlackFireFramework.Editor
 
 
         #endregion
-
 
         #region Build-in Type
 
