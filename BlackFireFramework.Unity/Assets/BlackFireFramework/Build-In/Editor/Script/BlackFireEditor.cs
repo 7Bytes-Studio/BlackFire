@@ -17,13 +17,18 @@ namespace BlackFireFramework.Editor
         #region Path
 
         /// <summary>
+        /// 框架资源路径。
+        /// </summary>
+        public static string BlackFireFrameworkPath { get; private set; }
+
+        /// <summary>
         /// 框架内部资源路径。
         /// </summary>
-        public const string AssetsPath = "BlackFireFramework/Build-In/.Assets/";
+        public static string AssetsPath = BlackFireFrameworkPath+"/Build-In/.Assets/";
         /// <summary>
         /// 框架内部资源脚本模板路径。
         /// </summary>
-        public const string ScriptTemplatePath = AssetsPath + "Data/Resources/ScriptTemplates/";
+        public static string ScriptTemplatePath = AssetsPath + "Data/Resources/ScriptTemplates/";
         /// <summary>
         /// 框架内部临时文件夹路径。
         /// </summary>
@@ -35,15 +40,15 @@ namespace BlackFireFramework.Editor
         /// <summary>
         /// 框架内部包管理路径。
         /// </summary>
-        public static string PackagePath { get { return Application.dataPath + "/BlackFireFramework/Custom/Packages/"; } }
+        public static string PackagePath { get { return BlackFireFrameworkPath+"/Custom/Packages/"; } }
         /// <summary>
         /// 框架自定义二次开发资源路径。
         /// </summary>
-        public static string FrameworkCustomPath { get { return Application.dataPath + "/BlackFireFramework/Custom/"; } }
+        public static string FrameworkCustomPath { get { return BlackFireFrameworkPath+"/Custom/"; } }
         /// <summary>
         /// 框架自定义二次开发资源的相对路径。
         /// </summary>
-        public static string FrameworkCustomRelativePath { get { return "Assets/BlackFireFramework/Custom/"; } }
+        public static string FrameworkCustomRelativePath { get { return BlackFireFrameworkPath+"/Custom/"; } }
 
 
 
@@ -58,6 +63,7 @@ namespace BlackFireFramework.Editor
 
         private static void InitFolders()
         {
+            BlackFireFrameworkPath = DepthMatchingBlackFireFrameworkPath(); //初始化框架路径。
             MakeUserCustomFolder();
             MakeUserTempFolder();
         }
@@ -81,7 +87,7 @@ namespace BlackFireFramework.Editor
 
 
 
-        #region FrameworkAssetsPath
+        #region FrameworkAssetsPath //暂时无用。
 
 
         public static string FrameworkAssetsPath { get { return DepthMatchingFrameworkAssetsPath(); } }
@@ -96,6 +102,27 @@ namespace BlackFireFramework.Editor
                 if (path.Contains("BlackFireFramework") && path.Contains("Runtime") && path.Contains("Script")) //匹配第一个
                 {
                     return path.Replace("/Runtime/Script/FrameworkInfo.cs", string.Empty);
+                }
+            }
+            return string.Empty;
+
+        }
+
+
+        #endregion
+
+        #region BlackFireFrameworkPath
+
+        private static string DepthMatchingBlackFireFrameworkPath()
+        {
+
+            var results = AssetDatabase.FindAssets("BlackFire");
+            foreach (var guid in results)
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                if (path.Contains("Runtime") && path.Contains("Script")) //匹配第一个
+                {
+                    return path.Replace("/Build-In/Runtime/Script/BlackFire.cs", string.Empty);
                 }
             }
             return string.Empty;
