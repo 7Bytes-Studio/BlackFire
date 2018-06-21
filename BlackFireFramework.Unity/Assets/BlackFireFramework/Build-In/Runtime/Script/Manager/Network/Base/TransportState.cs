@@ -5,13 +5,15 @@
 //----------------------------------------------------
 
 
-
 namespace BlackFireFramework.Unity
 {
-    public abstract class NetworkProtocolBase 
+    public enum TransportState 
 	{
-        public abstract void Send(byte[] message);
-
-        public abstract void Close();
-	}
+        Unknow,
+        Connect,
+        ReceiveMessage,
+        CloseByRemote,
+        CloseByUser,
+        Error
+    }
 }
