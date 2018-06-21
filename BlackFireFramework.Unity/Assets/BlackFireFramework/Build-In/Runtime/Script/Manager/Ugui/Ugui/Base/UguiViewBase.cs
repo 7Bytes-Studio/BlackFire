@@ -28,7 +28,6 @@ namespace BlackFireFramework.Unity
             Alpha = m_Alpha;
             Interactable = m_Interactable;
         }
-
 #endif
 
 

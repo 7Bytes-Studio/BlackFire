@@ -7,11 +7,13 @@
 
 
 using System;
+using System.Collections;
 
 namespace BlackFireFramework.Unity
 {
-    public abstract class TransportBase
+    public abstract class TransportBase : IEnumerator
     {
+
         /// <summary>
         /// 网络连接上时事件。
         /// </summary>
@@ -35,7 +37,7 @@ namespace BlackFireFramework.Unity
         /// <summary>
         /// 连接目标终端。
         /// </summary>
-        public abstract void Connect(); 
+        public abstract void Connect();
 
         /// <summary>
         /// 发送网络消息。
@@ -47,5 +49,18 @@ namespace BlackFireFramework.Unity
         /// 关闭网络连接。
         /// </summary>
         public abstract void Close();
-	}
+
+
+        #region IEnumerator Impl
+
+        object IEnumerator.Current { get { return null; } }
+
+        bool IEnumerator.MoveNext() { return KeepWaiting(); }
+
+        void IEnumerator.Reset() { }
+
+        protected abstract bool KeepWaiting();
+
+        #endregion
+    }
 }

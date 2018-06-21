@@ -21,7 +21,7 @@ namespace Sparrow.Editor
         private static readonly Regex s_LogRegex = new Regex(@" \(at (.+)\:(\d+)\)\r?\n");
 
         private const string StackTraceContainsString = "BlackFire:LogCallback";
-        private const string TargetScriptsFileFullName = "BlackFire.cs";
+        private const string TargetScriptsFileFullName = "BlackFire.Log.cs";
         private const string CallbackScriptsFileFullName = "Log.cs";
 
         [OnOpenAsset(0)]

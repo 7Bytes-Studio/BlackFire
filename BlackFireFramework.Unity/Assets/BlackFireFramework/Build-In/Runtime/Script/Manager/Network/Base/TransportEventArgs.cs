@@ -34,6 +34,8 @@ namespace BlackFireFramework.Unity
 
         private int m_BufferSize = 1024;
         private int m_LastBufferSize = 1024;
+
+
         public void AdjustBufferSize(int bufferSize)
         {
             if (0 >= m_BufferSize) throw new System.Exception("Buffer size cannot be less than or equal to 0!");

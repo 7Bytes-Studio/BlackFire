@@ -262,9 +262,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetZip">
-      <HintPath>Assets/BlackFireFramework/Build-In/Editor/Lib/DotNetZip/DotNetZip.dll</HintPath>
-    </Reference>
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.dll</HintPath>
     </Reference>
@@ -273,12 +270,6 @@
     </Reference>
     <Reference Include="BlackFireFramework.Network">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ClientEngine">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/SuperSocket.ClientEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="WebSocket4Net">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/WebSocket4Net.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -300,6 +291,15 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>Assets/BlackFireFramework/Build-In/Editor/Lib/3rd/DotNetZip/DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/WebSocket4Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -336,7 +336,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\DotNetZip\DotNetZip.xml" />
+    <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

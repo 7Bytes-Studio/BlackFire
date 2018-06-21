@@ -249,7 +249,7 @@ namespace BlackFireFramework.Unity
 
         private void AddLogInfo(LogLevel logLevel, string message, string stackTrace)
         {
-            if (m_MaxLogInfoCount<=m_LogInfoLinkedList.Count)
+            if (null== m_LogInfoLinkedList || m_MaxLogInfoCount <= m_LogInfoLinkedList.Count)
             {
                 return;
             }

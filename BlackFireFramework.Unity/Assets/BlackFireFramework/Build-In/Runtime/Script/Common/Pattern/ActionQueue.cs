@@ -26,9 +26,20 @@ namespace BlackFireFramework.Unity
            return s_Queue.Dequeue();
         }
 
+        public void DequeueAll()
+        {
+            while (0 < s_Queue.Count)
+            {
+                s_Queue.Dequeue().Invoke();
+            }
+        }
+
         public void Clear()
         {
            s_Queue.Clear();
         }
+
+
+
     }
 }
