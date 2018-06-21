@@ -277,8 +277,10 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSSqlite.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSText.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\DebuggerStyle.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerModuleGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerStyleChangeCallback.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerStyle.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventGUI.cs" />
@@ -289,8 +291,6 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Log\DebuggerLogGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\ObjectPool\DebuggerObjectPoolGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Setting\DebuggerSettingGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\IDebuggerModuleGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\IDebuggerStyleChangeCallback.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Editor.cs" />
