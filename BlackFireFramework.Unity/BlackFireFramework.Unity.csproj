@@ -229,6 +229,12 @@
     <Reference Include="BlackFireFramework.Network">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/BlackFireFramework.Network.dll</HintPath>
     </Reference>
+    <Reference Include="SuperSocket.ClientEngine">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/WebSocket4Net.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -240,12 +246,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ClientEngine">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/SuperSocket.ClientEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="WebSocket4Net">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/WebSocket/Lib/3rd/WebSocket4Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +298,15 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerClient.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerProtocol.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Client\Json_GatewayWorkerClient_Base.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Client\Json_GatewayWorkerClient_Create_Join_Leave_Group.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Client\Json_GatewayWorkerClient_Login.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Server\Json_GatewayWorkerServer_Base.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Server\Json_GatewayWorkerServer_OnGetGroupCount.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Json\Server\Json_GatewayWorkerServer_OnGetGroupList.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportState.cs" />
