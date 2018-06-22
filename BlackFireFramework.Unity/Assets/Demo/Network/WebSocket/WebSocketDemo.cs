@@ -4,6 +4,8 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 namespace BlackFireFramework.Unity
@@ -14,16 +16,29 @@ namespace BlackFireFramework.Unity
 
         private void Awake()
         {
-            m_WebSocket = BlackFire.Network.CreateUnityWebSocket("GatewayWorker::WebSocket::Client", "ws://127.0.0.1:8282?token=wxqdaf487542");
+            m_WebSocket = BlackFire.Network.CreateUnityWebSocket("GatewayWorker::WebSocket::Client", "ws://127.0.0.1:2018?token=wxqdaf487542");
             m_WebSocket.OnConnect += WebSocket_OnConnect;
             m_WebSocket.OnMessage += WebSocket_OnConnect;
             m_WebSocket.OnClose += WebSocket_OnConnect;
             m_WebSocket.OnError += WebSocket_OnConnect;
             m_WebSocket.Connect();
 
+            //Json Test
+
+            string json = "{\"type\":\"response_get_room_list\",\"rooms\":[\"room1\",\"room2\",\"room3\"]}";
+
+            var jo = new JObject();
+            jo.Add("uid", "wxid12346579");
+            jo.Add("password", "987654321");
+            jo.Add("group_list",new JArray() { "666","777" });
+            var str = jo.ToString(Formatting.None);
+
+            Debug.Log(str);
+
+            var o = JObject.Parse(json);
+
+            Debug.Log(o["type"]);
         }
-
-
 
         private void OnDestroy()
         {
