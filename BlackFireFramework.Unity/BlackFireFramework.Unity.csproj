@@ -301,9 +301,10 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Base\GatewayWorkerProtocol.enum.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerClient.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerProtocol.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportState.cs" />
@@ -341,6 +342,7 @@
     <Compile Include="Assets\Demo\Event\EventDemo_DBHandler.cs" />
     <Compile Include="Assets\Demo\Event\EventDemo_UIHandler.cs" />
     <Compile Include="Assets\Demo\Game\GameDemo.cs" />
+    <Compile Include="Assets\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
     <Compile Include="Assets\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\Demo\KVS\KVSDemo.cs" />
     <Compile Include="Assets\Demo\Network\Download\DownloadTest.cs" />

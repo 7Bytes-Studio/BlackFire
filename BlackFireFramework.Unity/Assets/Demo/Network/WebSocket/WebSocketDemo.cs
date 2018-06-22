@@ -30,7 +30,7 @@ namespace BlackFireFramework.Unity
             var jo = new JObject();
             jo.Add("uid", "wxid12346579");
             jo.Add("password", "987654321");
-            jo.Add("group_list",new JArray() { "666","777" });
+            jo.Add("group_list",new JArray() {});
             var str = jo.ToString(Formatting.None);
 
             Debug.Log(str);

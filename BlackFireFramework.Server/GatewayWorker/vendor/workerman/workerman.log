@@ -1,0 +1,65 @@
+2018-06-22 10:30:52 pid:1 ArgumentCountError: Too few arguments to function GatewayWorker\Lib\Gateway::sendToClient(), 1 passed in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php on line 21 and exactly 2 expected in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\Lib\Gateway.php:148
+Stack trace:
+#0 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php(21): GatewayWorker\Lib\Gateway::sendToClient('Login7f0000010b...')
+#1 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(84): Player::Login('7f0000010b54000...', '666', '777', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+#2 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(37): Router::Rpc('7f0000010b54000...', Array)
+#3 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(14): Router::ClientMessageHandler(Array)
+#4 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(20): Router::Route(Array)
+#5 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"rpc","...')
+#6 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"rpc","...')
+#7 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#8 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #28)
+#10 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#11 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#12 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#13 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#14 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#15 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#16 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#17 {main}
+2018-06-22 10:30:52 pid:1 Worker process terminated
+2018-06-22 10:30:56 pid:1 ArgumentCountError: Too few arguments to function GatewayWorker\Lib\Gateway::sendToClient(), 1 passed in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php on line 21 and exactly 2 expected in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\Lib\Gateway.php:148
+Stack trace:
+#0 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php(21): GatewayWorker\Lib\Gateway::sendToClient('Login7f0000010b...')
+#1 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(84): Player::Login('7f0000010b54000...', '666', '777', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+#2 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(37): Router::Rpc('7f0000010b54000...', Array)
+#3 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(14): Router::ClientMessageHandler(Array)
+#4 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(20): Router::Route(Array)
+#5 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"rpc","...')
+#6 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"rpc","...')
+#7 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#8 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #28)
+#10 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#11 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#12 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#13 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#14 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#15 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#16 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#17 {main}
+2018-06-22 10:30:56 pid:1 Worker process terminated
+2018-06-22 10:30:57 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://wiki.workerman.net/Error3
+2018-06-22 10:30:57 pid:1 SendBufferToWorker fail. The connections between Gateway and BusinessWorker are not ready. See http://wiki.workerman.net/Error3
+2018-06-22 10:33:03 pid:1 ArgumentCountError: Too few arguments to function GatewayWorker\Lib\Gateway::sendToClient(), 1 passed in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php on line 21 and exactly 2 expected in D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\Lib\Gateway.php:148
+Stack trace:
+#0 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php(21): GatewayWorker\Lib\Gateway::sendToClient('Login7f0000010b...')
+#1 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(84): Player::Login('7f0000010b54000...', '666', '777', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+#2 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(37): Router::Rpc('7f0000010b54000...', Array)
+#3 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(14): Router::ClientMessageHandler(Array)
+#4 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(20): Router::Route(Array)
+#5 [internal function]: Events::onMessage('7f0000010b54000...', '{"type":"rpc","...')
+#6 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(395): call_user_func('Events::onMessa...', '7f0000010b54000...', '{"type":"rpc","...')
+#7 [internal function]: GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#8 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Connection\TcpConnection.php(645): call_user_func(Array, Object(Workerman\Connection\AsyncTcpConnection), Array)
+#9 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #28)
+#10 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Events\Select.php(289): call_user_func_array(Array, Array)
+#11 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2231): Workerman\Events\Select->loop()
+#12 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#13 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#14 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#15 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#16 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#17 {main}
+2018-06-22 10:33:03 pid:1 Worker process terminated
