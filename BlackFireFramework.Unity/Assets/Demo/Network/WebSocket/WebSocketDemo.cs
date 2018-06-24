@@ -25,7 +25,7 @@ namespace BlackFireFramework.Unity
 
             //Json Test
 
-            string json = "{\"type\":\"response_get_room_list\",\"rooms\":[\"room1\",\"room2\",\"room3\"]}";
+            string json = "{\"type\":666,\"rooms\":[\"room1\",\"room2\",\"room3\",123,{\"hello\":\"kitty\"}]}";
 
             var jo = new JObject();
             jo.Add("uid", "wxid12346579");
@@ -38,6 +38,14 @@ namespace BlackFireFramework.Unity
             var o = JObject.Parse(json);
 
             Debug.Log(o["type"]);
+
+            Debug.Log(o["rooms"]);
+            var jarray = o["rooms"] as JArray;
+            foreach (var item in jarray)
+            {
+                Debug.Log(item.ToString());
+            }
+            
         }
 
         private void OnDestroy()

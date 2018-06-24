@@ -48,23 +48,32 @@ class Router
      */
     private static function LpcHandler($args)
     {
-       if(array_key_exists('client_id', $args) && array_key_exists('entity', $args) && array_key_exists('method', $args))
+       if(array_key_exists('entity', $args) && array_key_exists('method', $args))
        {
-            $client_id = $args['client_id'];
-            $cb = $args['entity']."::".$args['method'];
-           
-            if (array_key_exists('args', $args)) 
-            {
-                $cb_args= array_merge(array($client_id),$args['args']); 
+           $cb = $args['entity']."::".$args['method'];
+          
+           if(array_key_exists('client_id', $args))
+           {
+                $client_id = $args['client_id'];
+                if (array_key_exists('args', $args)) 
+                {
+                    $cb_args= array_merge(array($client_id),$args['args']); 
 
+                    if(method_exists($args['entity'],$args['method']))
+                        call_user_func_array($cb,$cb_args);
+                }
+                else
+                {                
+                    if(method_exists($args['entity'],$args['method']))
+                        call_user_func($cb,$client_id);
+                }
+           }
+           else
+           {
                 if(method_exists($args['entity'],$args['method']))
-                    call_user_func_array($cb,$cb_args);
-            }
-            else
-            {                
-                 if(method_exists($args['entity'],$args['method']))
-                    call_user_func($cb,$client_id);
-            }
+                    call_user_func($cb,$args['args']);
+           }
+
        }
     }
    
@@ -76,12 +85,15 @@ class Router
      */
     private static function Rpc($client_id,$djson) //'{"type":"rpc","entity":"Player","method":"Login","args":["666","777"]}'
     {
-        if(!array_key_exists('entity', $djson) || !array_key_exists('method', $djson) || !array_key_exists('args', $djson) ) return;
-        $args= array_merge(array($client_id),$djson['args'],[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL]); //填充方法参数，防止异常。
+        if(!array_key_exists('entity', $djson) || !array_key_exists('method', $djson) || !array_key_exists('uid', $djson) || !array_key_exists('args', $djson)) return;
+        $args= array_merge(array($client_id,$djson['uid']),$djson['args'],[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL]); //填充方法参数，防止异常。
         $cb = $djson["entity"]."::".$djson["method"];
 
         if(method_exists($djson['entity'],$djson['method']))
+        {
             call_user_func_array($cb,$args);
+        }
+           
     }
 
 }

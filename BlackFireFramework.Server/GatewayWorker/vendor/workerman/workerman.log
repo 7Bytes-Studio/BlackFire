@@ -63,3 +63,214 @@ Stack trace:
 #16 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
 #17 {main}
 2018-06-22 10:33:03 pid:1 Worker process terminated
+2018-06-24 20:44:32 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:33 pid:1 Worker process terminated
+2018-06-24 20:44:34 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:35 pid:1 Worker process terminated
+2018-06-24 20:44:35 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:36 pid:1 Worker process terminated
+2018-06-24 20:44:37 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:38 pid:1 Worker process terminated
+2018-06-24 20:44:38 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:39 pid:1 Worker process terminated
+2018-06-24 20:44:40 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:41 pid:1 Worker process terminated
+2018-06-24 20:44:41 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:42 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:42 pid:1 Worker process terminated
+2018-06-24 20:44:43 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:44 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:44 pid:1 Worker process terminated
+2018-06-24 20:44:44 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:45 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:45 pid:1 Worker process terminated
+2018-06-24 20:44:47 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:48 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:50 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:51 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:51 pid:1 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-06-24 20:44:53 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:53 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}
+2018-06-24 20:44:54 pid:1 Error: Class 'Timer' not found in D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Player.php:13
+Stack trace:
+#0 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(74): Player::OnWorkerStart(Array)
+#1 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Router.php(15): Router::LpcHandler(Array)
+#2 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\Events.php(15): Router::Route(Array)
+#3 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(218): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#5 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#6 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(2216): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#7 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\gateway-worker\src\BusinessWorker.php(197): Workerman\Worker->run()
+#8 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1221): GatewayWorker\BusinessWorker->run()
+#9 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(1164): Workerman\Worker::forkWorkersForWindows()
+#10 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\vendor\workerman\workerman\Worker.php(478): Workerman\Worker::forkWorkers()
+#11 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Server\GatewayWorker\Applications\BlackFire-WebSocket\start_businessworker.php(35): Workerman\Worker::runAll()
+#12 {main}

@@ -4,8 +4,10 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,16 +18,35 @@ namespace BlackFireFramework.Unity
 	{
         private void Start()
         {
+            BlackFire.GatewayWorker.RegisterEntity(typeof(Player));
             BlackFire.GatewayWorker.Connect("ws://127.0.0.1:2018");
         }
 
+        private string uid="Alan";
         private void OnGUI()
         {
-            if (GUILayout.Button("Send"))
+            uid = GUILayout.TextField(uid);
+
+            if (GUILayout.Button("Login"))
             {
-                BlackFire.GatewayWorker.Send("{\"type\":\"rpc\",\"entity\":\"Player\",\"method\":\"Login\",\"args\":[\"666\",\"777\"]}");
+                Player.Login(uid, "123456");
             }
+
+            if (GUILayout.Button("MatchPlayer"))
+            {
+                Player.MatchPlayer();
+            }
+
+            if (GUILayout.Button("SendToMatchedPlayer"))
+            {
+                Player.SendToMatchedPlayer("This is...........");
+            }
+
+
+
         }
+
+
 
     }
 }

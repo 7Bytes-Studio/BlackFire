@@ -80,7 +80,21 @@ namespace BlackFireFramework
             #region Method
 
 
+
+
             #endregion
+
+            #region Invoke
+
+            public static void Invoke(Type type,string methodName,params object[] args)
+            {
+                BindingFlags bindingFlags = BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public;
+                var method = type.GetMethod(methodName,bindingFlags);
+                method.Invoke(null,args);
+            }
+
+            #endregion
+
 
         }
     }

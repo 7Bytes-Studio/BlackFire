@@ -10,6 +10,11 @@ use \GatewayWorker\Lib\Gateway;
 
 class Events
 {
+    public static function onWorkerStart($businessWorker)
+    {
+        Router::Route(["route"=>"lpc","entity"=>"Player","method"=>"OnWorkerStart","args"=>[$businessWorker]]);
+    }
+
     public static function onConnect($client_id)
     {
         Router::Route(["route"=>"lpc","client_id"=>$client_id,"entity"=>"Player","method"=>"OnConnect"]);
@@ -17,6 +22,7 @@ class Events
     
    public static function onMessage($client_id, $message)
    {
+        echo $client_id." : ".$message."\n";
         Router::Route(["route"=>"client_message","client_id"=>$client_id,"message"=>$message]);
    }
    
