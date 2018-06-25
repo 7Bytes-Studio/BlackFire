@@ -37,12 +37,10 @@ namespace BlackFireFramework.Unity
                 Player.MatchPlayer();
             }
 
-            if (GUILayout.Button("SendToMatchedPlayer"))
+            if (GUILayout.Button("MatchedPlayerLeave"))
             {
-                Player.SendToMatchedPlayer("This is...........");
+                Player.MatchedPlayerLeave();
             }
-
-
 
         }
 

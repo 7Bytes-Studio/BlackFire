@@ -4,6 +4,8 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +16,7 @@ namespace BlackFireFramework.Unity
 {
 	public static class Player 
 	{
+
         public static string Uid { get; private set; }
 
         public static bool LoginSucceed{ get { return !string.IsNullOrEmpty(Uid); } }
@@ -32,10 +35,22 @@ namespace BlackFireFramework.Unity
             BlackFire.GatewayWorker.Send("{\"type\":\"rpc\",\"uid\":\"" + Uid + "\",\"entity\":\"Player\",\"method\":\"MatchPlayer\",\"args\":[]}");
         }
 
+        public static void MatchedPlayerLeave()
+        {
+            if (!LoginSucceed || string.IsNullOrEmpty(MatchedPlayer)) return;
+            BlackFire.GatewayWorker.Send("{\"type\":\"rpc\",\"uid\":\"" + Uid + "\",\"entity\":\"Player\",\"method\":\"MatchedPlayerLeave\",\"args\":[\"" + MatchedPlayer + "\"]}");
+        }
+
         public static void SendToMatchedPlayer(string message) //组名 等价于 目标用户名
         {
             if (!LoginSucceed || string.IsNullOrEmpty(MatchedPlayer)) return;
             BlackFire.GatewayWorker.Send("{\"type\":\"rpc\",\"uid\":\"" + Uid + "\",\"entity\":\"Player\",\"method\":\"SendToMatchedPlayer\",\"args\":[\"" + MatchedPlayer + "\",\"" + message + "\"]}");
+        }
+
+        public static void SyncPlayerState(string px,string py) //组名 等价于 目标用户名
+        {
+            if (!LoginSucceed || string.IsNullOrEmpty(MatchedPlayer)) return;
+            BlackFire.GatewayWorker.Send("{\"type\":\"rpc\",\"uid\":\"" + Uid + "\",\"entity\":\"Player\",\"method\":\"SyncPlayerState\",\"args\":[\"" + MatchedPlayer + "\",\"" + px + "\",\"" + py + "\"]}");
         }
 
 
@@ -51,6 +66,7 @@ namespace BlackFireFramework.Unity
                 Log.Info(uid);
                 Log.Info(loginResult);
                 Log.Info(loginMessage);
+                Event.Fire("Player/OnLogin", "Gateway::Player",EventArgs.Empty);
             }
         }
 
@@ -58,6 +74,7 @@ namespace BlackFireFramework.Unity
         {
             MatchedPlayer = who;
             Log.Info(who);
+            Event.Fire("Player/OnMatchPlayer", "Gateway::Player", EventArgs.Empty);
         }
 
 
@@ -65,11 +82,20 @@ namespace BlackFireFramework.Unity
         {
             MatchedPlayer = null;
             Log.Info(who);
+            Event.Fire("Player/OnMatchedPlayerLeave", "Gateway::Player", EventArgs.Empty);
         }
 
         private static void OnMatchedPlayerMessage(string fromUid,string message)
         {
             Log.Info(message);
+        }
+
+        private static void OnSyncPlayerState(string px, string py) //组名 等价于 目标用户名
+        {
+            Log.Info(px + "  " +py);
+            var ins = PlayerStateEventArgs.Spawn<PlayerStateEventArgs>();
+            ins.Set(px.To<float>(),py.To<float>());
+            Event.Fire("Player/OnSyncPlayerState", "Gateway::Player",ins);
         }
 
         #endregion

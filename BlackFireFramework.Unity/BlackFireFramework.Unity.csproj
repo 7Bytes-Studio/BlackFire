@@ -343,6 +343,9 @@
     <Compile Include="Assets\Demo\Event\EventDemo_DBHandler.cs" />
     <Compile Include="Assets\Demo\Event\EventDemo_UIHandler.cs" />
     <Compile Include="Assets\Demo\Game\GameDemo.cs" />
+    <Compile Include="Assets\Demo\GatewayWorker\Game\GameCanvas.cs" />
+    <Compile Include="Assets\Demo\GatewayWorker\Game\PlayerLogic.cs" />
+    <Compile Include="Assets\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
     <Compile Include="Assets\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
     <Compile Include="Assets\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\Demo\JsonNet\JsonNetSample.cs" />

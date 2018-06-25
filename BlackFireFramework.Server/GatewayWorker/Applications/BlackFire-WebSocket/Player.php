@@ -17,12 +17,14 @@ class Player
             {
                $p1 = array_pop(Player::$waiting_queue);
                $p2 = array_pop(Player::$waiting_queue);
-               $p1['playing'] = true;
-               $p1['match_uid'] = $p2['uid'];
-               $p2['playing'] = true;
-               $p2['match_uid'] = $p1['uid'];
+               Player::$players[$p1['uid']]['playing'] = true;
+               Player::$players[$p2['uid']]['playing'] = true;
+               Player::$players[$p1['uid']]['match_uid'] = $p2['uid'];
+               Player::$players[$p2['uid']]['match_uid'] = $p1['uid'];
+
                //发送匹配信息。
                //echo "发送匹配消息 ".$p1['uid'].$p2['uid'];
+
                Gateway::sendToUid($p1['uid'],JsonHelper::Rpc("Player","OnMatchPlayer",[$p2['uid']]));
                Gateway::sendToUid($p2['uid'],JsonHelper::Rpc("Player","OnMatchPlayer",[$p1['uid']]));
             }
@@ -55,11 +57,30 @@ class Player
         array_push(Player::$waiting_queue,Player::$players[$uid]); //进入等待队列。
     } 
 
-    public static function SendToMatchedPlayer($client_id,$uid,$match_uid,$message) //group_name <=> uid
+    public static function SendToMatchedPlayer($client_id,$uid,$match_uid,$message)
     {
-        Gateway::sendToUid($match_uid,JsonHelper::Rpc("Player","OnMatchedPlayerMessage",[$uid,$message]));
+        if(Player::$players[$match_uid]['playing']===true && Gateway::isUidOnline($match_uid))
+        {
+            Gateway::sendToUid($match_uid,JsonHelper::Rpc("Player","OnMatchedPlayerMessage",[$uid,$message]));
+        }
     }
 
+    public static function MatchedPlayerLeave($client_id,$uid,$match_uid)
+    {
+        Player::$players[$uid]['playing'] = false; //设置当前玩家的游戏状态为非游戏状态。
+        if(Player::$players[$match_uid]['playing']===true && Gateway::isUidOnline($match_uid))
+        {
+            Gateway::sendToUid($match_uid,JsonHelper::Rpc("Player","OnMatchedPlayerLeave",[$uid]));
+        }
+    }
 
+    public static function SyncPlayerState($client_id,$uid,$match_uid,$px,$py)
+    {
+        if(Player::$players[$match_uid]['playing']===true && Gateway::isUidOnline($match_uid))
+        {
+            Gateway::sendToUid($match_uid,JsonHelper::Rpc("Player","OnSyncPlayerState",[$px,$py]));
+        }
+    }
 
+    
 }
