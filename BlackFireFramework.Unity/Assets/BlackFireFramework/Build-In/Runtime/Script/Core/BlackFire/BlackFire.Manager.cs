@@ -40,7 +40,7 @@ public sealed partial class BlackFire
             BlackFireFramework.Unity.Utility.Transform.TraverseChilds(instance.transform, trans =>
             {
                 var manager = trans.GetComponent<IManager>();
-                if (null!=manager)
+                if (null!=manager && manager.IsWorking)
                 {
                     manager.StartManager();
                 }
@@ -55,7 +55,7 @@ public sealed partial class BlackFire
             BlackFireFramework.Unity.Utility.Transform.TraverseChilds(instance.transform, trans =>
             {
                 var manager = trans.GetComponent<IManager>();
-                if (null != manager)
+                if (null != manager && manager.IsWorking)
                 {
                     manager.ShutdownManager();
                 }

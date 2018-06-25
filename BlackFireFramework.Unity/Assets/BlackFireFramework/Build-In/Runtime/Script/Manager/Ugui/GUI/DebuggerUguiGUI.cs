@@ -44,45 +44,47 @@ namespace BlackFireFramework.Unity
         {
             if (null==BlackFire.Ugui) return;
 
-            BlackFireGUI.HorizontalLayout(() => {
-
-                GUILayout.Box("PointerEventData :".HexColor("green"), GUILayout.ExpandWidth(false));
-
-                m_UseCapture = GUILayout.Toggle(m_UseCapture, "UseCapture", GUILayout.ExpandWidth(false));
-
-                if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
-                {
-                    m_CaptureEventData = null;
-                }
-            });
-
-            if (m_UseCapture)
+            if (null!=BlackFire.Ugui.PointerEventData)
             {
-                if (BlackFire.Ugui.PointerEventData.pointerCurrentRaycast.isValid)
+                BlackFireGUI.HorizontalLayout(() => {
+
+                    GUILayout.Box("PointerEventData :".HexColor("green"), GUILayout.ExpandWidth(false));
+
+                    m_UseCapture = GUILayout.Toggle(m_UseCapture, "UseCapture", GUILayout.ExpandWidth(false));
+
+                    if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
+                    {
+                        m_CaptureEventData = null;
+                    }
+                });
+
+                if (m_UseCapture)
                 {
-                    m_CaptureEventData = BlackFire.Ugui.PointerEventData.ToString();
+                    if (BlackFire.Ugui.PointerEventData.pointerCurrentRaycast.isValid)
+                    {
+                        m_CaptureEventData = BlackFire.Ugui.PointerEventData.ToString();
+                    }
+
+                    BlackFireGUI.BoxHorizontalLayout(() =>
+                    {
+                        BlackFireGUI.ScrollView("Ugui/UseCapture", id =>
+                        {
+                            GUILayout.Label(m_CaptureEventData ?? BlackFire.Ugui.PointerEventData.ToString());
+                        });
+                    });
+                }
+                else
+                {
+                    BlackFireGUI.BoxHorizontalLayout(() =>
+                    {
+                        BlackFireGUI.ScrollView("Ugui/DontUseCapture", id =>
+                        {
+                            GUILayout.Label(BlackFire.Ugui.PointerEventData.ToString());
+                        });
+                    });
                 }
 
-                BlackFireGUI.BoxHorizontalLayout(() =>
-                {
-                    BlackFireGUI.ScrollView("Ugui/UseCapture", id =>
-                    {
-                        GUILayout.Label(m_CaptureEventData ?? BlackFire.Ugui.PointerEventData.ToString());
-                    });
-                });
             }
-            else
-            {
-                BlackFireGUI.BoxHorizontalLayout(() =>
-                {
-                    BlackFireGUI.ScrollView("Ugui/DontUseCapture", id =>
-                    {
-                        GUILayout.Label(BlackFire.Ugui.PointerEventData.ToString());
-                    });
-                });
-            }
-
-
 
         }
         public void OnDestroy()

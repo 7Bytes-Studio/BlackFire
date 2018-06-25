@@ -210,7 +210,7 @@ namespace BlackFireFramework.Unity
 
                             BlackFireGUI.BoxHorizontalLayout(()=> {
 
-                                GUILayout.Label(m_SelectedModuleName, new GUIStyle("Label") { padding=new RectOffset(0,0,0,0),alignment = TextAnchor.MiddleCenter,fontStyle = FontStyle.Bold});
+                                GUILayout.Label(m_SelectedModuleName, new GUIStyle("Label") { padding=new RectOffset(0,0,0,0),alignment = TextAnchor.MiddleRight, fontStyle = FontStyle.Bold});
                                 GUILayout.Label(GetFpsString(), new GUIStyle("Label") { padding = new RectOffset(0, 0, 0, 0), alignment = TextAnchor.MiddleRight, fontStyle = FontStyle.Bold });
 
                             });

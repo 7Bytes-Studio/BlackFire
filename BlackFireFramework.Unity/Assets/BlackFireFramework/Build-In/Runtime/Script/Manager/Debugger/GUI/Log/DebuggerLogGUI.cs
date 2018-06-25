@@ -88,7 +88,6 @@ namespace BlackFireFramework.Unity
                     int i = 0;
                     BlackFireFramework.Utility.Enum.Foreach<LogLevel>(e => {
 
-
                         m_ToggleLogResDic[e] = GUILayout.Toggle(m_ToggleLogResDic[e], string.Format("{0}".HexColor(m_LogLevelHexColors[i])+"({1})", e , m_ToggleLogCountDic[e].ToString().HexColor(m_LogLevelHexColors[i++])));
 
                     });

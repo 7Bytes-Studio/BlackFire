@@ -16,11 +16,11 @@ namespace BlackFireFramework.Unity
 	public sealed partial class GameManager
     {
         [SerializeField] private bool m_ApplyGameSpeedWhenInitialized;
-        [SerializeField] [Range(0, 100)] private int m_GameSpeed = 1;
+        [SerializeField] [Range(0f, 100f)] private float m_GameSpeed = 1;
         /// <summary>
         /// 设置游戏运行速度。
         /// </summary>
-        public int GameSpeed { get { return m_GameSpeed; } set { m_GameSpeed = value; Time.timeScale = value; } }
+        public float GameSpeed { get { return m_GameSpeed; } set { m_GameSpeed = value; Time.timeScale = value; } }
 
 
         [SerializeField] private bool m_ApplyFpsWhenInitialized;
