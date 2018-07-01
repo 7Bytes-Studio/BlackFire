@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Algorithm\Crc32.cs" />
+    <Compile Include="Common\EventArgs\EventArgs{T}.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
     <Compile Include="Common\Extension\Object.Extension.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Common\Utility\Utility.Convertor.cs" />
     <Compile Include="Common\Utility\Utility.Enum.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
+    <Compile Include="Core\Event\Event.Extension.partial.cs" />
     <Compile Include="Core\KVS\IKeyValueStorage.cs" />
     <Compile Include="Core\KVS\KVS.cs" />
     <Compile Include="Core\Log\Log.LogFile.partial.cs" />
