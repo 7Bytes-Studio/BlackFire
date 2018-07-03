@@ -11,48 +11,40 @@ namespace BlackFireFramework.Unity
 {
     public sealed partial class NetworkManager
     {
-        public TransportBase CreateWebSocket(string transportAlias, string uri, Encoding encoding)
+        public TransportBase CreateWebSocketClient(string transportAlias, string uri, Encoding encoding)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new WebSocket(uri,encoding);
+            var ws = new WebSocketClient(uri,encoding);
             AddTransport(transportAlias, ws);
             return ws;
         }
 
-        public TransportBase CreateWebSocket(string transportAlias, string uri)
+        public TransportBase CreateWebSocketClient(string transportAlias, string uri)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new WebSocket(uri,Encoding.UTF8);
+            var ws = new WebSocketClient(uri,Encoding.UTF8);
             AddTransport(transportAlias, ws);
             return ws;
         }
 
 
-        public TransportBase CreateUnityWebSocket(string transportAlias,string uri,Encoding encoding)
+        public TransportBase CreateUnityWebSocketClient(string transportAlias,string uri,Encoding encoding)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new UnityWebSocket(uri,encoding);
+            var ws = new UnityWebSocketClient(uri,encoding);
             AddTransport(transportAlias,ws);
             StartCoroutine(ws);
             return ws;
         }
 
-        public TransportBase CreateUnityWebSocket(string transportAlias,string uri)
+
+        public TransportBase CreateUnityWebSocketClient(string transportAlias,string uri)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new UnityWebSocket(uri,Encoding.UTF8);
+            var ws = new UnityWebSocketClient(uri,Encoding.UTF8);
             AddTransport(transportAlias, ws);
             StartCoroutine(ws);
             return ws;
-        }
-
-
-
-
-
-        private void CheckTransportExistsOrThrow(string transportAlias)
-        {
-            if (HasTransport(transportAlias)) throw new System.Exception("The transport already exists!");
         }
 
     }

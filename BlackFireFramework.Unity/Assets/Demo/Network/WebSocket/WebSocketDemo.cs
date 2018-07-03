@@ -16,7 +16,7 @@ namespace BlackFireFramework.Unity
 
         private void Awake()
         {
-            m_WebSocket = BlackFire.Network.CreateUnityWebSocket("GatewayWorker::WebSocket::Client", "ws://127.0.0.1:2018?token=wxqdaf487542");
+            m_WebSocket = BlackFire.Network.CreateUnityWebSocketClient("GatewayWorker::WebSocket::Client", "ws://127.0.0.1:2018?token=wxqdaf487542");
             m_WebSocket.OnConnect += WebSocket_OnConnect;
             m_WebSocket.OnMessage += WebSocket_OnConnect;
             m_WebSocket.OnClose += WebSocket_OnConnect;

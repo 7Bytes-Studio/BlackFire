@@ -66,7 +66,7 @@ namespace BlackFireFramework.Unity
                 case GatewayWorkerProtocol.Udp:
                     break;
                 case GatewayWorkerProtocol.Websocket:
-                    m_TransportProtocol = BlackFire.Network.CreateUnityWebSocket("GatewayWorkerClient", protocol);
+                    m_TransportProtocol = BlackFire.Network.CreateUnityWebSocketClient("GatewayWorkerClient", protocol);
                     m_TransportProtocol.OnConnect += TransportProtocol_OnConnect;
                     m_TransportProtocol.OnMessage += TransportProtocol_OnMessage;
                     m_TransportProtocol.OnClose += TransportProtocol_OnClose;

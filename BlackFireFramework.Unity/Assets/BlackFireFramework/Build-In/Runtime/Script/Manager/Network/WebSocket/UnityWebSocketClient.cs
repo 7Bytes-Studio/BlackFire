@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class UnityWebSocket : WebSocket
+    public sealed class UnityWebSocketClient : WebSocketClient
     {
         public override event EventHandler<TransportEventArgs> OnConnect;
         public override event EventHandler<TransportEventArgs> OnMessage;
@@ -20,7 +20,7 @@ namespace BlackFireFramework.Unity
 
         private ActionQueue m_ActionQueue = new ActionQueue();
   
-        public UnityWebSocket(string uri,Encoding encoding = null) : base(uri,encoding)
+        public UnityWebSocketClient(string uri,Encoding encoding = null) : base(uri,encoding)
         {
             base.OnConnect += UnityWebSocket_OnConnect;
             base.OnMessage += UnityWebSocket_OnMessage;
@@ -31,7 +31,6 @@ namespace BlackFireFramework.Unity
         private void UnityWebSocket_OnClose(object sender, TransportEventArgs e)
         {
             m_ActionQueue.Enqueue(() => {
-
                 if (null != this.OnClose)
                 {
                     this.OnClose.Invoke(this, e);
@@ -42,7 +41,6 @@ namespace BlackFireFramework.Unity
         private void UnityWebSocket_OnError(object sender, TransportEventArgs e)
         {
             m_ActionQueue.Enqueue(() => {
-
                 if (null != this.OnError)
                 {
                     this.OnError.Invoke(this, e);
@@ -53,7 +51,6 @@ namespace BlackFireFramework.Unity
         private void UnityWebSocket_OnConnect(object sender, TransportEventArgs e)
         {
             m_ActionQueue.Enqueue(() => {
-
                 if (null != this.OnConnect)
                 {
                     this.OnConnect.Invoke(this, e);
@@ -64,14 +61,12 @@ namespace BlackFireFramework.Unity
         private void UnityWebSocket_OnMessage(object sender, TransportEventArgs e)
         {
             m_ActionQueue.Enqueue(() => {
-
                 if (null != this.OnMessage)
                 {
                     this.OnMessage.Invoke(this, e);
                 }
             });
         }
-
 
         protected override bool KeepWaiting()
         {

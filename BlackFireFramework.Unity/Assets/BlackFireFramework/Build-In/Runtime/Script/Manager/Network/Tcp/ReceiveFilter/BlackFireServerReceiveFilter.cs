@@ -7,7 +7,7 @@
 using SuperSocket.ProtoBase;
 using System.Text;
 
-namespace Alan
+namespace BlackFireFramework.Unity
 {
     public sealed class BlackFireServerReceiveFilter : IReceiveFilter<BlackFireServerPackageInfo>
     {

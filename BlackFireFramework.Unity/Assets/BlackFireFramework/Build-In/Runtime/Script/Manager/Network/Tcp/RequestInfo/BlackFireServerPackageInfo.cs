@@ -7,7 +7,7 @@
 using System;
 using SuperSocket.ProtoBase;
 
-namespace Alan
+namespace BlackFireFramework.Unity
 {
     public sealed class BlackFireServerPackageInfo : IPackageInfo<string>
     {

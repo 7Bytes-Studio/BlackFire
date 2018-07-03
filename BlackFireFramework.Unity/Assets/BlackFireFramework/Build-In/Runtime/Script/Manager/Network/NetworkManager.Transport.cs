@@ -51,5 +51,9 @@ namespace BlackFireFramework.Unity
             return null;
         }
 
+        private void CheckTransportExistsOrThrow(string transportAlias)
+        {
+            if (HasTransport(transportAlias)) throw new System.Exception("The transport already exists!");
+        }
     }
 }

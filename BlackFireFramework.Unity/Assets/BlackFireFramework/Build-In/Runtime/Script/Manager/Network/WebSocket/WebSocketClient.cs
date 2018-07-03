@@ -12,7 +12,7 @@ using WebSocket4Net;
 
 namespace BlackFireFramework.Unity
 {
-    public class WebSocket : TransportBase
+    public class WebSocketClient : TransportBase
     {
         public override event EventHandler<TransportEventArgs> OnConnect;
         public override event EventHandler<TransportEventArgs> OnMessage;
@@ -22,7 +22,7 @@ namespace BlackFireFramework.Unity
         private WebSocket4Net.WebSocket m_WebSocket;
         private Encoding m_Encoding = Encoding.UTF8;
 
-        public WebSocket(string uri,Encoding encoding=null)
+        public WebSocketClient(string uri,Encoding encoding=null)
         {
             if (null != encoding) m_Encoding = encoding;//设置编码。
 
