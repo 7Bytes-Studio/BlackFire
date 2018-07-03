@@ -37,7 +37,8 @@ public sealed partial class BlackFire : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void OnBeforeSceneLoad()
     {
-        Log.SetLogCallback(LogCallback);
+        BlackFireFramework.Log.SetLogCallback(LogCallback);
+        BlackFireFramework.Event.SetGetEventHandlersCallback(GetEventHandlersCallback);
         Framework.Born(s_Unity, Time.unscaledDeltaTime, Time.deltaTime);
     }
 

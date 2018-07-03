@@ -73,7 +73,7 @@ namespace BlackFireFramework.Editor
 
                 BlackFireEditorGUI.BoxVerticalLayout(() => {
                     EditorGUILayout.Space();
-                    EditorGUILayout.LabelField("BlackFire Framework Version 1.1.1.180428_beta.");
+                EditorGUILayout.LabelField(string.Format("BlackFire Framework Version {0}.",Framework.Info.Version));
                     EditorGUILayout.LabelField("Copyright © 2008-2018 BlackFire-Studio. All Rights Reserved.");
                     EditorGUILayout.Space();
                 });

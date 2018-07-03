@@ -14,6 +14,7 @@ namespace Alan
 {
     public sealed class EventDemo : MonoBehaviour
     {
+
         private void OnGUI()
         {
             if (GUILayout.Button("这里假装在你的单机游戏里面操作玩家角色砍了一刀Boss"))

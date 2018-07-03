@@ -48,6 +48,8 @@
     <Compile Include="Common\Utility\Utility.Convertor.cs" />
     <Compile Include="Common\Utility\Utility.Enum.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
+    <Compile Include="Core\Event\Event.delegate.partial.cs" />
+    <Compile Include="Core\Event\Event.ExecuteEvents.partial.cs" />
     <Compile Include="Core\Event\Event.Extension.partial.cs" />
     <Compile Include="Core\KVS\IKeyValueStorage.cs" />
     <Compile Include="Core\KVS\KVS.cs" />

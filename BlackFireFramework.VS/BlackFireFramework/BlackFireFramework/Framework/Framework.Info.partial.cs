@@ -15,7 +15,7 @@ namespace BlackFireFramework
     {
         private static void Init_Info()
         {
-            Info = new FrameworkInfo("1.0.0",Thread.CurrentThread.ManagedThreadId,s_Who);
+            Info = new FrameworkInfo("1.1.0_beta",Thread.CurrentThread.ManagedThreadId,s_Who);
         }
 
 
