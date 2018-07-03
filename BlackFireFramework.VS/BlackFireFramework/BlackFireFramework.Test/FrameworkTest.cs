@@ -24,18 +24,18 @@ namespace BlackFireFramework.Test
 
 
 
-        [TestMethod]
-        public void TestMethod_TestAssembly()
-        {
-            Debug.WriteLine(EntityTree.GetEntityInChildren(typeof(IModuleManager)).ToString());
-            Debug.WriteLine(EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager)).ToString());
-            for (int i = 0; i < 60; i++)
-            {
-                Framework.Act("FrameworkCreator", 0f, 0f);
-            }
-            var exportedAssemblyManager = (IExportedAssemblyManager)EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager));
-            exportedAssemblyManager.LoadExportedAssembly("BlackFireFramework.TestAssembly");
-        }
+        //[TestMethod]
+        //public void TestMethod_TestAssembly()
+        //{
+        //    Debug.WriteLine(EntityTree.GetEntityInChildren(typeof(IModuleManager)).ToString());
+        //    Debug.WriteLine(EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager)).ToString());
+        //    for (int i = 0; i < 60; i++)
+        //    {
+        //        Framework.Act("FrameworkCreator", 0f, 0f);
+        //    }
+        //    var exportedAssemblyManager = (IExportedAssemblyManager)EntityTree.GetEntityInChildren(typeof(IExportedAssemblyManager));
+        //    exportedAssemblyManager.LoadExportedAssembly("BlackFireFramework.TestAssembly");
+        //}
 
 
 
