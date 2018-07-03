@@ -12,8 +12,6 @@ namespace BlackFireFramework
     public static partial class Event
     {
 
-
-
         /// <summary>
         /// Event静态类被使用。
         /// </summary>

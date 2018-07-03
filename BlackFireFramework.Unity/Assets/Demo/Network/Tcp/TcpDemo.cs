@@ -13,6 +13,8 @@ using System.Net;
 using System;
 using System.Text;
 using BlackFireFramework.Unity;
+using BlackFireFramework;
+using UnityEngine.EventSystems;
 
 namespace Alan
 {
@@ -22,6 +24,32 @@ namespace Alan
 
         private IEnumerator Start()
         {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             tcpClient = BlackFire.Network.CreateUnityTcpClient("SuperSocket:::","tcp://127.0.0.1:4000");
             tcpClient.Connect();
             tcpClient.OnConnect += TcpClientt_Connected;
@@ -34,6 +62,7 @@ namespace Alan
                     tcpClient.Send(Encoding.UTF8.GetBytes("Login {\"Account\":\"Password\":\"abc123456789\"}"));
                 }
             }
+
         }
 
         private void TcpClient_OnMessage(object sender, TransportEventArgs e)

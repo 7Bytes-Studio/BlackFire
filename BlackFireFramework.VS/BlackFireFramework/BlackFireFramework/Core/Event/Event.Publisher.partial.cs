@@ -22,7 +22,7 @@ namespace BlackFireFramework
             /// <summary>
             /// 加入主题。
             /// </summary>
-            /// <param name="topic"></param>
+            /// <param name="topic">事件主题。</param>
             public void JoinTopic(EventTopic topic)
             {
                 Topic = topic;

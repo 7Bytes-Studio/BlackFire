@@ -133,7 +133,7 @@ namespace BlackFireFramework
             /// 获取事件主题。
             /// </summary>
             /// <param name="topicName">事件主题的名字。</param>
-            /// <returns></returns>
+            /// <returns>事件主题。</returns>
             public static EventTopic GetEventTopic(string topicName)
             {
                 if (s_DictionaryEventTopic.ContainsKey(topicName))
