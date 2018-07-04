@@ -24,6 +24,22 @@ namespace BlackFireFramework.Unity
             AssetType = assetType;
         }
 
+
+        #region Event
+
+
+
+
+        #endregion
+
+
+
+
+        /// <summary>
+        /// 资源的引用计数。
+        /// </summary>
+        public int RefCount { get; private set; }
+
         /// <summary>
         /// 资源路径。
         /// </summary>

@@ -8,7 +8,7 @@ using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {
-    public static UguiManager s_Ugui = null;
+    private static UguiManager s_Ugui = null;
     public static UguiManager Ugui { get { return s_Ugui = (s_Ugui ?? GetManager<UguiManager>()); } }
 
 }

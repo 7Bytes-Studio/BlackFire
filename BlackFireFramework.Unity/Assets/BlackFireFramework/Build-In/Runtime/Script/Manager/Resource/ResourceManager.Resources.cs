@@ -77,7 +77,7 @@ namespace BlackFireFramework.Unity
                 {
                     m_AssetObjectLinkList.Remove(ao);
                     ao = null;
-                    UnloadUnusedAssets();
+                    Resources.UnloadUnusedAssets();
                 }
             }
         }

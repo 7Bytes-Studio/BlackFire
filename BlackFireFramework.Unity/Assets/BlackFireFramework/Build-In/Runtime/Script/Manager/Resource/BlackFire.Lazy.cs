@@ -8,7 +8,7 @@ using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {
-    public static ResourceManager s_Resource = null;
+    private static ResourceManager s_Resource = null;
     public static ResourceManager Resource { get { return s_Resource = (s_Resource ?? GetManager<ResourceManager>()); } }
 
 }
