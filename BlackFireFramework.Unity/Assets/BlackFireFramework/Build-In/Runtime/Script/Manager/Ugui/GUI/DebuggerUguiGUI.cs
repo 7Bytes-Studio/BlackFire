@@ -20,7 +20,7 @@ namespace BlackFireFramework.Unity
         {
             get
             {
-                return 5;
+                return 6;
             }
         }
 
@@ -28,7 +28,7 @@ namespace BlackFireFramework.Unity
         {
             get
             {
-                return "UGUI";
+                return "Ugui";
             }
         }
 
