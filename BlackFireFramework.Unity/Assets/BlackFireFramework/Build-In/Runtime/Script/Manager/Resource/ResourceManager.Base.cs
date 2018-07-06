@@ -94,6 +94,54 @@ namespace BlackFireFramework.Unity
         #endregion
 
 
+        #region AssetsBundle
+
+
+
+
+        public static AssetBundle Base_LoadFromFile(string path)
+        {
+           return AssetBundle.LoadFromFile(path);
+        }
+
+        public static AssetBundle Base_LoadFromFile(string path, uint crc)
+        {
+            return AssetBundle.LoadFromFile(path, crc);
+        }
+
+        public static AssetBundle Base_LoadFromFile(string path, uint crc, ulong offset)
+        {
+            return AssetBundle.LoadFromFile(path, crc, offset);
+        }
+
+
+
+
+
+
+
+
+
+        public static AssetBundleCreateRequest Base_LoadFromFileAsync(string path)
+        {
+            return AssetBundle.LoadFromFileAsync(path);
+        }
+
+        public static AssetBundleCreateRequest Base_LoadFromFileAsync(string path, uint crc)
+        {
+            return AssetBundle.LoadFromFileAsync(path, crc);
+        }
+
+        public static AssetBundleCreateRequest Base_LoadFromFileAsync(string path, uint crc, ulong offset)
+        {
+            return AssetBundle.LoadFromFileAsync(path, crc, offset);
+        }
+
+
+
+
+
+        #endregion
 
 
     }

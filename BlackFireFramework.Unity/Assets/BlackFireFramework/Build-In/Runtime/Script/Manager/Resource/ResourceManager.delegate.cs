@@ -5,6 +5,7 @@
 //----------------------------------------------------
 
 using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace BlackFireFramework.Unity
@@ -33,6 +34,17 @@ namespace BlackFireFramework.Unity
 
 
 
+
+
+
+
+
+
+
+
+
+
+
         public class ResourceEventArgs : EventArgs
         {
             public ResourceEventArgs(string resourceName)
@@ -45,7 +57,6 @@ namespace BlackFireFramework.Unity
             /// </summary>
             public string ResourceName { get; private set; }
         }
-
 
 
 
@@ -78,8 +89,6 @@ namespace BlackFireFramework.Unity
 
             public AssetAgency AssetAgency { get;private set; }
         }
-
-
 
 
 

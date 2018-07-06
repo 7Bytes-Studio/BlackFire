@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
+  m_Name: AssetReferenceDB
+  m_EditorClassIdentifier: 
+  m_assets:
+  - m_assetDatabaseId: 1c5196e122b8e46d3aef4164c81252e8
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.ttf
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 57e5b4f272c13400db25084f10fea6a1
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/readme.txt
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 995c7b348de57438c891b65236c1d7b2
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.m4v
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4c91b3261125c6c4780365dd6bd49448
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetBundleBuildMap.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 18678a28cef624aeb89c5717c46be35b
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.fbx
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: ae3ba93a359be43028ab177bfbf6af50
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.wav
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 75ce4a2b9ce8e45f9bcb12d38ed95952
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/NodeStyle.guiskin
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 398e8dcb2842643c18e34ef333c8d8f1
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/AssetBundleBrowser/README.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fea4e72e0941e42bdb611e8fa916dd2c
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/SettingTemplate/setting.shader
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c8e784f9942d804d80b3edadb817806
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c000a2af43b7f49bb81125a2e23953e3
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/AssetBundleBrowser/MANUAL.md
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 2ee57be488586cd48af890e6cd37e389
+    m_importFrom: Assets/Demo/Resource/ResourceDemo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fb20b8ea7e8426d4fb73fe65ceb3ee8e
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/ResourceManager.delegate.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1c68298eeb4cf014d8cc595cb0fd5ce5
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/ResourceManager.AssetsBundle.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 47588dbed42c27a4d8143917855a9a56
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/ResourceManager.Base.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000006100000000000000
+    m_importFrom: ProjectSettings/GraphicsSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  m_version: 2

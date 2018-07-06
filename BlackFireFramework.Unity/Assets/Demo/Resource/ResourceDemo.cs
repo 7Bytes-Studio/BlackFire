@@ -16,6 +16,7 @@ namespace Alan
 	public sealed class ResourceDemo : MonoBehaviour 
 	{
         private AssetAgency m_AssetAgency;
+
         private void OnGUI()
         {
             if (GUILayout.Button("异步加载资源"))
@@ -46,6 +47,13 @@ namespace Alan
             {
                 m_AssetAgency.ReleaseAsset();
             }
+
+
+            if (GUILayout.Button("加载AB包"))
+            {
+
+            }
+
 
         }
 
