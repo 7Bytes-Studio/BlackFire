@@ -60,7 +60,7 @@ namespace BlackFireFramework.Unity
                     });
 
                     BlackFireGUI.HorizontalLayout(() => {
-                        Debug.Log(m_ToggleBarSelect);
+                        //Debug.Log(m_ToggleBarSelect);
                         if (0== m_ToggleBarSelect)
                         {
                             BlackFire.Game.GameSpeed = GUILayout.HorizontalSlider(BlackFire.Game.GameSpeed, 1f, 100f, GUILayout.ExpandWidth(true));

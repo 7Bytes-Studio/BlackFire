@@ -42,7 +42,7 @@ namespace BlackFireFramework.Unity
 
         protected override void OnProcessUpdate()
         {
-            Debug.Log("ProcessTwo::OnProcessUpdate");
+            Debug.Log("ProcessTwo::OnProcessUpdate ");
         }
     }
 }

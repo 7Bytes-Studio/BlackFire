@@ -192,7 +192,7 @@ namespace BlackFireFramework.Unity
                             {
                                 foreach (var k in m_DrawModuleCallbackDic.Keys)
                                 {
-                                    if (GUILayout.Button(k, new GUIStyle("Button") { fontSize = 14, fixedHeight = 25 }))
+                                    if (GUILayout.Button(k.HexColor("#33CCFF"), new GUIStyle("Button") { fontSize = 14, fixedHeight = 25 }))
                                     {
                                         m_SelectedModuleName = k;
                                     }

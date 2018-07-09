@@ -38,14 +38,14 @@ namespace BlackFireFramework.Unity
         {
             Debug.Log("ProcessOne::OnProcessInit");
         }
-
+        private int i = 0; 
         protected override void OnProcessUpdate()
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 ChangeProcess(typeof(ProcessTwo));
             }
-            Debug.Log("ProcessOne::OnProcessUpdate");
+            Debug.Log("ProcessOne::OnProcessUpdate " + i++);
         }
     }
 }

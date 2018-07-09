@@ -73,7 +73,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1690882591988160
 GameObject:
   m_ObjectHideFlags: 1
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839e23f9211c57142ac67c9a0f21dc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DebuggerStyle: 0
+  m_DebuggerStyle: 1
   m_WindowScale: 1
 --- !u!114 &114617585636041726
 MonoBehaviour:
@@ -282,12 +282,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ProcessScrowFoldOut: 1
-  m_FirstProcess: 
-  m_AvailableProcesses: []
+  m_FirstProcess: BlackFireFramework.Unity.ProcessOne
+  m_AvailableProcesses:
+  - BlackFireFramework.Unity.ProcessOne
+  - BlackFireFramework.Unity.ProcessTwo
   m_AllProcesses:
   - BlackFireFramework.Unity.ProcessOne
   - BlackFireFramework.Unity.ProcessTwo
-  m_StartFirstProcessWhenInitialized: 0
+  m_StartFirstProcessWhenInitialized: 1
   m_ApplyGameSpeedWhenInitialized: 1
   m_GameSpeed: 1
   m_ApplyFpsWhenInitialized: 1

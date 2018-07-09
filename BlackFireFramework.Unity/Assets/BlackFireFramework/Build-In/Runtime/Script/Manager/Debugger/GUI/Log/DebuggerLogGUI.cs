@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using BlackFireFramework.Unity;
 using System.IO;
+using System;
 
 namespace BlackFireFramework.Unity
 {
@@ -29,10 +30,15 @@ namespace BlackFireFramework.Unity
 
         private class LogInfo
         {
+            public LogInfo()
+            {
+                LogDateTime = DateTime.Now;
+            }
             public LogLevel LogLevel;
             public string Message;
             public string StackTrace;
             public bool Selected;
+            public DateTime LogDateTime;
         }
 
         private bool m_HasSetLogFile;
@@ -163,11 +169,31 @@ namespace BlackFireFramework.Unity
             {
                 BlackFireGUI.ScrollView(101, id =>
                 {
-                    m_LogInfoLinkedList.Foreach(current=> {
+                    //修改日志链表为由尾部向前打印。
+                    //var current = m_LogInfoLinkedList.Last;
+                    //while (null!= current)
+                    //{
+                    //    if (!m_ToggleLogResDic[current.Value.LogLevel]) return;
+
+                    //    if (current.Value.Selected = GUILayout.Toggle(current.Value.Selected, string.Format("{0}  {1}",current.Value.LogDateTime.ToLongTimeString(),current.Value.Message)))
+                    //    {
+                    //        if (null != m_CurrentSelectedLogInfo && !m_CurrentSelectedLogInfo.Equals(current.Value))
+                    //        {
+                    //            m_CurrentSelectedLogInfo.Selected = false;
+                    //        }
+                    //        m_CurrentSelectedLogInfo = current.Value;
+                    //    }
+
+                    //    current = current.Previous;
+                    //}
+
+
+                    m_LogInfoLinkedList.Foreach(current =>
+                    {
 
                         if (!m_ToggleLogResDic[current.Value.LogLevel]) return;
 
-                        if (current.Value.Selected = GUILayout.Toggle(current.Value.Selected, current.Value.Message))
+                        if (current.Value.Selected = GUILayout.Toggle(current.Value.Selected, string.Format("{0}  {1}", current.Value.LogDateTime.ToLongTimeString(), current.Value.Message)))
                         {
                             if (null != m_CurrentSelectedLogInfo && !m_CurrentSelectedLogInfo.Equals(current.Value))
                             {
@@ -177,7 +203,7 @@ namespace BlackFireFramework.Unity
                         }
 
                     });
-                    
+
 
                 });
             });
@@ -248,9 +274,14 @@ namespace BlackFireFramework.Unity
 
         private void AddLogInfo(LogLevel logLevel, string message, string stackTrace)
         {
-            if (null== m_LogInfoLinkedList || m_MaxLogInfoCount <= m_LogInfoLinkedList.Count)
+            if (null== m_LogInfoLinkedList)
             {
                 return;
+            }
+
+            if (m_MaxLogInfoCount <= m_LogInfoLinkedList.Count)
+            {
+                m_LogInfoLinkedList.RemoveFirst();
             }
 
             m_ToggleLogCountDic[logLevel]++;
