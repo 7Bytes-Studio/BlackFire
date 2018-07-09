@@ -24,7 +24,7 @@ namespace BlackFireFramework.Unity
         {
             get
             {
-                return 10;
+                return 100;
             }
         }
 

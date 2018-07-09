@@ -98,6 +98,26 @@ namespace BlackFireFramework.Unity
 
         #region Layout
 
+        public static void DrawItem(string title,string content)
+        {
+            GUILayout.BeginHorizontal();
+            {
+                GUILayout.Label(title, new GUIStyle("Label") { wordWrap = false, alignment = TextAnchor.MiddleLeft });
+                GUILayout.Label(content,new GUIStyle("Label") { wordWrap = false, alignment = TextAnchor.MiddleRight });
+            }
+            GUILayout.EndHorizontal();
+        }
+
+        public static void DrawItem(Action head, Action body)
+        {
+            GUILayout.BeginHorizontal();
+            {
+                if (null != head) head.Invoke();
+                if (null != body) body.Invoke();
+            }
+            GUILayout.EndHorizontal();
+        }
+
         public static void BackgroundColor(Color color,Action callback)
         {
             GUI.backgroundColor = color;
@@ -160,6 +180,9 @@ namespace BlackFireFramework.Unity
 
 
         #endregion
+
+
+
 
     }
 }

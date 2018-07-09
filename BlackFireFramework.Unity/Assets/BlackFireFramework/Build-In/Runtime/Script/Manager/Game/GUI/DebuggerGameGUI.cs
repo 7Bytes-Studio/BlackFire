@@ -73,6 +73,34 @@ namespace BlackFireFramework.Unity
 
                 });
 
+
+                BlackFireGUI.HorizontalLayout(() => {
+
+                    GUILayout.Box("Quality Setting :".HexColor("green"), GUILayout.ExpandWidth(false));
+
+                });
+
+                BlackFireGUI.BoxVerticalLayout(() => {
+
+                    int currentQualityLevel = QualitySettings.GetQualityLevel();
+
+                         BlackFireGUI.HorizontalLayout(() => {
+                            GUILayout.Label(string.Format("Current Quality: {0}", QualitySettings.names[currentQualityLevel].HexColor("green")), GUILayout.ExpandWidth(false));
+                         });
+
+                    BlackFireGUI.ScrollView("QualityToolbarScrollView", id => {
+                        BlackFireGUI.HorizontalLayout(() => {
+                            int newQualityLevel = GUILayout.Toolbar(currentQualityLevel, QualitySettings.names);
+                            if (newQualityLevel != currentQualityLevel)
+                            {
+                                QualitySettings.SetQualityLevel(newQualityLevel);
+                            }
+                        });
+                    }, GUILayout.ExpandHeight(false));
+                });
+
+
+
             });
 
         
