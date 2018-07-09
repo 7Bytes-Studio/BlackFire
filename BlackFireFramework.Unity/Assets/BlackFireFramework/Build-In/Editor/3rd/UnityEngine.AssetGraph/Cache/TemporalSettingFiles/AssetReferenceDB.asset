@@ -76,4 +76,20 @@ MonoBehaviour:
     m_importFrom: ProjectSettings/GraphicsSettings.asset
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: 9228a8907a6d5be4ba2a22dd819baeac
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/AssetInfo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1d79b55f1bbd9984cab0d65947aac8ee
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/ResourceManager.Resources.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 28b355f24e1ff2f4482a5d6df3712117
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/ResourceManager.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 13516510a5c60614fa8e96abd6cd24b4
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Resource/AssetAgency.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2

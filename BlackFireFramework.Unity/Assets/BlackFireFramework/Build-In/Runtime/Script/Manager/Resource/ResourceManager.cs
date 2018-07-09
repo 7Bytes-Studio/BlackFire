@@ -14,6 +14,7 @@ namespace BlackFireFramework.Unity
         {
             base.OnStart();
             Init_Resource();
+            Init_AssetsBundle();
             Init_Scene();
             Init_Agency();
         }
@@ -22,6 +23,7 @@ namespace BlackFireFramework.Unity
         {
             base.OnUpdate();
             Update_Resource();
+            Update_AssetsBundle();
             Update_Scene();
             Update_Agency();
         }
@@ -30,6 +32,7 @@ namespace BlackFireFramework.Unity
         {
             base.OnShutdown();
             Destroy_Resource();
+            Destroy_AssetsBundle();
             Destroy_Scene();
             Destroy_Agency();
         }

@@ -9,17 +9,39 @@ using System;
 
 namespace BlackFireFramework.Unity
 {
-    public class AssetInfo
+    public abstract class AssetInfoBase
     {
-        public AssetInfo(string assetPath, Type assetType=null,bool shortdatedAsset=false)
+        public AssetInfoBase(string assetPath, Type assetType, bool shortdatedAsset)
         {
-            AssetPath = assetPath;
             AssetType = assetType;
             ShortdatedAsset = shortdatedAsset;
+            AssetPath = assetPath;
         }
 
-        public string AssetPath { get; private set; }
-        public Type AssetType { get; private set; }
-        public bool ShortdatedAsset { get; internal set; }
+        public string AssetPath { get; protected set; }
+        public Type AssetType { get; protected set; }
+        public bool ShortdatedAsset { get; protected set; }
+
     }
+
+
+    public sealed class ResourceAssetInfo : AssetInfoBase
+    {
+        public ResourceAssetInfo(string assetPath, Type assetType, bool shortdatedAsset) : base( assetPath, assetType, shortdatedAsset)
+        {
+
+        }
+    }
+
+
+    public sealed class AssetsBundleAssetInfo : AssetInfoBase
+    {
+        public AssetsBundleAssetInfo(string assetsBundlePath, string assetPath, Type assetType, bool shortdatedAsset) : base( assetPath, assetType, shortdatedAsset)
+        {
+            AssetsBundlePath = assetsBundlePath;
+        }
+
+        public string AssetsBundlePath { get; private set; }
+    }
+
 }

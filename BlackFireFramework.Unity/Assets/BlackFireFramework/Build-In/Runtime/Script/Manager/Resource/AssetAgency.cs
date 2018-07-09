@@ -40,7 +40,6 @@ namespace BlackFireFramework.Unity
 
         #endregion
 
-
         #region Property
 
 
@@ -77,7 +76,6 @@ namespace BlackFireFramework.Unity
 
 
         #endregion
-
 
         #region API
 
@@ -120,8 +118,6 @@ namespace BlackFireFramework.Unity
         }
 
         #endregion
-
-
 
         #region override
 

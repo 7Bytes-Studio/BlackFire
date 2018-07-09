@@ -13,9 +13,9 @@ namespace BlackFireFramework.Unity
     public sealed partial class ResourceManager
 	{
 
-        public delegate void LoadResourceFailure(LoadResourceFailureEventArgs loadResourceFailureEventArgs);
-        public delegate void LoadResourceProgress(LoadResourceProgressEventArgs loadResourceProgressEventArgs);
-        public delegate void LoadResourceComplete(LoadResourceCompleteEventArgs loadResourceCompleteEventArgs);
+        public delegate void LoadAssetFailure(LoadAssetFailureEventArgs loadResourceFailureEventArgs);
+        public delegate void LoadAssetProgress(LoadAssetProgressEventArgs loadResourceProgressEventArgs);
+        public delegate void LoadAssetComplete(LoadAssetCompleteEventArgs loadResourceCompleteEventArgs);
 
 
         public delegate void LoadSceneFailure(LoadSceneFailureEventArgs loadSceneFailureEventArgs);
@@ -60,16 +60,16 @@ namespace BlackFireFramework.Unity
 
 
 
-        public class LoadResourceFailureEventArgs : ResourceEventArgs
+        public class LoadAssetFailureEventArgs : ResourceEventArgs
         {
-            public LoadResourceFailureEventArgs(string resourceName) : base(resourceName)
+            public LoadAssetFailureEventArgs(string resourceName) : base(resourceName)
             {
             }
         }
 
-        public class LoadResourceProgressEventArgs : ResourceEventArgs
+        public class LoadAssetProgressEventArgs : ResourceEventArgs
         {
-            public LoadResourceProgressEventArgs(string resourceName, float process) : base(resourceName)
+            public LoadAssetProgressEventArgs(string resourceName, float process) : base(resourceName)
             {
                 Process = process;
             }
@@ -80,9 +80,9 @@ namespace BlackFireFramework.Unity
             public float Process { get; private set; }
         }
 
-        public class LoadResourceCompleteEventArgs : ResourceEventArgs
+        public class LoadAssetCompleteEventArgs : ResourceEventArgs
         {
-            public LoadResourceCompleteEventArgs(string resourceName, AssetAgency assetAgency) : base(resourceName)
+            public LoadAssetCompleteEventArgs(string resourceName, AssetAgency assetAgency) : base(resourceName)
             {
                 AssetAgency = assetAgency;
             }
