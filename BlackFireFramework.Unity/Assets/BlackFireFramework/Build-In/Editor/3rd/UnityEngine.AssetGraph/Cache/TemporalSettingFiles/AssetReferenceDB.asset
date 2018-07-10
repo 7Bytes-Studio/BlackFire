@@ -11,5 +11,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
-  m_assets: []
+  m_assets:
+  - m_assetDatabaseId: 234efdfc3243546428e894850b516ab2
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Ugui/Ugui/Base/UguiEntity.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 848f939d8595b3742a4d46a03d07cc73
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/TestCanvas.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: c04434a13a2db2b43951fbf6f74497c4
+    m_importFrom: Assets/BlackFireFramework/Demo/GL
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6bbe6d635c9d9c34f89a3a09662a7883
+    m_importFrom: Assets/BlackFireFramework/Demo/GL/GL.demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 6c809cec97d21ec48af4099153fb288c
+    m_importFrom: Assets/BlackFireFramework/Demo/GL/GLDemo.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3c8e784f9942d804d80b3edadb817806
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 4f21fe72b8ed1b8499d407d0a858a782
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Common/Utility/Utility.GL.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
