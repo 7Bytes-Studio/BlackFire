@@ -14,7 +14,7 @@ namespace BlackFireFramework
         /// <summary>
         /// 工厂方法绑定者（负责给对象池工厂绑定实例化回调委托）。
         /// </summary>
-        public class PoolFactoryBinder
+        public class PoolFactory
         {
             private Dictionary<Type, PoolFactoryCallback> m_BindDic = new Dictionary<Type, PoolFactoryCallback>();
 
@@ -23,7 +23,7 @@ namespace BlackFireFramework
             /// </summary>
             /// <param name="objectType">对象类型。</param>
             /// <param name="poolFactoryCallback">对象池工厂委托。</param>
-            public void AddBinding(Type objectType,PoolFactoryCallback poolFactoryCallback)
+            public void Bind(Type objectType,PoolFactoryCallback poolFactoryCallback)
             {
                 if (!m_BindDic.ContainsKey(objectType))
                 {

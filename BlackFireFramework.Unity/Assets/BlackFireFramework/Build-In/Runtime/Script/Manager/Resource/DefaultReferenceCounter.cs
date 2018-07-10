@@ -17,10 +17,15 @@ namespace BlackFireFramework.Unity
     {
         public int RefCount { get; private set; }
 
+        public int CumulativeCount { get; private set; }
+
+        public int RegressiveCount { get; private set; }
+
         public event Action OnRefCountIsZero;
 
         public void Cumulative(object ref_owner)
         {
+            ++CumulativeCount;
             ++RefCount;
         }
 
@@ -28,6 +33,7 @@ namespace BlackFireFramework.Unity
         {
             if (RefCount <= 0) return;
             --RefCount;
+            ++RegressiveCount;
             if (0==RefCount && null!= OnRefCountIsZero)
             {
                 OnRefCountIsZero.Invoke();

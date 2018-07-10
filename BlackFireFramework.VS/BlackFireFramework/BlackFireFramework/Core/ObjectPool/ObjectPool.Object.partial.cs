@@ -44,9 +44,9 @@ namespace BlackFireFramework
                 PoolName = poolName;
             }
 
-            internal virtual void Spawn()
+            internal virtual void Spawn(object args = null)
             {
-                OnSpawn();
+                OnSpawn(args);
             }
 
             internal void Recycle()
@@ -66,7 +66,7 @@ namespace BlackFireFramework
 
             protected virtual void OnLock() { }
             protected virtual void OnUnlock() { }
-            protected virtual void OnSpawn() { }
+            protected virtual void OnSpawn(object args=null) { }
             protected virtual void OnRecycle() { }
             protected virtual void OnRelease() { }
 

@@ -11,45 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee4bc21567f434b598a3c96ba4946372, type: 3}
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
-  m_assets:
-  - m_assetDatabaseId: d9cbc12f284d4334e986999a84591fd8
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/Setting/DebuggerSettingGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 1b038f3d40e34f64da4af130ef1068b9
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/GF
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3d56ee14831446347bf99707de95f417
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/GF/DebuggerProfilerGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6dfaa84ad86d63249a6557e4b589685f
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/GF/DebuggerInfoGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 5981498b1818d944982b1a2b6cf1b800
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/DebuggerTemplateGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 839e23f9211c57142ac67c9a0f21dc03
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/DebuggerManager.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 74c2ab852107cb64d9d62b90bfca1406
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Game/GUI/DebuggerGameGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 6b132218a92ab2f41aee68cda744ab41
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Debugger/GUI/Log/DebuggerLogGUI.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3c8e784f9942d804d80b3edadb817806
-    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9499a40b4ee5d3740b0d043fd47c607e
-    m_importFrom: Assets/Demo/[BlackFire].prefab
-    m_exportTo: 
-    m_variantName: 
+  m_assets: []
   m_version: 2

@@ -17,7 +17,7 @@ namespace BlackFireFramework
             {
                 Name = name;
                 Capacity = capacity;
-                PoolFactoryBinder = new PoolFactoryBinder();
+                PoolFactory = new PoolFactory();
             }
 
             public string Name { get; private set; }
@@ -25,11 +25,11 @@ namespace BlackFireFramework
             public abstract int Count { get;}
             public abstract int InCount { get;}
             public abstract int OutCount { get; }
-            public PoolFactoryBinder PoolFactoryBinder { get; private set; }
+            public PoolFactory PoolFactory { get; private set; }
 
             public abstract void Lock(ObjectBase @object);
             public abstract void UnLock(ObjectBase @object);
-            public abstract ObjectBase Spawn(Type objectType);
+            public abstract ObjectBase Spawn(Type objectType,Predicate<ObjectBase> predicate=null,Func<object> argsCallback=null);
             public abstract void Recycle(ObjectBase @object);
             public abstract void RecycleAll();
             public abstract void Release(ObjectBase @object);
@@ -185,11 +185,11 @@ namespace BlackFireFramework
                             if (!current.Value.Lock)
                             {
                                 current.Value.Release();
-                                m_LinkedListObject_InPool.Remove(current);
                             }
                         }
 
                     });
+                    m_LinkedListObject_InPool.Clear();
                 }
             }
 
@@ -204,17 +204,17 @@ namespace BlackFireFramework
                             if (!current.Value.Lock)
                             {
                                 current.Value.Release();
-                                m_LinkedListObject_OutPool.Remove(current);
                             }
                         }
                     });
+                    m_LinkedListObject_OutPool.Clear();
                 }
             }
 
-            public override ObjectBase Spawn(Type objectType)
+            public override ObjectBase Spawn(Type objectType, Predicate<ObjectBase> predicate = null,Func<object> factoryArgsCallback=null)
             {
                 CheckObjectTypeOrThrow(objectType);
-                var target = FindTypeInPool(objectType);
+                var target = null != predicate? FindTypeInPool(predicate):FindTypeInPool(objectType);
                 if (null != target && !target.Lock)
                 {
                     lock (m_Lock)
@@ -229,7 +229,7 @@ namespace BlackFireFramework
                 {
                     CheckCapacityOrThrow();
                     ObjectBase ins = null;
-                    var callback =  PoolFactoryBinder.GetBinding(objectType);
+                    var callback =  PoolFactory.GetBinding(objectType);
                     if (null != callback)
                     {
                         ins = callback.Invoke();
@@ -246,14 +246,35 @@ namespace BlackFireFramework
                     }
                     
                     ins.SetPoolOwnersName(Name);
-                    ins.Spawn();
+                    if (null != factoryArgsCallback)
+                    {
+                        ins.Spawn(factoryArgsCallback.Invoke());
+                    }
+                    else
+                    {
+                        ins.Spawn();
+                    }
                     return ins;
                 }
             }
 
 
 
+            private ObjectBase FindTypeInPool(Predicate<ObjectBase> predicate)
+            {
+                if (null == predicate) return null;
 
+                var current = m_LinkedListObject_InPool.First;
+                while (null != current)
+                {
+                    if (predicate.Invoke(current.Value))
+                    {
+                        return current.Value;
+                    }
+                    current = current.Next;
+                }
+                return null;
+            }
 
             private ObjectBase FindTypeInPool(Type objectType)
             {

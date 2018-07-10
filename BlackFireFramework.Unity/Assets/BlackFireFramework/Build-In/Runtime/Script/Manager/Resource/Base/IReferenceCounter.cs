@@ -24,6 +24,15 @@ namespace BlackFireFramework.Unity
         int RefCount { get; }
 
         /// <summary>
+        /// 累加次数。
+        /// </summary>
+        int CumulativeCount { get; }
+        /// <summary>
+        /// 累减次数。
+        /// </summary>
+        int RegressiveCount { get; }
+
+        /// <summary>
         /// 引用累加功能。
         /// </summary>
         /// <param name="ref_owner">引用的所属者。</param>

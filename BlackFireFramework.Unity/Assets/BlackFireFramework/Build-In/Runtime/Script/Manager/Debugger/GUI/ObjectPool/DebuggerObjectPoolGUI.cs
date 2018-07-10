@@ -124,7 +124,7 @@ namespace BlackFireFramework.Unity
                         for (int i = 0; i < pools.Length; i++)
                         {
                             var bindTypeStr = "{  ";
-                            var arr = pools[i].PoolFactoryBinder.GetBindingTypes();
+                            var arr = pools[i].PoolFactory.GetBindingTypes();
                             for (int j = 0; j < arr.Length; j++)
                             {
                                 if (arr.Length - 1 == j)

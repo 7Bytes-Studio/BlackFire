@@ -18,6 +18,11 @@ namespace BlackFireFramework.Unity
         {
             return string.Format("<color={0}>{1}</color>", hexColor, text);
         }
-	
-	}
+
+        public static string HexColor(this int intText, string hexColor)
+        {
+            return string.Format("<color={0}>{1}</color>", hexColor, intText);
+        }
+
+    }
 }

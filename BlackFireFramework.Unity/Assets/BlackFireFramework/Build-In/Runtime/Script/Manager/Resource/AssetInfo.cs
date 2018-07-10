@@ -27,7 +27,7 @@ namespace BlackFireFramework.Unity
 
     public sealed class ResourceAssetInfo : AssetInfoBase
     {
-        public ResourceAssetInfo(string assetPath, Type assetType, bool shortdatedAsset) : base( assetPath, assetType, shortdatedAsset)
+        public ResourceAssetInfo(string assetPath, Type assetType=null, bool shortdatedAsset=false) : base( assetPath, assetType, shortdatedAsset)
         {
 
         }

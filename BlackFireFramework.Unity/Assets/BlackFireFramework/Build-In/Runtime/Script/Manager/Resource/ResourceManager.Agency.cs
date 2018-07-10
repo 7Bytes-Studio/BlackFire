@@ -4,12 +4,20 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed partial class ResourceManager 
-	{
+    public sealed partial class ResourceManager
+    {
+        /// <summary>
+        /// 获取已经存在资源代理。
+        /// </summary>
+        /// <param name="key">资源代理索引。</param>
+        /// <returns></returns>
+        public AssetAgency this[ string key]{ get{return HasAsset(key);} }
 
         private void Init_Agency()
         {
@@ -53,6 +61,56 @@ namespace BlackFireFramework.Unity
                 current = current.Next;
             }
         }
+
+
+
+        /// <summary>
+        /// 遍历资源代理。
+        /// </summary>
+        /// <param name="callback">遍历资源代理时的回调。</param>
+        public void ForeachAssetAgency(Action<LinkedListNode<AssetAgency>> callback)
+        {
+            m_AssetObjectLinkList.Foreach(callback);
+        }
+
+        /// <summary>
+        /// 资源代理数目。
+        /// </summary>
+        public int AssetAgencyCount { get { return m_AssetObjectLinkList.Count; } }
+
+
+        private LinkedList<AssetAgency> m_AssetObjectLinkList = new LinkedList<AssetAgency>();
+
+        private AssetAgency HasAsset(string assetName)
+        {
+            var current = m_AssetObjectLinkList.First;
+            while (null != current)
+            {
+                if (current.Value.AssetPath == assetName)
+                {
+                    return current.Value;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
+
+        private AssetAgency HasAsset(UnityEngine.Object asset)
+        {
+            var current = m_AssetObjectLinkList.First;
+            while (null != current)
+            {
+                if (current.Value.Equals(asset))
+                {
+                    return current.Value;
+                }
+                current = current.Next;
+            }
+            return null;
+        }
+
+
+
 
     }
 }

@@ -25,7 +25,7 @@ namespace BlackFireFramework
 
         public BulletLogic Target { get; private set; }
 
-        protected override void OnSpawn()
+        protected override void OnSpawn(object args)
         {
             base.OnSpawn();
             Target.transform.position = Vector3.zero;

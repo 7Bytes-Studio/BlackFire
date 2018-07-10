@@ -37,7 +37,7 @@ namespace BlackFireFramework
             m_TestPool = ObjectPool.CreatePool("TestPool",300);
             //对象池设计可以存放不同子类类型对象，只要是继承自ObjectPool.Object。
             //下面是给对象池的工厂绑定实例化回调。
-            m_TestPool.PoolFactoryBinder.AddBinding(typeof(BulletObject),()=>new BulletObject(GameObject.Instantiate<BulletLogic>(m_BulletTemplate)));
+            m_TestPool.PoolFactory.Bind(typeof(BulletObject),()=>new BulletObject(GameObject.Instantiate<BulletLogic>(m_BulletTemplate)));
         }
 
         //界面UI点击FireBullet事件。

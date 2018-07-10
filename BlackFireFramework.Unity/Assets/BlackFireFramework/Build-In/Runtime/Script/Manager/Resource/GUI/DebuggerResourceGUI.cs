@@ -43,12 +43,19 @@ namespace BlackFireFramework.Unity
 
             if(0<BlackFire.Resource.AssetAgencyCount)
                 BlackFireGUI.BoxVerticalLayout(()=> {
-                    BlackFire.Resource.ForeachAssetAgency(current=> {
-                        var assetAgency = current.Value;
-                        BlackFireGUI.HorizontalLayout(() => {
-                            GUILayout.Label(string.Format("Path:{0}   HashCode:{1}   Type:{2}   RefCount:{3}", assetAgency.AssetPath.HexColor("yellow"), assetAgency.GetHashCode().ToString().HexColor("yellow"), assetAgency.AssetType.ToString().HexColor("yellow"), assetAgency.RefCount.ToString().HexColor("yellow")));
+                    BlackFireGUI.ScrollView("ResourceRefCountScrollView",id=> {
+
+                        BlackFire.Resource.ForeachAssetAgency(current => {
+                            var assetAgency = current.Value;
+                            BlackFireGUI.HorizontalLayout(() => {
+                                BlackFireGUI.DrawItem(
+                                    string.Format("Path:{0}   ", assetAgency.AssetPath.HexColor("yellow") ),
+                                    string.Format("RefCount:{4}   AcquireCount:{0}   RestoreCount:{1}   Type:{3}   HashCode:{2}", assetAgency.AcquireCount.HexColor("yellow"), assetAgency.RestoreCount.HexColor("yellow"), assetAgency.GetHashCode().ToString().HexColor("yellow"), assetAgency.AssetType.ToString().HexColor("yellow"), assetAgency.RefCount.ToString().HexColor("yellow")));
+                            });
                         });
-                    });
+
+                    },GUILayout.ExpandHeight(false));
+
                 });
 
         }

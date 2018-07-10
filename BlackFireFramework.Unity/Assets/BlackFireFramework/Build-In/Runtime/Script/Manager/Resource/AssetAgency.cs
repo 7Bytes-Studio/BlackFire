@@ -54,6 +54,16 @@ namespace BlackFireFramework.Unity
         public int RefCount { get { return ReferenceCounter.RefCount; } }
 
         /// <summary>
+        /// 资源请求次数。
+        /// </summary>
+        public int AcquireCount { get { return ReferenceCounter.CumulativeCount; } }
+
+        /// <summary>
+        /// 资源归还次数。
+        /// </summary>
+        public int RestoreCount { get { return ReferenceCounter.RegressiveCount; } }
+
+        /// <summary>
         /// 资源路径。
         /// </summary>
         public string AssetPath { get; private set; }

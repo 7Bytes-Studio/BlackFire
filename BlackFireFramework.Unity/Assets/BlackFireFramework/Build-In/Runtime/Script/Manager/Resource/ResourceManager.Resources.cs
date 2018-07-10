@@ -88,55 +88,7 @@ namespace BlackFireFramework.Unity
         }
 
 
-        /// <summary>
-        /// 遍历资源代理。
-        /// </summary>
-        /// <param name="callback">遍历资源代理时的回调。</param>
-        public void ForeachAssetAgency(Action<LinkedListNode<AssetAgency>> callback)
-        {
-            m_AssetObjectLinkList.Foreach(callback);
-        } 
-
-        /// <summary>
-        /// 资源代理数目。
-        /// </summary>
-        public int AssetAgencyCount { get { return m_AssetObjectLinkList.Count; } }
-
-        #region 数据结构
-
-        private LinkedList<AssetAgency> m_AssetObjectLinkList = new LinkedList<AssetAgency>();
-
-        private AssetAgency HasAsset(string assetName)
-        {
-            var current = m_AssetObjectLinkList.First;
-            while (null != current)
-            {
-                if (current.Value.AssetPath == assetName)
-                {
-                    return current.Value;
-                }
-                current = current.Next;
-            }
-            return null;
-        }
-
-        private AssetAgency HasAsset(Object asset)
-        {
-            var current = m_AssetObjectLinkList.First;
-            while (null != current)
-            {
-                if (current.Value.Equals(asset))
-                {
-                    return current.Value;
-                }
-                current = current.Next;
-            }
-            return null;
-        }
-
-
-        #endregion
-
+      
 
     }
 }

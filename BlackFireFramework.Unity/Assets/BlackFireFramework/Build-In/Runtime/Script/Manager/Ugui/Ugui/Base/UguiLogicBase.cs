@@ -17,6 +17,7 @@ namespace BlackFireFramework.Unity
 
         [SerializeField] private string m_Id = string.Empty;
 
+
         /// <summary>
         /// ID。
         /// </summary>

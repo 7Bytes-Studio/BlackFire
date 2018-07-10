@@ -255,6 +255,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
@@ -352,6 +353,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\GUI\DebuggerUguiGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiBehaviourBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiEntity.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiLogicBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiViewBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Canvas\UguiCanvasLogicBase.cs" />
@@ -360,35 +362,36 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelViewBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
-    <Compile Include="Assets\Demo\Debugger\DebuggerDemo.cs" />
-    <Compile Include="Assets\Demo\Event\BeShotTrigger.cs" />
-    <Compile Include="Assets\Demo\Event\EventDemo.cs" />
-    <Compile Include="Assets\Demo\Event\EventDemo_DBHandler.cs" />
-    <Compile Include="Assets\Demo\Event\EventDemo_UIHandler.cs" />
-    <Compile Include="Assets\Demo\Event\IBeShotHandler.cs" />
-    <Compile Include="Assets\Demo\Event\MonsterEntity.cs" />
-    <Compile Include="Assets\Demo\Game\GameDemo.cs" />
-    <Compile Include="Assets\Demo\GatewayWorker\Game\GameCanvas.cs" />
-    <Compile Include="Assets\Demo\GatewayWorker\Game\PlayerLogic.cs" />
-    <Compile Include="Assets\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
-    <Compile Include="Assets\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
-    <Compile Include="Assets\Demo\Job\JobDemo.cs" />
-    <Compile Include="Assets\Demo\JsonNet\JsonNetSample.cs" />
-    <Compile Include="Assets\Demo\KVS\KVSDemo.cs" />
-    <Compile Include="Assets\Demo\Network\Download\DownloadTest.cs" />
-    <Compile Include="Assets\Demo\Network\Tcp\TcpDemo.cs" />
-    <Compile Include="Assets\Demo\Network\WebSocket\WebSocketDemo.cs" />
-    <Compile Include="Assets\Demo\ObjectPool\BulletLogic.cs" />
-    <Compile Include="Assets\Demo\ObjectPool\BulletObject.cs" />
-    <Compile Include="Assets\Demo\ObjectPool\ObjectPoolDemo.cs" />
-    <Compile Include="Assets\Demo\Process\ProcessDemo.cs" />
-    <Compile Include="Assets\Demo\Process\ProcessOne.cs" />
-    <Compile Include="Assets\Demo\Process\ProcessTwo.cs" />
-    <Compile Include="Assets\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />
-    <Compile Include="Assets\Demo\Resource\ResourceDemo.cs" />
-    <Compile Include="Assets\Demo\Resource\Scene\SceneDemo.cs" />
-    <Compile Include="Assets\Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\Demo\Ugui\DoubleClickButtonDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_DBHandler.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_UIHandler.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\GameCanvas.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Network\WebSocket\WebSocketDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletObject.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\ObjectPoolDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessOne.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessTwo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\TestCanvas.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphicResources\LineDraw.shader" />
