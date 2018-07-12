@@ -15,7 +15,7 @@ namespace BlackFireFramework
     public static partial class Utility
     {
         /// <summary>
-        /// Http连接操作帮助类
+        /// Http连接操作帮助类。
         /// </summary>
         public static class Http
         {

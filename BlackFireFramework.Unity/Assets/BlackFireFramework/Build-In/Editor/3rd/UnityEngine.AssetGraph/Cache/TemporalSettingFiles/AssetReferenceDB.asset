@@ -524,10 +524,6 @@ MonoBehaviour:
     m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GroupView/GroupAssetListTree.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 9f67e8d4b6cec4c3fbbcbf34acfabebd
-    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/Square.png
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 2bc0d9d4d7b8e478c831da74cdf06151
     m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/GUI/GraphicResources/LineDraw.shader
     m_exportTo: 
@@ -1618,6 +1614,50 @@ MonoBehaviour:
     m_variantName: 
   - m_assetDatabaseId: d261c338c4c9b684cb2147a4b6846925
     m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Network.dll.mdb
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: df67caefba216bf48aede599d16c96f3
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/Udp
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: df46352c038765642ba7c70b1a2b3dff
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Manager/Network/Udp/UdpClient.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 00000000000000006100000000000000
+    m_importFrom: ProjectSettings/GraphicsSettings.asset
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 7c876660554497a4f8165ac63c10213e
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Core/BlackFire/Editor/Resources/BlackFire.Logo.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: d4832359e68a10545a898c0d9befcc24
+    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Script/Core/BlackFire/Editor/Logo/Sparrow.jpg
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 1370940c35a73e3478c9063d3dc8553e
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/Resources/Manager.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 0eb3ccf8917c82e4b958be89291b40df
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: f286ce8fa7efa074a9d0eb790d01a2c4
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/ChartImage.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 9f67e8d4b6cec4c3fbbcbf34acfabebd
+    m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/Square.png
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 44d94fc7f9d5223469bdd977cf57b930
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/ChartImageMat.mat
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: fe9a4f43254cd0641befbcd58d7b687b
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/Graphic.Demo.unity
     m_exportTo: 
     m_variantName: 
   m_version: 2
