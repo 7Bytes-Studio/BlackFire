@@ -394,7 +394,8 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\Graphic\ChartImage.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\CAACTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\Graphic\ChartGraphic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\TestCanvas.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />
   </ItemGroup>

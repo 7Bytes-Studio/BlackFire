@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity 
 {
-	public class ChartImage : Graphic 
+	public class ChartGraphic : Graphic 
 	{
         private RectTransform m_CachedRectTransform = null;
         public RectTransform CachedRectTransform { get { return m_CachedRectTransform ?? (m_CachedRectTransform = GetComponent<RectTransform>());   } }
@@ -20,16 +20,15 @@ namespace BlackFireFramework.Unity
         [SerializeField] private float m_Width = 5f;
         public float Width { get { return m_Width; } set { m_Width = value; } }
 
-        private float m_Y = 0f;
+        [SerializeField] private float m_Y = 0f;
         public float Y { get { return m_Y; } set { m_Y = value;  } }
 
-        private float m_X = 0f;
+        [SerializeField] private float m_X = 0f;
         public float X { get { return m_X; } set { m_X = value; } }
 
 
-        public Stack<Vector3> m_PointQueue = new Stack<Vector3>();
-        public LinkedList<Vector3> m_LinkedList = new LinkedList<Vector3>();
-
+        private Stack<Vector3> m_OriginPointQueue = new Stack<Vector3>();
+        private LinkedList<Vector3> m_LinkedList = new LinkedList<Vector3>();
 
 
         protected override void Awake()
@@ -40,15 +39,32 @@ namespace BlackFireFramework.Unity
 
         private void Init()
         {
-            if (0==m_PointQueue.Count)
+            if (0==m_OriginPointQueue.Count)
             {
-                m_PointQueue.Push(Vector3.zero);
+                m_OriginPointQueue.Push(Vector3.zero);
             }
         }
 
+
+
+        private Vector3 PointHandler(Vector3 point)
+        {
+            var x = Mathf.Clamp(point.x, -Mathf.Abs(X), Mathf.Abs(X));
+            var y = Mathf.Clamp(point.y, -Mathf.Abs(Y), Mathf.Abs(Y));
+
+            //x = (CachedRectTransform.sizeDelta.x/2) * (x / X);
+            //y = (CachedRectTransform.sizeDelta.y/2) * (y / Y);
+
+            //Debug.Log(CachedRectTransform.sizeDelta.x+"  "+ CachedRectTransform.sizeDelta.y+"  "+ point +"   "+ CachedRectTransform.pivot);
+
+            return new Vector3(x,y,point.z);
+        }
+
+
         public void Push(Vector3 point)
         {
-            var quadPoints = Utility.GL.QuadrangleLine(m_PointQueue.Peek(),point,Width);
+            point = PointHandler(point); 
+            var quadPoints = Utility.GL.QuadrangleLine(m_OriginPointQueue.Peek(),point,Width);
 
             if (4 <= m_LinkedList.Count)
             {
@@ -71,15 +87,15 @@ namespace BlackFireFramework.Unity
                 m_LinkedList.AddLast(quadPoints[3]);
             }
 
-            m_PointQueue.Push(point);
+            m_OriginPointQueue.Push(point);
         }
 
         public void Pop()
         {
-            if (1< m_PointQueue.Count)
-                m_PointQueue.Pop();
+            if (1< m_OriginPointQueue.Count)
+                m_OriginPointQueue.Pop();
 
-            if (4<=m_PointQueue.Count)
+            if (4<=m_OriginPointQueue.Count)
             {
                 for (int i = 0; i < 4; i++)
                 {
@@ -89,13 +105,15 @@ namespace BlackFireFramework.Unity
         }
 
 
-
+#if UNITY_EDITOR
 
         protected override void OnValidate()
         {
             Init();
             base.OnValidate();
         }
+
+#endif
 
         protected void Update()
         {
@@ -134,6 +152,7 @@ namespace BlackFireFramework.Unity
             }
         }
 
+        [SerializeField] private float planH;
         private float time=0f;
         private void OnGUI()
         {
@@ -150,8 +169,9 @@ namespace BlackFireFramework.Unity
         {
             while (true)
             {
-                yield return new WaitForSeconds(0.2f);
-                Push(new Vector3(time += 10, Random.Range(-150f,150f), 0f));
+                yield return new WaitForSeconds(0.1f);
+                //X += 10f;
+                Push(new Vector3(time +=10f, planH, 0f));
             }
         }
 

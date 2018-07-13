@@ -1644,20 +1644,24 @@ MonoBehaviour:
     m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: f286ce8fa7efa074a9d0eb790d01a2c4
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/ChartImage.cs
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: 9f67e8d4b6cec4c3fbbcbf34acfabebd
     m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Editor/System/Utility/Square.png
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 44d94fc7f9d5223469bdd977cf57b930
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/ChartImageMat.mat
-    m_exportTo: 
-    m_variantName: 
   - m_assetDatabaseId: fe9a4f43254cd0641befbcd58d7b687b
     m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/Graphic.Demo.unity
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 09c83e521b905b24689ef82e14116051
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/Graphic/ChartGraphic.cs
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 5ecb6a4647c5b9d4983ba1b73ad9f2b3
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC
+    m_exportTo: 
+    m_variantName: 
+  - m_assetDatabaseId: 3b4a857afe673464486c802014ab0a78
+    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/CAACTest.cs
     m_exportTo: 
     m_variantName: 
   m_version: 2
