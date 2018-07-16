@@ -220,9 +220,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/JsonNet/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.dll</HintPath>
     </Reference>
@@ -253,21 +250,23 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\3rd\DB\SQLite\SQLite.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\DB\SQLite\SQLite.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\String.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\Transform.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\ActionQueue.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\FakeSingleton{T}.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\UnityObject{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Ugui\DoubleClickButton.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
@@ -364,6 +363,8 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelViewBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Business\Movement\PlayerController.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DoubleClickButton.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
@@ -395,6 +396,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\CAACTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\FuckingMap.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\Graphic\ChartGraphic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\TestCanvas.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />

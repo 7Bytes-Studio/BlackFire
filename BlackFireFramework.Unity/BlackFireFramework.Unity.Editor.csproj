@@ -265,9 +265,6 @@
     <Reference Include="DotNetZip">
       <HintPath>Assets/BlackFireFramework/Build-In/Editor/Lib/3rd/DotNetZip/DotNetZip.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/JsonNet/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="BlackFireFramework">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.dll</HintPath>
     </Reference>
@@ -306,6 +303,9 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -481,9 +481,9 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageInfoList.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageWindow.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Ugui\Editor\DoubleClickButtonEditor.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\Editor\BlackFireInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\Editor\DoubleClickButtonEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphicResources\LineDraw.shader" />

@@ -14,23 +14,32 @@ namespace BlackFireFramework
 {
 	public sealed class CAACTest : MonoBehaviour 
 	{
+        [SerializeField] private float bili=0.1f;
+        [SerializeField] private FuckingMap m_FuckingMap = null;
 
-        private RectTransform m_CachedRectTransform = null;
-        public RectTransform CachedRectTransform { get { return m_CachedRectTransform ?? (m_CachedRectTransform = GetComponent<RectTransform>()); } }
+        [SerializeField] private Transform m_Cube = null;
 
+        private Vector3 m_LastPosition;
+        private float m_LastAngle;
 
         private void Update()
         {
-
-            if (Input.GetKey(KeyCode.J))
+            if (m_LastPosition==Vector3.zero)
             {
-                CachedRectTransform.localEulerAngles = new Vector3(CachedRectTransform.localEulerAngles.x, CachedRectTransform.localEulerAngles.y, CachedRectTransform.localEulerAngles.z+Time.deltaTime*0.1f);
-            }
-            else if (Input.GetKey(KeyCode.K))
-            {
-                CachedRectTransform.localEulerAngles = new Vector3(CachedRectTransform.localEulerAngles.x, CachedRectTransform.localEulerAngles.y, CachedRectTransform.localEulerAngles.z-Time.deltaTime*0.1f);
+                m_LastPosition = m_Cube.transform.localPosition;
             }
 
+            if (m_LastAngle == 0f)
+            {
+                m_LastAngle = m_Cube.transform.localEulerAngles.y;
+            }
+
+
+            var v = bili*(m_Cube.transform.localPosition - m_LastPosition);
+            var a = m_Cube.transform.localEulerAngles.y - m_LastAngle;
+            m_FuckingMap.Move(v.x,v.z,a);
+            m_LastPosition = m_Cube.transform.localPosition;
+            m_LastAngle = m_Cube.transform.localEulerAngles.y;
         }
 
     }
