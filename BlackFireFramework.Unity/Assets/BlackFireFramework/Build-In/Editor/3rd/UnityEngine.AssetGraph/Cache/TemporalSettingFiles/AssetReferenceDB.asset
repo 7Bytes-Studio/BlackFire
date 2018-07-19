@@ -12,88 +12,28 @@ MonoBehaviour:
   m_Name: AssetReferenceDB
   m_EditorClassIdentifier: 
   m_assets:
-  - m_assetDatabaseId: 3b9f796f4da6cd647bd6e9fa3dfbb199
-    m_importFrom: Assets/BlackFireFramework/Custom/Business
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 7ef31dbf559bd19439afafe545406f0f
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Ugui/Editor
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: bef184dfdbfbdc64aa95dd9b5663f0f1
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Movement
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a6e809dfb9c852d4e8b3a0b0bcb6cc7d
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Ugui
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 634e7e96f80c11a41a8e03a6bb52ab72
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Ugui/DoubleClickButton.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 4bcaadcbc13ec1a40853acb447f91274
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Ugui/Editor/DoubleClickButtonEditor.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 93e9642c627eeae498f2fdd8f3fed875
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 9d84eeb258e65c169f0958973f6d2099
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll.mdb
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: af0406f5930e589db58fb8338d5d91c2
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 878a269ee50954f5843ce9e2d98a44a6
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 69296fe1811d7c043a0ed8d1efe0a124
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/DB/SQLite
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: c25ce635ad978944d8c3b315a2a94563
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/DB/SQLite/Plugins.7z
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: a0e6b42b53f361e43b28f7943f8a501f
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/DB
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3167cf07da2eb6d488e50990e199fa13
-    m_importFrom: Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/DB/SQLite/SQLite.cs
+  - m_assetDatabaseId: 11d56f83c217b49428991733b6572ab3
+    m_importFrom: Assets/BlackFireFramework/Demo/Backpack/Backpack.unity
     m_exportTo: 
     m_variantName: 
   - m_assetDatabaseId: 3c8e784f9942d804d80b3edadb817806
     m_importFrom: Assets/BlackFireFramework/Build-In/Editor/3rd/UnityEngine.AssetGraph/Cache/TemporalSettingFiles/AssetReferenceDB.asset
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: dc98d5b2ba1ec254f812571699bffa07
-    m_importFrom: Assets/BlackFireFramework/Custom/Business/Movement/PlayerController.cs
+  - m_assetDatabaseId: eb3370dade90aff4fb5c297a8567c927
+    m_importFrom: Assets/BlackFireFramework/Demo/Backpack/Module/Impl/SimpleBackpack.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: c9d2d92b03f9c544f82cdde1558ec0a8
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/CAAC.demo.unity
+  - m_assetDatabaseId: c7f8269eac9d3494cbc9bbf66404638e
+    m_importFrom: Assets/BlackFireFramework/Demo/Backpack/UI/BackpackTest.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 9fd92a1e4da8fe048be749fb5c18f0a3
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/Map/Materials
+  - m_assetDatabaseId: 04108e178f7870e4685d60d6d104505b
+    m_importFrom: Assets/BlackFireFramework/Demo/Backpack/UI/Pannel/UBackPackPannelLogic.cs
     m_exportTo: 
     m_variantName: 
-  - m_assetDatabaseId: 6d1da43bcc6dfc6488ee11594017d88b
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/Map/Materials/Down_beijingmap_gai.mat
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: 3b4a857afe673464486c802014ab0a78
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/CAACTest.cs
-    m_exportTo: 
-    m_variantName: 
-  - m_assetDatabaseId: b0284d9fb1b52a745a0c4b3c96e6e396
-    m_importFrom: Assets/BlackFireFramework/Demo/Ugui/CAAC/FuckingMap.cs
+  - m_assetDatabaseId: 16ebeca92ca29e248919ddc9e9cca4f1
+    m_importFrom: Assets/BlackFireFramework/Demo/Backpack/UI/UBackpackStuffLogic.cs
     m_exportTo: 
     m_variantName: 
   m_version: 2

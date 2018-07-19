@@ -19,28 +19,28 @@ namespace BlackFireFramework
 
         [SerializeField] private Transform m_Cube = null;
 
-        private Vector3 m_LastPosition;
-        private float m_LastAngle;
+            private Vector3 m_LastPosition;
+            private float m_LastAngle;
 
-        private void Update()
-        {
-            if (m_LastPosition==Vector3.zero)
+            private void Update()
             {
+                if (m_LastPosition==Vector3.zero)
+                {
+                    m_LastPosition = m_Cube.transform.localPosition;
+                }
+
+                if (m_LastAngle == 0f)
+                {
+                    m_LastAngle = m_Cube.transform.localEulerAngles.y;
+                }
+
+
+                var v = bili*(m_Cube.transform.localPosition - m_LastPosition);
+                var a = m_Cube.transform.localEulerAngles.y - m_LastAngle;
+                m_FuckingMap.Move(v.x,v.z,a);
                 m_LastPosition = m_Cube.transform.localPosition;
-            }
-
-            if (m_LastAngle == 0f)
-            {
                 m_LastAngle = m_Cube.transform.localEulerAngles.y;
             }
-
-
-            var v = bili*(m_Cube.transform.localPosition - m_LastPosition);
-            var a = m_Cube.transform.localEulerAngles.y - m_LastAngle;
-            m_FuckingMap.Move(v.x,v.z,a);
-            m_LastPosition = m_Cube.transform.localPosition;
-            m_LastAngle = m_Cube.transform.localEulerAngles.y;
-        }
 
     }
 }
