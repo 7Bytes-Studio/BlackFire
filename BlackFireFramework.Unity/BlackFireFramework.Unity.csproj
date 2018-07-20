@@ -363,6 +363,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelViewBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Business\Movement\PlayerController.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DoubleClickButton\DoubleClickButton.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DragGraphic\DragGraphic.cs" />

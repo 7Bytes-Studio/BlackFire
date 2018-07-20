@@ -36,4 +36,8 @@ MonoBehaviour:
     m_importFrom: Assets/BlackFireFramework/Demo/Backpack/UI/UBackpackStuffLogic.cs
     m_exportTo: 
     m_variantName: 
+  - m_assetDatabaseId: bbc6268327b0f2241924256767d9b705
+    m_importFrom: Assets/BlackFireFramework/Custom/Business/Ugui/DragGraphic/DragGraphic.cs
+    m_exportTo: 
+    m_variantName: 
   m_version: 2
