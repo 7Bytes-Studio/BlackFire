@@ -37,8 +37,12 @@ namespace BlackFireFramework.Editor
         private SerializedProperty m_SP_ProcessScrowFoldOut = null;
         private SerializedProperty m_SP_ApplyGameSpeedWhenInitialized = null;
         private SerializedProperty m_SP_ApplyFpsWhenInitialized = null;
-        
-            
+        private SerializedProperty m_SP_NeverSleep = null;
+        private SerializedProperty m_SP_ApplyNeverSleep = null;
+        private SerializedProperty m_SP_RunInBackground = null;
+        private SerializedProperty m_SP_ApplyRunInBackground = null;
+
+
         private Type[] m_ImplTypes = null;
         private int m_ProcessPopupIndex = 0;
         private Dictionary<string, bool> m_ImplTypeDic = new Dictionary<string, bool>();
@@ -54,6 +58,10 @@ namespace BlackFireFramework.Editor
             m_SP_ProcessScrowFoldOut = serializedObject.FindProperty("m_ProcessScrowFoldOut");
             m_SP_ApplyGameSpeedWhenInitialized = serializedObject.FindProperty("m_ApplyGameSpeedWhenInitialized");
             m_SP_ApplyFpsWhenInitialized = serializedObject.FindProperty("m_ApplyFpsWhenInitialized");
+            m_SP_NeverSleep = serializedObject.FindProperty("m_NeverSleep");
+            m_SP_ApplyNeverSleep = serializedObject.FindProperty("m_ApplyNeverSleep");
+            m_SP_RunInBackground = serializedObject.FindProperty("m_RunInBackground");
+            m_SP_ApplyRunInBackground = serializedObject.FindProperty("m_ApplyRunInBackground");
 
             ReflectProcessTypesInfo();
         }
@@ -131,6 +139,16 @@ namespace BlackFireFramework.Editor
 
         protected override void OnDrawInspector()
         {
+            var t = (GameManager)target;
+
+            GUILayout.Space(15);
+
+            BlackFireEditorGUI.BoxVerticalLayout(() => {
+
+                EditorGUILayout.PropertyField(m_SP_RunInBackground);
+                m_SP_ApplyRunInBackground.boolValue = EditorGUILayout.ToggleLeft("ApplyRunInBackground", m_SP_ApplyRunInBackground.boolValue);
+
+            });
 
             GUILayout.Space(15);
 
@@ -149,6 +167,15 @@ namespace BlackFireFramework.Editor
                 m_SP_ApplyFpsWhenInitialized.boolValue = EditorGUILayout.ToggleLeft("ApplyFps", m_SP_ApplyFpsWhenInitialized.boolValue);
 
             });
+
+            GUILayout.Space(5);
+
+            BlackFireEditorGUI.BoxVerticalLayout(() => {
+
+                EditorGUILayout.PropertyField(m_SP_NeverSleep);
+                m_SP_ApplyNeverSleep.boolValue = EditorGUILayout.ToggleLeft("ApplyNeverSleep", m_SP_ApplyNeverSleep.boolValue);
+            });
+
 
             GUILayout.Space(5);
 

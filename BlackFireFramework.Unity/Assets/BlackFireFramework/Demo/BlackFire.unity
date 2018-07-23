@@ -298,6 +298,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_NeverSleep
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_ApplyNeverSleep
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_RunInBackground
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_ApplyRunInBackground
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}
   m_IsPrefabParent: 0

@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BFAC6901-2D55-9A57-DE91-538D3F3BAA11}</ProjectGuid>
+    <ProjectGuid>{AC2C2EEB-B73D-D3AA-91F6-97270854DEA6}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <AssemblyName>UnityGameFramework.Editor.dll</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.4.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -196,8 +196,17 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
@@ -208,17 +217,53 @@
     <Reference Include="UnityEngine.Timeline">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:/Develop/Unity2017.4.1f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip">
+      <HintPath>Assets/BlackFireFramework/Build-In/Editor/Lib/3rd/DotNetZip/DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll</HintPath>
@@ -244,179 +289,100 @@
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="GameFramework">
+      <HintPath>Assets/GameFramework/Libraries/GameFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/GameFramework/Libraries/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\3rd\DB\SQLite\SQLite.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\String.Extension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\Transform.Extension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\ActionQueue.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\FakeSingleton{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\UnityObject{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.IO.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Text.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Transform.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Unique.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Event.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Log.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSSqlite.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSText.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\DebuggerStyle.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerModuleGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerStyleChangeCallback.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\DebuggerTemplateGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_EventTopic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Instruction.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Response.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Var.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerInfoGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerProfilerGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Log\DebuggerLogGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\ObjectPool\DebuggerObjectPoolGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Setting\DebuggerSettingGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Editor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Process.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Base\GatewayWorkerProtocol.enum.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Base\GatewayWorkerState.enum.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Player.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportState.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHandlerBigFile.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportEventArgsExtension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportExtension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Download.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.T.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Tcp.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Transport.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.WebSocket.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\ReceiveFilter\BlackFireServerReceiveFilter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\ReceiveFilter\DefaultReceiveFilter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\RequestInfo\BlackFireServerPackageInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\RequestInfo\DefaultPackageInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\TcpClient.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Tcp\UnityTcpClient.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Udp\UdpClient.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\WebSocket\UnityWebSocketClient.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\WebSocket\WebSocketClient.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetAgency.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\Base\IReferenceCounter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\DefaultReferenceCounter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\GUI\DebuggerResourceGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Agency.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.AssetsBundle.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Base.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.delegate.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Resources.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\GUI\DebuggerUguiGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiBehaviourBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiEntity.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Canvas\UguiCanvasLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Canvas\UguiCanvasViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Movement\PlayerController.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DoubleClickButton\DoubleClickButton.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DragGraphic\DragGraphic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\Backpack\Stuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\ORM\ORM.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\BackpackBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\BackpackStuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\IBackpackModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\ORM\ORMBackpackBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\ORM\ORMStuffBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\ORM\SimpleORMBackpack.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\ORM\SimpleORMStuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\SimpleBackpack.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\SimpleBackpackModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Test\BackpackModuleTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\BackpackTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\Pannel\UBackPackPannelLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\UBackpackStuffLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_DBHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_UIHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\GameCanvas.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\WebSocket\WebSocketDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletObject.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\ObjectPoolDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessOne.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessTwo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\CAACTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\FuckingMap.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\Graphic\ChartGraphic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\TestCanvas.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />
+    <ProjectReference Include="UnityGameFramework.Runtime.csproj">
+      <Project>{67A9BF4A-0647-E7AB-D27F-F75FB487D16B}</Project>
+      <Name>UnityGameFramework.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\AssetBundleAnalyzer.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\AssetBundleAnalyzerController.CircularDependencyChecker.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\AssetBundleAnalyzerController.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\AssetBundleAnalyzerController.Stamp.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\AssetsOrder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\DependencyData.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleAnalyzer\ScatteredAssetsOrder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderConfigPathAttribute.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.AssetBundleCode.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.AssetBundleData.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.AssetData.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.BuildReport.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\AssetBundleBuilderController.VersionListData.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\BuildAssetBundle.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleBuilder\IBuildEventHandler.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\Asset.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\AssetBundle.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\AssetBundleCollection.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\AssetBundleCollectionConfigPathAttribute.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\AssetBundleLoadType.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleCollection\AssetBundleType.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditor.AssetBundleFolder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditor.AssetBundleItem.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditor.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditor.MenuState.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditorConfigPathAttribute.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetBundleEditorController.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\AssetSorterType.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\SourceAsset.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\AssetBundleEditor\SourceFolder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\BaseComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\ConfigComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\DataNodeComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\DataTableComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\DebuggerComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\DownloadComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\EntityComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\EventComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\FsmComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\GameFrameworkInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\LocalizationComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\NetworkComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\ObjectPoolComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\ProcedureComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\ReferencePoolComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\ResourceComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\SceneComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\SettingComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\SoundComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\UIComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Inspector\WebRequestComponentInspector.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\BuildSettings.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\BuildSettingsConfigPathAttribute.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\ConfigPathAttribute.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\ContextMenu.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\Help.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\HelperInfo.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\LogRedirection.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\OpenFolder.cs" />
+    <Compile Include="Assets\GameFramework\Scripts\Editor\Misc\Type.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphicResources\LineDraw.shader" />
@@ -424,6 +390,10 @@
     <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\SettingTemplate\setting.shader" />
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\WebSocket\Lib\3rd\SuperSocket.ProtoBase.XML" />
+    <None Include="Assets\GameFramework\Libraries\GameFramework.xml" />
+    <None Include="Assets\GameFramework\Libraries\link.xml" />
+    <None Include="Assets\GameFramework\Scripts\Editor\UnityGameFramework.Editor.asmdef" />
+    <None Include="Assets\GameFramework\Scripts\Runtime\UnityGameFramework.Runtime.asmdef" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
