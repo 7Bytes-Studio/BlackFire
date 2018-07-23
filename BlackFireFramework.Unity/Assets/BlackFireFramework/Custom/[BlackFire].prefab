@@ -292,8 +292,12 @@ MonoBehaviour:
   m_StartFirstProcessWhenInitialized: 1
   m_ApplyGameSpeedWhenInitialized: 1
   m_GameSpeed: 1
+  m_ApplyNeverSleep: 0
+  m_NeverSleep: 0
   m_ApplyFpsWhenInitialized: 1
   m_Fps: 60
+  m_RunInBackground: 0
+  m_ApplyRunInBackground: 0
 --- !u!114 &114943347918137894
 MonoBehaviour:
   m_ObjectHideFlags: 1

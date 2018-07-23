@@ -364,9 +364,9 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Movement\PlayerController.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DoubleClickButton\DoubleClickButton.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DragGraphic\DragGraphic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Movement\SimplePlayerController\SimplePlayerController.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DoubleClickButton\DoubleClickButton.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DragGraphic\DragGraphic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\Backpack\Stuff.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\ORM\ORM.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\BackpackBase.cs" />
@@ -396,6 +396,9 @@
     <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroup.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroupLeader.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />

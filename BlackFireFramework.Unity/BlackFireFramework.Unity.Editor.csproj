@@ -339,7 +339,8 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Editor\Script\Window\Package\PackageWindow.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\Editor\BlackFireInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\Editor\GameInspector.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Business\Ugui\DoubleClickButton\Editor\DoubleClickButtonEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Editor\Menu\DebuggerWindowMenu.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DoubleClickButton\Editor\DoubleClickButtonEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />

@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class PlayerController : MonoBehaviour 
+    public sealed class SimplePlayerController : MonoBehaviour 
 	{
         [SerializeField] private float m_MoveSpeed = 30f;
         [SerializeField] private float m_RotaSpeed = 150f;
