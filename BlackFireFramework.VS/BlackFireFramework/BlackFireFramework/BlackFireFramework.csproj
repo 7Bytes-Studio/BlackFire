@@ -52,6 +52,11 @@
     <Compile Include="Core\Event\Event.delegate.partial.cs" />
     <Compile Include="Core\Event\Event.ExecuteEvents.partial.cs" />
     <Compile Include="Core\Event\Event.Extension.partial.cs" />
+    <Compile Include="Core\Group\Group.ICommand.partial.cs" />
+    <Compile Include="Core\Group\Group.partial.cs" />
+    <Compile Include="Core\Group\Group.IGroupLeader.partial.cs" />
+    <Compile Include="Core\Group\Group.IGroupMember.partial.cs" />
+    <Compile Include="Core\Group\Group.IGroup.partial.cs" />
     <Compile Include="Core\KVS\IKeyValueStorage.cs" />
     <Compile Include="Core\KVS\KVS.cs" />
     <Compile Include="Core\Log\Log.LogFile.partial.cs" />
@@ -121,5 +126,6 @@
   <ItemGroup>
     <Compile Include="Common\Extension\String.Extension.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

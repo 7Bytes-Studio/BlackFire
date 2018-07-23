@@ -419,9 +419,6 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\GUI\GraphicResources\LineDraw.shader" />
-    <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\SettingTemplate\readme.txt" />
-    <None Include="Assets\BlackFireFramework\Build-In\Editor\3rd\UnityEngine.AssetGraph\Editor\SettingTemplate\setting.shader" />
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\WebSocket\Lib\3rd\SuperSocket.ProtoBase.XML" />
   </ItemGroup>
