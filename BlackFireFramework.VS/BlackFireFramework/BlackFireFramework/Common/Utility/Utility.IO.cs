@@ -6,7 +6,7 @@
 
 using System.IO;
 
-namespace BlackFireFramework.Unity
+namespace BlackFireFramework
 {
     public static partial class Utility
     {

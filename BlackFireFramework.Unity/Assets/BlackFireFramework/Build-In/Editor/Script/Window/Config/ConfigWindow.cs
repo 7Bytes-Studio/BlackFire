@@ -54,7 +54,7 @@ namespace BlackFireFramework.Editor
                     else
                     {
                         m_Configuration = BlackFireFrameworkConfig.CreateInstance<BlackFireFrameworkConfig>();
-                        Unity.Utility.IO.ExistsOrCreateFolder(BlackFireEditor.FrameworkCustomRelativePath + "/Resources");
+                        BlackFireFramework.Utility.IO.ExistsOrCreateFolder(BlackFireEditor.FrameworkCustomRelativePath + "/Resources");
                         m_Configuration.PackageServerAPIUrl = m_PackageServerUrl;
                         AssetDatabase.CreateAsset(m_Configuration, BlackFireEditor.FrameworkCustomRelativePath + "/Resources/BlackFireFrameworkConfig.asset");
                     }

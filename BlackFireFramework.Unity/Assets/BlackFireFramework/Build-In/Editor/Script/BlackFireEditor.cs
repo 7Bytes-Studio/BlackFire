@@ -73,15 +73,15 @@ namespace BlackFireFramework.Editor
             var results = AssetDatabase.FindAssets("Custom");
             if (0 == results.Length)
             {
-                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom");
-                Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom/Packages");
+                BlackFireFramework.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom");
+                BlackFireFramework.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/BlackFireFramework/Custom/Packages");
                 AssetDatabase.Refresh();
             }
         }
         private static void MakeUserTempFolder()
         {
-            Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp");
-            Unity.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp/Packages");
+            BlackFireFramework.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp");
+            BlackFireFramework.Utility.IO.ExistsOrCreateFolder(Application.dataPath + "/../Temp/BlackFireFramework.Temp/Packages");
         }
 
 

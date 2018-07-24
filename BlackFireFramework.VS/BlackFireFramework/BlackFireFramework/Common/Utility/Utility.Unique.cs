@@ -6,7 +6,7 @@
 
 using System.Collections.Generic;
 
-namespace BlackFireFramework.Unity
+namespace BlackFireFramework
 {
     public static partial class Utility
     {

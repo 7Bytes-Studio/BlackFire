@@ -46,9 +46,11 @@
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
     <Compile Include="Common\Extension\Object.Extension.cs" />
     <Compile Include="Common\Utility\Utility.Array.cs" />
+    <Compile Include="Common\Utility\Utility.IO.cs" />
     <Compile Include="Common\Utility\Utility.IP.cs" />
     <Compile Include="Common\Utility\Utility.Convertor.cs" />
     <Compile Include="Common\Utility\Utility.Enum.cs" />
+    <Compile Include="Common\Utility\Utility.Unique.cs" />
     <Compile Include="Core\EntityTree\EntityTree.cs" />
     <Compile Include="Core\Event\Event.delegate.partial.cs" />
     <Compile Include="Core\Event\Event.ExecuteEvents.partial.cs" />
