@@ -50,11 +50,17 @@ namespace BlackFireFramework
             return false;
         }
 
+        /// <summary>
+        /// 查询成员的权限。
+        /// </summary>
         public static Permission QueryPermission(string groupName,string memberName)
         {
             return Permission.QueryPermission(groupName,memberName);
         }
 
+        /// <summary>
+        /// 查询成员与小组的关系。
+        /// </summary>
         public static Relationship QueryRelationship(string memberName)
         {
            return Relationship.QueryRelationship(memberName);
