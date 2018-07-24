@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertorTest.cs" />
+    <Compile Include="AttributeTest.cs" />
     <Compile Include="ObjectExtensionTest.cs" />
     <Compile Include="StringExtensionTest.cs" />
     <Compile Include="RecyclableEventArgsTest.cs" />

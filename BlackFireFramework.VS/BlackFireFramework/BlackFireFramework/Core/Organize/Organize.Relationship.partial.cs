@@ -12,56 +12,56 @@ namespace BlackFireFramework
     {
         public class Relationship
         {
-            public string MemberName { get; internal set; }
-            public string[] OwnerGroups { get; internal set; }
+            public long MemberId { get; internal set; }
+            public long[] OwnerGroupIds { get; internal set; }
 
-            private List<string> OwnerGroupList = new List<string>();
+            private List<long> OwnerGroupIdList = new List<long>();
 
-            internal void RecordGroup(string groupName)
+            internal void RecordGroup(long groupId)
             {
-                if (!OwnerGroupList.Contains(groupName))
+                if (!OwnerGroupIdList.Contains(groupId))
                 {
-                    OwnerGroupList.Add(groupName);
+                    OwnerGroupIdList.Add(groupId);
                 }
             }
 
-            internal bool RemoveGroup(string groupName)
+            internal bool RemoveGroup(long groupId)
             {
-                if (OwnerGroupList.Contains(groupName))
+                if (OwnerGroupIdList.Contains(groupId))
                 {
-                    OwnerGroupList.Remove(groupName);
+                    OwnerGroupIdList.Remove(groupId);
                     return true;
                 }
                 return false;
             }
 
-            private static readonly Dictionary<string, Relationship> s_RelationshipDic = new Dictionary<string, Relationship>();
+            private static readonly Dictionary<long, Relationship> s_RelationshipDic = new Dictionary<long, Relationship>();
 
 
 
-            internal static void RecordRelationship(string memberName,string groupName)
+            internal static void RecordRelationship(long memberId,long groupId)
             {
-                if (!s_RelationshipDic.ContainsKey(memberName))
+                if (!s_RelationshipDic.ContainsKey(memberId))
                 {
-                    s_RelationshipDic.Add(memberName,new Relationship());
+                    s_RelationshipDic.Add(memberId, new Relationship());
                 }
-                s_RelationshipDic[memberName].RecordGroup(groupName);
+                s_RelationshipDic[memberId].RecordGroup(groupId);
             }
 
-            internal static Relationship QueryRelationship(string memberName)
+            internal static Relationship QueryRelationship(long memberId)
             {
-                if (s_RelationshipDic.ContainsKey(memberName))
+                if (s_RelationshipDic.ContainsKey(memberId))
                 {
-                    return s_RelationshipDic[memberName];
+                    return s_RelationshipDic[memberId];
                 }
                 return null;
             }
 
-            internal static bool RemoveRelationship(string memberName, string groupName)
+            internal static bool RemoveRelationship(long memberId, long groupId)
             {
-                if (s_RelationshipDic.ContainsKey(memberName))
+                if (s_RelationshipDic.ContainsKey(memberId))
                 {
-                   return s_RelationshipDic[memberName].RemoveGroup(groupName);
+                   return s_RelationshipDic[memberId].RemoveGroup(groupId);
                 }
                 return false;
             }

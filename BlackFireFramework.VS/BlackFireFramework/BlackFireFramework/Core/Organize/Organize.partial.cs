@@ -5,7 +5,6 @@
 //----------------------------------------------------
 
 using System;
-using System.Collections.Generic;
 
 namespace BlackFireFramework
 {
@@ -14,38 +13,61 @@ namespace BlackFireFramework
     /// </summary>
     public static partial class Organize
     {
+
+        /// <summary>
+        /// 遍历小组。
+        /// </summary>
+        public static void Foreach(Action<Group> callback)
+        {
+            Group.Foreach(callback);
+        }
+
         /// <summary>
         /// 创建小组。
         /// </summary>
-        public static T CreateGroup<T>(string groupName,int groupWeight) where T: Group
+        public static bool CreateGroup<T>(long groupId,string groupName,int groupWeight) where T: Group
         {
-            var ins = Utility.Reflection.New<T>();
-            ins.Name = groupName;
-            ins.Weight = groupWeight;
-            Group.RecordGroup(ins);
-            return ins;
+            try
+            {
+                var ins = Utility.Reflection.New<T>();
+                ins.Id = groupId;
+                ins.Name = groupName;
+                ins.Weight = groupWeight;
+                Group.RecordGroup(ins);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public static bool Join(string groupName,GroupMember groupMember,int groupMemberWeight)
+        /// <summary>
+        /// 成员加入小组。
+        /// </summary>
+        public static bool Join(long groupId,GroupMember groupMember,int groupMemberWeight)
         {
-            Relationship.RecordRelationship(groupMember.Name,groupName);
-            var group = Group.QueryGroup(groupName);
+            Relationship.RecordRelationship(groupMember.Id,groupId);
+            var group = Group.QueryGroup(groupId);
             if (null!=group)
             {
-                Permission.RecordPermission(groupName, groupMember.Name,group.Weight, groupMemberWeight);
+                Permission.RecordPermission(groupId, groupMember.Id,group.Weight, groupMemberWeight);
                 return group.JoinGroup(groupMember); 
             }
             return false;
         }
 
-        public static bool Leave(string groupName,string memberName)
+        /// <summary>
+        /// 成员离开小组。
+        /// </summary>
+        public static bool Leave(long groupId,long memberId)
         {
-            var group = Group.QueryGroup(groupName);
+            var group = Group.QueryGroup(groupId);
             if (null != group)
             {
-                Permission.RemovePermission(groupName, memberName);
-                Relationship.RemoveRelationship(memberName,groupName);
-                return group.LeaveGroup(memberName);
+                Permission.RemovePermission(groupId, memberId);
+                Relationship.RemoveRelationship(memberId,groupId);
+                return group.LeaveGroup(memberId);
             }
             return false;
         }
@@ -53,17 +75,79 @@ namespace BlackFireFramework
         /// <summary>
         /// 查询成员的权限。
         /// </summary>
-        public static Permission QueryPermission(string groupName,string memberName)
+        public static Permission QueryPermission(long groupId,long memberId)
         {
-            return Permission.QueryPermission(groupName,memberName);
+            return Permission.QueryPermission(groupId, memberId);
         }
 
         /// <summary>
         /// 查询成员与小组的关系。
         /// </summary>
-        public static Relationship QueryRelationship(string memberName)
+        public static Relationship QueryRelationship(long memberId)
         {
-           return Relationship.QueryRelationship(memberName);
+           return Relationship.QueryRelationship(memberId);
         }
+
+        /// <summary>
+        /// 设置命令接口权限。
+        /// </summary>
+        public static void SetCommandPermission<T>(int permission) where T : ICommand
+        {
+            Command.SetCommandPermission<T>(permission);
+        }
+
+        /// <summary>
+        /// 执行成员命令。
+        /// </summary>
+        public static bool ExecuteCommand<T>(long groupId,long memberId ,CommandCallback<T> callback, bool usePermission = true) where T:ICommand 
+        {
+            var permission = Permission.QueryPermission(groupId,memberId);
+            if (null!= permission)
+            {
+                var groupMember = GroupMember.QueryGroupMember(memberId);
+                if (null != groupMember)
+                {
+                    if (usePermission)
+                    {
+                        var maxPermission = permission.GroupWeight + permission.Weight;
+                        if (maxPermission>=Command.GetCommandPermission<T>()) //权限足够
+                        {
+                            return groupMember.HandleCommand<T>(callback);
+                        }
+                    }
+                    else
+                    {
+                        return groupMember.HandleCommand<T>(callback);
+                    }
+                   
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 执行组命令。
+        /// </summary>
+        public static bool ExecuteCommand<T>(long groupId, CommandCallback<T> callback, bool usePermission = true) where T : ICommand
+        {
+            var group = Group.QueryGroup(groupId);
+            if (null != group)
+            {
+                if (usePermission)
+                {
+                    var maxPermission = group.Weight;
+                    if (maxPermission >= Command.GetCommandPermission<T>()) //权限足够
+                    {
+                        return group.HandleCommand<T>(callback);
+                    }
+                }
+                else
+                {
+                    return group.HandleCommand<T>(callback);
+                }
+            }
+            return false;
+        }
+
     }
 }

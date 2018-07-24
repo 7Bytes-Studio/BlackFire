@@ -95,7 +95,23 @@ namespace BlackFireFramework
 
             #endregion
 
+            #region Attribute
 
+            public static T GetMethodAttribute<T>(Type type,string methodName)where T: Attribute
+            {
+                var mi = type.GetMethod(methodName);
+                if (null!=mi)
+                {
+                    var attributes = mi.GetCustomAttributes(typeof(T),false);
+                    if (0<attributes.Length)
+                    {
+                        return attributes[0] as T;
+                    }
+                }
+                return null;
+            }
+
+            #endregion
         }
     }
 }

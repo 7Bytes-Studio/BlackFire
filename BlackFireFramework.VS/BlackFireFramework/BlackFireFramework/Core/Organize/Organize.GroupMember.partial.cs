@@ -4,12 +4,50 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace BlackFireFramework
 {
-    public abstract class GroupMember
+    public static partial class Organize
     {
-        public string Name { get; protected set; }
+        public abstract class GroupMember
+        {
+            public long Id { get; internal set; }
+            public string Name { get; protected set; }
 
-        public int Ability { get;}
+            public int Ability { get; protected set; }
+
+            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : ICommand
+            {
+                if (this is T)
+                {
+                    commandCallback.Invoke((T)((object)this));
+                    return true;
+                }
+                return false;
+            }
+
+
+            private static readonly Dictionary<long, GroupMember> s_GroupMembers = new Dictionary<long, GroupMember>();
+
+            internal static void RecordGroupMember(GroupMember groupMember)
+            {
+                if (!s_GroupMembers.ContainsKey(groupMember.Id))
+                {
+                    s_GroupMembers.Add(groupMember.Id,groupMember);
+                    return;
+                }
+                throw new System.Exception(string.Format("An instance with Id {0} already exists.", groupMember.Id));
+            }
+
+            internal static GroupMember QueryGroupMember(long groupMemberId)
+            {
+                if (s_GroupMembers.ContainsKey(groupMemberId))
+                {
+                    return s_GroupMembers[groupMemberId];
+                }
+                return null;
+            }
+        }
     }
 }

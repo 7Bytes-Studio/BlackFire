@@ -12,8 +12,8 @@ namespace BlackFireFramework
     {
         public class Permission
         {
-            internal string PermissionOwnerName { get;set; }
-            internal string PermissionOwnerGroupName { get;set; }
+            internal long PermissionOwnerId { get;set; }
+            internal long PermissionOwnerGroupId { get;set; }
 
             public int GroupWeight { get; internal set; }
 
@@ -22,27 +22,27 @@ namespace BlackFireFramework
 
             private static readonly LinkedList<Permission> s_Permissions = new LinkedList<Permission>();
 
-            internal static bool RecordPermission(string groupName,string groupMemberName,int groupWeight,int weigh)
+            internal static bool RecordPermission(long groupId,long groupMemberId,int groupWeight,int weigh)
             {
                 var current = s_Permissions.First;
                 while (null!=current)
                 {
-                    if (current.Value.PermissionOwnerName==groupMemberName&&current.Value.PermissionOwnerGroupName==groupName)
+                    if (current.Value.PermissionOwnerId == groupMemberId && current.Value.PermissionOwnerGroupId== groupId)
                     {
                         return false;
                     }
                     current = current.Next;
                 }
-                s_Permissions.AddLast(new Permission() { PermissionOwnerName = groupMemberName, PermissionOwnerGroupName = groupName, GroupWeight = groupWeight, Weight = weigh });
+                s_Permissions.AddLast(new Permission() { PermissionOwnerId = groupMemberId, PermissionOwnerGroupId = groupId, GroupWeight = groupWeight, Weight = weigh });
                 return true;
             }
 
-            internal static Permission QueryPermission(string groupName,string groupMemberName)
+            internal static Permission QueryPermission(long groupId, long groupMemberId)
             {
                 var current = s_Permissions.First;
                 while (null != current)
                 {
-                    if (current.Value.PermissionOwnerName == groupMemberName && current.Value.PermissionOwnerGroupName == groupName)
+                    if (current.Value.PermissionOwnerId == groupMemberId && current.Value.PermissionOwnerGroupId == groupId)
                     {
                         return current.Value;
                     }
@@ -52,12 +52,12 @@ namespace BlackFireFramework
             }
 
 
-            internal static bool RemovePermission(string groupName, string groupMemberName)
+            internal static bool RemovePermission(long groupId, long groupMemberId)
             {
                 var current = s_Permissions.First;
                 while (null != current)
                 {
-                    if (current.Value.PermissionOwnerName == groupMemberName && current.Value.PermissionOwnerGroupName == groupName)
+                    if (current.Value.PermissionOwnerId == groupMemberId && current.Value.PermissionOwnerGroupId == groupId)
                     {
                         s_Permissions.Remove(current);
                         return true;

@@ -13,3 +13,10 @@ D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\Bla
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CoreCompileInputs.cache
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.pdb
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Network.dll
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Network.pdb
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csprojAssemblyReference.cache
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CopyComplete
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.dll
+C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.pdb

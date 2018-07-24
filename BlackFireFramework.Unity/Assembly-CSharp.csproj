@@ -186,8 +186,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroup.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroupLeader.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Group\UICommonGroup.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />

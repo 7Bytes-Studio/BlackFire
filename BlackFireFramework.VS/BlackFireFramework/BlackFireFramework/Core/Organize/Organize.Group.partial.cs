@@ -13,6 +13,7 @@ namespace BlackFireFramework
     {
         public abstract partial class Group
         {
+            public long Id { get; internal set; }
             public string Name { get; internal set; }
 
             public int Weight { get; internal set; }
@@ -20,53 +21,78 @@ namespace BlackFireFramework
             public virtual int Ability { get {
 
                     int ability = 0;
-                    foreach (var kv in m_GroupMemberDic)
+                    foreach (var v in m_GroupMemberDic.Values)
                     {
-                        ability += kv.Value.Ability;
+                        ability += v.Ability;
                     }
                     return ability;
                 } }
 
+            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : ICommand
+            {
+                if (this is T)
+                {
+                    commandCallback.Invoke((T)((object)this));
+                    return true;
+                }
+                return false;
+            }
 
-            private Dictionary<string,GroupMember> m_GroupMemberDic = new Dictionary<string, GroupMember>();
+
+
+
+
+
+
+
+
+            private Dictionary<long,GroupMember> m_GroupMemberDic = new Dictionary<long, GroupMember>();
+
 
             internal bool JoinGroup(GroupMember groupMember)
             {
-                if (!m_GroupMemberDic.ContainsKey(groupMember.Name))
+                if (!m_GroupMemberDic.ContainsKey(groupMember.Id))
                 {
-                    m_GroupMemberDic.Add(groupMember.Name,groupMember);
+                    m_GroupMemberDic.Add(groupMember.Id,groupMember);
                     return true;
                 }
                 return false;
             }
 
-            internal bool LeaveGroup(string groupMemberName)
+            internal bool LeaveGroup(long groupMemberId)
             {
-                if (m_GroupMemberDic.ContainsKey(groupMemberName))
+                if (m_GroupMemberDic.ContainsKey(groupMemberId))
                 {
-                    m_GroupMemberDic.Remove(groupMemberName);
+                    m_GroupMemberDic.Remove(groupMemberId);
                     return true;
                 }
                 return false;
             }
 
 
-            private static readonly Dictionary<string, Group> s_GroupMDic = new Dictionary<string, Group>();
+            private static readonly Dictionary<long, Group> s_GroupMDic = new Dictionary<long, Group>();
 
+            internal static void Foreach(Action<Group> callback)
+            {
+                foreach (var v in s_GroupMDic.Values)
+                {
+                    callback?.Invoke(v);
+                }
+            }
 
             internal static void RecordGroup(Group group)
             {
-                if (!s_GroupMDic.ContainsKey(group.Name))
+                if (!s_GroupMDic.ContainsKey(group.Id))
                 {
-                    s_GroupMDic.Add(group.Name, group);
+                    s_GroupMDic.Add(group.Id, group);
                 }
             }
 
-            internal static Group QueryGroup(string groupName)
+            internal static Group QueryGroup(long groupId)
             {
-                if (s_GroupMDic.ContainsKey(groupName))
+                if (s_GroupMDic.ContainsKey(groupId))
                 {
-                    return s_GroupMDic[groupName];
+                    return s_GroupMDic[groupId];
                 }
                 return null;
             }

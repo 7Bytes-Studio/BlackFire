@@ -68,7 +68,9 @@ namespace BlackFireFramework.Test
                 throw new NotImplementedException();
             }
 
-            public override ObjectPool.ObjectBase Spawn(Type objectType)
+
+
+            public override ObjectPool.ObjectBase Spawn(Type objectType, Predicate<ObjectPool.ObjectBase> predicate = null, Func<object> argsCallback = null)
             {
                 throw new NotImplementedException();
             }
@@ -143,10 +145,7 @@ namespace BlackFireFramework.Test
 
         private sealed class ObjectTest : ObjectPool.ObjectBase
         {
-            protected override void OnSpawn()
-            {
-                Debug.WriteLine("OnSpawn");
-            }
+
         }
 
     }
