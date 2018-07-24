@@ -52,11 +52,11 @@
     <Compile Include="Core\Event\Event.delegate.partial.cs" />
     <Compile Include="Core\Event\Event.ExecuteEvents.partial.cs" />
     <Compile Include="Core\Event\Event.Extension.partial.cs" />
-    <Compile Include="Core\Group\Group.ICommand.partial.cs" />
-    <Compile Include="Core\Group\Group.partial.cs" />
-    <Compile Include="Core\Group\Group.IGroupLeader.partial.cs" />
-    <Compile Include="Core\Group\Group.IGroupMember.partial.cs" />
-    <Compile Include="Core\Group\Group.IGroup.partial.cs" />
+    <Compile Include="Core\Organize\Organize.Group.partial.cs" />
+    <Compile Include="Core\Organize\Organize.GroupMember.partial.cs" />
+    <Compile Include="Core\Organize\Organize.partial.cs" />
+    <Compile Include="Core\Organize\Organize.Permission.partial.cs" />
+    <Compile Include="Core\Organize\Organize.Relationship.partial.cs" />
     <Compile Include="Core\KVS\IKeyValueStorage.cs" />
     <Compile Include="Core\KVS\KVS.cs" />
     <Compile Include="Core\Log\Log.LogFile.partial.cs" />
