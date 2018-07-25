@@ -6,9 +6,16 @@
 
 namespace BlackFireFramework.Unity
 {
+    /// <summary>
+    /// UI管家。
+    /// </summary>
     public sealed class UIManager : ManagerBase 
 	{
 
+        public void AddUI()
+        {
+
+        }
 	
 	}
 }

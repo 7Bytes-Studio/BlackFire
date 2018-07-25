@@ -10,10 +10,10 @@ using UnityEngine.EventSystems;
 namespace BlackFireFramework.Unity
 {
     /// <summary>
-    /// UIBehaviour inherited from UIBehaviour.
+    /// UguiBehaviourBase inherited from UIBehaviour.
     /// </summary>
-	public class UIBehaviour : UnityEngine.EventSystems.UIBehaviour
-    {
+	public class UguiBehaviourBase : UIBehaviour 
+	{
         #region Transform
 
         /// <summary>
