@@ -15,77 +15,69 @@ namespace BlackFireFramework.Unity
     /// <summary>
     /// 窗口的抽象。
     /// </summary>
-    public class UIWindow : UIBehaviour,IPointerEnterHandler,IPointerExitHandler
+    public class UIWindow : UIBehaviour<IUIWindowLogic>
 	{
-        public long Id { get; private set; }
 
-        public IUIWindowImpl Impl { get; private set; }
+        #region 对外接口
 
-        internal UIManager UIManager { get; set; }
+        private IUIWindowLogic m_Logic = null;
+        public override IUIWindowLogic Logic { get { return m_Logic??(m_Logic=GetComponent<IUIWindowLogic>()); } }
 
+        public WindowInfo WindowInfo { get; private set; }
 
+        public bool IsShowing { get; private set; }
+
+        public void Open()
+        {
+            OnOpen();
+        }
+
+        public void Close()
+        {
+            OnClose();
+        }
+
+        #endregion
 
 
         #region 生命周期
 
-        internal void OnCreate()
+
+        internal void OnCreate(WindowInfo windowInfo)
         {
-            Impl.OnCreate();
+            WindowInfo = windowInfo;
+            Logic.OnCreate(this);
         }
 
-        internal void OnOpen()
+        private void OnOpen()
         {
-            Impl.OnOpen();
+            IsShowing = true;
+            Logic.OnOpen();
         }
 
         internal void OnUpdate()
         {
-            Impl.OnUpdate();
+            Logic.OnUpdate();
         }
 
-        internal void OnClose()
+        private void OnClose()
         {
-            Impl.OnClose();
+            IsShowing = false;
+            Logic.OnClose();
         }
 
         internal void OnDestroyed()
         {
-            Impl.OnDestroyed();
+            Logic.OnDestroyed();
         }
 
         #endregion
 
-        #region PointerHandler
-
-        void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
-        {
-            OnRefocus();
-        }
-
-        void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
-        {
-            OnLostFocus();
-        }
-
-        #endregion
 
         #region 事件
 
-        internal void OnRefocus()
-        {
-            Impl.OnRefocus();
-        }
-
-        internal void OnLostFocus()
-        {
-            Impl.OnLostFocus();
-        }
 
         #endregion
-
-
-
-
 
     }
 }

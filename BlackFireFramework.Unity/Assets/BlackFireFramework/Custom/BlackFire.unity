@@ -194,7 +194,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1989274562
+--- !u!1001 &500852559
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -231,26 +231,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4560137033670976, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
-        type: 2}
-      propertyPath: m_NeverSleep
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
-        type: 2}
-      propertyPath: m_ApplyNeverSleep
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
-        type: 2}
-      propertyPath: m_RunInBackground
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
-        type: 2}
-      propertyPath: m_ApplyRunInBackground
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

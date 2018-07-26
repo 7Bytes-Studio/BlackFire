@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class PlayerLogic : UguiLogicBase 
+    public sealed class PlayerLogic : UIElement 
 	{
         [SerializeField] private bool m_IsLocalPlayer;
         public bool IsLocalPlayer { get { return m_IsLocalPlayer; } set { m_IsLocalPlayer = value; } }
@@ -22,9 +22,8 @@ namespace BlackFireFramework.Unity
 
         public int Fps { get { return m_Fps; } set { m_Fps = value; m_EventFireIntervel = 1 / value; } }
         private float m_EventFireIntervel;
-        protected override void Start()
+        private void Start()
         {
-            base.Start();
             Debug.Log(IsLocalPlayer);
             var img = GetComponent<Image>();
             m_NameText = GetComponentInChildren<Text>();
@@ -57,10 +56,8 @@ namespace BlackFireFramework.Unity
             }
         }
 
-        protected override void Update()
+        private void Update()
         {
-            base.Update();
-
             if (IsLocalPlayer) //如果是本地玩家。
             {
                 m_InputPosition = LocalPlayerInput();

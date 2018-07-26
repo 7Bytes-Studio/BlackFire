@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 4871881631988768}
   - component: {fileID: 114146904018431224}
   m_Layer: 0
-  m_Name: Ugui
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,9 +254,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1773098938196268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff77d0f2129826148a46cd93cd3e725b, type: 3}
+  m_Script: {fileID: 11500000, guid: d47486ee511e3db44a774061f4040fc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IUIEventDataHelperTypeFullName: BlackFireFramework.Unity.DefaultUIEventDataHelper
 --- !u!114 &114513172082017248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,12 +293,12 @@ MonoBehaviour:
   m_StartFirstProcessWhenInitialized: 1
   m_ApplyGameSpeedWhenInitialized: 1
   m_GameSpeed: 1
-  m_ApplyNeverSleep: 0
-  m_NeverSleep: 0
+  m_ApplyNeverSleep: 1
+  m_NeverSleep: 1
   m_ApplyFpsWhenInitialized: 1
   m_Fps: 60
-  m_RunInBackground: 0
-  m_ApplyRunInBackground: 0
+  m_RunInBackground: 1
+  m_ApplyRunInBackground: 1
 --- !u!114 &114943347918137894
 MonoBehaviour:
   m_ObjectHideFlags: 1

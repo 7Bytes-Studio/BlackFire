@@ -27,7 +27,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_1;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ALAN_LOG</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_1;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_1;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;ALAN_LOG</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_1;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -259,21 +259,23 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\Behaviour.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\ILogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\String.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\Transform.Extension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\MonoBehaviourEx.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\UIBehaviourEx.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\ActionQueue.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\FakeSingleton{T}.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\UnityObject{T}.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.IO.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Text.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Transform.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Unique.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
@@ -351,37 +353,23 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Resources.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\GUI\DebuggerUguiGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiBehaviourBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiEntity.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Base\UguiViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Canvas\UguiCanvasLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Canvas\UguiCanvasViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelLogicBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\Ugui\Impl\Panel\UguiPanelViewBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Ugui\UguiManagerGraphicRaycaster.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIElementLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIEventDataHelper.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIEventHandler.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIWindowLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIBehaviour{T}.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIElement.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIWindow.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\WindowInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\BlackFire.Lazy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\GUI\DebuggerUIGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\DefaultUIEventDataHelper.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\UguiUIElement.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\UguiWindowLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Movement\SimplePlayerController\SimplePlayerController.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DoubleClickButton\DoubleClickButton.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DragGraphic\DragGraphic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\Backpack\Stuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Common\ORM\ORM.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\BackpackBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\BackpackStuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\IBackpackModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\ORM\ORMBackpackBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Base\ORM\ORMStuffBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\ORM\SimpleORMBackpack.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\ORM\SimpleORMStuff.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\SimpleBackpack.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Impl\SimpleBackpackModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\Module\Test\BackpackModuleTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\BackpackTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\Pannel\UBackPackPannelLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\BackpackSystem\UI\UBackpackStuffLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
@@ -390,15 +378,14 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\GameCanvas.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\GameWindowLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroup.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\SimpleGroupLeader.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Group\UICommonGroup.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
@@ -415,11 +402,6 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\CAACTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\CAAC\FuckingMap.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\Graphic\ChartGraphic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\TestCanvas.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Ugui\UIDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
