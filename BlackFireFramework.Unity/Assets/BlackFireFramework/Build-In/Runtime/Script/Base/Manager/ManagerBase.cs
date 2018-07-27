@@ -61,7 +61,7 @@ namespace BlackFireFramework.Unity
             BlackFire.ModuleManager.UnRegister<T>();
         }
 
-    protected virtual void OnStart()
+        protected virtual void OnStart()
         {
 
         }
