@@ -22,3 +22,8 @@ C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\Bla
 C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.csproj.CopyComplete
 C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.dll
 C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.pdb
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Game.dll
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Game.pdb
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.csprojResolveAssemblyReference.cache
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.dll
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.pdb

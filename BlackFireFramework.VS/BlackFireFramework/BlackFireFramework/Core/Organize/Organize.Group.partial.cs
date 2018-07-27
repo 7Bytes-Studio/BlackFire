@@ -74,9 +74,10 @@ namespace BlackFireFramework
 
             internal static void Foreach(Action<Group> callback)
             {
+                if(null==callback)return;
                 foreach (var v in s_GroupMDic.Values)
                 {
-                    callback?.Invoke(v);
+                    callback.Invoke(v);
                 }
             }
 

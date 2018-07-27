@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BlackFireFramework.Test</RootNamespace>
     <AssemblyName>BlackFireFramework.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -91,6 +91,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlackFireFramework.Game\BlackFireFramework.Game.csproj">
+      <Project>{5b0e0660-1004-4e0a-8f52-bd53d8920737}</Project>
+      <Name>BlackFireFramework.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlackFireFramework.Network\BlackFireFramework.Network.csproj">
+      <Project>{7dff7d4b-a387-4ace-bad4-3e64a9badcfa}</Project>
+      <Name>BlackFireFramework.Network</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BlackFireFramework\BlackFireFramework.csproj">
       <Project>{b0720c61-5e4b-4c27-a270-4c516810120c}</Project>
       <Name>BlackFireFramework</Name>

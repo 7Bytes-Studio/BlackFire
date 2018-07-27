@@ -27,11 +27,20 @@ namespace BlackFireFramework.Test
                 Debug.WriteLine(name+"  "+poolCapacity);
             }
 
-            public override int Count => throw new NotImplementedException();
+            public override int Count
+            {
+                get { throw new NotImplementedException(); }
+            }
 
-            public override int InCount => throw new NotImplementedException();
+            public override int InCount  
+            {
+                get { throw new NotImplementedException(); }
+            }
 
-            public override int OutCount => throw new NotImplementedException();
+            public override int OutCount            
+            {
+                get { throw new NotImplementedException(); }
+            }
 
             public override void Lock(ObjectPool.ObjectBase @object)
             {

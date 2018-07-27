@@ -19,7 +19,7 @@ namespace BlackFireFramework
         /// <summary>
         /// 参数。
         /// </summary>
-        public T Arg { get; }
+        public T Arg { get; private set; }
 
     }
 }
