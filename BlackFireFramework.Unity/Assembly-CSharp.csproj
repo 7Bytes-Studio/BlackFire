@@ -109,11 +109,6 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Base\GatewayWorkerProtocol.enum.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Base\GatewayWorkerState.enum.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\GatewayWorkerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\GatewayWorker\Player.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportEventArgs.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Base\TransportState.cs" />
@@ -176,10 +171,6 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\GameWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\Game\PlayerStateEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GatewayWorker\GatewayWorkerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />

@@ -9,6 +9,7 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
+    /// <inheritdoc />
     /// <summary>
     /// UI管家。
     /// </summary>
@@ -23,7 +24,6 @@ namespace BlackFireFramework.Unity
             base.OnStart();
             UIEventDataHelper = (IUIEventDataHelper)gameObject.AddComponent( Type.GetType(m_IUIEventDataHelperTypeFullName) );
         }
-
 
         public UIWindow CreateWindow(UIWindow window,WindowInfo windowInfo)
         {
