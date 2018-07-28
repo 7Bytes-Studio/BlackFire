@@ -146,6 +146,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Resources.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\BubblingEvent\IButtonClickHandler.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIElementLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIEventDataHelper.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\IUIEventHandler.cs" />
@@ -155,14 +156,18 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\UIWindow.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Base\WindowInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\BlackFire.Lazy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroup.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroupMember.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\UIDefaultGroup.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\GUI\DebuggerUIGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\DefaultUIEventDataHelper.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\UguiUIElement.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Ugui\UguiWindowLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Movement\SimplePlayerController\SimplePlayerController.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DoubleClickButton\DoubleClickButton.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DragGraphic\DragGraphic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Button\Button.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DoubleClickButton\DoubleClickButton.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DragGraphic\DragGraphic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
@@ -191,6 +196,8 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBoxWindowLogic.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>

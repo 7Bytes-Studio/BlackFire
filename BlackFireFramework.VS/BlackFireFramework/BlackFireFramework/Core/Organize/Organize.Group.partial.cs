@@ -70,12 +70,12 @@ namespace BlackFireFramework
             }
 
 
-            private static readonly Dictionary<long, Group> s_GroupMDic = new Dictionary<long, Group>();
+            private static readonly Dictionary<long, Group> s_GroupDic = new Dictionary<long, Group>();
 
             internal static void Foreach(Action<Group> callback)
             {
                 if(null==callback)return;
-                foreach (var v in s_GroupMDic.Values)
+                foreach (var v in s_GroupDic.Values)
                 {
                     callback.Invoke(v);
                 }
@@ -83,19 +83,31 @@ namespace BlackFireFramework
 
             internal static void RecordGroup(Group group)
             {
-                if (!s_GroupMDic.ContainsKey(group.Id))
+                if (!s_GroupDic.ContainsKey(group.Id))
                 {
-                    s_GroupMDic.Add(group.Id, group);
+                    s_GroupDic.Add(group.Id, group);
                 }
             }
 
             internal static Group QueryGroup(long groupId)
             {
-                if (s_GroupMDic.ContainsKey(groupId))
+                if (s_GroupDic.ContainsKey(groupId))
                 {
-                    return s_GroupMDic[groupId];
+                    return s_GroupDic[groupId];
                 }
                 return null;
+            }
+
+            internal static long QueryGroupId(string groupName)
+            {
+                foreach (var v in s_GroupDic.Values)
+                {
+                    if (v.Name == groupName)
+                    {
+                        return v.Id;
+                    }
+                }
+                return 0L;
             }
 
         }

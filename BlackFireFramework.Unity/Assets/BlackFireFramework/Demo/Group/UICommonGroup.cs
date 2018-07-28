@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BlackFireFramework;
 
-public sealed class UICommonGroup : Organize.Group,IUICommonTest
+public sealed class UICommonTestGroup : Organize.Group,IUICommonTest
 {
     public void HideAllCommonUI()
     {

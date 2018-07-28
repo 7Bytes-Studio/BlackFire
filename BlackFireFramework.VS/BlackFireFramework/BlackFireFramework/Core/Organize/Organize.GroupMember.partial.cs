@@ -12,9 +12,8 @@ namespace BlackFireFramework
     {
         public abstract class GroupMember
         {
-            public long Id { get; internal set; }
+            public long Id { get; protected internal set; }
             public string Name { get; protected set; }
-
             public int Ability { get; protected set; }
 
             protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : ICommand

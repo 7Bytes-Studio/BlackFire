@@ -23,9 +23,15 @@ namespace BlackFireFramework.Unity
         private IUIWindowLogic m_Logic = null;
         public override IUIWindowLogic Logic { get { return m_Logic??(m_Logic=GetComponent<IUIWindowLogic>()); } }
 
-        public WindowInfo WindowInfo { get; private set; }
+        public WindowInfo WindowInfo { get; internal set; }
 
-        public bool IsShowing { get; private set; }
+	    public int Layer
+	    {
+	        get { return Logic.Layer; }
+	        set { Logic.Layer = value; }
+	    }
+
+	    public bool IsShowing { get; private set; }
 
         public void Open()
         {

@@ -22,6 +22,34 @@ namespace BlackFireFramework
             Group.Foreach(callback);
         }
 
+
+        public static long GetGroupId(string groupName)
+        {
+            return Group.QueryGroupId(groupName);
+        }
+
+
+        /// <summary>
+        /// 创建小组。
+        /// </summary>
+        public static bool CreateGroup(Type groupType,long groupId,string groupName,int groupWeight) 
+        {
+            try
+            {
+                Group ins = (Group)Utility.Reflection.New(groupType);
+                ins.Id = groupId;
+                ins.Name = groupName;
+                ins.Weight = groupWeight;
+                Group.RecordGroup(ins);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        
+        
         /// <summary>
         /// 创建小组。
         /// </summary>
@@ -57,6 +85,7 @@ namespace BlackFireFramework
             return false;
         }
 
+        
         /// <summary>
         /// 成员离开小组。
         /// </summary>

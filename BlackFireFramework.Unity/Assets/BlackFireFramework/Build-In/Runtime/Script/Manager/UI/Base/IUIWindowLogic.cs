@@ -8,6 +8,7 @@ namespace BlackFireFramework.Unity
 {
     public interface IUIWindowLogic: ILogic
     {
+        int Layer { get; set; }
         void OnCreate(UIWindow Window);
         void OnOpen();
         void OnUpdate();

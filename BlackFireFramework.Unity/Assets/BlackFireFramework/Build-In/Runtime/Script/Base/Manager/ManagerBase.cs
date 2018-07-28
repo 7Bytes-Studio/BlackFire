@@ -61,14 +61,25 @@ namespace BlackFireFramework.Unity
             BlackFire.ModuleManager.UnRegister<T>();
         }
 
+        /// <summary>
+        /// 模块被启动事件。
+        /// </summary>
         protected virtual void OnStart()
         {
 
         }
+        
+        /// <summary>
+        /// 模块被轮询事件。
+        /// </summary>
         protected virtual void OnUpdate()
         {
 
         }
+        
+        /// <summary>
+        /// 模块被关闭事件。
+        /// </summary>
         protected virtual void OnShutdown()
         {
 

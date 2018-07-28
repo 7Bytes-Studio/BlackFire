@@ -80,7 +80,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Editor\UIInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Editor\UIWindowInspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Editor\Menu\DebuggerWindowMenu.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\DoubleClickButton\Editor\DoubleClickButtonEditor.cs" />
+    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DoubleClickButton\Editor\DoubleClickButtonEditor.cs" />
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>

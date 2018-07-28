@@ -218,7 +218,13 @@ namespace BlackFireFramework.Unity
 
         #region Event
 
-        public virtual void OnCreate(UIWindow Window) { }
+        public int Layer
+        {
+            get { return Canvas.sortingOrder; }
+            set { Canvas.sortingOrder = value; }
+        }
+        
+        public virtual void OnCreate(UIWindow Window) { gameObject.SetActive(false); }
         public virtual void OnOpen() { }
         public virtual void OnUpdate() { }
         public virtual void OnClose() { }

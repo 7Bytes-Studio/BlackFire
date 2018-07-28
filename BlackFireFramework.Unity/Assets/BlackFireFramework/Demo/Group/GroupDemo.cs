@@ -8,7 +8,7 @@ public class GroupDemo : MonoBehaviour {
 
     private void Start()
     {
-        Organize.CreateGroup<UICommonGroup>(1,"UICommonGroup",100);
+        Organize.CreateGroup<UICommonTestGroup>(1,"UICommonGroup",100);
         Organize.SetCommandPermission<IUICommonTest>(100);
         Organize.ExecuteCommand<IUICommonTest>(1,i=>i.HideAllCommonUI());
         Organize.SetCommandPermission<IUICommonTest>(101);

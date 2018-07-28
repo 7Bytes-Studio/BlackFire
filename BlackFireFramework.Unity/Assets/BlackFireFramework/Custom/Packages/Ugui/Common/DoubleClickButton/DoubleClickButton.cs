@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-    public class DoubleClickButton : Button 
+    public class DoubleClickButton : UnityEngine.UI.Button 
 	{
         [SerializeField][Range(0.6f,2.0f)]private float m_DoubleClickIntervel = 0.6f;
         private float m_DoubleClickTimer = 0f;
