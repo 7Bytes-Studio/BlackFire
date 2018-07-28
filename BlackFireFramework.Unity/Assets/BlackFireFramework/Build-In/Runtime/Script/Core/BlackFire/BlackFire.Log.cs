@@ -43,7 +43,7 @@ public sealed partial class BlackFire
             default:
                 break;
         }
-        Log.EnLogFileQueue(logMessage);
+        BlackFireFramework.Log.EnLogFileQueue(logMessage);
     }
 
 
