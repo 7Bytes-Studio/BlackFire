@@ -20,14 +20,23 @@ namespace BlackFireFramework.Unity
         {
             var current = transform;
             UIWindow window = null;
+            T i = default(T);
             while (null!=current)
             {
+                i = current.GetComponent<T>();
+                if (null!=i)
+                {
+                    windowHandleCallback.Invoke(i);
+                    return;
+                }
+
                 window = current.GetComponent<UIWindow>();
                 if (null!=window)
                 {
                     if (window.Logic is T)
                     {
                         windowHandleCallback.Invoke((T)window.Logic);
+                        return;
                     }
                 }
                 current = current.parent;
