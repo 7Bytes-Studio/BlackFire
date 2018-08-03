@@ -62,6 +62,36 @@ namespace BlackFireFramework
             return array;
         }
 
+
+        public static bool Contain<T>(this LinkedList<T> linkedList,Predicate<T> predicate)
+        {
+            var current = linkedList.First;
+            while (null!=current)
+            {
+                if (predicate.Invoke(current.Value))
+                {
+                    return true;
+                }
+                current = current.Next;
+            }
+            return false;
+        }
+
+        public static T Find<T>(this LinkedList<T> linkedList,Predicate<T> predicate)
+        {
+            var current = linkedList.First;
+            while (null!=current)
+            {
+                if (predicate.Invoke(current.Value))
+                {
+                    return current.Value;
+                }
+                current = current.Next;
+            }
+            return default(T);
+        }
+        
+        
     }
 }
 
