@@ -77,6 +77,23 @@ namespace BlackFireFramework.Unity
         [SerializeField] private bool m_StartFirstProcessWhenInitialized;
         public bool StartFirstProcessWhenInitialized { get { return m_StartFirstProcessWhenInitialized; } set { m_StartFirstProcessWhenInitialized = value; } }
 
+        
+        /// <summary>
+        /// 检查并添加流程。
+        /// </summary>
+        private void CheckAndAddProcess(Type type,string processName)
+        {
+            if (BlackFireFramework.Utility.Reflection.HasConstructor(type,typeof(string)))
+            {
+                AddProcess(BlackFireFramework.Utility.Reflection.New(type, m_FirstProcess) as ProcessBase);
+            }
+            else
+            {
+                AddProcess(BlackFireFramework.Utility.Reflection.New(type) as ProcessBase);
+            }
+        }
+
+
         /// <summary>
         /// 初始化流程。
         /// </summary>
@@ -84,13 +101,13 @@ namespace BlackFireFramework.Unity
         {
             CheckFirstProcessOrThrow();
 
-            AddProcess(BlackFireFramework.Utility.Reflection.New(Type.GetType(m_FirstProcess), m_FirstProcess) as ProcessBase);
-
+            CheckAndAddProcess(Type.GetType(m_FirstProcess),m_FirstProcess);
+            
             for (int i = 0; i < m_AvailableProcesses.Length; i++)
             {
                 if (m_AvailableProcesses[i] != m_FirstProcess)
                 {
-                    AddProcess(BlackFireFramework.Utility.Reflection.New(Type.GetType(m_AvailableProcesses[i]), m_AvailableProcesses[i]) as ProcessBase);
+                    CheckAndAddProcess(Type.GetType(m_AvailableProcesses[i]),m_AvailableProcesses[i]);
                 }
             }
 

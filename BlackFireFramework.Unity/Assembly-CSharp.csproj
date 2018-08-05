@@ -190,6 +190,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletObject.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\ObjectPoolDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessNoCtor.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessOne.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessTwo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />

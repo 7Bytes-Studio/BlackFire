@@ -79,7 +79,17 @@ namespace BlackFireFramework
 
             #region Method
 
-
+            public static int GetConstructorCount(Type type)
+            {
+               return type.GetConstructors().Length;
+            }
+            
+            public static bool HasConstructor(Type type,params Type[] types)
+            {
+                return null!=type.GetConstructor(types);
+            }
+            
+            
 
 
             #endregion
