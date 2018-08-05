@@ -138,7 +138,7 @@ namespace BlackFireFramework.Editor
             
             m_SP_FirstProcessIndex.intValue = BlackFireEditorGUI.ArrayPopup("First Process",m_SP_FirstProcessIndex.intValue, selectedProcessList.ToArray());
             m_SP_FirstProcess.stringValue = selectedProcessList[m_SP_FirstProcessIndex.intValue = m_SP_FirstProcessIndex.intValue >= selectedProcessList.Count ? selectedProcessList.Count - 1 : m_SP_FirstProcessIndex.intValue];
-            Debug.Log(m_SP_FirstProcessIndex.intValue);
+//            Debug.Log(m_SP_FirstProcessIndex.intValue);
         }
 
         protected override void OnDrawInspector()
