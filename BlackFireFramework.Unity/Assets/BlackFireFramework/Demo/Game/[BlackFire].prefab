@@ -141,7 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ProcessScrowFoldOut: 1
-  m_FirstProcess: BlackFireFramework.Unity.ProcessOne
+  m_FirstProcess: BlackFireFramework.Unity.ProcessTwo
+  m_FirstProcessIndex: 1
   m_AvailableProcesses:
   - BlackFireFramework.Unity.ProcessOne
   - BlackFireFramework.Unity.ProcessTwo
@@ -149,10 +150,14 @@ MonoBehaviour:
   - BlackFireFramework.Unity.ProcessOne
   - BlackFireFramework.Unity.ProcessTwo
   m_StartFirstProcessWhenInitialized: 1
-  m_ApplyGameSpeedWhenInitialized: 0
+  m_ApplyGameSpeedWhenInitialized: 1
   m_GameSpeed: 1
-  m_ApplyFpsWhenInitialized: 0
+  m_ApplyNeverSleep: 0
+  m_NeverSleep: 0
+  m_ApplyFpsWhenInitialized: 1
   m_Fps: 60
+  m_RunInBackground: 0
+  m_ApplyRunInBackground: 0
 --- !u!114 &114609054617722798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DontDestroy: 1
   m_AssemblyList:
+  - BlackFireFramework.Network
   - BlackFireFramework.Game
   m_Logo: {fileID: 2800000, guid: d4832359e68a10545a898c0d9befcc24, type: 3}
 --- !u!114 &114969824798475856
@@ -179,5 +185,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839e23f9211c57142ac67c9a0f21dc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DebuggerStyle: 0
+  m_DebuggerStyle: 2
   m_WindowScale: 1

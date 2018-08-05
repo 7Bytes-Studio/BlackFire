@@ -25,6 +25,7 @@ namespace BlackFireFramework.Unity
         /// </summary>
         public string FirstProcess { get { return m_FirstProcess; } }
 
+        [SerializeField] private int m_FirstProcessIndex;
 
         [SerializeField] private string[] m_AvailableProcesses = null;
         /// <summary>
@@ -98,6 +99,7 @@ namespace BlackFireFramework.Unity
                 StartFirstProcess();
             }
         }
+        
         private void CheckFirstProcessOrThrow()
         {
             if (m_FirstProcess.IsNullOrEmpty())
