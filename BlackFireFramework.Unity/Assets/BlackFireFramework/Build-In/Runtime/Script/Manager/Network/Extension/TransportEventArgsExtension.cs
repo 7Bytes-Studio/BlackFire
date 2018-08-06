@@ -6,6 +6,7 @@
 
 
 using System.Text;
+using BlackFireFramework.Network;
 
 namespace BlackFireFramework.Unity
 {

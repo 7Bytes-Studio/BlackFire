@@ -15,6 +15,7 @@ using System.Text;
 using BlackFireFramework.Unity;
 using BlackFireFramework;
 using UnityEngine.EventSystems;
+using BlackFireFramework.Network;
 
 namespace Alan
 {

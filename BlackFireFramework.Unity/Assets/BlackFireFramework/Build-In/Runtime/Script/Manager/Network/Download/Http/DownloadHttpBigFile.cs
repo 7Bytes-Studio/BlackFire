@@ -19,7 +19,6 @@ namespace BlackFireFramework.Unity
         public override event EventHandler<DownloadFailureEventArgs> OnDownloadFailure;
         public override event EventHandler<DownloadProgressEventArgs> OnDownloadProgress;
 
-
         private DownloadHandlerBigFile m_DownloadHandlerBigFile = null;
         private UnityWebRequestAsyncOperation m_UnityWebRequestAsyncOperation = null;
 

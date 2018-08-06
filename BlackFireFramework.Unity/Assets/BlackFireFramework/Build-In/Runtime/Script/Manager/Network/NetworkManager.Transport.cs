@@ -6,6 +6,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using BlackFireFramework.Network;
 
 namespace BlackFireFramework.Unity
 {

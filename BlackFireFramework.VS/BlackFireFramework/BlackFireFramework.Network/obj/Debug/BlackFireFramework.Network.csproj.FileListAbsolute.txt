@@ -10,7 +10,6 @@ D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\B
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Network.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Network.pdb
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csprojResolveAssemblyReference.cache
-D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csproj.CoreCompileInputs.cache
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.pdb
 C:\Users\Alan\Desktop\Project\Unity\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Network.dll

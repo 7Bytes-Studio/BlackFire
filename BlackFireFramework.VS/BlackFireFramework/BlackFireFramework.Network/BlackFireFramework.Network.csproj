@@ -30,12 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.10.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc">
+      <HintPath>..\packages\SuperSocket.ClientEngine.0.10.0\lib\net35-client\SuperSocket.ClientEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SuperSocket.ProtoBase, Version=1.7.0.17, Culture=neutral, PublicKeyToken=6c80000676988ebb">
+      <HintPath>..\packages\SuperSocket.ProtoBase.1.7.0.17\lib\net35-client\SuperSocket.ProtoBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebSocket4Net, Version=0.15.2.11, Culture=neutral, PublicKeyToken=eb4e154b696bf72a">
+      <HintPath>..\packages\WebSocket4Net.0.15.2\lib\net35\WebSocket4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Download\Base\DownloadBase.cs" />
@@ -47,12 +59,26 @@
     <Compile Include="Download\DownloadModule.cs" />
     <Compile Include="Export.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transport\Base\TransportBase.cs" />
+    <Compile Include="Transport\Base\TransportEventArgs.cs" />
+    <Compile Include="Transport\Base\TransportState.cs" />
+    <Compile Include="Transport\Tcp\ReceiveFilter\BlackFireServerReceiveFilter.cs" />
+    <Compile Include="Transport\Tcp\ReceiveFilter\DefaultReceiveFilter.cs" />
+    <Compile Include="Transport\Tcp\RequestInfo\BlackFireServerPackageInfo.cs" />
+    <Compile Include="Transport\Tcp\RequestInfo\DefaultPackageInfo.cs" />
+    <Compile Include="Transport\Tcp\TcpClient.cs" />
+    <Compile Include="Transport\Tcp\UnityTcpClient.cs" />
+    <Compile Include="Transport\Websocket\UnityWebSocketClient.cs" />
+    <Compile Include="Transport\Websocket\WebSocketClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlackFireFramework\BlackFireFramework.csproj">
       <Project>{b0720c61-5e4b-4c27-a270-4c516810120c}</Project>
       <Name>BlackFireFramework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

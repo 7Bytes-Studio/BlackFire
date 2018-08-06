@@ -45,6 +45,7 @@
     <Compile Include="Common\EventArgs\RecyclableEventArgs.Extension.cs" />
     <Compile Include="Common\EventArgs\RecyclableEventArgs.cs" />
     <Compile Include="Common\Extension\Object.Extension.cs" />
+    <Compile Include="Common\Pattern\ActionQueue\ActionQueue.cs" />
     <Compile Include="Common\Utility\Utility.Array.cs" />
     <Compile Include="Common\Utility\Utility.IO.cs" />
     <Compile Include="Common\Utility\Utility.IP.cs" />

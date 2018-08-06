@@ -7,6 +7,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
+using BlackFireFramework.Network;
 
 namespace BlackFireFramework.Unity
 {
