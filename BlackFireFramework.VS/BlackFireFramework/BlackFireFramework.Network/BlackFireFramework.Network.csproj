@@ -67,8 +67,10 @@
     <Compile Include="Transport\Tcp\RequestInfo\BlackFireServerPackageInfo.cs" />
     <Compile Include="Transport\Tcp\RequestInfo\DefaultPackageInfo.cs" />
     <Compile Include="Transport\Tcp\TcpClient.cs" />
-    <Compile Include="Transport\Tcp\UnityTcpClient.cs" />
-    <Compile Include="Transport\Websocket\UnityWebSocketClient.cs" />
+    <Compile Include="Transport\Tcp\SyncTcpClient.cs" />
+    <Compile Include="Transport\Udp\SyncUdpClient.cs" />
+    <Compile Include="Transport\Udp\UdpClient.cs" />
+    <Compile Include="Transport\Websocket\SyncWebSocketClient.cs" />
     <Compile Include="Transport\Websocket\WebSocketClient.cs" />
   </ItemGroup>
   <ItemGroup>

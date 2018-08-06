@@ -4,14 +4,14 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using SuperSocket.ClientEngine;
 using System;
-using System.Collections;
+using System.Net;
 using System.Text;
-using System.Threading;
 
 namespace BlackFireFramework.Network
 {
-    public sealed class UnityWebSocketClient : WebSocketClient
+    public class SyncTcpClient : TcpClient
     {
         public override event EventHandler<TransportEventArgs> OnConnect;
         public override event EventHandler<TransportEventArgs> OnMessage;
@@ -19,53 +19,13 @@ namespace BlackFireFramework.Network
         public override event EventHandler<TransportEventArgs> OnError;
 
         private ActionQueue m_ActionQueue = new ActionQueue();
-  
-        public UnityWebSocketClient(string uri,Encoding encoding = null) : base(uri,encoding)
-        {
-            base.OnConnect += UnityWebSocket_OnConnect;
-            base.OnMessage += UnityWebSocket_OnMessage;
-            base.OnError += UnityWebSocket_OnError;
-            base.OnClose += UnityWebSocket_OnClose;
-        }
 
-        private void UnityWebSocket_OnClose(object sender, TransportEventArgs e)
+        public SyncTcpClient(string uri) : base(uri)
         {
-            m_ActionQueue.Enqueue(() => {
-                if (null != this.OnClose)
-                {
-                    this.OnClose.Invoke(this, e);
-                }
-            });
-        }
-
-        private void UnityWebSocket_OnError(object sender, TransportEventArgs e)
-        {
-            m_ActionQueue.Enqueue(() => {
-                if (null != this.OnError)
-                {
-                    this.OnError.Invoke(this, e);
-                }
-            });
-        }
-
-        private void UnityWebSocket_OnConnect(object sender, TransportEventArgs e)
-        {
-            m_ActionQueue.Enqueue(() => {
-                if (null != this.OnConnect)
-                {
-                    this.OnConnect.Invoke(this, e);
-                }
-            });
-        }
-
-        private void UnityWebSocket_OnMessage(object sender, TransportEventArgs e)
-        {
-            m_ActionQueue.Enqueue(() => {
-                if (null != this.OnMessage)
-                {
-                    this.OnMessage.Invoke(this, e);
-                }
-            });
+            base.OnConnect += UnityTcpClient_OnConnect;
+            base.OnMessage += UnityTcpClient_OnMessage;
+            base.OnError +=   UnityTcpClient_OnError;
+            base.OnClose += UnityTcpClient_OnClose;
         }
 
         protected override bool KeepWaiting()
@@ -77,6 +37,47 @@ namespace BlackFireFramework.Network
             }
             return true;
         }
+
+        private void UnityTcpClient_OnClose(object sender, TransportEventArgs e)
+        {
+            m_ActionQueue.Enqueue(() => {
+                if (null != this.OnClose)
+                {
+                    this.OnClose.Invoke(this, e);
+                }
+            });
+        }
+
+        private void UnityTcpClient_OnError(object sender, TransportEventArgs e)
+        {
+            m_ActionQueue.Enqueue(() => {
+                if (null != this.OnError)
+                {
+                    this.OnError.Invoke(this, e);
+                }
+            });
+        }
+
+        private void UnityTcpClient_OnMessage(object sender, TransportEventArgs e)
+        {
+            m_ActionQueue.Enqueue(() => {
+                if (null != this.OnMessage)
+                {
+                    this.OnMessage.Invoke(this, e);
+                }
+            });
+        }
+
+        private void UnityTcpClient_OnConnect(object sender, TransportEventArgs e)
+        {
+            m_ActionQueue.Enqueue(() => {
+                if (null != this.OnConnect)
+                {
+                    this.OnConnect.Invoke(this, e);
+                }
+            });
+        }
+
 
     }
 }

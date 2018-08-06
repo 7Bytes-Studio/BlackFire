@@ -32,7 +32,7 @@ namespace BlackFireFramework.Unity
         public TransportBase CreateUnityWebSocketClient(string transportAlias,string uri,Encoding encoding)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new UnityWebSocketClient(uri,encoding);
+            var ws = new SyncWebSocketClient(uri,encoding);
             AddTransport(transportAlias,ws);
             StartCoroutine(ws);
             return ws;
@@ -42,7 +42,7 @@ namespace BlackFireFramework.Unity
         public TransportBase CreateUnityWebSocketClient(string transportAlias,string uri)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var ws = new UnityWebSocketClient(uri,Encoding.UTF8);
+            var ws = new SyncWebSocketClient(uri,Encoding.UTF8);
             AddTransport(transportAlias, ws);
             StartCoroutine(ws);
             return ws;

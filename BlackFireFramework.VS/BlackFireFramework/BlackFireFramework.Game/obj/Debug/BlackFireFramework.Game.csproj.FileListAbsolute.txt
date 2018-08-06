@@ -1,7 +1,6 @@
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Game.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Game.pdb
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.csprojResolveAssemblyReference.cache
-D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.csproj.CoreCompileInputs.cache
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.pdb
 D:\Workspace\Project\Github\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Runtime\Lib\BlackFireFramework.Game.dll

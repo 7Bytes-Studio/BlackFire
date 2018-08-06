@@ -82,11 +82,11 @@
     <Compile Include="Assets\BlackFireFramework\Custom\Editor\Menu\DebuggerWindowMenu.cs" />
     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DoubleClickButton\Editor\DoubleClickButtonEditor.cs" />
     <None Include="Assets\BlackFireFramework\Build-In\Editor\Lib\3rd\DotNetZip\DotNetZip.xml" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/App/Unity2018.1.1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -343,6 +343,18 @@
     <Reference Include="BlackFireFramework.Network">
       <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Network.dll</HintPath>
     </Reference>
+    <Reference Include="SuperSocket.ClientEngine">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ProtoBase">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ProtoBase.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -360,18 +372,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ProtoBase">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ProtoBase.dll</HintPath>
-    </Reference>
-    <Reference Include="WebSocket4Net">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/WebSocket4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ClientEngine">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ClientEngine.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/App/Unity2018.1.1/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>

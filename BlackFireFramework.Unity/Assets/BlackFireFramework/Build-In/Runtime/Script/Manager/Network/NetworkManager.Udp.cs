@@ -4,30 +4,30 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Text;
-using UnityEngine;
+using System;
 using BlackFireFramework.Network;
 
 namespace BlackFireFramework.Unity
 {
     public sealed partial class NetworkManager
     {
-        public TransportBase CreateTcpClient(string transportAlias,string uri)
+        
+        public TransportBase CreateUdpClient(string transportAlias,string uri)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var tcp = new TcpClient(uri);
-            AddTransport(transportAlias,tcp);
-            return tcp;
+            var udp = new UdpClient(uri);
+            AddTransport(transportAlias,udp);
+            return udp;
         }
 
-        public TransportBase CreateUnityTcpClient(string transportAlias, string uri)
+        public TransportBase CreateUnityUdpClient(string transportAlias, string uri)
         {
             CheckTransportExistsOrThrow(transportAlias);
-            var tcp = new SyncTcpClient(uri);
-            AddTransport(transportAlias, tcp);
-            StartCoroutine(tcp);
-            return tcp;
+            var udp = new SyncUdpClient(uri);
+            AddTransport(transportAlias, udp);
+            StartCoroutine(udp);
+            return udp;
         }
-
+        
     }
 }
