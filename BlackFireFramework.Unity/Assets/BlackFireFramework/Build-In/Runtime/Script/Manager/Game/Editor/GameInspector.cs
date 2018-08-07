@@ -46,7 +46,8 @@ namespace BlackFireFramework.Editor
         private Type[] m_ImplTypes = null;
         private int m_ProcessPopupIndex = 0;
         private Dictionary<string, bool> m_ImplTypeDic = new Dictionary<string, bool>();
-
+        
+        
         private void OnEnable()
         {
             m_GameManager = target as GameManager;

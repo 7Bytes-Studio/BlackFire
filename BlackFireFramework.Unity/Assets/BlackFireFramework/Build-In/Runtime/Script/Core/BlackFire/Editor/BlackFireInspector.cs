@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using BlackFireFramework.Unity;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -18,10 +19,13 @@ namespace BlackFireFramework.Editor
     {
         private bool m_FoldOutAbout = true;
         private bool m_FoldOutSetting = true;
+        private bool m_FoldOutIoC = true;
 
-        private SerializedProperty m_DontDestroyProperty = null;
-        private SerializedProperty m_LogoProperty = null;
-        private SerializedProperty m_AssemblyListProperty = null;
+        private SerializedProperty m_SP_DontDestroy = null;
+        private SerializedProperty m_SP_Logo = null;
+        private SerializedProperty m_SP_AssemblyList = null;
+        private SerializedProperty m_SP_IoCRegisters = null;
+        private SerializedProperty m_SP_AvailableIoCRegisters = null;
         private Texture m_Logo=null;
         private Texture m_LogoRes = null;
 
@@ -33,11 +37,15 @@ namespace BlackFireFramework.Editor
 
         private void OnEnable()
         {
-            m_DontDestroyProperty = serializedObject.FindProperty("m_DontDestroy");
-            m_LogoProperty = serializedObject.FindProperty("m_Logo");
-            m_AssemblyListProperty = serializedObject.FindProperty("m_AssemblyList");
+            m_SP_DontDestroy = serializedObject.FindProperty("m_DontDestroy");
+            m_SP_Logo = serializedObject.FindProperty("m_Logo");
+            m_SP_AssemblyList = serializedObject.FindProperty("m_AssemblyList");
+            m_SP_IoCRegisters = serializedObject.FindProperty("m_IoCRegisters");
+            m_SP_AvailableIoCRegisters = serializedObject.FindProperty("m_AvailableIoCRegisters");
             m_LogoRes = Resources.Load<Texture>("BlackFire.Logo");
-            m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject, m_AssemblyListProperty);
+            m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject, m_SP_AssemblyList);
+
+            ReflectIoCRegisterTypesInfo();
         }
 
         
@@ -46,25 +54,7 @@ namespace BlackFireFramework.Editor
         {
             serializedObject.Update(); //更新被序列化的对象上的数据
             EditorGUILayout.Space();
-
-            if (null == m_LogoRes)
-            {
-                if (null == m_Logo)
-                {
-                    m_Logo = EditorGUILayout.ObjectField(m_LogoProperty.objectReferenceValue, typeof(Texture), true) as Texture;
-                }
-                else
-                {
-                    m_LogoProperty.objectReferenceValue = m_Logo;
-                    BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
-                }
-            }
-            else
-            {
-                m_Logo = Instantiate<Texture>(m_LogoRes);
-                BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
-            }
-
+            DrawLogo();
             EditorGUILayout.Space();
             EditorGUILayout.Space();
 
@@ -87,15 +77,22 @@ namespace BlackFireFramework.Editor
             {
                 BlackFireEditorGUI.BoxVerticalLayout(() => {
                     BlackFireEditorGUI.Label("Mode", Color.green);
-                    m_DontDestroyProperty.boolValue = EditorGUILayout.ToggleLeft("DontDestroy", m_DontDestroyProperty.boolValue);
+                    m_SP_DontDestroy.boolValue = EditorGUILayout.ToggleLeft("DontDestroy", m_SP_DontDestroy.boolValue);
                     BlackFireEditorGUI.Space(2);
                     DrawAssemblyList(); //绘制程序集列表
                 });
 
                 BlackFireEditorGUI.Space(2);
             }
+            
+            
+            if (m_FoldOutIoC = BlackFireEditorGUI.FoldOut("IoC", m_FoldOutIoC, "yellow"))
+            {
+                DrawIoCList();
+                BlackFireEditorGUI.Space(2);
+            }
 
-
+            
 
 
 
@@ -110,6 +107,32 @@ namespace BlackFireFramework.Editor
         }
 
 
+
+
+        private void DrawLogo()
+        {
+            if (null == m_LogoRes)
+            {
+                if (null == m_Logo)
+                {
+                    m_Logo = EditorGUILayout.ObjectField(m_SP_Logo.objectReferenceValue, typeof(Texture), true) as Texture;
+                }
+                else
+                {
+                    m_SP_Logo.objectReferenceValue = m_Logo;
+                    BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
+                }
+            }
+            else
+            {
+                m_Logo = Instantiate<Texture>(m_LogoRes);
+                BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
+            }
+        }
+
+        
+        
+        
 
         private void DrawAssemblyList()
         {
@@ -127,7 +150,56 @@ namespace BlackFireFramework.Editor
 
             GUI.backgroundColor = Color.white;
         }
+        
+        private Dictionary<string, bool> m_ImplTypeDic = new Dictionary<string, bool>();
+        private void DrawIoCList()
+        {
+            BlackFireGUI.ScrollView("BlackFireInspector/IoCView",id=> {
 
+                BlackFireGUI.BoxVerticalLayout(()=> {
+                    for (int i = 0; i < m_SP_IoCRegisters.arraySize; i++)
+                    {
+                        var element = m_SP_IoCRegisters.GetArrayElementAtIndex(i).stringValue;
+                        var selected = m_ImplTypeDic[element];
+                        if (selected)
+                        {
+                            GUI.backgroundColor = Color.green;
+                            m_ImplTypeDic[element] = EditorGUILayout.ToggleLeft(element, selected);
+                            GUI.backgroundColor = Color.white;
+                        }
+                        else
+                        {
+                            m_ImplTypeDic[element] = EditorGUILayout.ToggleLeft(element, selected);
+                        }
+                    }
+
+                });
+
+            }, GUILayout.ExpandHeight(false));
+        }
+        
+        private Type[] m_ImplTypes = null;
+        private void ReflectIoCRegisterTypesInfo()
+        {
+            m_ImplTypes = BlackFireFramework.Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IIoCRegister));
+            m_SP_IoCRegisters.arraySize = m_ImplTypes.Length;
+
+            for (int i = 0; i < m_ImplTypes.Length; i++)
+            {
+                m_SP_IoCRegisters.GetArrayElementAtIndex(i).stringValue = m_ImplTypes[i].FullName;
+                m_ImplTypeDic.Add(m_ImplTypes[i].FullName, false);
+            }
+
+            for (int i = 0; i < m_SP_AvailableIoCRegisters.arraySize; i++)
+            {
+                m_ImplTypeDic[m_SP_AvailableIoCRegisters.GetArrayElementAtIndex(i).stringValue] = true;
+            }
+            serializedObject.ApplyModifiedProperties();
+        }
+        
+        
+        
+        
         private void GetFrameworkReferencedAssemblies()
         {
             var fwAssemblyName = typeof(Framework).Assembly.GetName().Name;
@@ -147,10 +219,10 @@ namespace BlackFireFramework.Editor
                 }
             }
 
-            m_AssemblyListProperty.arraySize = assemblyList.Count;
+            m_SP_AssemblyList.arraySize = assemblyList.Count;
             for (int i = 0; i < assemblyList.Count; i++)
             {
-                m_AssemblyListProperty.GetArrayElementAtIndex(i).stringValue = assemblyList[i];
+                m_SP_AssemblyList.GetArrayElementAtIndex(i).stringValue = assemblyList[i];
             }
 
         }

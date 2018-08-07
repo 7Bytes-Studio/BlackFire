@@ -75,8 +75,8 @@
     <Compile Include="Core\Event\Event.LifeCircle.partial.cs" />
     <Compile Include="Core\Event\Event.cs" />
     <Compile Include="Common\Pattern\ObjectQueue\ObjectQueue{T}.cs" />
-    <Compile Include="Core\IoC\SparrowIoC\API\IBinder.cs" />
-    <Compile Include="Core\IoC\SparrowIoC\API\ISparrowIoC.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Base\IBinder.cs" />
+    <Compile Include="Core\IoC\SparrowIoC\Base\ISparrowIoC.cs" />
     <Compile Include="Core\IoC\SparrowIoC\Extension\IBinderExtension.cs" />
     <Compile Include="Core\IoC\SparrowIoC\Extension\IoCBuildCallback.cs" />
     <Compile Include="Core\IoC\SparrowIoC\Extension\ISparrowIoCExtension.cs" />
