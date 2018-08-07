@@ -34,6 +34,7 @@ namespace BlackFireFramework.Editor
         private SerializedProperty m_SP_AllProcesses = null;
         private SerializedProperty m_SP_AvailableProcesses = null;
         private SerializedProperty m_SP_FirstProcess = null;
+        private SerializedProperty m_SP_FirstProcessIndex = null;
         private SerializedProperty m_SP_ProcessScrowFoldOut = null;
         private SerializedProperty m_SP_ApplyGameSpeedWhenInitialized = null;
         private SerializedProperty m_SP_ApplyFpsWhenInitialized = null;
@@ -44,16 +45,16 @@ namespace BlackFireFramework.Editor
 
 
         private Type[] m_ImplTypes = null;
-        private int m_ProcessPopupIndex = 0;
         private Dictionary<string, bool> m_ImplTypeDic = new Dictionary<string, bool>();
-        
-        
+
         private void OnEnable()
         {
             m_GameManager = target as GameManager;
             m_SP_GameSpeed = serializedObject.FindProperty("m_GameSpeed");
             m_SP_Fps = serializedObject.FindProperty("m_Fps");
             m_SP_FirstProcess = serializedObject.FindProperty("m_FirstProcess");
+            m_SP_FirstProcessIndex= serializedObject.FindProperty("m_FirstProcessIndex");
+            
             m_SP_AllProcesses = serializedObject.FindProperty("m_AllProcesses");
             m_SP_AvailableProcesses = serializedObject.FindProperty("m_AvailableProcesses");
             m_SP_ProcessScrowFoldOut = serializedObject.FindProperty("m_ProcessScrowFoldOut");
@@ -134,8 +135,10 @@ namespace BlackFireFramework.Editor
             {
                 m_SP_AvailableProcesses.GetArrayElementAtIndex(i).stringValue = selectedProcessList[i];
             }
-            BlackFireEditorGUI.ArrayPopup("First Process", ref m_ProcessPopupIndex, selectedProcessList.ToArray());
-            m_SP_FirstProcess.stringValue = selectedProcessList[m_ProcessPopupIndex = m_ProcessPopupIndex >= selectedProcessList.Count ? selectedProcessList.Count - 1 : m_ProcessPopupIndex];
+            
+            m_SP_FirstProcessIndex.intValue = BlackFireEditorGUI.ArrayPopup("First Process",m_SP_FirstProcessIndex.intValue, selectedProcessList.ToArray());
+            m_SP_FirstProcess.stringValue = selectedProcessList[m_SP_FirstProcessIndex.intValue = m_SP_FirstProcessIndex.intValue >= selectedProcessList.Count ? selectedProcessList.Count - 1 : m_SP_FirstProcessIndex.intValue];
+//            Debug.Log(m_SP_FirstProcessIndex.intValue);
         }
 
         protected override void OnDrawInspector()
