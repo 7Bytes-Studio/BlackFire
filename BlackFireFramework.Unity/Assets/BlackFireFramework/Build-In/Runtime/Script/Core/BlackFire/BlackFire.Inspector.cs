@@ -13,9 +13,10 @@ using UnityEngine;
 public sealed partial class BlackFire
 {
 #if UNITY_EDITOR
-   
-    //[SerializeField] private 
-    
+
+    [SerializeField] private bool m_FoldOutAbout=true;
+    [SerializeField] private bool m_FoldOutSetting=true;
+    [SerializeField] private bool m_FoldOutIoC=true;
     
 #endif
 }

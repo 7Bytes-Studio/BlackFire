@@ -56,6 +56,9 @@ MonoBehaviour:
   - BlackFireFramework.Network
   - BlackFireFramework.Game
   m_Logo: {fileID: 0}
+  m_FoldOutAbout: 1
+  m_FoldOutSetting: 1
+  m_FoldOutIoC: 1
   m_IoCRegisters:
   - BlackFireFramework.Unity.IoCRegister1
   - BlackFireFramework.Unity.IoCRegister2
@@ -63,4 +66,7 @@ MonoBehaviour:
   - BlackFireFramework.Unity.IoCRegister11
   - BlackFireFramework.Unity.IoCRegister22
   - BlackFireFramework.Unity.IoCRegister33
-  m_AvailableIoCRegisters: []
+  m_AvailableIoCRegisters:
+  - BlackFireFramework.Unity.IoCRegister1
+  - BlackFireFramework.Unity.IoCRegister2
+  - BlackFireFramework.Unity.IoCRegister3

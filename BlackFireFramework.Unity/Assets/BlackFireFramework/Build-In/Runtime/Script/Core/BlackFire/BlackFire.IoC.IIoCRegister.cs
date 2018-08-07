@@ -13,11 +13,6 @@ using BlackFireFramework;
 public interface IIoCRegister
 {
     /// <summary>
-    /// 注册接口的实现者。
-    /// </summary>
-    string Owner { get; }
-
-    /// <summary>
     /// 注册事件。
     /// </summary>
     /// <param name="ioc">IoC实例。</param>

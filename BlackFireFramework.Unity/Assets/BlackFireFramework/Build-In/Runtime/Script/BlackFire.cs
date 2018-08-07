@@ -46,6 +46,7 @@ public sealed partial class BlackFire : MonoBehaviour
     {
         if(m_DontDestroy)
             DontDestroyOnLoad();
+        StartIoC();
         StartAssemblyManager(this);
         StartModuleManager(this);
         StartUnityManager(this);

@@ -266,6 +266,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AvailableIoCRegisters.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4646230455984016, guid: 746c1daf47d18624d8628ee0778ef997, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -297,6 +307,41 @@ Prefab:
     - target: {fileID: 4646230455984016, guid: 746c1daf47d18624d8628ee0778ef997, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AssemblyList.Array.data[1]
+      value: BlackFireFramework.Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AvailableIoCRegisters.Array.data[3]
+      value: BlackFireFramework.Unity.IoCRegister11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AvailableIoCRegisters.Array.data[4]
+      value: BlackFireFramework.Unity.IoCRegister22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_FoldOutIoC
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_FoldOutSetting
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_FoldOutAbout
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114579126020907304, guid: 746c1daf47d18624d8628ee0778ef997,
+        type: 2}
+      propertyPath: m_AvailableIoCRegisters.Array.data[5]
+      value: BlackFireFramework.Unity.IoCRegister33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 746c1daf47d18624d8628ee0778ef997, type: 2}

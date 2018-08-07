@@ -4,6 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace BlackFireFramework.Unity
@@ -18,63 +19,51 @@ namespace BlackFireFramework.Unity
 
     public sealed class IoCRegister1 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alan"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
         {
+            Debug.Log(this.GetType());
         }
     }
     public sealed class IoCRegister2 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alan"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
-        {
+        { 
+            Debug.Log(this.GetType());
         }
     }
     public sealed class IoCRegister3 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alan"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
         {
+            Debug.Log(this.GetType());
         }
     }
     
     public sealed class IoCRegister11 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alex"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
-        {
+        { 
+            Debug.Log(this.GetType());
         }
     }
     public sealed class IoCRegister22 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alex"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
         {
+            Debug.Log(this.GetType());
         }
     }
     public sealed class IoCRegister33 : IIoCRegister
     {
-        public string Owner
-        {
-            get { return "Alex"; }
-        }
+
         public void OnRegister(ISparrowIoC ioc)
-        {
+        { 
+            Debug.Log(this.GetType());
         }
     }
 

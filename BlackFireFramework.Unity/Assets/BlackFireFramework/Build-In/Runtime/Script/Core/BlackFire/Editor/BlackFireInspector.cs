@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using BlackFireFramework.Unity;
+using Boo.Lang;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -17,15 +18,19 @@ namespace BlackFireFramework.Editor
     [CustomEditor(typeof(BlackFire))]
     public sealed class BlackFireInspector : InspectorBase
     {
-        private bool m_FoldOutAbout = true;
-        private bool m_FoldOutSetting = true;
-        private bool m_FoldOutIoC = true;
 
         private SerializedProperty m_SP_DontDestroy = null;
         private SerializedProperty m_SP_Logo = null;
         private SerializedProperty m_SP_AssemblyList = null;
         private SerializedProperty m_SP_IoCRegisters = null;
         private SerializedProperty m_SP_AvailableIoCRegisters = null;
+        
+        private SerializedProperty m_SP_FoldOutAbout = null;
+        private SerializedProperty m_SP_FoldOutSetting = null;
+        private SerializedProperty m_SP_FoldOutIoC = null;
+        
+        
+        
         private Texture m_Logo=null;
         private Texture m_LogoRes = null;
 
@@ -42,6 +47,10 @@ namespace BlackFireFramework.Editor
             m_SP_AssemblyList = serializedObject.FindProperty("m_AssemblyList");
             m_SP_IoCRegisters = serializedObject.FindProperty("m_IoCRegisters");
             m_SP_AvailableIoCRegisters = serializedObject.FindProperty("m_AvailableIoCRegisters");
+            m_SP_FoldOutAbout = serializedObject.FindProperty("m_FoldOutAbout");
+            m_SP_FoldOutSetting = serializedObject.FindProperty("m_FoldOutSetting");
+            m_SP_FoldOutIoC = serializedObject.FindProperty("m_FoldOutIoC");
+            
             m_LogoRes = Resources.Load<Texture>("BlackFire.Logo");
             m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject, m_SP_AssemblyList);
 
@@ -58,7 +67,7 @@ namespace BlackFireFramework.Editor
             EditorGUILayout.Space();
             EditorGUILayout.Space();
 
-            if (m_FoldOutAbout = BlackFireEditorGUI.FoldOut("About", m_FoldOutAbout,"yellow"))
+            if (m_SP_FoldOutAbout.boolValue = BlackFireEditorGUI.FoldOut("About", m_SP_FoldOutAbout.boolValue,"yellow"))
             {
 
                 BlackFireEditorGUI.BoxVerticalLayout(() => {
@@ -73,7 +82,7 @@ namespace BlackFireFramework.Editor
             }
 
 
-            if (m_FoldOutSetting = BlackFireEditorGUI.FoldOut("Setting", m_FoldOutSetting, "yellow"))
+            if (m_SP_FoldOutSetting.boolValue = BlackFireEditorGUI.FoldOut("Setting", m_SP_FoldOutSetting.boolValue, "yellow"))
             {
                 BlackFireEditorGUI.BoxVerticalLayout(() => {
                     BlackFireEditorGUI.Label("Mode", Color.green);
@@ -86,10 +95,15 @@ namespace BlackFireFramework.Editor
             }
             
             
-            if (m_FoldOutIoC = BlackFireEditorGUI.FoldOut("IoC", m_FoldOutIoC, "yellow"))
+            if (m_SP_FoldOutIoC.boolValue = BlackFireEditorGUI.FoldOut("IoC", m_SP_FoldOutIoC.boolValue, "yellow"))
             {
-                DrawIoCList();
-                BlackFireEditorGUI.Space(2);
+                BlackFireEditorGUI.BoxVerticalLayout(() => {
+                    BlackFireEditorGUI.Label("Registers", Color.green);
+                    DrawIoCList();
+                    BlackFireEditorGUI.Space(2);
+                });
+
+
             }
 
             
@@ -138,20 +152,22 @@ namespace BlackFireFramework.Editor
         {
             BlackFireEditorGUI.Label("Assemblies", Color.green);
             GUILayout.Space(2);
-            GUI.backgroundColor = Color.green;
+            //GUI.backgroundColor = Color.green;
             if (GUILayout.Button("Update"))
             {
                 GetFrameworkReferencedAssemblies();
             }
-            GUI.backgroundColor = Color.white;
-            GUI.backgroundColor = Color.cyan;
+//            GUI.backgroundColor = Color.white;
+//            GUI.backgroundColor = Color.cyan;
             GUILayout.Space(2);
             m_ReorderableList.DoLayoutList();
 
-            GUI.backgroundColor = Color.white;
+           // GUI.backgroundColor = Color.white;
         }
         
         private Dictionary<string, bool> m_ImplTypeDic = new Dictionary<string, bool>();
+        private System.Collections.Generic.List<string> m_SelectedIoCRegisters = new System.Collections.Generic.List<string>();
+        
         private void DrawIoCList()
         {
             BlackFireGUI.ScrollView("BlackFireInspector/IoCView",id=> {
@@ -161,18 +177,33 @@ namespace BlackFireFramework.Editor
                     {
                         var element = m_SP_IoCRegisters.GetArrayElementAtIndex(i).stringValue;
                         var selected = m_ImplTypeDic[element];
-                        if (selected)
-                        {
+                        if (selected) //如果被选择了
+                        {                            
+                            if (!m_SelectedIoCRegisters.Contains(element))
+                            {
+                                m_SelectedIoCRegisters.Add(element);
+                            }
+                            
                             GUI.backgroundColor = Color.green;
                             m_ImplTypeDic[element] = EditorGUILayout.ToggleLeft(element, selected);
                             GUI.backgroundColor = Color.white;
                         }
                         else
                         {
+                            if (m_SelectedIoCRegisters.Contains(element))
+                            {
+                                m_SelectedIoCRegisters.Remove(element);
+                            }
                             m_ImplTypeDic[element] = EditorGUILayout.ToggleLeft(element, selected);
                         }
                     }
 
+                    m_SP_AvailableIoCRegisters.arraySize = m_SelectedIoCRegisters.Count; //设置可用IoC注册数组。
+                    for (int j = 0; j < m_SelectedIoCRegisters.Count; j++)
+                    {
+                        m_SP_AvailableIoCRegisters.GetArrayElementAtIndex(j).stringValue = m_SelectedIoCRegisters[j];
+                    }
+                    
                 });
 
             }, GUILayout.ExpandHeight(false));
@@ -204,7 +235,7 @@ namespace BlackFireFramework.Editor
         {
             var fwAssemblyName = typeof(Framework).Assembly.GetName().Name;
             var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-            List<string> assemblyList = new List<string>();
+            System.Collections.Generic.List<string> assemblyList = new System.Collections.Generic.List<string>();
             for (int i = 0; i < assemblies.Length; i++)
             {
                 if (assemblies[i].GetName().Name.Contains("Assembly-CSharp")) continue; //过滤运行时项目程序集跟编辑器程序集。
