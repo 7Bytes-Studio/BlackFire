@@ -116,6 +116,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportEventArgsExtension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportExtension.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Networker\Networker.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Download.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.T.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Network\Networker\AlanNetworker.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Udp\UdpDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\WebSocket\WebSocketDemo.cs" />
