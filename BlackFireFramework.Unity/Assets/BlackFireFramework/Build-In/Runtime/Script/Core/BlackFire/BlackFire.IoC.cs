@@ -26,7 +26,7 @@ public sealed partial class BlackFire
         var list = s_Instance.m_AvailableIoCRegisters;
         for (int i = 0; i < list.Length; i++)
         {
-            var ins = Utility.Reflection.New(Type.GetType(list[i])) as IIoCRegister;
+            var ins = BlackFireFramework.Utility.Reflection.New(Type.GetType(list[i])) as IIoCRegister;
             ins.OnRegister(IoC);
         }
     }
