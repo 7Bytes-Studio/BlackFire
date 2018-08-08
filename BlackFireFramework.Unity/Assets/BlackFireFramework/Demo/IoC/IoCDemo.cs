@@ -13,9 +13,36 @@ namespace BlackFireFramework.Unity
     {
         private void Start()
         {
-
+            var i = BlackFire.IoC.Build<ISayHello>();
+            Log.Info(i.GetHashCode());
+            i.SayHello();
+            i = BlackFire.IoC.Build<ISayHello>();
+            Log.Info(i.GetHashCode());
+            i.SayHello();
         }
     }
+
+    public interface ISayHello
+    {
+        void SayHello();
+    }
+
+    internal sealed class SayHelloImpl : ISayHello
+    {
+        public void SayHello()
+        {
+            Debug.Log("Alan:Hello!");
+        }
+    }
+    
+    internal sealed class SayHelloZCImpl : ISayHello
+    {
+        public void SayHello()
+        {
+            Debug.Log("ZC:Hello!");
+        }
+    }
+    
 
     public sealed class IoCRegister1 : IIoCRegister
     {
@@ -23,6 +50,8 @@ namespace BlackFireFramework.Unity
         public void OnRegister(ISparrowIoC ioc)
         {
             Debug.Log(this.GetType());
+            //ioc.RegisterType<SayHelloImpl>().As<ISayHello>();
+            ioc.RegisterType<SayHelloZCImpl>().As<ISayHello>();
         }
     }
     public sealed class IoCRegister2 : IIoCRegister
