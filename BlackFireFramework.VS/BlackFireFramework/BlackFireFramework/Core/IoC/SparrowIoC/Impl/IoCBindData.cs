@@ -62,11 +62,15 @@ namespace BlackFireFramework
                 }
                 else
                 {
-                    var clone = (Instance as ICloneable).Clone();
-                    if (null!=clone)
+                    if (Instance is ICloneable)
                     {
+                        var clone = (Instance as ICloneable).Clone();
                         m_InstanceList.Add(clone);
                         return clone;
+                    }
+                    else
+                    {
+                        throw new System.Exception(string.Format("Type '{0}' is not assignable from 'ICloneable' interface.",Instance.GetType()));
                     }
                 }
 

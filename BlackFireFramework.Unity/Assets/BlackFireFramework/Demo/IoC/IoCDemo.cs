@@ -4,8 +4,10 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace BlackFireFramework.Unity
 {
@@ -22,6 +24,10 @@ namespace BlackFireFramework.Unity
         }
     }
 
+    
+    
+    
+    
     public interface ISayHello
     {
         void SayHello();
@@ -35,11 +41,16 @@ namespace BlackFireFramework.Unity
         }
     }
     
-    internal sealed class SayHelloZCImpl : ISayHello
+    internal sealed class SayHelloZCImpl : ISayHello,ICloneable
     {
         public void SayHello()
         {
             Debug.Log("ZC:Hello!");
+        }
+
+        public object Clone()
+        {
+            return new SayHelloZCImpl();
         }
     }
     
@@ -51,7 +62,11 @@ namespace BlackFireFramework.Unity
         {
             Debug.Log(this.GetType());
             //ioc.RegisterType<SayHelloImpl>().As<ISayHello>();
-            ioc.RegisterType<SayHelloZCImpl>().As<ISayHello>();
+            //ioc.RegisterType<SayHelloZCImpl>().As<ISayHello>();
+            //ioc.Register(i=>new SayHelloZCImpl()).As<ISayHello>();
+            //ioc.RegisterInstance(new SayHelloZCImpl()).As<ISayHello>();
+            //ioc.RegisterInstance(new SayHelloImpl()).As<ISayHello>().AsSingleton();
+            ioc.Register(i=>new SayHelloZCImpl()).As<ISayHello>();
         }
     }
     public sealed class IoCRegister2 : IIoCRegister
