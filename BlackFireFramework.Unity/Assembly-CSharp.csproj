@@ -71,9 +71,12 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Screen.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Text.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Texture.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Transform.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\ScreenCapture.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
@@ -194,6 +197,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBoxWindowLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Utility\ScreenDemo.cs" />
     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\SuperSocket.ProtoBase.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

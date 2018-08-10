@@ -4,6 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
 using System.IO;
 
 namespace BlackFireFramework
@@ -29,6 +30,21 @@ namespace BlackFireFramework
             }
 
 
+            public static void SaveFile(string filePath,byte[] data,Action saveCompleteCallback)
+            {
+                var fs = File.Open(filePath, FileMode.Create);
+                fs.BeginWrite(data, 0, data.Length, new AsyncCallback(iar =>
+                {
+                    using (var _fs = iar.AsyncState as FileStream)
+                    {
+                        _fs.EndWrite(iar);
+                        if (null!=saveCompleteCallback)
+                        {
+                            saveCompleteCallback.Invoke();
+                        }
+                    }
+                }), fs);
+            }
 
         }
 
