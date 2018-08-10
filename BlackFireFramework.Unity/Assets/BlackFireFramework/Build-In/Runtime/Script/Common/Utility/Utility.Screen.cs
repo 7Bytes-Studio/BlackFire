@@ -18,9 +18,9 @@ namespace BlackFireFramework.Unity
             /// </summary>
             /// <param name="captureRect"></param>
             /// <returns></returns>
-            public static Texture2D ScreenCapture(Rect captureRect)
+            public static Texture2D ScreenCapture(Rect captureRect,TextureFormat textureFormat)
             {
-                Texture2D photo = new Texture2D((int)captureRect.width,(int)captureRect.height, TextureFormat.RGB24, false);
+                Texture2D photo = new Texture2D((int)captureRect.width,(int)captureRect.height,textureFormat,false);
                 photo.ReadPixels(captureRect, 0, 0, false);
                 photo.Apply();
                 return photo;

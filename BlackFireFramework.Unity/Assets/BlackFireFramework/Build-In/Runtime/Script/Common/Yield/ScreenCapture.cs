@@ -11,14 +11,15 @@ namespace BlackFireFramework.Unity
 {
     public sealed class ScreenCapture : CustomYieldInstruction
     {
-        public ScreenCapture(Rect? captureRect=null,ImageFormat imageFormat=ImageFormat.JPG,string path=null)
+        public ScreenCapture(Rect? captureRect=null,ImageFormat imageFormat=ImageFormat.JPG,string path=null,TextureFormat textureFormat=TextureFormat.RGB24)
         {
             if (null==captureRect)
             {
                 captureRect = new Rect(0f,0f,Screen.width,Screen.height);
             }
             
-            m_Photo = BlackFireFramework.Unity.Utility.Screen.ScreenCapture(captureRect.Value);
+            m_Photo = BlackFireFramework.Unity.Utility.Screen.ScreenCapture(captureRect.Value,textureFormat);
+            
             if (null == path)
             {
                 m_KeepWaiting = true;
@@ -62,7 +63,14 @@ namespace BlackFireFramework.Unity
         {
             get { return m_KeepWaiting; }
         }
-        
+
+
+        public void DestroyPhoto()
+        {
+            UnityEngine.Object.DestroyImmediate(m_Photo);
+            m_Photo = null;
+        }
+
     }
 
     public enum ImageFormat

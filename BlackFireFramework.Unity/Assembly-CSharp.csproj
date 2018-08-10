@@ -197,7 +197,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBoxWindowLogic.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Utility\ScreenDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Utility\Screen\ScreenDemo.cs" />
     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\SuperSocket.ProtoBase.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
