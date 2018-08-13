@@ -225,10 +225,10 @@ namespace BlackFireFramework.Unity
         }
         
         public virtual void OnCreate(UIWindow Window) { gameObject.SetActive(false); }
-        public virtual void OnOpen() { }
+        public virtual void OnOpen() { gameObject.SetActive(true); }
         public virtual void OnUpdate() { }
-        public virtual void OnClose() { }
-        public virtual void OnDestroyed() { }
+        public virtual void OnClose() {  gameObject.SetActive(false); }
+        public virtual void OnDestroyed() { DestroyImmediate(gameObject); }
 
         #endregion
 

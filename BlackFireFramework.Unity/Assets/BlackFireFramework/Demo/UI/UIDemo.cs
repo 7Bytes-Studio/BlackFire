@@ -4,32 +4,47 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System.Collections;
 using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
     public sealed class UIDemo : MonoBehaviour
     {
-        private void Start()
+        private IEnumerator Start()
         {
             BlackFire.Resource.LoadAsync(
                 new ResourceAssetInfo("UI/MessageBoxWindow",typeof(UIWindow)), e =>
                 {
                     
-                    var window = e.AssetAgency.AcquireAsset(this) as UIWindow;
-                    window = Instantiate<UIWindow>(window);
+                    var windowTpl = e.AssetAgency.AcquireAsset(this) as UIWindow;
+                    var window = BlackFire.UI.CreateWindow(windowTpl,1L,"System MessageBox","Default");
                     e.AssetAgency.RestoreAsset(this);
-
-                    BlackFire.UI.CreateWindow(window,new WindowInfo(1,"System MessageBox","Default"));
                     
                     Log.Debug(window.Logic==null);
-                    if (window.Logic is MessageBoxWindowLogic)
+                    window.Open();
+
+                    if (window.Logic is IMessageBoxWindowLogic)
                     {
-                        (window.Logic as MessageBoxWindowLogic).SetContent("@~@");
-                        window.Open();
+                        (window.Logic as IMessageBoxWindowLogic).SetContent("@~@");
                     }
                     
+                    if (window.Logic is IColourfulMessageBoxWindowLogic)
+                    {
+                        (window.Logic as IColourfulMessageBoxWindowLogic).UseColourful();
+                    }
+                    
+                    if (window.Logic is IShakeMessageBoxWindowLogic)
+                    {
+                        (window.Logic as IShakeMessageBoxWindowLogic).Shake();
+                    }
+
                 });
+            
+            yield return new WaitForSeconds(5f);
+
+            BlackFire.UI.DestroyUIWindow(1L);
+            Debug.Log("DestroyWindow Id:"+1L);
         }
     }
 }

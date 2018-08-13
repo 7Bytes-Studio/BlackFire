@@ -11,7 +11,7 @@ public sealed class UICommonTestGroup : Organize.Group,IUICommonTest
     }
 }
 
-public interface IUICommonTest: Organize.ICommand
+public interface IUICommonTest: BlackFireFramework.Event.IEventHandler
 {
     void HideAllCommonUI();
 }

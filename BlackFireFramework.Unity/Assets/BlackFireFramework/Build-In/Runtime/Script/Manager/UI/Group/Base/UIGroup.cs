@@ -8,6 +8,5 @@ namespace BlackFireFramework.Unity
 {
     public class UIGroup : Organize.Group
     {
-
     }
 }

@@ -8,7 +8,6 @@ namespace BlackFireFramework.Unity
 {
     public sealed class UIDefaultGroup : UIGroup
     {
-        
-        
+       
     }
 }

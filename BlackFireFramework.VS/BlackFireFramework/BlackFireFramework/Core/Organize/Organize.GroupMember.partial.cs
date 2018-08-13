@@ -16,7 +16,7 @@ namespace BlackFireFramework
             public string Name { get; protected set; }
             public int Ability { get; protected set; }
 
-            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : ICommand
+            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : Event.IEventHandler
             {
                 if (this is T)
                 {

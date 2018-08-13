@@ -9,24 +9,22 @@ namespace BlackFireFramework.Unity
 {
     public sealed class WindowInfo
     {
-        public WindowInfo(long id, string name, string groupName)
+        public WindowInfo(long id, string name, long groupId,int gmWeight=0)
         {
             Id = id;
             Name = name;
-            GroupId = Organize.GetGroupId(groupName);
-            GroupName = groupName;
+            GroupId = groupId;
+            GroupMemberWeight = gmWeight;
         }
 
         public long Id { get; internal set; }
         public string Name{ get; internal set; }
         public long GroupId { get; internal set; }
-        public string GroupName{ get; internal set; }
+        public int GroupMemberWeight { get; internal set; }
 
-
-        
         public override string ToString()
         {
-            return string.Format("Id : {0}\nName : {1}\nGroupId : {2}\nGroupName : {3}", Id,Name,GroupId,GroupName);
+            return string.Format("Id : {0}\nName : {1}\nGroupId : {2}\n", Id,Name,GroupId);
         }
     }
 }

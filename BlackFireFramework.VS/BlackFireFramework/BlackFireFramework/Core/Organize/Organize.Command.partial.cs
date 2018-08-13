@@ -15,14 +15,14 @@ namespace BlackFireFramework
     public static partial class Organize
     {
 
-        public delegate void CommandCallback<T>(T i) where T:ICommand;
+        public delegate void CommandCallback<T>(T i) where T:Event.IEventHandler;
 
 
         internal static class Command
         {
             private static readonly Dictionary<Type, int> s_CommandPermissonDic = new Dictionary<Type, int>();
 
-            public static void SetCommandPermission<T>(int permission) where T : ICommand
+            public static void SetCommandPermission<T>(int permission) where T : Event.IEventHandler
             {
                 if (!s_CommandPermissonDic.ContainsKey(typeof(T)))
                 {
@@ -32,7 +32,7 @@ namespace BlackFireFramework
                 s_CommandPermissonDic[typeof(T)] = permission;
             }
 
-            public static int GetCommandPermission<T>() where T : ICommand
+            public static int GetCommandPermission<T>() where T : Event.IEventHandler
             {
                 if (s_CommandPermissonDic.ContainsKey(typeof(T)))
                 {
@@ -42,11 +42,6 @@ namespace BlackFireFramework
             }
 
         }
-
-
-        public interface ICommand
-        {
-
-        }
+        
     }
 }

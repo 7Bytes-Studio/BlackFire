@@ -28,7 +28,7 @@ namespace BlackFireFramework
                     return ability;
                 } }
 
-            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : ICommand
+            protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : Event.IEventHandler
             {
                 if (this is T)
                 {

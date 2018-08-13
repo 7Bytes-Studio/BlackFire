@@ -120,7 +120,7 @@ namespace BlackFireFramework
         /// <summary>
         /// 设置命令接口权限。
         /// </summary>
-        public static void SetCommandPermission<T>(int permission) where T : ICommand
+        public static void SetCommandPermission<T>(int permission) where T : Event.IEventHandler
         {
             Command.SetCommandPermission<T>(permission);
         }
@@ -128,7 +128,7 @@ namespace BlackFireFramework
         /// <summary>
         /// 执行成员命令。
         /// </summary>
-        public static bool ExecuteCommand<T>(long groupId,long memberId ,CommandCallback<T> callback, bool usePermission = true) where T:ICommand 
+        public static bool ExecuteCommand<T>(long groupId,long memberId ,CommandCallback<T> callback, bool usePermission = true) where T:Event.IEventHandler 
         {
             var permission = Permission.QueryPermission(groupId,memberId);
             if (null!= permission)
@@ -157,7 +157,7 @@ namespace BlackFireFramework
         /// <summary>
         /// 执行组命令。
         /// </summary>
-        public static bool ExecuteCommand<T>(long groupId, CommandCallback<T> callback, bool usePermission = true) where T : ICommand
+        public static bool ExecuteCommand<T>(long groupId, CommandCallback<T> callback, bool usePermission = true) where T : Event.IEventHandler
         {
             var group = Group.QueryGroup(groupId);
             if (null != group)

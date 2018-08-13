@@ -63,7 +63,7 @@ namespace BlackFireFramework
         }
 
 
-        public static bool Contain<T>(this LinkedList<T> linkedList,Predicate<T> predicate)
+        public static bool Contains<T>(this LinkedList<T> linkedList,Predicate<T> predicate)
         {
             var current = linkedList.First;
             while (null!=current)

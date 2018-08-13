@@ -43,7 +43,22 @@ namespace BlackFireFramework.Unity
             OnClose();
         }
 
-        #endregion
+	    public void Destroy()
+	    {
+	        OnDestroyed();
+	    }
+
+	    #region Unity LifeCircle
+
+		private void Update()
+		{
+			OnUpdate();
+		}
+
+		#endregion
+	    
+	    
+	    #endregion
 
 
         #region 生命周期
