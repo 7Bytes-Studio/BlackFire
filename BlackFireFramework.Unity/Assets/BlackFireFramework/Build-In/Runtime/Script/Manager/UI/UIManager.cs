@@ -32,6 +32,7 @@ namespace BlackFireFramework.Unity
 			return Organize.CreateGroup<T>(groupId,groupName,groupWeight);
 		}
 
+		
 		private bool Join(string groupName, UIGroupMember uiGroupMember, int groupMemberWeight)
 		{
 		 	var groupId = Organize.GetGroupId(groupName);

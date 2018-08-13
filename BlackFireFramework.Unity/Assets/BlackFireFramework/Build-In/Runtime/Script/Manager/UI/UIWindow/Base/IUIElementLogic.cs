@@ -9,7 +9,7 @@ namespace BlackFireFramework.Unity
     public delegate void WindowHandleCallback<T>(T i) where T : IUIEventHandler;
 
     /// <summary>
-    /// 窗口的UI原色的逻辑接口类。
+    /// 窗口的UI元素的逻辑接口类。
     /// </summary>
     public interface IUIElementLogic : ILogic
     {
