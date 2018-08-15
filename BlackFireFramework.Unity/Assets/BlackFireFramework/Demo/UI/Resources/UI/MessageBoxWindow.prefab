@@ -263,9 +263,6 @@ MonoBehaviour:
   m_Alpha: 1
   m_Interactable: 1
   m_TextContent: {fileID: 114013803276886406}
-  shake: 1000
-  shakeAmount: 0.7
-  decreaseFactor: 1
 --- !u!114 &114150069577118064
 MonoBehaviour:
   m_ObjectHideFlags: 1

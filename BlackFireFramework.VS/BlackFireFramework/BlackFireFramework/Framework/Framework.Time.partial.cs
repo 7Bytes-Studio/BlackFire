@@ -9,7 +9,7 @@ using System;
 namespace BlackFireFramework
 {
     /// <summary>
-    /// 框架时间类。
+    /// 框架时间轴。
     /// </summary>
     public static partial class Framework
     {
