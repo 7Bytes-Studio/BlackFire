@@ -8,6 +8,6 @@ using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {
-    private static INetworkManager s_Network = null;
-    public static INetworkManager Network { get { return s_Network = (s_Network ?? GetManager<INetworkManager>()); } }
+    private static IDebuggerManager s_Debugger = null;
+    public static IDebuggerManager Debugger { get { return s_Debugger = (s_Debugger ?? GetManager<IDebuggerManager>()); } }
 }

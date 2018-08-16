@@ -15,7 +15,7 @@ namespace BlackFireFramework.Unity
     /// <summary>
     /// UI管家。
     /// </summary>
-    public sealed partial class UIManager : ManagerBase 
+    public sealed partial class UIManager : ManagerBase,IUIManager
 	{
         [SerializeField] private string m_IUIEventDataHelperTypeFullName = string.Empty;
 

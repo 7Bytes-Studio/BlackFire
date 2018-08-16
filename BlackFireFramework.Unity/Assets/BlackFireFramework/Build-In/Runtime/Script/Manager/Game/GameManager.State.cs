@@ -13,8 +13,8 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-	public sealed partial class GameManager
-    {
+	public sealed partial class GameManager 
+	{
         private void InitState()
         {
 

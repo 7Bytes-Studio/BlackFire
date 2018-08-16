@@ -68,7 +68,7 @@ namespace BlackFireFramework.Unity
         bool LeaveUIGroup(long groupId,long uiGroupMemberId);
 
         /// <summary>
-        /// 给组成员下达命令。
+        /// 下达命令。
         /// </summary>
         /// <param name="groupId">组Id。</param>
         /// <param name="callback">命令会调。</param>

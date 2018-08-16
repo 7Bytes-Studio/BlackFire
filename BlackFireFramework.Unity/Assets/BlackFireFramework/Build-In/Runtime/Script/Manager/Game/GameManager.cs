@@ -14,7 +14,7 @@ using BlackFireFramework.Game;
 
 namespace BlackFireFramework.Unity
 {
-	public sealed partial class GameManager : ManagerBase
+	public sealed partial class GameManager : ManagerBase,IGameManager
     {
 
         /// <summary>

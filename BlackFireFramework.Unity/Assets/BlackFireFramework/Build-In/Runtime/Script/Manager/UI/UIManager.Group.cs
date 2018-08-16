@@ -15,8 +15,8 @@ namespace BlackFireFramework.Unity
     /// <summary>
     /// UI管家。
     /// </summary>
-    public sealed partial class UIManager 
-	{
+    public sealed partial class UIManager
+    {
 
 		public bool CreateUIGroup<T>(long groupId, string groupName, int groupWeight) where T : UIGroup
 		{
@@ -24,7 +24,7 @@ namespace BlackFireFramework.Unity
 		}
 		
 		private Dictionary<long,List<UIGroupMember>> m_UIGroupMembersDic = new Dictionary<long, List<UIGroupMember>>();
-		private bool JoinUIGroup(long groupId,UIGroupMember uiGroupMember, int groupMemberWeight)
+		public bool JoinUIGroup(long groupId,UIGroupMember uiGroupMember, int groupMemberWeight)
 		{
 			var joinResult = m_UIGroupModule.JoinUIGroup(groupId,uiGroupMember,groupMemberWeight);
 			if (joinResult) //如果加入成功。

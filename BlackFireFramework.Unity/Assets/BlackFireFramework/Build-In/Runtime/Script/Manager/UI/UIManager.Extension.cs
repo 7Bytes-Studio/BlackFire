@@ -14,18 +14,18 @@ namespace BlackFireFramework.Unity
     public static class UIManagerExtension
 	{
 
-		public static UIWindow CreateWindow(this UIManager uiManager,UIWindow windowTpl,long id, string name, long groupId)
+		public static UIWindow CreateWindow(this IUIManager uiManager,UIWindow windowTpl,long id, string name, long groupId)
 		{
 			return uiManager.CreateWindow(windowTpl,new WindowInfo(id,name,groupId));
 		}
 
-		public static UIWindow CreateWindow(this UIManager uiManager,UIWindow windowTpl,long id, string name, string groupName)
+		public static UIWindow CreateWindow(this IUIManager uiManager,UIWindow windowTpl,long id, string name, string groupName)
 		{
 			var groupId = uiManager.QueryUIGroupId( groupName );
 			return uiManager.CreateWindow(windowTpl,new WindowInfo( id, name, groupId ));
 		}
 		
-		public static bool ExecuteCommand<T>(this UIManager uiManager,UIWindow window, UICommandCallback<T> callback) where T : Event.IEventHandler
+		public static bool ExecuteCommand<T>(this IUIManager uiManager,UIWindow window, UICommandCallback<T> callback) where T : Event.IEventHandler
 		{
 			return uiManager.ExecuteCommand<T>(window.WindowInfo.GroupId, callback);
 		}

@@ -8,7 +8,7 @@ using System;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed partial class ResourceManager : ManagerBase 
+    public sealed partial class ResourceManager : ManagerBase ,IResourceManager
 	{
         protected override void OnStart()
         {

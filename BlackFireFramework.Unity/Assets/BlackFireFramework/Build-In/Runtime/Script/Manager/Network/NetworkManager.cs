@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed partial class NetworkManager : ManagerBase
+    public sealed partial class NetworkManager : ManagerBase,INetworkManager
     {
         private IDownloadModule m_DownloadModule = null;
 

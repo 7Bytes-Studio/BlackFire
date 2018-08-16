@@ -17,8 +17,8 @@ namespace BlackFireFramework.Unity
     /// <summary>
     /// 调试器管家。
     /// </summary>
-	public sealed partial class DebuggerManager : ManagerBase 
-	{
+	public sealed partial class DebuggerManager : ManagerBase, IDebuggerManager
+    {
         #region Public
 
         public float WindowScale { get { return m_WindowScale; } set { m_WindowScale = value; } }
@@ -118,8 +118,6 @@ namespace BlackFireFramework.Unity
 
 
         #region Private
-
-      
 
         private void DrawMiniDebugger(string title)
         {
@@ -311,7 +309,8 @@ namespace BlackFireFramework.Unity
         {
             m_MiniDebuggerHexColor = hexColor;
         }
-        private string GetFpsString()
+     
+	    private string GetFpsString()
         {
             var fps = Unity.Utility.Game.Fps();
             if (HasErrorOrException)

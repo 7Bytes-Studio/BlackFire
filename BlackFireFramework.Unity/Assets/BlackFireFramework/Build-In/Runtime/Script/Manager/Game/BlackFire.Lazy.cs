@@ -8,7 +8,7 @@ using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {
-    private static GameManager s_Game = null;
-    public static GameManager Game { get { return s_Game = (s_Game ?? GetManager<GameManager>()); } }
+    private static IGameManager s_Game = null;
+    public static IGameManager Game { get { return s_Game = (s_Game ?? GetManager<IGameManager>()); } }
 
 }
