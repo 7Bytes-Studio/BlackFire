@@ -155,6 +155,40 @@ namespace BlackFireFramework
         }
 
         /// <summary>
+        /// 执行成员命令。
+        /// </summary>
+        public static bool ExecuteCommand<T>(long groupId,CommandCallback<T> callback,bool orderGroupMembers, bool usePermission = true) where T:Event.IEventHandler 
+        {
+            var group = Group.QueryGroup(groupId);
+            var members = group.AcquirAllGroupMembers();
+            foreach (var member in members)
+            {
+                var permission = Permission.QueryPermission(group.Id,member.Id);
+                if (null!= permission)
+                {
+                    if (null != member)
+                    {
+                        if (usePermission)
+                        {
+                            var maxPermission = permission.GroupWeight + permission.Weight;
+                            if (maxPermission>=Command.GetCommandPermission<T>()) //权限足够
+                            {
+                                return member.HandleCommand<T>(callback);
+                            }
+                        }
+                        else
+                        {
+                            return member.HandleCommand<T>(callback);
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        
+        
+        
+        /// <summary>
         /// 执行组命令。
         /// </summary>
         public static bool ExecuteCommand<T>(long groupId, CommandCallback<T> callback, bool usePermission = true) where T : Event.IEventHandler

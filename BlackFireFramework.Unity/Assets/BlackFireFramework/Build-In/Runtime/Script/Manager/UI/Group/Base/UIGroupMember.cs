@@ -15,6 +15,20 @@ namespace BlackFireFramework.Unity
             Name = window.WindowInfo.Name;
         }
         
+        
+        
         public UIWindow Window { get; private set; }
+
+
+        
+        protected override bool HandleCommand<T>(Organize.CommandCallback<T> commandCallback)
+        {
+            if (null!=Window && null!=Window.Logic && Window.Logic is T)
+            {
+                commandCallback.Invoke((T)(object) Window.Logic);
+                return true;
+            }
+            return false;
+        }
     }
 }

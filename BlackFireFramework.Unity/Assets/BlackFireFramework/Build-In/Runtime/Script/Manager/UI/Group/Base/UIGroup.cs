@@ -10,9 +10,39 @@ namespace BlackFireFramework.Unity
 {
     public class UIGroup : Organize.Group
     {
-        public virtual IEnumerable<UIGroupMember> GetUIGroupMembers()
+        protected override bool HandleCommand<T>(Organize.CommandCallback<T> commandCallback)
         {
-           return BlackFire.UI.GetUIGroupMembers(Id);
+            if (typeof(IUIGroupCommand).IsAssignableFrom(typeof(T))) //组命令。
+            {
+                return base.HandleCommand<T>(commandCallback);
+            }
+            else if (typeof(IUIGroupMemberCommand).IsAssignableFrom(typeof(T))) //成员命令。
+            {
+                var members = AcquirAllGroupMembers();
+                foreach (var member in members)
+                {
+                    var result = Organize.ExecuteCommand(this.Id, member.Id, commandCallback, false);
+                    if (result)
+                    {
+                        return true;
+                    }
+                }
+            }
+            else if (typeof(IUIGroupMembersCommand).IsAssignableFrom(typeof(T))) //成员命令。
+            {
+                var members = AcquirAllGroupMembers();
+                bool hasHandler = false;
+                foreach (var member in members)
+                {
+                    var result = Organize.ExecuteCommand(this.Id, member.Id, commandCallback, false);
+                    if (result)
+                    {
+                        hasHandler = true;
+                    }
+                }
+                return hasHandler;
+            }
+            return false;
         }
     }
 }

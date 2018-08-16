@@ -38,12 +38,10 @@ namespace BlackFireFramework
                 return false;
             }
 
-
-
-
-
-
-
+            public IEnumerable<GroupMember> AcquirAllGroupMembers()
+            {
+                return m_GroupMemberDic.Values;
+            }
 
 
             private Dictionary<long,GroupMember> m_GroupMemberDic = new Dictionary<long, GroupMember>();
@@ -59,6 +57,7 @@ namespace BlackFireFramework
                 return false;
             }
 
+           
             internal bool LeaveGroup(long groupMemberId)
             {
                 if (m_GroupMemberDic.ContainsKey(groupMemberId))

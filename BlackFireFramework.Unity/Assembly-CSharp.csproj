@@ -144,6 +144,9 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\BlackFire.Lazy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupCommand.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMemberCommand.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMembersCommand.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventDataHelper.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventModule.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Impl\DefaultUIEventDataHelper.cs" />

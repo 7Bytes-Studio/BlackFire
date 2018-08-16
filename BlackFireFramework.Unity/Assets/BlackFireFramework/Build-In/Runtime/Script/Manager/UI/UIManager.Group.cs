@@ -84,6 +84,11 @@ namespace BlackFireFramework.Unity
 			return m_UIGroupModule.ExecuteCommand<T>(groupId, callback);
 		}
 
+		/// <summary>
+		/// 通过UI小组名查询UI组Id。
+		/// </summary>
+		/// <param name="uiGroupName">UI小组名。</param>
+		/// <returns>UI组Id。</returns>
 		public long QueryUIGroupId(string uiGroupName)
 		{
 			return m_UIGroupModule.QueryUIGroupId(uiGroupName);
