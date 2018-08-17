@@ -28,6 +28,5 @@ namespace BlackFireFramework.Unity
             StartCoroutine(tcp);
             return tcp;
         }
-
     }
 }

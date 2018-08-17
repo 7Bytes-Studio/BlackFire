@@ -94,12 +94,5 @@ public sealed partial class BlackFire : MonoBehaviour
 
 
     #endregion
-
-
-
-
-
-
-
 }
 
