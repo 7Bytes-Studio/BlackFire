@@ -9,7 +9,7 @@ using SuperSocket.ProtoBase;
 
 namespace BlackFireFramework.Network
 {
-    public sealed class BlackFireServerPackageInfo : IPackageInfo<string>
+    public sealed class BlackFireServerPackageInfo : SuperSocket.ProtoBase.IPackageInfo<string>
     {
         public BlackFireServerPackageInfo(string key, string json)
         {

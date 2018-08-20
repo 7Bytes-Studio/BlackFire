@@ -5,6 +5,7 @@
 //----------------------------------------------------
 
 using System.Net;
+using System.Text;
 using UnityEngine;
 using BlackFireFramework.Network;
 
@@ -40,11 +41,15 @@ namespace BlackFireFramework.Unity
             
             udp.Connect();
             listener.Connect();
+            
+            var helper = new PackageHelper<StringPackageInfo>(listener,new StringReceiveFilter(),new string[]{ "Assembly-CSharp" });
         }
 
         private void LateUpdate()
         {
-            udp.Send(new byte[]{0x69,0x68,0x67});
+            //udp.Send(new byte[]{0x69,0x68,0x67});
+            var cmd = Encoding.UTF8.GetBytes(" RPC FuncName 1 2 233 ");
+            udp.Send(cmd);
         }
 
         private void OnDestroy()
@@ -52,5 +57,20 @@ namespace BlackFireFramework.Unity
             udp.Close();
             listener.Close();
         }
+        
+        
     }
+
+
+    public sealed class RPC : StringCommand
+    {
+        public override void ExecuteCommand(TransportBase transport, StringPackageInfo packageInfo)
+        {
+            Debug.Log(transport.GetHashCode());
+            Debug.Log(packageInfo.Key);
+            Debug.Log(packageInfo.Body);
+            Debug.Log(packageInfo.Parameters);
+        }
+    }
+
 }

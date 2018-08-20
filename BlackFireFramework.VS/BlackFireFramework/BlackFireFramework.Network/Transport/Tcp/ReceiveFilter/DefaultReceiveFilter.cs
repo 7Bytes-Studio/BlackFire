@@ -4,15 +4,16 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using SuperSocket.ProtoBase;
 using System;
 using System.Text;
 
 namespace BlackFireFramework.Network
 {
-    public sealed class DefaultReceiveFilter : IReceiveFilter<DefaultPackageInfo>
+    using SuperSocket.ProtoBase;
+
+    public sealed class DefaultReceiveFilter : SuperSocket.ProtoBase.IReceiveFilter<DefaultPackageInfo>
     {
-        public IReceiveFilter<DefaultPackageInfo> NextReceiveFilter { get { return null; } }
+        public SuperSocket.ProtoBase.IReceiveFilter<DefaultPackageInfo> NextReceiveFilter { get { return null; } }
 
         public FilterState State { get; private set; }
 

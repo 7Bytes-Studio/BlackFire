@@ -36,6 +36,31 @@ namespace BlackFireFramework
                 }
                 return null;
             }
+            
+            
+            /// <summary>
+            /// 获取指定程序集的所有的子类实现类型。
+            /// </summary>
+            /// <param name="assemblyName">指定的程序集。</param>
+            /// <param name="typeBase">基类类型。</param>
+            /// <returns>所有的子类实现类型数组。</returns>
+            public static Type[] GetImplTypes(string[] assemblyNames,Type typeBase)
+            {
+                List<Type> list = new List<Type>();
+                for (int i = 0; i < assemblyNames.Length; i++)
+                {
+                    var tps = GetImplTypes(assemblyNames[i], typeBase);
+                    if (null!=tps)
+                    {
+                        for (int j = 0; j < tps.Length; j++)
+                        {
+                            list.Add(tps[j]);
+                        }
+                    }
+                }
+                return list.ToArray();
+            }
+            
 
             /// <summary>
             /// 是否是指定的基类类型的实现类。

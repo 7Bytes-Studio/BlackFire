@@ -9,9 +9,9 @@ using System.Text;
 
 namespace BlackFireFramework.Network
 {
-    public sealed class BlackFireServerReceiveFilter : IReceiveFilter<BlackFireServerPackageInfo>
+    public sealed class BlackFireServerReceiveFilter : SuperSocket.ProtoBase.IReceiveFilter<BlackFireServerPackageInfo>
     {
-        public IReceiveFilter<BlackFireServerPackageInfo> NextReceiveFilter { get { return null; } }
+        public SuperSocket.ProtoBase.IReceiveFilter<BlackFireServerPackageInfo> NextReceiveFilter { get { return null; } }
 
         public FilterState State { get; private set; }
 

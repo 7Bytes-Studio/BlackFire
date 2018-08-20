@@ -198,6 +198,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Network\Model\FilterDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Networker\AlanNetworker.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Udp\UdpDemo.cs" />

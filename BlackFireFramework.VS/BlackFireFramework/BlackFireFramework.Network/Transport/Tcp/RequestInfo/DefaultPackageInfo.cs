@@ -9,7 +9,7 @@ using SuperSocket.ProtoBase;
 
 namespace BlackFireFramework.Network
 {
-    public sealed class DefaultPackageInfo : IPackageInfo
+    public sealed class DefaultPackageInfo : SuperSocket.ProtoBase.IPackageInfo
     {
         public DefaultPackageInfo(byte[] data)
         {
