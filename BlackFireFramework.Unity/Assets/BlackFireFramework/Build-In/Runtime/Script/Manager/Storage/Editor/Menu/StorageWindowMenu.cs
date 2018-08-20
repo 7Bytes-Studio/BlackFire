@@ -23,6 +23,29 @@ namespace BlackFireFramework.Editor
         {
             var sourcePath = BlackFireEditor.PluginsPath + "/BlackFire-Sqlite";
             var destPath = Application.dataPath + "/Plugins/BlackFire-Sqlite";
+            
+            if (Directory.Exists(sourcePath))
+            {
+                if (Directory.Exists(destPath))
+                {
+                    DirectoryInfo di =new DirectoryInfo(destPath);
+                    di.Delete(true);
+                }
+                
+                try
+                {
+                    Directory.CreateDirectory(destPath);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("创建目标目录失败：" + ex.Message);
+                }
+            }
+            else
+            {
+                throw new DirectoryNotFoundException("源目录不存在！");
+            } 
+            
             CopyFolder(sourcePath,destPath);
             AssetDatabase.Refresh();
         }
@@ -38,7 +61,6 @@ namespace BlackFireFramework.Editor
             {
                 if (!Directory.Exists(destPath))
                 {
-                    //目标目录不存在则创建
                     try
                     {
                         Directory.CreateDirectory(destPath);
@@ -48,10 +70,7 @@ namespace BlackFireFramework.Editor
                         throw new Exception("创建目标目录失败：" + ex.Message);
                     }
                 }
-                else
-                {
-                    Directory.Delete(destPath,true);
-                }
+                
                 //获得源文件下所有文件
                 List<string> files = new List<string>(Directory.GetFiles(sourcePath));                
                 files.ForEach(c =>
@@ -66,12 +85,13 @@ namespace BlackFireFramework.Editor
                     string destDir = Path.Combine(destPath,Path.GetFileName(c));
                     //采用递归的方法实现
                     CopyFolder(c, destDir);
-                });                
+                });   
             }
             else
             {
                 throw new DirectoryNotFoundException("源目录不存在！");
-            }            
+            } 
+             
         }
             
     }
