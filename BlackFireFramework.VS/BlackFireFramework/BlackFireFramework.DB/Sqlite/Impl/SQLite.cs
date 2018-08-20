@@ -45,7 +45,7 @@ using Sqlite3DatabaseHandle = System.IntPtr;
 using Sqlite3Statement = System.IntPtr;
 #endif
 
-namespace SQLite4Unity3d
+namespace BlackFireFramework.DB
 {
 	public class SQLiteException : Exception
 	{

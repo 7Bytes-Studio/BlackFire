@@ -17,6 +17,8 @@ namespace BlackFireFramework.Unity
     /// <summary>
     /// 调试器管家。
     /// </summary>
+    [DisallowMultipleComponent]
+    [AddComponentMenu("BlackFire/Debugger")]
 	public sealed partial class DebuggerManager : ManagerBase, IDebuggerManager
     {
         #region Public

@@ -9,6 +9,11 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
+    /// <summary>
+    /// 网络管家。
+    /// </summary>
+    [DisallowMultipleComponent]
+    [AddComponentMenu("BlackFire/Network")]
     public sealed partial class NetworkManager : ManagerBase,INetworkManager
     {
         private IDownloadModule m_DownloadModule = null;

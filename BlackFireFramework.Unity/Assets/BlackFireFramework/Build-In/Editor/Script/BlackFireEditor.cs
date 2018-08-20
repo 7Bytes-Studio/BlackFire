@@ -26,7 +26,7 @@ namespace BlackFireFramework.Editor
         /// 框架内部资源路径。
         /// </summary>
         public static string AssetsPath = BlackFireFrameworkPath+"/Build-In/.Assets/";
-
+		
 		/// <summary>
 		/// 框架内部资源脚本模板路径。
 		/// </summary>
@@ -35,6 +35,14 @@ namespace BlackFireFramework.Editor
 			get { return Application.dataPath.Replace("-6:|      ").TrimEnd() + BlackFireFrameworkPath + "/Build-In/.Assets/Data/Resources/ScriptTemplates/"; }
 		}
 
+		/// <summary>
+		/// 框架内部Plugins路径。
+		/// </summary>
+		public static string PluginsPath
+		{
+			get { return Application.dataPath.Replace("-6:|      ").TrimEnd() + BlackFireFrameworkPath + "/Build-In/.Assets/Plugins/"; }
+		}
+		
 	    /// <summary>
 	    /// 图片资源路径。
 	    /// </summary>

@@ -14,6 +14,11 @@ using BlackFireFramework.Game;
 
 namespace BlackFireFramework.Unity
 {
+    /// <summary>
+    /// 游戏管家。
+    /// </summary>
+    [DisallowMultipleComponent]
+    [AddComponentMenu("BlackFire/Game")]
 	public sealed partial class GameManager : ManagerBase,IGameManager
     {
 

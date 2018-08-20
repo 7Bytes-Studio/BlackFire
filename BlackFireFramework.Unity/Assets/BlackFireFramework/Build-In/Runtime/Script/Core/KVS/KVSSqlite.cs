@@ -4,7 +4,6 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using SQLite4Unity3d;
 using UnityEngine;
 #if !UNITY_EDITOR
 using System.Collections;
@@ -12,6 +11,7 @@ using System.IO;
 #endif
 using System.Collections.Generic;
 using System.Collections;
+using BlackFireFramework.DB;
 using UnityEngine.UI;
 
 
