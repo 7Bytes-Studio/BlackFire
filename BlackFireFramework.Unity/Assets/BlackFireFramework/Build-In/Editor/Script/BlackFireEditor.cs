@@ -7,6 +7,7 @@
 
 
 using System.IO;
+using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
@@ -132,6 +133,26 @@ namespace BlackFireFramework.Editor
 
         #endregion
 
+	    #region EditorResources
+
+	    public static Object Load(string assetName)
+	    {
+	        var results = AssetDatabase.FindAssets(assetName);
+	        foreach (var guid in results)
+	        {
+	            Debug.Log(guid);
+	        }
+	        return null;
+	    }
+
+
+	    [Test]
+	    public static void Test()
+	    {
+	        Load("BlackFire.Logo");
+	    }
+
+	    #endregion
 
     }
 }
