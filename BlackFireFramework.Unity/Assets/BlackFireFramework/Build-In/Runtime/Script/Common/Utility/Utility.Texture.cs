@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 namespace BlackFireFramework.Unity
 {
@@ -100,8 +101,6 @@ namespace BlackFireFramework.Unity
                 BlackFireFramework.Utility.IO.SaveFile(filePath,data,saveCompleteCallback);
                 return (ulong)data.Length;
             }
-            
-            
 
             /// <summary>
             /// 获取指定目录下的所有图片文件路径。
@@ -123,6 +122,24 @@ namespace BlackFireFramework.Unity
                 }
                 return imagefilesDic;
             }
+
+            /// <summary>
+            /// 加载外部贴图。
+            /// </summary>
+            /// <param name="path">外部贴图路径。</param>
+            /// <returns>2D贴图。</returns>
+            public static Texture2D Load(string path)
+            {
+                if (File.Exists(path))
+                {
+                    var data = File.ReadAllBytes(path);
+                    var tex = new Texture2D(0,0);
+                    tex.LoadImage(data);
+                    return tex;
+                }
+                return null;
+            }
+            
         }
     }
 }

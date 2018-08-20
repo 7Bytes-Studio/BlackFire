@@ -6,7 +6,9 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Reflection;
+using System.Threading;
 using BlackFireFramework.Unity;
 using Boo.Lang;
 using UnityEditor;
@@ -36,8 +38,6 @@ namespace BlackFireFramework.Editor
 
         private ReorderableList m_ReorderableList = null;
 
-       
-
         public override InspectorSetting Setting { get { return new InspectorSetting(); } }
 
         private void OnEnable()
@@ -50,14 +50,14 @@ namespace BlackFireFramework.Editor
             m_SP_FoldOutAbout = serializedObject.FindProperty("m_FoldOutAbout");
             m_SP_FoldOutSetting = serializedObject.FindProperty("m_FoldOutSetting");
             m_SP_FoldOutIoC = serializedObject.FindProperty("m_FoldOutIoC");
-            
-            m_LogoRes = Resources.Load<Texture>("BlackFire.Logo");
+           
+            if(null==m_LogoRes)
+                m_LogoRes = BlackFireEditor.Load<Texture>("BlackFire.Logo.png");
             m_ReorderableList = BlackFireEditorGUI.ReorderableList("BlackFire Framework Extended Assemblies", serializedObject, m_SP_AssemblyList);
-
             ReflectIoCRegisterTypesInfo();
         }
 
-        
+ 
 
         protected override void OnDrawInspector()
         {
@@ -143,9 +143,6 @@ namespace BlackFireFramework.Editor
                 BlackFireEditorGUI.DrawTexture(m_Logo, 15, 2048, 144);
             }
         }
-
-        
-        
         
 
         private void DrawAssemblyList()

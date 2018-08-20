@@ -26,10 +26,31 @@ namespace BlackFireFramework.Editor
         /// 框架内部资源路径。
         /// </summary>
         public static string AssetsPath = BlackFireFrameworkPath+"/Build-In/.Assets/";
-        /// <summary>
-        /// 框架内部资源脚本模板路径。
-        /// </summary>
-        public static string ScriptTemplatePath = AssetsPath + "Data/Resources/ScriptTemplates/";
+
+		/// <summary>
+		/// 框架内部资源脚本模板路径。
+		/// </summary>
+		public static string ScriptTemplatePath
+		{
+			get { return Application.dataPath.Replace("-6:|      ").TrimEnd() + BlackFireFrameworkPath + "/Build-In/.Assets/Data/Resources/ScriptTemplates/"; }
+		}
+
+	    /// <summary>
+	    /// 图片资源路径。
+	    /// </summary>
+	    public static string ImagesPath
+	    {
+		    get { return Application.dataPath.Replace("-6:|      ").TrimEnd() + BlackFireFrameworkPath + "/Build-In/.Assets/Data/Resources/Images/"; }
+	    }
+		
+		/// <summary>
+		/// 图片资源路径。
+		/// </summary>
+		public static string EditorResourcesPath
+		{
+			get { return BlackFireFrameworkPath + "/Build-In/Editor/EditorResources/"; }
+		}
+		
         /// <summary>
         /// 框架内部临时文件夹路径。
         /// </summary>
@@ -135,21 +156,9 @@ namespace BlackFireFramework.Editor
 
 	    #region EditorResources
 
-	    public static Object Load(string assetName)
+	    public static T Load<T>(string assetName) where T : UnityEngine.Object
 	    {
-	        var results = AssetDatabase.FindAssets(assetName);
-	        foreach (var guid in results)
-	        {
-	            Debug.Log(guid);
-	        }
-	        return null;
-	    }
-
-
-	    [Test]
-	    public static void Test()
-	    {
-	        Load("BlackFire.Logo");
+		    return AssetDatabase.LoadAssetAtPath<T>(BlackFireEditor.EditorResourcesPath + assetName);
 	    }
 
 	    #endregion

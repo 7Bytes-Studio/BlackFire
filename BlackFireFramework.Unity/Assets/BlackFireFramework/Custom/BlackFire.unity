@@ -206,6 +206,11 @@ Prefab:
       propertyPath: m_AllProcesses.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4560137033670976, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -257,6 +262,36 @@ Prefab:
         type: 2}
       propertyPath: m_AllProcesses.Array.data[3]
       value: BlackFireFramework.Unity.ProcessTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[0]
+      value: BlackFireFramework.Unity.IoCRegister1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[1]
+      value: BlackFireFramework.Unity.IoCRegister2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[2]
+      value: BlackFireFramework.Unity.IoCRegister3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[3]
+      value: BlackFireFramework.Unity.IoCRegister11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[4]
+      value: BlackFireFramework.Unity.IoCRegister22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_IoCRegisters.Array.data[5]
+      value: BlackFireFramework.Unity.IoCRegister33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}

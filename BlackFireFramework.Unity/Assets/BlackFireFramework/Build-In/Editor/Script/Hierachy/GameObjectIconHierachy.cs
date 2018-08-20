@@ -49,7 +49,8 @@ namespace BlackFireFramework.Editor
             {
                 if (!s_IconDic.ContainsKey(type))
                 {
-                    s_IconDic.Add(type, (Texture2D)Resources.Load(s_ResourcesPathDic[type]));
+                    s_IconDic.Add(type,BlackFireEditor.Load<Texture2D>(s_ResourcesPathDic[type]+".png"));
+                    //s_IconDic.Add(type, (Texture2D)Resources.Load(s_ResourcesPathDic[type]));
                 }
                 return s_IconDic[type];
             }
