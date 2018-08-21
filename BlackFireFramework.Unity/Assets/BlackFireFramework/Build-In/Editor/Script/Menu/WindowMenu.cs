@@ -29,6 +29,21 @@ namespace BlackFireFramework.Editor
            window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,730f,650f);
         }
 
+		[MenuItem(TopMenuName+"ScriptableObject Creator")]
+		private static void OnMenuItemClick_ScriptableObjectCreator()
+		{
+			var window = EditorWindow.GetWindow(typeof(ScriptableObjectCreatorEditorWindow), false, "Creator") as ScriptableObjectCreatorEditorWindow;
+			window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,250f,100f);
+		}
+	    
+
+		[MenuItem("BlackFire/Game Process &p")]
+		static void OnMenuItemClick_GameProcess()
+		{
+			var window = EditorWindow.GetWindow(typeof(ProcessWindow), false, "Process") as ProcessWindow;
+			window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,730f,650f);
+		}
+	    
 
     }
 }

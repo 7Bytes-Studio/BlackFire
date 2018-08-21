@@ -6,19 +6,22 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 
 namespace BlackFireFramework.Editor
 {
-    [CreateAssetMenu(menuName = "BlackFire/Config")]
+    /// <summary>
+    /// 框架配置文件类。
+    /// </summary>
     public sealed class BlackFireFrameworkConfig : ScriptableObject 
 	{
+	    /// <summary>
+	    /// 包服务器接口地址。
+	    /// </summary>
         public string PackageServerAPIUrl;
-
-
-
-      
     }
 }
