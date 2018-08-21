@@ -69,6 +69,7 @@ namespace BlackFireFramework.Unity
             CheckErrorOrException();
             InitDebuggerModuleGUI();
             InitDebuggerStyleChange();
+            InitKvs();
         }
 
         protected override void OnUpdate()
@@ -92,6 +93,7 @@ namespace BlackFireFramework.Unity
         {
             base.OnShutdown();
             DestroyDebuggerModuleGUI();
+            DestroyKVS();
         }
 
 
@@ -244,6 +246,7 @@ namespace BlackFireFramework.Unity
 
         private void InitDebuggerModuleGUI()
         {
+  
             var types = BlackFireFramework.Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IDebuggerModuleGUI));
 
             for (int i = 0; i < types.Length; i++)
@@ -261,6 +264,19 @@ namespace BlackFireFramework.Unity
                     m_DebuggerModuleGUIList[i].OnInit(this);
                     RegisterModuleGUI(m_DebuggerModuleGUIList[i]);
                 }
+            }
+
+
+            
+        }
+
+        private void InitKvs()
+        {
+            //获取上一次最后一次的左侧栏。
+            m_SelectedModuleName = KVS.GetValue<KVSPlayerPrefs>("DebuggerManager/SelectedModuleName");
+            if (null == m_DebuggerModuleGUIList.Find(v => v.ModuleName == m_SelectedModuleName))
+            {
+                m_SelectedModuleName = m_DebuggerModuleGUIList[0].ModuleName;
             }
         }
 
@@ -305,6 +321,12 @@ namespace BlackFireFramework.Unity
             {
                 m_DebuggerModuleGUIList[i].OnDestroy();
             }
+        }
+
+        private void DestroyKVS()
+        {
+            //保存最后一次的左侧栏。
+            KVS.SetValue<KVSPlayerPrefs>("DebuggerManager/SelectedModuleName",m_SelectedModuleName);
         }
 
         private void SetMiniDebuggerColor(string hexColor)
