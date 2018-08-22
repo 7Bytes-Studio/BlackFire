@@ -65,5 +65,8 @@ namespace BlackFireFramework.Unity
 		    target.OnDestroyed();
 		}
 		
+		
+		
+		
 	}
 }

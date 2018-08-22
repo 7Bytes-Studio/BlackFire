@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -113,88 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &198395471
-Prefab:
+--- !u!1 &84811205
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_AvailableProcesses.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849888399228312, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114969824798475856, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_DebuggerStyle
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_GameSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_ApplyGameSpeedWhenInitialized
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_ApplyFpsWhenInitialized
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_FirstProcess
-      value: BlackFireFramework.Unity.ProcessOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_AvailableProcesses.Array.data[0]
-      value: BlackFireFramework.Unity.ProcessOne
-      objectReference: {fileID: 0}
-    - target: {fileID: 114321477601352184, guid: 16e2858c1941d154294cffb1c99c3f24,
-        type: 2}
-      propertyPath: m_AvailableProcesses.Array.data[1]
-      value: BlackFireFramework.Unity.ProcessTwo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 16e2858c1941d154294cffb1c99c3f24, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 84811206}
+  - component: {fileID: 84811207}
+  m_Layer: 0
+  m_Name: Debugger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84811206
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84811205}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1751768754}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84811207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84811205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839e23f9211c57142ac67c9a0f21dc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DebuggerStyle: 0
+  m_WindowScale: 1
 --- !u!1 &859042699
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +220,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1428338128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1428338129}
+  - component: {fileID: 1428338130}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1428338129
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428338128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1751768754}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428338130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428338128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5028b9cde81694d86230b36b89145f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ProcessScrowFoldOut: 1
+  m_FirstProcess: BlackFireFramework.Unity.ProcessStart
+  m_FirstProcessIndex: 4
+  m_AvailableProcesses:
+  - BlackFireFramework.Unity.ProcessContest
+  - BlackFireFramework.Unity.ProcessEnd
+  - BlackFireFramework.Unity.ProcessHotUpdate
+  - BlackFireFramework.Unity.ProcessMainMenu
+  - BlackFireFramework.Unity.ProcessStart
+  m_AllProcesses:
+  - BlackFireFramework.Unity.ProcessContest
+  - BlackFireFramework.Unity.ProcessEnd
+  - BlackFireFramework.Unity.ProcessHotUpdate
+  - BlackFireFramework.Unity.ProcessMainMenu
+  - BlackFireFramework.Unity.ProcessStart
+  m_StartFirstProcessWhenInitialized: 1
+  m_ApplyGameSpeedWhenInitialized: 0
+  m_GameSpeed: 1
+  m_ApplyNeverSleep: 0
+  m_NeverSleep: 0
+  m_ApplyFpsWhenInitialized: 0
+  m_Fps: 60
+  m_RunInBackground: 0
+  m_ApplyRunInBackground: 0
 --- !u!1 &1725435044
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,4 +364,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1751768753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1751768754}
+  m_Layer: 0
+  m_Name: Build-In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1751768754
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751768753}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 84811206}
+  - {fileID: 1428338129}
+  m_Father: {fileID: 1787263102}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1787263100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1787263102}
+  - component: {fileID: 1787263101}
+  m_Layer: 0
+  m_Name: '[BlackFire]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1787263101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787263100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627d718f684af694988a0b24f798c501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DontDestroy: 1
+  m_AssemblyList:
+  - BlackFireFramework.Network
+  - BlackFireFramework.Game
+  - BlackFireFramework.DB
+  m_Logo: {fileID: 0}
+  m_FoldOutAbout: 1
+  m_FoldOutSetting: 1
+  m_FoldOutIoC: 0
+  m_IoCRegisters:
+  - BlackFireFramework.Unity.IoCRegister1
+  - BlackFireFramework.Unity.IoCRegister2
+  - BlackFireFramework.Unity.IoCRegister3
+  - BlackFireFramework.Unity.IoCRegister11
+  - BlackFireFramework.Unity.IoCRegister22
+  - BlackFireFramework.Unity.IoCRegister33
+  m_AvailableIoCRegisters: []
+--- !u!4 &1787263102
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1787263100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1751768754}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

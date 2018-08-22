@@ -8,6 +8,22 @@ namespace BlackFireFramework.Game
 {
     public interface IProcessModule:IModule
     {
+
+        /// <summary>
+        /// 第一个启动流程。
+        /// </summary>
+        ProcessBase BootProcess { get; }
+
+        /// <summary>
+        /// 当前的活动流程。
+        /// </summary>
+        ProcessBase CurrentProcess { get; }
+
+        /// <summary>
+        /// 上一个活动流程。
+        /// </summary>
+        ProcessBase LastProcess { get; }
+        
         /// <summary>
         /// 添加流程。
         /// </summary>

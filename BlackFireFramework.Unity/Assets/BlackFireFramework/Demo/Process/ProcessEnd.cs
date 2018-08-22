@@ -4,45 +4,48 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Collections;
+using BlackFireFramework.Game;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using BlackFireFramework.Game;
 
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class ProcessTwo : ProcessBase
+    public sealed class ProcessEnd : ProcessBase
     {
-        public ProcessTwo(string processName) : base(processName)
+        public override string Name
         {
-
+            get { return "End"; }
         }
-
+        
         protected override void OnProcessDestroy()
         {
-            Debug.Log("ProcessTwo::OnProcessDestroy");
+            Debug.Log(Name+"::OnProcessDestroy");
         }
 
         protected override void OnProcessEnter()
         {
-            Debug.Log("ProcessTwo::OnProcessEnter");
+            Debug.Log(Name+"::OnProcessEnter");
         }
 
         protected override void OnProcessExit()
         {
-            Debug.Log("ProcessTwo::OnProcessExit");
+            Debug.Log(Name+"::OnProcessExit");
         }
 
         protected override void OnProcessInit()
         {
-            Debug.Log("ProcessTwo::OnProcessInit");
+            Debug.Log(Name+"::OnProcessInit");
         }
-
+        private int i = 0; 
         protected override void OnProcessUpdate()
         {
-            Debug.Log("ProcessTwo::OnProcessUpdate ");
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                ChangeProcess(typeof(ProcessStart));
+            }
+            Debug.Log(Name+"::OnProcessUpdate " + i++);
         }
     }
 }

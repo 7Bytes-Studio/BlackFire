@@ -64,7 +64,7 @@ namespace BlackFireFramework.Editor
             m_SP_ApplyNeverSleep = serializedObject.FindProperty("m_ApplyNeverSleep");
             m_SP_RunInBackground = serializedObject.FindProperty("m_RunInBackground");
             m_SP_ApplyRunInBackground = serializedObject.FindProperty("m_ApplyRunInBackground");
-
+            
             ReflectProcessTypesInfo();
         }
 
@@ -144,7 +144,7 @@ namespace BlackFireFramework.Editor
         protected override void OnDrawInspector()
         {
             var t = (GameManager)target;
-
+            
             GUILayout.Space(15);
 
             BlackFireEditorGUI.BoxVerticalLayout(() => {

@@ -67,9 +67,31 @@ namespace BlackFireFramework.Unity
             return m_ProcessModule.GetProcesses();
         }
 
+        
+        /// <summary>
+        /// 当前活动的流程。
+        /// </summary>
+        public ProcessBase CurrentProcess
+        {
+            get { return m_ProcessModule.CurrentProcess; }
+        }
 
+        /// <summary>
+        /// 上一个活动的流程。
+        /// </summary>
+        public ProcessBase LastProcess    
+        {
+            get { return m_ProcessModule.LastProcess; }
+        }
 
-
+        private DateTime m_ProcessModuleStartWorkingTime;
+            /// <summary>
+            /// 流程模块运作时间。
+            /// </summary>
+            public float ProcessModuleWorkingTime
+        {
+            get { return (float)(DateTime.Now-m_ProcessModuleStartWorkingTime).TotalSeconds; }
+        }
 
 
         #region Private
@@ -85,7 +107,7 @@ namespace BlackFireFramework.Unity
         {
             if (BlackFireFramework.Utility.Reflection.HasConstructor(type,typeof(string)))
             {
-                AddProcess(BlackFireFramework.Utility.Reflection.New(type, m_FirstProcess) as ProcessBase);
+                AddProcess(BlackFireFramework.Utility.Reflection.New(type, processName) as ProcessBase);
             }
             else
             {
@@ -99,6 +121,8 @@ namespace BlackFireFramework.Unity
         /// </summary>
         private void InitProcess()
         {
+            m_ProcessModuleStartWorkingTime = DateTime.Now;
+                
             CheckFirstProcessOrThrow();
 
             CheckAndAddProcess(Type.GetType(m_FirstProcess),m_FirstProcess);

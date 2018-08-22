@@ -12,40 +12,40 @@ using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class ProcessOne : ProcessBase
+    public sealed class ProcessHotUpdate : ProcessBase
     {
-        public ProcessOne(string processName) : base(processName)
+        public override string Name
         {
-
+            get { return "HotUpdate"; }
         }
-
+        
         protected override void OnProcessDestroy()
         {
-            Debug.Log("ProcessOne::OnProcessDestroy");
+            Debug.Log(Name+"::OnProcessDestroy");
         }
 
         protected override void OnProcessEnter()
         {
-            Debug.Log("ProcessOne::OnProcessEnter");
+            Debug.Log(Name+"::OnProcessEnter");
         }
 
         protected override void OnProcessExit()
         {
-            Debug.Log("ProcessOne::OnProcessExit");
+            Debug.Log(Name+"::OnProcessExit");
         }
 
         protected override void OnProcessInit()
         {
-            Debug.Log("ProcessOne::OnProcessInit");
+            Debug.Log(Name+"::OnProcessInit");
         }
         private int i = 0; 
         protected override void OnProcessUpdate()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.M))
             {
-                ChangeProcess(typeof(ProcessTwo));
+                ChangeProcess(typeof(ProcessMainMenu));
             }
-            Debug.Log("ProcessOne::OnProcessUpdate " + i++);
+            Debug.Log(Name+"::OnProcessUpdate " + i++);
         }
     }
 }

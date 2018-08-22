@@ -54,5 +54,20 @@ namespace BlackFireFramework.Unity
         /// </summary>
         /// <returns>所有流程实例数组。</returns>
         ProcessBase[] GetProcesses();
+
+        /// <summary>
+        /// 当前的活动流程。
+        /// </summary>
+        ProcessBase CurrentProcess { get; }
+        
+        /// <summary>
+        /// 上一个活动流程。
+        /// </summary>
+        ProcessBase LastProcess { get; }
+
+        /// <summary>
+        /// 流程模块运作时间。
+        /// </summary>
+        float ProcessModuleWorkingTime { get; }
     }
 }

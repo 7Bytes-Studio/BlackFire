@@ -27,7 +27,7 @@ namespace BlackFireFramework.Editor
             }
         }
 
-        private UIManager m_UIManager = null;
+        //private UIManager m_UIManager = null;
 
         private SerializedProperty m_SP_IUIEventDataHelperTypeFullName = null;
   
@@ -38,7 +38,7 @@ namespace BlackFireFramework.Editor
 
         private void OnEnable()
         {
-            m_UIManager = target as UIManager;
+            //m_UIManager = target as UIManager;
             m_SP_IUIEventDataHelperTypeFullName = serializedObject.FindProperty("m_IUIEventDataHelperTypeFullName");
             m_ImplTypes = BlackFireFramework.Utility.Reflection.GetImplTypes("Assembly-CSharp", typeof(IUIEventDataHelper));
         }

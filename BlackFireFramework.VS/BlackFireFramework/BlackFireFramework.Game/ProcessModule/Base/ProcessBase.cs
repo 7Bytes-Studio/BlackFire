@@ -10,21 +10,44 @@ namespace BlackFireFramework.Game
 {
     public abstract class ProcessBase : EntityTreeNode
     {
-        public ProcessBase(string processName):base(new UserData(processName))
+        internal static ProcessBase LastProcess;
+        internal static ProcessBase CurrentProcess;
+        
+        public ProcessBase():base(null)
         {
             Event.On(GlobalEvent.ChangeProcess, this, (sender, args) =>
             {
                 var convertArgs = args as ChangeProcessEventArgs;
-                if (!sender.Equals(this) && convertArgs.ToProcessType == GetType())
+                if (!sender.Equals(this) && convertArgs.ToProcessType == GetType()) //改变状态至当前类型状态。
                 {
                     IsWorking = true;
                     OnProcessEnter();
+                    m_StartWorkingTime = DateTime.Now;
+                    LastEnterDate = DateTime.Now;
+                    CurrentProcess = this;
                 }
             });
         }
 
+        public abstract string Name { get; }
+
         public bool IsWorking { get; private set; }
 
+        private float m_WorkingTime;
+        public float WorkingTime
+        {
+            get { return m_WorkingTime; }
+        }
+        
+        public float ActivityTime
+        {
+            get { return IsWorking?(float)(DateTime.Now - LastEnterDate).TotalSeconds:0f;}
+        }
+        
+        public DateTime LastEnterDate { get; private set; }
+        public DateTime LastExitDate { get; private set; }
+
+        private DateTime m_StartWorkingTime = DateTime.Now; //开始运作的时间。
         protected override void OnBorn()
         {
             OnProcessInit();
@@ -34,6 +57,8 @@ namespace BlackFireFramework.Game
         {
             if (IsWorking)
             {
+                m_WorkingTime += (float) (DateTime.Now - m_StartWorkingTime).TotalSeconds;
+                m_StartWorkingTime = DateTime.Now;
                 OnProcessUpdate();
             }
         }
@@ -41,19 +66,20 @@ namespace BlackFireFramework.Game
         protected override void OnDie()
         {
             OnProcessDestroy();
+            Event.Off(GlobalEvent.ChangeProcess,this);
         }
 
 
 
-        protected internal abstract void OnProcessInit();
+        protected abstract void OnProcessInit();
 
-        protected internal abstract void OnProcessEnter();
+        protected abstract void OnProcessEnter();
 
-        protected internal abstract void OnProcessUpdate();
+        protected abstract void OnProcessUpdate();
 
-        protected internal abstract void OnProcessExit();
+        protected abstract void OnProcessExit();
 
-        protected internal abstract void OnProcessDestroy();
+        protected abstract void OnProcessDestroy();
 
 
 
@@ -63,6 +89,8 @@ namespace BlackFireFramework.Game
             {
                 IsWorking = false;
                 OnProcessExit();
+                LastExitDate = DateTime.Now;
+                LastProcess = this;
                 Event.Fire(GlobalEvent.ChangeProcess, this, new ChangeProcessEventArgs() { FromProcessType = GetType(), ToProcessType = processType });
             }
         }
@@ -73,6 +101,8 @@ namespace BlackFireFramework.Game
             {
                 IsWorking = false;
                 OnProcessExit();
+                LastExitDate = DateTime.Now;
+                LastProcess = this;
                 Event.Fire(GlobalEvent.ChangeProcess, this, new ChangeProcessEventArgs() { FromProcessType = GetType(), ToProcessType = typeof(T) });
             }
         }

@@ -19,6 +19,11 @@ namespace BlackFireFramework.Unity
 
         [SerializeField] private bool m_ProcessScrowFoldOut;
 
+        private void Reset()
+        {
+            m_AvailableProcesses = null;
+        }
+
 #endif
     }
 }

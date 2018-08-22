@@ -10,7 +10,36 @@ namespace BlackFireFramework.Game
 {
     internal sealed class ProcessModule : ModuleBase, IProcessModule
     {
+        
         private ProcessBase m_BootProcess = null;
+
+        public ProcessBase BootProcess
+        {
+            get { return m_BootProcess; }
+        }
+        
+        
+        public ProcessBase CurrentProcess {
+            get
+            {
+//                foreach (ProcessBase node in this)
+//                {
+//                    if (node.IsWorking)
+//                    {
+//                        return node;
+//                    }
+//                }
+//                return null;
+                return ProcessBase.CurrentProcess;
+            }
+        }
+        
+        public ProcessBase LastProcess {
+            get
+            {
+                return ProcessBase.LastProcess;
+            }
+        }
 
         public void AddProcess(ProcessBase process)
         {
@@ -20,6 +49,7 @@ namespace BlackFireFramework.Game
                 m_BootProcess = process;
             }
             AddChildNode(process);
+            //Log.Info(process.Value.Name+"  "+process.GetHashCode());
         }
 
         public ProcessBase[] GetProcesses()

@@ -7,6 +7,7 @@
 using BlackFireFramework.Unity;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,11 +18,12 @@ namespace BlackFireFramework
 	{
         private void Start()
         {
-            var one = new ProcessOne("One");
-            var two = new ProcessTwo("Two");
-            BlackFire.Game.AddProcess(one);
-            BlackFire.Game.AddProcess(two);
-            BlackFire.Game.StartFirstProcess();
+//            var one = new ProcessStart();
+//            var two = new ProcessEnd();
+//            BlackFire.Game.AddProcess(one);
+//            BlackFire.Game.AddProcess(two);
+//            BlackFire.Game.StartFirstProcess();
+	        
         }
     }
 }
