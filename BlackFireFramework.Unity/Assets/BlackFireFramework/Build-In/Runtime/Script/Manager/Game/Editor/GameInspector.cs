@@ -154,7 +154,7 @@ namespace BlackFireFramework.Editor
 
             });
 
-            GUILayout.Space(15);
+            GUILayout.Space(5);
 
             BlackFireEditorGUI.BoxVerticalLayout(()=> {
 

@@ -22,14 +22,16 @@ namespace BlackFireFramework.Editor
             window.position = new UnityEngine.Rect((1920f - 520f) / 2, (1080f - 136f) / 2, 520f, 136f);
         }
 
-        [MenuItem(TopMenuName+"Package")]
+		
+        [MenuItem(TopMenuName + "Package")]
         private static void OnMenuItemClick_Package()
         {
            var window = EditorWindow.GetWindow(typeof(PackageWindow), false, "Package") as PackageWindow;
            window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,730f,650f);
         }
 
-		[MenuItem(TopMenuName+"ScriptableObject Creator &c")]
+		
+		[MenuItem(TopMenuName + "ScriptableObject Creator &c")]
 		private static void OnMenuItemClick_ScriptableObjectCreator()
 		{
 			var window = EditorWindow.GetWindow(typeof(ScriptableObjectCreatorEditorWindow), false, "Creator") as ScriptableObjectCreatorEditorWindow;
@@ -37,13 +39,41 @@ namespace BlackFireFramework.Editor
 		}
 	    
 
-		[MenuItem("BlackFire/Game Process &g")]
+		[MenuItem(TopMenuName + "Game Process &g")]
 		static void OnMenuItemClick_GameProcess()
 		{
 			var window = EditorWindow.GetWindow(typeof(ProcessWindow), false, "Process") as ProcessWindow;
 			window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,730f,650f);
 		}
 	    
+		
+		[MenuItem(TopMenuName + "Project/Open Data Path")]
+		private static void OpenDataPath()
+		{
+			Utility.Project.OpenDataPath();
+		}
+
+		
+		[MenuItem(TopMenuName + "Project/Open Persistent Data Path")]
+		private static void OpenPersistentDataPath()
+		{
+			Utility.Project.OpenPersistentDataPath();
+		}
+
+
+		[MenuItem(TopMenuName + "Project/Open Streaming Assets Path")]
+		private static void OpenStreamingAssetsPath()
+		{
+			Utility.Project.OpenStreamingAssetsPath();
+		}
+
+		
+		[MenuItem(TopMenuName + "Project/Open Temporary Cache Path")]
+		private static void OpenTemporaryCachePath()
+		{
+			Utility.Project.OpenTemporaryCachePath();
+		}
+		
 
     }
 }

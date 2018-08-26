@@ -204,7 +204,7 @@ Prefab:
     - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AllProcesses.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
@@ -246,22 +246,22 @@ Prefab:
     - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AllProcesses.Array.data[0]
-      value: BlackFireFramework.Unity.ProcessNoCtor`1
+      value: BlackFireFramework.Unity.ProcessContest
       objectReference: {fileID: 0}
     - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AllProcesses.Array.data[1]
-      value: BlackFireFramework.Unity.ProcessNoCtorDemo
+      value: BlackFireFramework.Unity.ProcessEnd
       objectReference: {fileID: 0}
     - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AllProcesses.Array.data[2]
-      value: BlackFireFramework.Unity.ProcessOne
+      value: BlackFireFramework.Unity.ProcessHotUpdate
       objectReference: {fileID: 0}
     - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
       propertyPath: m_AllProcesses.Array.data[3]
-      value: BlackFireFramework.Unity.ProcessTwo
+      value: BlackFireFramework.Unity.ProcessMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 114136341389774088, guid: 9499a40b4ee5d3740b0d043fd47c607e,
         type: 2}
@@ -292,6 +292,11 @@ Prefab:
         type: 2}
       propertyPath: m_IoCRegisters.Array.data[5]
       value: BlackFireFramework.Unity.IoCRegister33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114617585636041726, guid: 9499a40b4ee5d3740b0d043fd47c607e,
+        type: 2}
+      propertyPath: m_AllProcesses.Array.data[4]
+      value: BlackFireFramework.Unity.ProcessStart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9499a40b4ee5d3740b0d043fd47c607e, type: 2}
