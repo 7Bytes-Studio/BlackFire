@@ -1,7 +1,7 @@
 # BlackFireFramework
 One magical project.
 
-![BlackFireLogo](https://github.com/BlackFire-Studio/BlackFireFramework/blob/wiki/Images/BlackFire.png)
+![BlackFireFramework](https://github.com/BlackFire-Studio/BlackFireFramework/blob/wiki/Images/Framework.png)
 
 # Wiki
 
