@@ -2,15 +2,13 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{EC7BB73A-B248-D095-F483-4E8E35CEC212}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -48,446 +46,448 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>D:\Workspace\Develop\Unity\2018.1.7f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>C:\App\Unity2018.1.7\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:\Workspace\Develop\Unity\2018.1.7f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\App\Unity2018.1.7\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\Behaviour.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\ILogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\String.Extension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\Transform.Extension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\MonoBehaviourEx.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\UIBehaviourEx.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\FakeSingleton{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\UnityObject{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Screen.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Text.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Texture.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Transform.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\ScreenCapture.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Event.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Inspector.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.IIoCRegister.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Log.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSSqlite.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSText.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\DebuggerStyle.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerModuleGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerStyleChangeCallback.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\DebuggerTemplateGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventArgs.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_EventTopic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Instruction.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Response.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Var.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerInfoGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerProfilerGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Log\DebuggerLogGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\ObjectPool\DebuggerObjectPoolGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Setting\DebuggerSettingGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\IDebuggerManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Editor.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Process.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\IGameManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHandlerBigFile.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportEventArgsExtension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportExtension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\INetworkManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Networker\Networker.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Download.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.GUID.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.T.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Tcp.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Transport.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Udp.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.WebSocket.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetAgency.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\Base\IReferenceCounter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\DefaultReferenceCounter.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\GUI\DebuggerResourceGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\IResourceManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Agency.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.AssetsBundle.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Base.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.delegate.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Resources.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\IStorageManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\StorageManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\StorageManager.Sqlite.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\BlackFire.Lazy.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupCommand.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMemberCommand.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMembersCommand.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventDataHelper.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Impl\DefaultUIEventDataHelper.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Impl\UIEventModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\IUIGroupModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroup.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroupMember.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Impl\UIDefaultGroup.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Impl\UIGroupModule.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\GUI\DebuggerUIGUI.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\IUIManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Extension.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Group.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Window.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIElementLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIEventHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIBehaviour{T}.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIElement.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIWindow.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\WindowInfo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Impl\Ugui\UguiUIElement.cs" />
-    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Impl\Ugui\UguiWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Movement\SimplePlayerController\SimplePlayerController.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Button\Button.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Button\IButtonClickHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DoubleClickButton\DoubleClickButton.cs" />
-    <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DragGraphic\DragGraphic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_DBHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_UIHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Group\UICommonGroup.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\IoC\IoCDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Model\FilterDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Networker\AlanNetworker.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\Udp\UdpDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Network\WebSocket\WebSocketDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletObject.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\ObjectPoolDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessContest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessEnd.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessHotUpdate.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessMainMenu.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessStart.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Storage\StorageDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IColourfulMessageBoxWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IMessageBoxWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IShakeMessageBoxWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Impl\Alan\Script\MessageBoxWindowLogic.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
-    <Compile Include="Assets\BlackFireFramework\Demo\Utility\Screen\ScreenDemo.cs" />
-    <None Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\SuperSocket.ProtoBase.xml" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AIModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ARModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.BaselibModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClothModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CloudWebServicesModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.FacebookModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GridModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.InputModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticlesLegacyModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTrackingModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StyleSheetsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TLSModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TimelineModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UNETModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VRModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.WebModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.WindModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XRModule">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Locator">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Timeline">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIAutomation">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework.DB">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.DB.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework.Game">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Game.dll</HintPath>
-    </Reference>
-    <Reference Include="BlackFireFramework.Network">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Network.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ClientEngine">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ClientEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="SuperSocket.ProtoBase">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ProtoBase.dll</HintPath>
-    </Reference>
-    <Reference Include="WebSocket4Net">
-      <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/WebSocket4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityScript">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityScript.Lang">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
-    </Reference>
-    <Reference Include="Boo.Lang">
-      <HintPath>D:/Workspace/Develop/Unity/2018.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Entity\EntityBase.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\IManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\Manager\ManagerBase.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\Behaviour.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Base\WorldView\ILogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\BlackFire.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Attribute\GameObjectIconAttribute.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\String.Extension.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Extension\Transform.Extension.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\GUI\BlackFireGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\MonoBehaviourEx.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Mono\UIBehaviourEx.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\FakeSingleton{T}.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Pattern\UnityObject{T}.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Game.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.GL.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Screen.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Text.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Texture.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Utility\Utility.Transform.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\CheckFileCrc32.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Common\Yield\ScreenCapture.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Application.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Assembly.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Editor.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Event.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Inspector.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.IIoCRegister.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Log.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSPlayerPrefs.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSSqlite.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\KVS\KVSText.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\DebuggerStyle.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerModuleGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\Base\IDebuggerStyleChangeCallback.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\DebuggerStyleChangedCallback.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\DebuggerTemplateGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventArgs.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\DebuggerEventGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_EventTopic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Instruction.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Response.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Var.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerInfoGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerProfilerGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Log\DebuggerLogGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\ObjectPool\DebuggerObjectPoolGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Setting\DebuggerSettingGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\IDebuggerManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Editor.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Process.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.Setting.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\IGameManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHandlerBigFile.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportEventArgsExtension.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Extension\TransportExtension.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\INetworkManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Networker\Networker.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Download.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.GUID.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.T.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Tcp.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Transport.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.Udp.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\NetworkManager.WebSocket.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetAgency.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\AssetInfo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\Base\IReferenceCounter.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\DefaultReferenceCounter.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\GUI\DebuggerResourceGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\IResourceManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Agency.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.AssetsBundle.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Base.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.delegate.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Resources.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\ResourceManager.Scene.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Resource\SceneInfo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\IStorageManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\StorageManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Storage\StorageManager.Sqlite.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\BlackFire.Lazy.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupCommand.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMemberCommand.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\Command\IUIGroupMembersCommand.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventDataHelper.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Base\IUIEventModule.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Impl\DefaultUIEventDataHelper.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Event\Impl\UIEventModule.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\IUIGroupModule.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroup.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Base\UIGroupMember.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Impl\UIDefaultGroup.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\Group\Impl\UIGroupModule.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\GUI\DebuggerUIGUI.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\IUIManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Extension.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Group.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIManager.Window.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIElementLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIEventHandler.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\IUIWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIBehaviour{T}.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIElement.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\UIWindow.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Base\WindowInfo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Impl\Ugui\UguiUIElement.cs" />
+     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\UI\UIWindow\Impl\Ugui\UguiWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Movement\SimplePlayerController\SimplePlayerController.cs" />
+     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Button\Button.cs" />
+     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Button\IButtonClickHandler.cs" />
+     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DoubleClickButton\DoubleClickButton.cs" />
+     <Compile Include="Assets\BlackFireFramework\Custom\Packages\Ugui\Common\DragGraphic\DragGraphic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Debugger\DebuggerDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\BeShotTrigger.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_DBHandler.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\EventDemo_UIHandler.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\IBeShotHandler.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Event\MonsterEntity.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Game\GameDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\GameObject\GameObjectTracer.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\GameObject\GameObjectTracerUT.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\GL\GLDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\GL\ModelBase.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Group\UICommonGroup.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\IoC\IoCDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\Model\FilterDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\Networker\AlanNetworker.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\Tcp\TcpDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\Udp\UdpDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Network\WebSocket\WebSocketDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\BulletObject.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\ObjectPool\ObjectPoolDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessContest.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessEnd.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessHotUpdate.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessMainMenu.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Process\ProcessStart.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ReferenceCountingTest\ReferenceCountingTest.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Resource\ResourceDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Resource\Scene\SceneDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Storage\StorageDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Timer\TimeDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IColourfulMessageBoxWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IMessageBoxWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Base\IShakeMessageBoxWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\UI\MessageBox\Impl\Alan\Script\MessageBoxWindowLogic.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
+     <Compile Include="Assets\BlackFireFramework\Demo\Utility\Screen\ScreenDemo.cs" />
+     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\SuperSocket.ProtoBase.xml" />
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.StandardEvents">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.BaselibModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CloudWebServicesModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FacebookModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTrackingModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TimelineModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WebModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Locator">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/3rd/Json/JsonNet/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="BlackFireFramework.DB">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.DB.dll</HintPath>
+ </Reference>
+ <Reference Include="BlackFireFramework">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="BlackFireFramework.Game">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Game.dll</HintPath>
+ </Reference>
+ <Reference Include="BlackFireFramework.Network">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Network.dll</HintPath>
+ </Reference>
+ <Reference Include="SuperSocket.ClientEngine">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ClientEngine.dll</HintPath>
+ </Reference>
+ <Reference Include="SuperSocket.ProtoBase">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ProtoBase.dll</HintPath>
+ </Reference>
+ <Reference Include="WebSocket4Net">
+ <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/WebSocket4Net.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/Alan/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>C:/App/Unity2018.1.7/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -497,4 +497,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
