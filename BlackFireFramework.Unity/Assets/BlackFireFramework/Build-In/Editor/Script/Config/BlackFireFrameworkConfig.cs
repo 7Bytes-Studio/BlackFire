@@ -4,12 +4,7 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
-using UnityEngine.UI;
 
 
 namespace BlackFireFramework.Editor
