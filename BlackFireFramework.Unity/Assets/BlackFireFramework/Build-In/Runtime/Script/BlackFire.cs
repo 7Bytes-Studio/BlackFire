@@ -50,6 +50,7 @@ public sealed partial class BlackFire : MonoBehaviour
         StartAssemblyManager(this);
         StartModuleManager(this);
         StartUnityManager(this);
+        SetIterator(this);
     }
 
     /// <summary>

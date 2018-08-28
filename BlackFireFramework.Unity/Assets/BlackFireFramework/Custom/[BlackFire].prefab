@@ -246,6 +246,17 @@ MonoBehaviour:
   - BlackFireFramework.Network
   - BlackFireFramework.Game
   m_Logo: {fileID: 2800000, guid: d4832359e68a10545a898c0d9befcc24, type: 3}
+  m_FoldOutAbout: 1
+  m_FoldOutSetting: 1
+  m_FoldOutIoC: 1
+  m_IoCRegisters:
+  - BlackFireFramework.Unity.IoCRegister1
+  - BlackFireFramework.Unity.IoCRegister2
+  - BlackFireFramework.Unity.IoCRegister3
+  - BlackFireFramework.Unity.IoCRegister11
+  - BlackFireFramework.Unity.IoCRegister22
+  - BlackFireFramework.Unity.IoCRegister33
+  m_AvailableIoCRegisters: []
 --- !u!114 &114146904018431224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProcessScrowFoldOut: 1
   m_FirstProcess: BlackFireFramework.Unity.ProcessOne
+  m_FirstProcessIndex: 0
   m_AvailableProcesses:
   - BlackFireFramework.Unity.ProcessOne
   - BlackFireFramework.Unity.ProcessTwo

@@ -85,6 +85,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Inspector.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.IoC.IIoCRegister.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Iterator.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Log.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Manager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Core\BlackFire\BlackFire.Module.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Event\Json_Var.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerInfoGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\GF\DebuggerProfilerGUI.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Iterator\DebuggerIteratorGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Log\DebuggerLogGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\ObjectPool\DebuggerObjectPoolGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Debugger\GUI\Setting\DebuggerSettingGUI.cs" />
@@ -202,6 +204,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Group\GroupDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Group\UICommonGroup.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\IoC\IoCDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Iterator\IteratorDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
@@ -231,11 +234,11 @@
     <Compile Include="Assets\BlackFireFramework\Demo\UI\UIDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Utility\Screen\ScreenDemo.cs" />
     <None Include="Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\SuperSocket.ProtoBase.xml" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/App/Unity2018.1.7/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
