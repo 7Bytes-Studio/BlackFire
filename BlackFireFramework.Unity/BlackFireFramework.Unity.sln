@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFireFramework.Unity", "Assembly-CSharp.csproj", "{EC7BB73A-B248-D095-F483-4E8E35CEC212}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{EC7BB73A-B248-D095-F483-4E8E35CEC212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFireFramework.Unity", "Assembly-CSharp-Editor.csproj", "{F7BC7CA4-5809-FFDA-23BB-0B33246F296F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{F7BC7CA4-5809-FFDA-23BB-0B33246F296F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

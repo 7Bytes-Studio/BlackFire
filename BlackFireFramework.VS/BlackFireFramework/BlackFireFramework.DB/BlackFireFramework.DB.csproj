@@ -42,8 +42,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sqlite\Base\IConnection.cs" />
     <Compile Include="Sqlite\Base\ISqliteModule.cs" />
-    <Compile Include="Sqlite\Impl\Connection.cs" />
-    <Compile Include="Sqlite\Impl\SQLite.cs" />
     <Compile Include="Sqlite\Impl\SqliteModule.cs" />
   </ItemGroup>
   <ItemGroup>

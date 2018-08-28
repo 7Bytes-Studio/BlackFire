@@ -28,6 +28,7 @@ namespace BlackFireFramework.Unity
         {
             RegisterModule<ISqliteModule>();
             m_SqliteModule = GetModule<ISqliteModule>();
+            m_SqliteModule.ConnectionFactory = (alias, path) => new DefaultSqliteConnection(alias,new SQLiteConnection(path, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create));
         }
     }
 }

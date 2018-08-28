@@ -4,6 +4,8 @@
 //Website: www.0x69h.com
 //----------------------------------------------------
 
+using System;
+
 namespace BlackFireFramework.DB
 {
     /// <summary>
@@ -11,6 +13,11 @@ namespace BlackFireFramework.DB
     /// </summary>
     public interface ISqliteModule:IModule
     {
+        /// <summary>
+        /// Sqlite的连接器工厂。
+        /// </summary>
+        Func<string,string,IConnection> ConnectionFactory { get; set; }
+
         /// <summary>
         /// 连接或创建数据库并返回数据服务。
         /// </summary>

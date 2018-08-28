@@ -1,3 +1,9 @@
+//----------------------------------------------------
+//Copyright © 2008-2017 Mr-Alan. All rights reserved.
+//Mail: Mr.Alan.China@[outlook|gmail].com
+//Website: www.0x69h.com
+//----------------------------------------------------
+
 //
 // Copyright (c) 2009-2012 Krueger Systems, Inc.
 // 
@@ -45,8 +51,9 @@ using Sqlite3DatabaseHandle = System.IntPtr;
 using Sqlite3Statement = System.IntPtr;
 #endif
 
-namespace BlackFireFramework.DB
+namespace BlackFireFramework.Unity
 {
+	
 	public class SQLiteException : Exception
 	{
 		public SQLite3.Result Result { get; private set; }

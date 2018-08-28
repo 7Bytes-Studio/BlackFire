@@ -9,54 +9,120 @@ namespace BlackFireFramework.DB
     /// </summary>
     public interface IConnection
     {
+        
         /// <summary>
         /// 别名。
         /// </summary>
         string Alias { get; }
+        
+        
+        /// <summary>
+        /// 关闭连接。
+        /// </summary>
+        void Close();
 
+
+        /// <summary>
+        /// 执行数据库命令。
+        /// </summary>
+        /// <param name="cmd">数据库命令。</param>
+        /// <returns>影响行数。</returns>
+        int Execute(string sql, params object[] args);
+        
+                
+        #region 增
+        
         /// <summary>
         /// 新创建表。
         /// </summary>
+        /// <typeparam name="T">ORM类类型。</typeparam>
         void CreateTable<T>();
-
+        
         /// <summary>
         /// 检查是否存在或者创建新表。
         /// </summary>
-        void CheckOrCreateTable<T>() where T : new();
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        bool CheckOrCreateTable<T>() where T : new();
+        
+        /// <summary>
+        /// 插入多个记录（可以是不同ORM类的实例）。
+        /// </summary>
+        /// <param name="rows">ORM类的实例集合。</param>
+        void Insert(IEnumerable rows); 
 
         /// <summary>
-        /// 插入多个记录，可以是不同表的row。
+        /// 插入一条记录。
         /// </summary>
-        void Insert(IEnumerable objects); //插入多个记录，可以是不同表的row
+        /// <param name="row">ORM类实例。</param>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        void Insert<T>(T row);
+        
+        #endregion
+        
+        
+        
+        #region 删
 
         /// <summary>
-        /// 插入一个 。
+        /// 删除表的一条记录。
         /// </summary>
-        void Insert<T>(T t); //插入一个
+        /// <param name="primaryKey">主键。</param>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        void Delete<T>(object primaryKey); 
+        
+        
+        #endregion
+        
+        
+        
+        #region 改
 
         /// <summary>
-        /// 获取表里面的所有行 。
+        /// 更新表的一条记录。
         /// </summary>
-        IEnumerable<T> Query<T>() where T : new(); //获取表里面的所有行。
+        /// <param name="row">ORM类实例。</param>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        void Update<T>(T row); 
 
         /// <summary>
-        /// 查询表的某一行 。
+        /// 更新所有表的记录（可以是不同ORM类的实例）。
         /// </summary>
-        T Query<T>(Func<T, bool> handler) where T : new(); //查询表的某一行。
+        /// <param name="rows">ORM类的实例集合。</param>
+        void UpdateAll(IEnumerable rows); 
+
+        #endregion
+        
+        
+        
+        #region 查
+        
+        /// <summary>
+        /// 获取表里面的所有行。
+        /// </summary>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        /// <returns>ORM类记录集合。</returns>
+        IEnumerable<T> Query<T>() where T : new(); 
 
         /// <summary>
-        /// 删除T表的一条row记录，t实例里面的主键要对应。
+        /// 查询表的某一行。
         /// </summary>
-        void Delete<T>(object t); //删除T表的一条row记录，t实例里面的主键要对应。
+        /// <param name="handler">查询条件回调。</param>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        /// <returns>ORM类记录。</returns>
+        T Query<T>(Func<T, bool> handler) where T : new();
+
 
         /// <summary>
-        /// 更新T表的一条row记录，t实例里面的主键要对应。
+        /// 执行Sql语句查询表（ex："select * from User where Account = ?" ）。
         /// </summary>
-        void Update<T>(T t); //更新T表的一条row记录，t实例里面的主键要对应。
+        /// <param name="sql">Sql查询语句。</param>
+        /// <param name="args">?替换参数。</param>
+        /// <typeparam name="T">ORM类类型。</typeparam>
+        /// <returns>查询ORM类实例集合。</returns>
+        List<T> Query<T>(string sql, params object[] args) where T : new();
 
-        /// <summary>
-        /// 更新记录，可以是不同表的不同row。
-        /// </summary>
-        void UpdateAll(IEnumerable objects); //更新记录，可以是不同表的不同row。
+        #endregion
+
+
     }
 }

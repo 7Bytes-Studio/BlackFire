@@ -25,5 +25,5 @@ namespace BlackFireFramework.Unity
         {
             m_SqliteModule.CloseConnection(connectionAlias);
         }
-    }
+    }        
 }
