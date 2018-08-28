@@ -74,6 +74,16 @@ namespace BlackFireFramework.Editor
 			Utility.Project.OpenTemporaryCachePath();
 		}
 		
+		
+		[MenuItem(TopMenuName + "Project/Development Scene &d")]
+		private static void OpenDevelopmentScene()
+		{
+			var window = EditorWindow.GetWindow(typeof(DevelopmentSceneWindow), false, "DevelopmentScene") as DevelopmentSceneWindow;
+			window.position = new UnityEngine.Rect((1920f-730f)/2,(1080f-650f)/2,300f,550f);
+		}
+		
+
+
 
     }
 }
