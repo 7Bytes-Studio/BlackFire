@@ -1,0 +1,5 @@
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Pattern\obj\Debug\BlackFireFramework.Pattern.csprojResolveAssemblyReference.cache
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Pattern.dll
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Pattern.pdb
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Pattern\obj\Debug\BlackFireFramework.Pattern.dll
+D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Pattern\obj\Debug\BlackFireFramework.Pattern.pdb

@@ -20,7 +20,7 @@ namespace BlackFireFramework.Pattern
         /// <param name="ioc">BlackFireFramework内部的IOC容器。</param>
         protected override void OnExport(ISparrowIoC ioc)
         {
-          //  ioc.RegisterType<DownloadModule>().As<IDownloadModule>();
+            ioc.RegisterType<MVPModule>().As<IMVPModule>();
 #if DEVELOP
             Log.Info("ExportedAssembly::OnExport");
 #endif

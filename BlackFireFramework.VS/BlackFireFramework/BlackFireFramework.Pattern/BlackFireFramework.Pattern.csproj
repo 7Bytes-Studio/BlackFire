@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,9 +45,10 @@
     <Compile Include="MVP\Base\MVP\IView.cs" />
     <Compile Include="MVP\Base\MVP\IViewEventHandler.cs" />
     <Compile Include="MVP\Base\MVP\ModelBase.cs" />
-    <Compile Include="MVP\Base\MVP\MVPEntry.cs" />
     <Compile Include="MVP\Base\MVP\PresenterBase.cs" />
     <Compile Include="MVP\Base\MVP\ViewBase.cs" />
+    <Compile Include="MVP\Impl\MVPEntry.cs" />
+    <Compile Include="MVP\Impl\MVPModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,9 +56,6 @@
       <Project>{b0720c61-5e4b-4c27-a270-4c516810120c}</Project>
       <Name>BlackFireFramework</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVP\Impl" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

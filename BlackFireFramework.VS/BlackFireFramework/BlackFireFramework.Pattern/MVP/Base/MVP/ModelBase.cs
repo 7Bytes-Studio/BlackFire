@@ -14,9 +14,6 @@ namespace BlackFireFramework.Pattern
         /// <summary>
         /// 模型层接口。
         /// </summary>
-        protected internal virtual IModel Model
-        {
-            get { return (IModel)(object)this; }
-        }
+        protected internal abstract IModel Model{ get; }
     }
 }

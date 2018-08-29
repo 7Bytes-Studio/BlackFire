@@ -5,15 +5,22 @@
 //----------------------------------------------------
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace BlackFireFramework.Pattern
 {
     public interface IMVPModule:IModule
     {
-        void Bind(string bindName,Type model,Type view,Type presenter);
 
-        void UnBind(string bindName);
+        void BindVP(Type view,IEnumerable<Type> presenters);
+        
+        void BindMP(Type model,IEnumerable<Type> presenters);
+        
+        void UnBind(Type viewOrmodel);
 
-        void UnBind(Type modelOrViewOrPresenter);
+        ModelBase AcquireModel(Type model);
+        ViewBase AcquireView(Type view);
+        PresenterBase AcquirePresenter(Type presenter);
     }
 }
