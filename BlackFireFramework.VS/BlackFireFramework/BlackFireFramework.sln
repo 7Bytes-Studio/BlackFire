@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFireFramework.Network"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFireFramework.DB", "BlackFireFramework.DB\BlackFireFramework.DB.csproj", "{4870D38E-3762-45C2-8735-1B4723B8C013}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFireFramework.Pattern", "BlackFireFramework.Pattern\BlackFireFramework.Pattern.csproj", "{4EF2FAC3-4E65-400F-B6F6-497FB10D52D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4870D38E-3762-45C2-8735-1B4723B8C013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4870D38E-3762-45C2-8735-1B4723B8C013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4870D38E-3762-45C2-8735-1B4723B8C013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF2FAC3-4E65-400F-B6F6-497FB10D52D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF2FAC3-4E65-400F-B6F6-497FB10D52D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF2FAC3-4E65-400F-B6F6-497FB10D52D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF2FAC3-4E65-400F-B6F6-497FB10D52D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

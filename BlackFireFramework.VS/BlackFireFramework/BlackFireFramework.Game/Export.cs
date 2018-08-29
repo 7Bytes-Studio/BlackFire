@@ -19,7 +19,7 @@ namespace BlackFireFramework.Game
         protected override void OnExport(ISparrowIoC ioc)
         {
             ioc.RegisterType<ProcessModule>().As<IProcessModule>();
-#if VS_EDITOR
+#if DEVELOP
             Log.Info("ExportedAssembly::OnExport");
 #endif
 
@@ -33,21 +33,21 @@ namespace BlackFireFramework.Game
 
         protected override void OnBorn()
         {
-#if VS_EDITOR
+#if DEVELOP
           Log.Info("ExportedAssembly::OnBorn");
 #endif
         }
 
         protected override void OnAct()
         {
-#if VS_EDITOR
+#if DEVELOP
           Log.Info("ExportedAssembly::OnAct");
 #endif
         }
 
         protected override void OnDie()
         {
-#if VS_EDITOR
+#if DEVELOP
           Log.Info("ExportedAssembly::OnDie");
 #endif
         }

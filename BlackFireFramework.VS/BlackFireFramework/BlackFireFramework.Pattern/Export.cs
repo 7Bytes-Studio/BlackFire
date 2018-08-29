@@ -5,26 +5,25 @@
 //----------------------------------------------------
 
 
-using System.Diagnostics;
-
-namespace BlackFireFramework.DB
+namespace BlackFireFramework.Pattern
 {
     /// <summary>
-    /// BlackFireFramework.DB 的导出类。
+    /// BlackFireFramework.Pattern 的导出类。
     /// </summary>
     public sealed class Export : ExportedAssemblyBase
     {
+        
+        
         /// <summary>
         /// 导出接口事件(该事件会被BlackFire核心程序集反射执行)。
         /// </summary>
         /// <param name="ioc">BlackFireFramework内部的IOC容器。</param>
         protected override void OnExport(ISparrowIoC ioc)
         {
-            ioc.RegisterType<SqliteModule>().As<ISqliteModule>();
+          //  ioc.RegisterType<DownloadModule>().As<IDownloadModule>();
 #if DEVELOP
             Log.Info("ExportedAssembly::OnExport");
 #endif
-
         }
 
 
