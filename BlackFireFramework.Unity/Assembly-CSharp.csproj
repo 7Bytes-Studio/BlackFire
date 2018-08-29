@@ -120,6 +120,10 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GameManager.State.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\GUI\DebuggerGameGUI.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Game\IGameManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\BlackFire.Lazy.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\Extension\ILoopManagerExtension.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\ILoopManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\LoopManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHandlerBigFile.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Network\Download\Http\DownloadHttpBigFile.cs" />
@@ -208,6 +212,7 @@
     <Compile Include="Assets\BlackFireFramework\Demo\Job\JobDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\JsonNet\JsonNetSample.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\KVS\KVSDemo.cs" />
+    <Compile Include="Assets\BlackFireFramework\Demo\Loop\LoopDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Download\DownloadTest.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Model\FilterDemo.cs" />
     <Compile Include="Assets\BlackFireFramework\Demo\Network\Networker\AlanNetworker.cs" />
