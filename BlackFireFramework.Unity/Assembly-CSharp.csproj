@@ -124,6 +124,9 @@
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\Extension\ILoopManagerExtension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\ILoopManager.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\Loop\LoopManager.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\Base\Model.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\Base\Presenter.cs" />
+    <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\Base\View.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\BlackFire.Lazy.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\Extension\IMVPManagerExtension.cs" />
     <Compile Include="Assets\BlackFireFramework\Build-In\Runtime\Script\Manager\MVP\IMVPManager.cs" />

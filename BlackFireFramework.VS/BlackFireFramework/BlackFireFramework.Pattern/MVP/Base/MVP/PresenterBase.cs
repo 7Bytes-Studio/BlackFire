@@ -12,9 +12,8 @@ namespace BlackFireFramework.Pattern
     public abstract class PresenterBase : PatternEntityTreeNode
     {
     
-        protected internal IView View { get; set; }
-        protected internal IModel Model { get; set; }
-
+        protected internal IView ViewInterface { get; set; }
+        protected internal IModel ModelInterface { get; set; }
       
     }
 }

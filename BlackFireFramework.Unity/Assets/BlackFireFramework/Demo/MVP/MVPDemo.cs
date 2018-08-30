@@ -52,7 +52,7 @@ namespace Alan
 			//Log.Info("M::OnDestroy");
 		}
 
-		protected override IModel Model
+		protected override IModel ModelInterface
 		{
 			get { return this ; }
 		}
@@ -83,7 +83,7 @@ namespace Alan
 			//Log.Info("V::OnDestroy");
 		}
 
-		protected override IView View
+		protected override IView ViewInterface
 		{
 			get { return this; }
 		}
@@ -114,8 +114,8 @@ namespace Alan
 
 		public void UpdateUI()
 		{
-			var name = (Model as INameDataModel).AcquireName();
-			(View as ITestUIView).SetNameText(name);
+			var name = (ModelInterface as INameDataModel).AcquireName();
+			(ViewInterface as ITestUIView).SetNameText(name);
 		}
 	}
 	

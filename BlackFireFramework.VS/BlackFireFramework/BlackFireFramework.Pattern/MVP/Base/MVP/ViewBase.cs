@@ -20,7 +20,7 @@ namespace BlackFireFramework.Pattern
         /// <summary>
         /// 显示层曝露出来的接口，用于显示层的数据设置（一般单向设置）。
         /// </summary>
-        protected internal abstract IView View { get; }
+        protected internal abstract IView ViewInterface { get; }
 
         /// <summary>
         /// 发出事件。

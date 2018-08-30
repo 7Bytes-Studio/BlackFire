@@ -44,7 +44,7 @@ namespace BlackFireFramework.Pattern
                 {
                     if (m_Dic.ContainsKey(p))
                     {
-                        (m_Dic[p] as PresenterBase).View = null;
+                        (m_Dic[p] as PresenterBase).ViewInterface = null;
                     }
                 }
                 m_VPEntryLinkedList.Remove(target);
@@ -60,7 +60,7 @@ namespace BlackFireFramework.Pattern
                 {
                     if (m_Dic.ContainsKey(p))
                     {
-                        (m_Dic[p] as PresenterBase).Model = null;
+                        (m_Dic[p] as PresenterBase).ModelInterface = null;
                     }
                 }
                 
@@ -88,7 +88,7 @@ namespace BlackFireFramework.Pattern
                 foreach (var tp in presenters)
                 {
                     var presenterIns = CheckOrCreatePatternInstance(tp) as PresenterBase;
-                    presenterIns.View = viewIns.View;
+                    presenterIns.ViewInterface = viewIns.ViewInterface;
                     viewIns.PresenterTypeList.Add(tp);
                 }
                 m_VPEntryLinkedList.AddLast(new VPEntry(){ View = view,Presenters = presenters}); //添加纪录。
@@ -111,7 +111,7 @@ namespace BlackFireFramework.Pattern
                 foreach (var tp in presenters)
                 {
                     var presenterIns = CheckOrCreatePatternInstance(tp) as PresenterBase;
-                    presenterIns.Model = modelIns.Model;
+                    presenterIns.ModelInterface = modelIns.ModelInterface;
                 }
                 m_MPEntryLinkedList.AddLast(new MPEntry(){ Model = model,Presenters = presenters}); //添加纪录。
             }

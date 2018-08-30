@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace BlackFireFramework.Unity
+namespace Alan
 {
     [RequireComponent(typeof(MeshFilter))]
     [RequireComponent(typeof(MeshRenderer))]
