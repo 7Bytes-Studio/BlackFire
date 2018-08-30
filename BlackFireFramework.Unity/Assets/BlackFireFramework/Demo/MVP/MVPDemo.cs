@@ -4,18 +4,15 @@ using System.Collections.Generic;
 using BlackFireFramework;
 using BlackFireFramework.Pattern;
 using BlackFireFramework.Unity;
+using UnityEngine;
 
 namespace Alan
 {
-	public sealed class MVPDemo : ManagerBase
+	public sealed class MVPDemo : MonoBehaviour
 	{
-		protected override void OnStart()
+		private void Start()
 		{
-			base.OnStart();
-			RegisterModule<IMVPModule>();
-			var mvpModule = GetModule<IMVPModule>();
-			mvpModule.BindVP(typeof(V),new Type[]{typeof(P) });
-			mvpModule.BindMP(typeof(M),new Type[]{typeof(P) });
+			BlackFire.MVP.BindMVP<M,V,P>();
 		}
 	}
 
