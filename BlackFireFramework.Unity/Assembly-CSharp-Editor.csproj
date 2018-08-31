@@ -354,9 +354,6 @@
     <Reference Include="BlackFireFramework.Pattern">
       <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Pattern.dll</HintPath>
     </Reference>
-    <Reference Include="BlackFireFramework.Pattern">
-      <HintPath>D:/__BlackFire__/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/BlackFireFramework.Pattern.dll</HintPath>
-    </Reference>
     <Reference Include="SuperSocket.ClientEngine">
       <HintPath>D:/Workspace/Project/OpenSource/BlackFireFramework/BlackFireFramework.Unity/Assets/BlackFireFramework/Build-In/Runtime/Lib/Build-In/SuperSocket.ClientEngine.dll</HintPath>
     </Reference>
