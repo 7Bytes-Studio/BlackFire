@@ -4,30 +4,43 @@ Shader "Unlit/CubeShader"
 {
     Properties
     {
-        _Size ("Size",float) = 0
-        _Color ("Color",Color)=(0.6,0.6,0.6,0.6)
-    
+        _Size ("Size",float) = 1
     }
 
 	SubShader
 	{
+		LOD 100
+
 	    pass
 	    {
 	    	CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
 			
-			uniform float _Size;
-			uniform fixed4 _Color;
-			
-			float4 vert(float4 v:POSITION):SV_POSITION
+			struct a2v
 			{
-			    return UnityObjectToClipPos(v*float(_Size));
+				float4 vertex : POSITION;
+				float3 normal : NORMAL;
+				float4 texcoord:TEXCOORD0;
+			};
+
+			struct v2f
+			{
+				float4 pos:SV_POSITION;
+				fixed3 color:COLOR0;
+			};
+			
+			v2f vert(a2v i)
+			{
+				v2f o;
+				o.pos = UnityObjectToClipPos(i.vertex);
+				o.color = i.normal*0.5+fixed3(0.5,0.5,0.5); //normal的分量为[-1,1]
+				return o;
 			}
 			
-			fixed4 frag():SV_Target
+			fixed4 frag(v2f i):SV_Target
 			{
-			    return fixed4(_Color);
+			    return fixed4(i.color,1.0);
 			}
 			
 			ENDCG
