@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CubeMat
-  m_Shader: {fileID: 4800000, guid: 1c207b99280550e4d94c73ef88973b90, type: 3}
+  m_Name: DiffuseMat
+  m_Shader: {fileID: 4800000, guid: 6cfaf26f8bec36a489580c6bdc3e60e4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 40a0ab40c0bede2409da8b4f8b962f9f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09a88738b5883c34b8e1e053e972ad64, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -58,18 +58,26 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DistanceFactor: 21.94
     - _DstBlend: 0
+    - _Frequency: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _InvWaveLength: 10
+    - _Magnitude: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Offset: 0
     - _Parallax: 0.02
     - _Size: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 0.1
     - _SrcBlend: 1
+    - _TimeFactor: 7.13
+    - _TotalFactor: 14.71
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
