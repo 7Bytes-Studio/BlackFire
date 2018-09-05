@@ -15,7 +15,7 @@ namespace BlackFireFramework.Unity
 {
     public sealed class MessageBoxWindowLogic : UguiWindowLogic,
         IMessageBoxWindowLogic,IColourfulMessageBoxWindowLogic,IShakeMessageBoxWindowLogic,
-        IButtonClickHandler<Button>
+        IButtonClickHandler<MarkButton>
     {
         public override void OnCreate(UIWindow Window)
         {
@@ -29,7 +29,7 @@ namespace BlackFireFramework.Unity
             m_TextContent.text = content;
         }
 
-        public void OnButtonClick(Button button)
+        public void OnButtonClick(MarkButton button)
         {
             Log.Info("Click::"+button.Mark);
         }

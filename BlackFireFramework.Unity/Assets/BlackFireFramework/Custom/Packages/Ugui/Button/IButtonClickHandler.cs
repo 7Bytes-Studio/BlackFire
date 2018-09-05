@@ -6,7 +6,7 @@
 
 namespace BlackFireFramework.Unity
 {
-    public interface IButtonClickHandler<T> : IUIEventHandler where T : Button
+    public interface IButtonClickHandler<T> : IUIEventHandler where T : MarkButton
     {
         void OnButtonClick(T button);
     }

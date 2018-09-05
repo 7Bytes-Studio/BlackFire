@@ -5,10 +5,11 @@
 //----------------------------------------------------
 
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.UIElements;
 
 namespace BlackFireFramework.Unity
 {
-    public class Button : UguiUIElement,IPointerClickHandler
+    public class MarkButton : UguiUIElement,IPointerClickHandler
     {
         [UnityEngine.SerializeField] private string m_Mark;
         public string Mark 
@@ -18,7 +19,7 @@ namespace BlackFireFramework.Unity
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            BubblingEvent<IButtonClickHandler<Button>>(i=>i.OnButtonClick(this));
+            BubblingEvent<IButtonClickHandler<MarkButton>>(i=>i.OnButtonClick(this));
         }
     }    
 }
