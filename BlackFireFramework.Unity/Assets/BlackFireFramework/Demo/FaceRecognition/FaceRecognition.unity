@@ -256,7 +256,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 403929040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1603, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -328,7 +328,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &810999363
 GameObject:
@@ -439,6 +439,51 @@ MonoBehaviour:
   m_PixelImageTpl: {fileID: 535348902}
   m_Width: 100
   m_Height: 100
+--- !u!1 &1274960203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1274960205}
+  - component: {fileID: 1274960204}
+  m_Layer: 0
+  m_Name: PixlsInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1274960204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274960203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e569b6660694b9d94d6aad2b65432df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Tnit: {r: 0.9150943, g: 0.8158152, b: 0.8158152, a: 0}
+  m_Maker: {fileID: 810999368}
+  m_T2dLeft: {fileID: 2800000, guid: b8caebfb79ee1894ba2aba450bfe7b8e, type: 3}
+  m_T2dMiddle: {fileID: 2800000, guid: f94a114c82bee4a4b91dc454001760ff, type: 3}
+  m_T2dRight: {fileID: 2800000, guid: 4bbf44ddf46d7eb4295dd22507af4306, type: 3}
+--- !u!4 &1274960205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274960203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.653365, y: -1603.1888, z: 5.9403443}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354701403
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1354701404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +514,7 @@ MonoBehaviour:
   m_PixelImageMaker: {fileID: 810999368}
   WebCam: {fileID: 0}
   ma: {fileID: 403929041}
-  m_Texture2DPixels: {fileID: 0}
+  m_T2d: {fileID: 0}
 --- !u!4 &1354701405
 Transform:
   m_ObjectHideFlags: 0
@@ -588,8 +633,8 @@ Camera:
   m_GameObject: {fileID: 1971946755}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3500356, g: 0.3584906, b: 0.35690647, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

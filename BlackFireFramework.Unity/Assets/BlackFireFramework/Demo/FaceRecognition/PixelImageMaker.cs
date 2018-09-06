@@ -20,7 +20,7 @@ namespace BlackFireFramework.Unity
         
         
 
-        private void Awake()
+        private void Awake1()
         {
             var index = 0;
             var matrix = new Matrix(3,3);
@@ -67,13 +67,13 @@ namespace BlackFireFramework.Unity
                 }
             }
             
-            Debug.Log(matrix.ToString());
-            Debug.Log((int)matrix[2,2]);
+           // Debug.Log(matrix.ToString());
+           // Debug.Log((int)matrix[2,2]);
         }
 
         public void MakePixelImages(Color32[] color32s)
         {
-            StartCoroutine(MakePixelImagesYield(color32s));
+            StartCoroutine(MakeGreyPixelImagesYield(color32s));
         }
 
 
@@ -93,7 +93,21 @@ namespace BlackFireFramework.Unity
             }
         }
         
-       
+        private IEnumerator MakeGreyPixelImagesYield(Color32[] color32s)
+        {
+            int index=0;
+            for (int i = 0; i < m_Height; i++)
+            {
+                for (int j = 0; j < m_Width; j++)
+                {
+                    var img = GameObject.Instantiate<Image>(m_PixelImageTpl,m_PixelImageTpl.rectTransform.parent);
+                    img.gameObject.SetActive(true);
+                    img.rectTransform.anchoredPosition3D = new Vector3(j*2,-i*2,0);
+                    img.color = Utility.Graphic.Ash(color32s[index++]);
+                }
+                yield return null;
+            }
+        }
         
     }
 }
