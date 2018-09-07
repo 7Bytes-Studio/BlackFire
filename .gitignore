@@ -32,3 +32,8 @@ BlackFireFramework.VS/BlackFireFramework/BlackFireFramework.Server.Package/obj/
 BlackFireFramework.VS/BlackFireFramework/BlackFireFramework.Unity/obj/
 BlackFireFramework.VS/BlackFireFramework/BlackFireFramework.Hotfix/obj/
 BlackFireFramework.VS/BlackFireFramework/.idea/
+BlackFireFramework.Unity/Assets/FaceTrackerExample/
+BlackFireFramework.Unity/Assets/OpenCVForUnity/
+BlackFireFramework.Unity/Assets/StreamingAssets/
+BlackFireFramework.Unity/Assets/FaceTrackerExample.meta
+BlackFireFramework.Unity/Assets/OpenCVForUnity.meta
