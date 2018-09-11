@@ -48,6 +48,7 @@ namespace BlackFireFramework.Unity
                 labelsList.Add (label++); //为图片打上标签。
                 yield return null;
             }
+            
             m_Labels.fromList(labelsList); //标签列表。
             
             if (null!=loadCompleted)
@@ -55,11 +56,101 @@ namespace BlackFireFramework.Unity
                 loadCompleted.Invoke();
             }
         }
+
+
+        private Mat MatRead(string uri)
+        {
+            return Imgcodecs.imread(uri,0);
+        }
+
+        [SerializeField] private Texture2D _2d;
+        private Mat MatRead(WebCamDevice webCamDevice,WebCamTexture webCamTexture)
+        {
+            Mat rgbaMat = new Mat(webCamTexture.height, webCamTexture.width, CvType.CV_8UC4);
+            Color32[] color32s = new Color32[webCamTexture.height*webCamTexture.width];
+            Utils.webCamTextureToMat(webCamTexture,rgbaMat,color32s);
+            FlipMat(webCamDevice,webCamTexture,rgbaMat,false,true);
+            _2d = new Texture2D(160,120,TextureFormat.RGBA32,false);
+            Utils.matToTexture2D(rgbaMat,_2d);
+            return rgbaMat;
+        }
         
         
-        public FaceRecognitionEventArgs FaceRecognition(string sampleImageuri)
+        private void FlipMat(WebCamDevice webCamDevice,WebCamTexture webCamTexture,Mat mat,bool flipVertical=false,bool flipHorizontal=false)
+        {
+            int flipCode = int.MinValue;
+
+            if (webCamDevice.isFrontFacing)
+            {
+                if (webCamTexture.videoRotationAngle == 0)
+                {
+                    flipCode = 1;
+                } else if (webCamTexture.videoRotationAngle == 90)
+                {
+                    flipCode = 1;
+                }
+                if (webCamTexture.videoRotationAngle == 180)
+                {
+                    flipCode = 0;
+                } else if (webCamTexture.videoRotationAngle == 270)
+                {
+                    flipCode = 0;
+                }
+            } else
+            {
+                if (webCamTexture.videoRotationAngle == 180)
+                {
+                    flipCode = -1;
+                } else if (webCamTexture.videoRotationAngle == 270)
+                {
+                    flipCode = -1;
+                }
+            }
+
+            if (flipVertical)
+            {
+                if (flipCode == int.MinValue)
+                {
+                    flipCode = 0;
+                } else if (flipCode == 0)
+                {
+                    flipCode = int.MinValue;
+                } else if (flipCode == 1)
+                {
+                    flipCode = -1;
+                } else if (flipCode == -1)
+                {
+                    flipCode = 1;
+                }
+            }
+
+            if (flipHorizontal)
+            {
+                if (flipCode == int.MinValue)
+                {
+                    flipCode = 1;
+                } else if (flipCode == 0)
+                {
+                    flipCode = -1;
+                } else if (flipCode == 1)
+                {
+                    flipCode = int.MinValue;
+                } else if (flipCode == -1)
+                {
+                    flipCode = 0;
+                }
+            }
+
+            if (flipCode > int.MinValue)
+            {
+                Core.flip(mat, mat, flipCode);
+            }
+        }
+        
+        
+
+        private FaceRecognitionEventArgs _FaceRecognition(Mat sampleMat)
         {            
-            Mat sampleMat = Imgcodecs.imread(sampleImageuri,0);
             int[] predictedLabel = new int[1]; //预判标签
             double[] predictedConfidence = new double[1]; //预判可信度
 
@@ -71,7 +162,7 @@ namespace BlackFireFramework.Unity
             Debug.Log ("Confidence: " + predictedConfidence[0]);
 
 
-            Mat predictedMat = m_Images[predictedLabel[0]];
+            Mat predictedMat = m_Images[predictedLabel[0]]; //找到匹配的那张图
 
             Mat baseMat = new Mat(sampleMat.rows(), predictedMat.cols() + sampleMat.cols(), CvType.CV_8UC1);
             predictedMat.copyTo(baseMat.submat (new OpenCVForUnity.Rect(0, 0, predictedMat.cols (), predictedMat.rows ())));
@@ -94,6 +185,18 @@ namespace BlackFireFramework.Unity
                 FaceRecTexture = texture
             };
         }
+        
+        public FaceRecognitionEventArgs FaceRecognition(string sampleImageuri)
+        {
+            return _FaceRecognition(MatRead(sampleImageuri));
+        }
+        
+        public FaceRecognitionEventArgs FaceRecognition(WebCamDevice webCamDevice,WebCamTexture webCamTexture)
+        {
+            return _FaceRecognition(MatRead(webCamDevice,webCamTexture));
+        }
+
+        
         
     }
 
