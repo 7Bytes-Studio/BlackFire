@@ -5,45 +5,105 @@
 //----------------------------------------------------
 
 using System.Collections;
-using OpenCVForUnity;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace BlackFireFramework.Unity
 {
     public sealed class FaceRecognizerDemo : MonoBehaviour
     {
-        [SerializeField] private MeshRenderer m_MeshRenderer;
+        [SerializeField] private RawImage m_RawImage_Face;
+        [SerializeField] private RawImage m_RawImage_FaceToLib;
+        [SerializeField] private RawImage m_RawImage_FaceToRec;
+        [SerializeField] private UnityEngine.UI.Text m_Text_Confidence = null;
+
+        private Texture2D m_Texture2D = null;
+        private WebCam m_WebCam = null;
+        
         private IEnumerator Start()
         {
-            BlackFire.CG.LoadFaceImages(new string[]
+            //读取库中的图片。
+            var faceLibFolder = Application.streamingAssetsPath + "/facelib/";
+            DirectoryInfo di = new DirectoryInfo(faceLibFolder);
+            var fis = di.GetFiles();
+            List<string> uris = new List<string>();
+            foreach (var fi in fis)
             {
-                Application.streamingAssetsPath+"/facerec/facerec_0.bmp",
-                Application.streamingAssetsPath+"/facerec/facerec_1.bmp",
-                Application.streamingAssetsPath+"/facerec/facerec_2.bmp",
-//            }, () =>
-//            {
-//                var args = BlackFire.CG.FaceRecognition(Application.streamingAssetsPath+"/facerec/alanzeng.bmp");
-//                m_MeshRenderer.material.mainTexture = args.FaceRecTexture;
-            });
+                if(fi.Extension.Contains("meta")) continue;
+                uris.Add(fi.FullName);
+            }
+            BlackFire.CG.LoadFaceImages(uris);
             
-            yield return null;
+            m_Texture2D = new Texture2D(160,120,TextureFormat.RGBA32,true);
+            m_WebCam = new WebCam(160,120);
+            yield return m_WebCam;
+            m_RawImage_Face.texture = m_WebCam.WebCamTexture;
 
-            var webCam = new WebCam(92,112);
-            yield return webCam;
+            BlackFireFramework.Utility.IO.ExistsOrCreateFolder(Application.persistentDataPath + "/face");
+            var tmpPath = Application.persistentDataPath + "/face/facerec_tmp.png";
+            while (true)
+            {
+                yield return new WaitForSeconds(0.618f);
+                
+                m_WebCam.WebCamTexture.Pause();
+                m_Texture2D.SetPixels32(m_WebCam.WebCamTexture.GetPixels32());
+                m_Texture2D.Apply();
+                m_WebCam.WebCamTexture.Play();
             
-            Debug.Log(webCam.WebCamTexture.width+"  "+webCam.WebCamTexture.height);
+                Utility.Texture.ToPNGFile(tmpPath,m_Texture2D);
+                yield return new WaitForEndOfFrame();
+                var args = BlackFire.CG.FaceRecognition(tmpPath);
+
+                if (args.RecognitionFailure)
+                {
+                    m_RawImage_FaceToRec.texture = m_Texture2D;
+                    continue;
+                }
+                
+                m_RawImage_FaceToRec.texture = args.FaceRecTexture;
+                if (0!=args.Confidence)
+                {
+                    m_Text_Confidence.text = string.Format("FaceId : {0}   Confidence : {1}",args.PredictedLabel,args.Confidence.ToString());
+                   // Log.Info("认证成功! 可信度 : "+args.Confidence);
+                }
+            }
             
-            m_MeshRenderer.material.mainTexture = webCam.WebCamTexture;
+        }
+
+
+        public void FaceSample(Texture2D texture2D,string faceId)
+        {
+            StartCoroutine(_FaceSample(texture2D,faceId));
+        }
+
+        private IEnumerator _FaceSample(Texture2D texture2D,string faceId)
+        {
+            m_WebCam.WebCamTexture.Pause();
+            texture2D.SetPixels32(m_WebCam.WebCamTexture.GetPixels32());
+            texture2D.Apply();
             
-            yield return new WaitForSeconds(2f);
+            var path = Application.streamingAssetsPath + "/facelib/" + faceId + ".png";
+            Utility.Texture.ToPNGFile(path,texture2D);
+            yield return new WaitForEndOfFrame();
+            BlackFire.CG.LoadFaceImages(new string[]{path});
+            m_WebCam.WebCamTexture.Play();
+        }
+
+
+
+        private void OnGUI()
+        {
+            if (GUILayout.Button("人脸采集"))
+            {
+                var faceId = "Fucker_"+UnityEngine.Random.Range(999,9999);
+                var texture2D = new Texture2D(160,120,TextureFormat.RGBA32,true);
+                FaceSample(texture2D,faceId);
+                m_RawImage_FaceToLib.texture = texture2D;
+            }
             
-            webCam.WebCamTexture.Pause();
-            var args = BlackFire.CG.FaceRecognition(webCam.WebCamDevice,webCam.WebCamTexture);
-            webCam.WebCamTexture.Play();
-            m_MeshRenderer.material.mainTexture = args.FaceRecTexture;
             
-           
-           // Utils.webCamTextureToMat();
             
         }
     }
