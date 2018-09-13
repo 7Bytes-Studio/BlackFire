@@ -24,6 +24,7 @@ namespace BlackFireFramework.Unity
         
         private IEnumerator Start()
         {
+            yield return new WaitForSeconds(3f);
             //读取库中的图片。
             var faceLibFolder = Application.streamingAssetsPath + "/facelib/";
             DirectoryInfo di = new DirectoryInfo(faceLibFolder);

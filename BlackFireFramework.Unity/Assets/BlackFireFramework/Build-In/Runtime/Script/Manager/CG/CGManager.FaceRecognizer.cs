@@ -105,8 +105,6 @@ namespace BlackFireFramework.Unity
             return rgbaMat;
         }
         
-        
-        
         private void FlipMat(WebCamDevice webCamDevice,WebCamTexture webCamTexture,Mat mat,bool flipVertical=false,bool flipHorizontal=false)
         {
             int flipCode = int.MinValue;
@@ -177,8 +175,6 @@ namespace BlackFireFramework.Unity
                 Core.flip(mat, mat, flipCode);
             }
         }
-        
-        
 
         private FaceRecognitionEventArgs _FaceRecognition(Mat sampleMat)
         {            
@@ -191,7 +187,7 @@ namespace BlackFireFramework.Unity
             faceRecognizer.predict (sampleMat,predictedLabel,predictedConfidence);
             var label = predictedLabel[0];
 
-            Debug.Log ("Predicted class: " + label + " | " + "Confidence: " + predictedConfidence[0] + " | ");
+            Debug.Log ("Predicted class: " + label + " | " + "Confidence: " + predictedConfidence[0] );
 
             
             if (0==label)
@@ -237,7 +233,7 @@ namespace BlackFireFramework.Unity
     }
 
 
-    public sealed class FaceRecognitionEventArgs
+    public sealed class FaceRecognitionEventArgs:EventArgs
     {
         public bool RecognitionFailure; //识别失败
         public int PredictedLabel; //预判等级
