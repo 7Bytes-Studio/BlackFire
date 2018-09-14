@@ -12,8 +12,8 @@ namespace BlackFireFramework.Unity
     {
         private void Start()
         {
-            var cgTpl = Resources.Load<GraphicsManager>("/CG/CG");
-            IManager manager = Instantiate<GraphicsManager>(cgTpl, transform);
+            var g = gameObject.AddComponent<GraphicsManager>();
+            IManager manager = g;
             manager.StartManager();
         }
     }
