@@ -35,7 +35,7 @@ namespace BlackFireFramework.Unity
                 if(fi.Extension.Contains("meta")) continue;
                 uris.Add(fi.FullName);
             }
-            BlackFire.CG.LoadFaceImages(uris);
+            BlackFire.Graphics.LoadFaceImages(uris);
             
             m_Texture2D = new Texture2D(160,120,TextureFormat.RGBA32,true);
             m_WebCam = new WebCam(160,120);
@@ -55,7 +55,7 @@ namespace BlackFireFramework.Unity
             
                 Utility.Texture.ToPNGFile(tmpPath,m_Texture2D);
                 yield return new WaitForEndOfFrame();
-                var args = BlackFire.CG.FaceRecognition(tmpPath);
+                var args = BlackFire.Graphics.FaceRecognition(tmpPath);
 
                 if (args.RecognitionFailure)
                 {
@@ -88,7 +88,7 @@ namespace BlackFireFramework.Unity
             var path = Application.streamingAssetsPath + "/facelib/" + faceId + ".png";
             Utility.Texture.ToPNGFile(path,texture2D);
             yield return new WaitForEndOfFrame();
-            BlackFire.CG.LoadFaceImages(new string[]{path});
+            BlackFire.Graphics.LoadFaceImages(new string[]{path});
             m_WebCam.WebCamTexture.Play();
         }
 

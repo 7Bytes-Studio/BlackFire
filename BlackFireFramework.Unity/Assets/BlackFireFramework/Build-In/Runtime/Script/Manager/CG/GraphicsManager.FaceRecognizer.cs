@@ -14,7 +14,7 @@ using BlackFireFramework;
 
 namespace BlackFireFramework.Unity
 {
-	public sealed partial class CGManager
+	public sealed partial class GraphicsManager
     {
 
         private void Init_FaceRecognizer()

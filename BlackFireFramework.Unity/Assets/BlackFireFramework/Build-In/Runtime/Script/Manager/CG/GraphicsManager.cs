@@ -16,13 +16,14 @@ namespace BlackFireFramework.Unity
     /// 人脸图像管家。
     /// </summary>
     [DisallowMultipleComponent]
-    [AddComponentMenu("BlackFire/CG")]
-	public sealed partial class CGManager : ManagerBase
+    [AddComponentMenu("BlackFire/Graphics")]
+	public sealed partial class GraphicsManager : ManagerBase
     {
         protected override void OnStart()
         {
             base.OnStart();
             Init_FaceRecognizer();
+            Init_FaceTracker();
         }
     }
 

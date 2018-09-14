@@ -8,6 +8,6 @@ using BlackFireFramework.Unity;
 
 public sealed partial class BlackFire
 {
-    private static CGManager s_CG = null;
-    public static CGManager CG { get { return s_CG = (s_CG ?? GetManager<CGManager>()); } }
+    private static GraphicsManager s_Graphics = null;
+    public static GraphicsManager Graphics { get { return s_Graphics = (s_Graphics ?? GetManager<GraphicsManager>()); } }
 }

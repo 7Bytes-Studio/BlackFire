@@ -8,11 +8,12 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
-    public sealed class DelayToLoadManager : MonoBehaviour
+    public sealed class DelayToLoadGraphicsManager : MonoBehaviour
     {
         private void Start()
         {
-            IManager manager =  gameObject.AddComponent<CGManager>();
+            var cgTpl = Resources.Load<GraphicsManager>("/CG/CG");
+            IManager manager = Instantiate<GraphicsManager>(cgTpl, transform);
             manager.StartManager();
         }
     }

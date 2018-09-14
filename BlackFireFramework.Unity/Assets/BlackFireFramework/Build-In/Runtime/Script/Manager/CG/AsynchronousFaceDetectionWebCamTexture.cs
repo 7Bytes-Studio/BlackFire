@@ -3,24 +3,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-
 #if UNITY_5_3 || UNITY_5_3_OR_NEWER
 using UnityEngine.SceneManagement;
 #endif
 using OpenCVForUnity;
+using OpenCVForUnityExample;
 using Rect = OpenCVForUnity.Rect;
 using PositionsVector = System.Collections.Generic.List<OpenCVForUnity.Rect>;
 
-namespace OpenCVForUnityExample
+namespace BlackFireFramework.Unity
 {
     /// <summary>
     /// Asynchronous Face Detection WebCamTexture Example
     /// Referring to https://github.com/Itseez/opencv/blob/master/modules/objdetect/src/detection_based_tracker.cpp.
     /// </summary>
     [RequireComponent (typeof(WebCamTextureToMatHelper))]
-    public class AsynchronousFaceDetectionWebCamTextureExample : MonoBehaviour
+    public class AsynchronousFaceDetectionWebCamTexture : MonoBehaviour
     {
+        /// <summary>
+        /// The face track rects.
+        /// </summary>
+        public event Action<Rect[]> OnFaceTrackRect;
 
+        
         /// <summary>
         /// The gray mat.
         /// </summary>
@@ -225,8 +230,10 @@ namespace OpenCVForUnityExample
         /// </summary>
         public void OnWebCamTextureToMatHelperInitialized ()
         {
+#if DEVELOP
             Debug.Log ("OnWebCamTextureToMatHelperInitialized");
-            
+#endif
+
             Mat webCamTextureMat = webCamTextureToMatHelper.GetMat ();
 
             texture = new Texture2D (webCamTextureMat.cols (), webCamTextureMat.rows (), TextureFormat.RGBA32, false);
@@ -234,9 +241,9 @@ namespace OpenCVForUnityExample
             gameObject.GetComponent<Renderer> ().material.mainTexture = texture;
             
             gameObject.transform.localScale = new Vector3 (webCamTextureMat.cols (), webCamTextureMat.rows (), 1);
-            
+#if DEVELOP
             Debug.Log ("Screen.width " + Screen.width + " Screen.height " + Screen.height + " Screen.orientation " + Screen.orientation);
-
+#endif
             if (fpsMonitor != null){
                 fpsMonitor.Add ("width", webCamTextureMat.width ().ToString());
                 fpsMonitor.Add ("height", webCamTextureMat.height ().ToString());
@@ -272,8 +279,9 @@ namespace OpenCVForUnityExample
         /// </summary>
         public void OnWebCamTextureToMatHelperDisposed ()
         {
+#if DEVELOP
             Debug.Log ("OnWebCamTextureToMatHelperDisposed");
-
+#endif
             #if !UNITY_WEBGL
             StopThread ();
             #else
@@ -306,7 +314,9 @@ namespace OpenCVForUnityExample
         /// <param name="errorCode">Error code.</param>
         public void OnWebCamTextureToMatHelperErrorOccurred (WebCamTextureToMatHelper.ErrorCode errorCode)
         {
+#if DEVELOP
             Debug.Log ("OnWebCamTextureToMatHelperErrorOccurred " + errorCode);
+#endif
         }
 
         // Update is called once per frame
@@ -385,7 +395,11 @@ namespace OpenCVForUnityExample
 
                 rects = resultObjects.ToArray ();
                 for (int i = 0; i < rects.Length; i++) {
-                    //Debug.Log ("detect faces " + rects [i]);
+//                    Debug.Log ("detect faces " + rects [i]);
+                    if (null!=OnFaceTrackRect)
+                    {
+                        OnFaceTrackRect.Invoke(rects);
+                    }
                     Imgproc.rectangle (rgbaMat, new Point (rects [i].x, rects [i].y), new Point (rects [i].x + rects [i].width, rects [i].y + rects [i].height), new Scalar (255, 0, 0, 255), 2);
                 }
 
@@ -470,8 +484,9 @@ namespace OpenCVForUnityExample
             #else
             ThreadPool.QueueUserWorkItem (_ => action ());
             #endif
-
+#if DEVELOP
             Debug.Log ("Thread Start");
+#endif
         }
 
         private void StopThread ()
@@ -484,7 +499,9 @@ namespace OpenCVForUnityExample
             while (isThreadRunning) {
                 //Wait threading stop
             } 
+#if DEVELOP
             Debug.Log ("Thread Stop");
+#endif
         }
 
         #if !UNITY_WEBGL

@@ -508,10 +508,10 @@ namespace OpenCVForUnityExample
                     if (isTimeout) break;
                     #endif
                     #endif
-
+#if DEVELOP
                     Debug.Log ("WebCamTextureToMatHelper:: " + "devicename:" + webCamTexture.deviceName + " name:" + webCamTexture.name + " width:" + webCamTexture.width + " height:" + webCamTexture.height + " fps:" + webCamTexture.requestedFPS
                     + " videoRotationAngle:" + webCamTexture.videoRotationAngle + " videoVerticallyMirrored:" + webCamTexture.videoVerticallyMirrored + " isFrongFacing:" + webCamDevice.isFrontFacing);
-
+#endif
                     if (colors == null || colors.Length != webCamTexture.width * webCamTexture.height)
                         colors = new Color32[webCamTexture.width * webCamTexture.height];
 
