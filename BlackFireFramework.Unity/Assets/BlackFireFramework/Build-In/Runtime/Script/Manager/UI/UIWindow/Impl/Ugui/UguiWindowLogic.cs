@@ -228,7 +228,7 @@ namespace BlackFireFramework.Unity
         public virtual void OnOpen() { gameObject.SetActive(true); }
         public virtual void OnUpdate() { }
         public virtual void OnClose() {  gameObject.SetActive(false); }
-        public virtual void OnDestroyed() { DestroyImmediate(gameObject); }
+        public virtual void OnDestroyed() {  }
 
         #endregion
 
