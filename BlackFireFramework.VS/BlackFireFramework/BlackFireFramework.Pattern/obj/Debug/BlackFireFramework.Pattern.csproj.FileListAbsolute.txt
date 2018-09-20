@@ -10,3 +10,5 @@ D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework.Uni
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Pattern.pdb
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Pattern.dll
 D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\BlackFireFramework\Build-In\Runtime\Lib\Build-In\BlackFireFramework.Pattern.pdb
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Pattern.dll
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Pattern.pdb

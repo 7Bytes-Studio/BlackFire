@@ -26,3 +26,5 @@ D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Asse
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.csprojResolveAssemblyReference.cache
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.dll
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Game\obj\Debug\BlackFireFramework.Game.pdb
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Game.dll
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Game.pdb

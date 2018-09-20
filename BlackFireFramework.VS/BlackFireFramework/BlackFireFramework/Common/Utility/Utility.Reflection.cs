@@ -11,6 +11,29 @@ namespace BlackFireFramework
 
             #region Type
 
+            public static Type GetType(string assemblyName,string typeFullName)
+            {
+                Assembly assembly = Assembly.Load(assemblyName);
+                return assembly.GetType(typeFullName);
+            }
+
+            
+            public static Type GetType(string[] assemblyNames,string typeFullName)
+            {
+                for (int i = 0; i < assemblyNames.Length; i++)
+                {
+                    var assembly = Assembly.Load(assemblyNames[i]);
+                    var type = assembly.GetType(typeFullName);
+                    if (null!=type)
+                    {
+                        return type;
+                    }
+                }
+                return null;
+            }
+
+
+
             /// <summary>
             /// 获取指定程序集的所有的子类实现类型。
             /// </summary>

@@ -24,3 +24,5 @@ D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.Unity\Asse
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.csprojResolveAssemblyReference.cache
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.dll
 D:\Workspace\Project\OpenSource\BlackFireFramework\BlackFireFramework.VS\BlackFireFramework\BlackFireFramework.Network\obj\Debug\BlackFireFramework.Network.pdb
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Network.dll
+D:\__BlackFire__\BlackFireFramework\BlackFireFramework.Unity\Assets\Plugins\BlackFireFramework\Runtime\Lib\Build-In\BlackFireFramework.Network.pdb
