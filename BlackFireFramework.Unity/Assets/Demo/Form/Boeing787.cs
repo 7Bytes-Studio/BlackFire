@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace BlackFireFramework.Unity
 {
-    public class CC919 : Plane ,IFly_FormGroupMemberCommand
+    public class Boeing787 : Plane //,IFly_FormGroupCommand
     {
         public void Fly()
         {
-            Log.Info("CC919 飞行。");
+            Log.Info("Boeing787 飞行。");
         }
     }
 }

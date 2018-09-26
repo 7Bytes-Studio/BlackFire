@@ -230,48 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e45d914555fa1e141af113fa6fec47d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &963012651
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4159204262519442, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0dc9c8a8ad26bad4fb2456f174f31492, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1480001101
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +258,7 @@ Transform:
   m_Children:
   - {fileID: 519166621}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480001103
 MonoBehaviour:
@@ -330,13 +288,7 @@ MonoBehaviour:
   - BlackFireFramework.Unity.IoCRegister11
   - BlackFireFramework.Unity.IoCRegister22
   - BlackFireFramework.Unity.IoCRegister33
-  m_AvailableIoCRegisters:
-  - BlackFireFramework.Unity.IoCRegister1
-  - BlackFireFramework.Unity.IoCRegister2
-  - BlackFireFramework.Unity.IoCRegister3
-  - BlackFireFramework.Unity.IoCRegister11
-  - BlackFireFramework.Unity.IoCRegister22
-  - BlackFireFramework.Unity.IoCRegister33
+  m_AvailableIoCRegisters: []
 --- !u!1 &1874161271
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1972689616
 MonoBehaviour:
