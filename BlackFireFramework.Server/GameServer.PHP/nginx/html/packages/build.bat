@@ -1,1 +1,0 @@
-start BlackFireFramework.Server.Package.exe http://0x69h.com
