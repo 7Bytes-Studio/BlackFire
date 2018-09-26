@@ -1,4 +1,4 @@
-# BlackFireFramework
+# BlackFire
 One magical project.
 
 ![BlackFireFramework](https://github.com/BlackFire-Studio/BlackFireFramework/blob/wiki/Images/Framework.png)
