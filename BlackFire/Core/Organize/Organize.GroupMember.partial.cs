@@ -15,10 +15,22 @@ namespace BlackFire
     {
         public abstract class GroupMember
         {
+            /// <summary>
+            /// 成员Id。
+            /// </summary>
             public long Id { get; protected internal set; }
-            public string Name { get; protected set; }
-            public int Ability { get; protected set; }
+            /// <summary>
+            /// 成员名字。
+            /// </summary>
+            public string Name { get; protected internal set; }
+            /// <summary>
+            /// 成员能力值。（这个数值决定了处理任务的优先级）
+            /// </summary>
+            public int Ability { get; protected internal set; }
 
+            /// <summary>
+            /// 处理命令。
+            /// </summary>
             protected internal virtual bool HandleCommand<T>(CommandCallback<T> commandCallback) where T : Event.IEventHandler
             {
                 if (this is T)

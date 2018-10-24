@@ -25,12 +25,13 @@ namespace BlackFire
             Group.Foreach(callback);
         }
 
-
+        /// <summary>
+        /// 获取小组Id。
+        /// </summary>
         public static long GetGroupId(string groupName)
         {
             return Group.QueryGroupId(groupName);
         }
-
 
         /// <summary>
         /// 创建小组。
@@ -51,8 +52,7 @@ namespace BlackFire
                 return false;
             }
         }
-        
-        
+          
         /// <summary>
         /// 创建小组。
         /// </summary>
@@ -74,6 +74,63 @@ namespace BlackFire
         }
 
         /// <summary>
+        /// 创建成员。
+        /// </summary>
+        public static bool CreateMember(Type memberType , long groupMemberId , int ability , string name)
+        {
+            try
+            {
+                var ins = (GroupMember)Utility.Reflection.New(memberType);
+                ins.Id = groupMemberId;
+                ins.Name = name;
+                ins.Ability = ability;
+                GroupMember.RecordGroupMember(ins);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        
+        /// <summary>
+        /// 创建成员。
+        /// </summary>
+        public static bool CreateMember<T>(long groupMemberId , int ability , string name) where T: GroupMember
+        {
+            try
+            {
+                var ins = (GroupMember)Utility.Reflection.New(typeof(T));
+                ins.Id = groupMemberId;
+                ins.Name = name;
+                ins.Ability = ability;
+                GroupMember.RecordGroupMember(ins);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 获取小组成员实例。
+        /// </summary>
+        public static GroupMember GetGroupMember(long groupMemberId)
+        {
+            return GroupMember.QueryGroupMember(groupMemberId);
+        }
+        
+        /// <summary>
+        /// 获取小组成员实例。
+        /// </summary>
+        public static T GetGroupMember<T>(long groupMemberId)where T: GroupMember
+        {
+            return GroupMember.QueryGroupMember(groupMemberId) as T;
+        }
+
+
+        /// <summary>
         /// 成员加入小组。
         /// </summary>
         public static bool Join(long groupId,GroupMember groupMember,int groupMemberWeight)
@@ -87,8 +144,7 @@ namespace BlackFire
             }
             return false;
         }
-
-        
+      
         /// <summary>
         /// 成员离开小组。
         /// </summary>
@@ -188,9 +244,7 @@ namespace BlackFire
             }
             return false;
         }
-        
-        
-        
+                 
         /// <summary>
         /// 执行组命令。
         /// </summary>
