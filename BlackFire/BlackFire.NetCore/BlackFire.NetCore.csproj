@@ -1,0 +1,98 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="..\Common\Algorithm\Crc32.cs" />
+      <Compile Include="..\Common\Attribute\PermissionAttribute.cs" />
+      <Compile Include="..\Common\EventArgs\EventArgs{T}.cs" />
+      <Compile Include="..\Common\EventArgs\RecyclableEventArgs.cs" />
+      <Compile Include="..\Common\EventArgs\RecyclableEventArgs.Extension.cs" />
+      <Compile Include="..\Common\Extension\LinkedList.Extension.cs" />
+      <Compile Include="..\Common\Extension\Object.Extension.cs" />
+      <Compile Include="..\Common\Extension\String.Extension.cs" />
+      <Compile Include="..\Common\Pattern\ActionQueue\ActionQueue.cs" />
+      <Compile Include="..\Common\Pattern\MutiwayTree\MultiwayTreeNode{T}.cs" />
+      <Compile Include="..\Common\Pattern\MutiwayTree\MultiwayTree{T}.cs" />
+      <Compile Include="..\Common\Pattern\MutiwayTree\TraversaType.cs" />
+      <Compile Include="..\Common\Pattern\ObjectQueue\ObjectQueue{T}.cs" />
+      <Compile Include="..\Common\Pattern\Singleton\Singleton{T}.cs" />
+      <Compile Include="..\Common\Utility\Utility.Array.cs" />
+      <Compile Include="..\Common\Utility\Utility.Convertor.cs" />
+      <Compile Include="..\Common\Utility\Utility.cs" />
+      <Compile Include="..\Common\Utility\Utility.Enum.cs" />
+      <Compile Include="..\Common\Utility\Utility.Http.cs" />
+      <Compile Include="..\Common\Utility\Utility.IO.cs" />
+      <Compile Include="..\Common\Utility\Utility.IP.cs" />
+      <Compile Include="..\Common\Utility\Utility.Reflection.cs" />
+      <Compile Include="..\Common\Utility\Utility.Unique.cs" />
+      <Compile Include="..\Core\EntityTree\EntityTree.cs" />
+      <Compile Include="..\Core\EntityTree\EntityTree.FrameworkSingleInstance.partial.cs" />
+      <Compile Include="..\Core\EntityTree\EntityTree.LifeCircle.partial.cs" />
+      <Compile Include="..\Core\EntityTree\EntityTreeNode.cs" />
+      <Compile Include="..\Core\EntityTree\UserData.cs" />
+      <Compile Include="..\Core\Event\Event.cs" />
+      <Compile Include="..\Core\Event\Event.delegate.partial.cs" />
+      <Compile Include="..\Core\Event\Event.EventTopic.partial.cs" />
+      <Compile Include="..\Core\Event\Event.ExecuteEvents.partial.cs" />
+      <Compile Include="..\Core\Event\Event.Extension.partial.cs" />
+      <Compile Include="..\Core\Event\Event.LifeCircle.partial.cs" />
+      <Compile Include="..\Core\Event\Event.Publisher.partial.cs" />
+      <Compile Include="..\Core\Event\Event.Subscriber.partial.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Base\IBinder.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Base\ISparrowIoC.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Extension\IBinderExtension.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Extension\IoCBuildCallback.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Extension\ISparrowIoCExtension.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Impl\Binder.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Impl\IoCBindData.cs" />
+      <Compile Include="..\Core\IoC\SparrowIoC\Impl\SparrowIoC.cs" />
+      <Compile Include="..\Core\Iterator\Iterator.cs" />
+      <Compile Include="..\Core\Iterator\Iterator.delegate.partial.cs" />
+      <Compile Include="..\Core\Job\Job.cs" />
+      <Compile Include="..\Core\Job\Job.delegate.partial.cs" />
+      <Compile Include="..\Core\Job\Job.LifeCircle.partial.cs" />
+      <Compile Include="..\Core\Job\Job.State.partial.cs" />
+      <Compile Include="..\Core\Job\Job.Token.partial.cs" />
+      <Compile Include="..\Core\KVS\IKeyValueStorage.cs" />
+      <Compile Include="..\Core\KVS\KVS.cs" />
+      <Compile Include="..\Core\Log\Log.cs" />
+      <Compile Include="..\Core\Log\Log.LifeCircle.partial.cs" />
+      <Compile Include="..\Core\Log\Log.LogFile.partial.cs" />
+      <Compile Include="..\Core\Log\LogCallback.delegate.cs" />
+      <Compile Include="..\Core\Log\LogLevel.enum.cs" />
+      <Compile Include="..\Core\Module\API\IModule.cs" />
+      <Compile Include="..\Core\Module\API\IModuleManager.cs" />
+      <Compile Include="..\Core\Module\API\ModuleBase.cs" />
+      <Compile Include="..\Core\Module\Extension\IModuleManagerExtension.cs" />
+      <Compile Include="..\Core\Module\Impl\ModuleManager.cs" />
+      <Compile Include="..\Core\ObjectPool\ObjectPool.cs" />
+      <Compile Include="..\Core\ObjectPool\ObjectPool.delegate.partial.cs" />
+      <Compile Include="..\Core\ObjectPool\ObjectPool.Object.partial.cs" />
+      <Compile Include="..\Core\ObjectPool\ObjectPool.Pool.partial.cs" />
+      <Compile Include="..\Core\ObjectPool\ObjectPool.PoolFactoryBinder.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.Command.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.Group.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.GroupMember.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.Permission.partial.cs" />
+      <Compile Include="..\Core\Organize\Organize.Relationship.partial.cs" />
+      <Compile Include="..\Core\Timer\Timer.cs" />
+      <Compile Include="..\Core\Timer\TimerTaskCallback.cs" />
+      <Compile Include="..\Core\Timer\TimeTask.cs" />
+      <Compile Include="..\Core\Timer\TimeTaskType.cs" />
+      <Compile Include="..\Export\ExportedAssemblyBase.cs" />
+      <Compile Include="..\Export\ExportedAssemblyManager.cs" />
+      <Compile Include="..\Export\IExportedAssemblyManager.cs" />
+      <Compile Include="..\Framework\Framework.cs" />
+      <Compile Include="..\Framework\Framework.GlobalData.partial.cs" />
+      <Compile Include="..\Framework\Framework.Info.partial.cs" />
+      <Compile Include="..\Framework\Framework.IoC.partial.cs" />
+      <Compile Include="..\Framework\Framework.LifeCircle.partial.cs" />
+      <Compile Include="..\Framework\Framework.State.partial.cs" />
+      <Compile Include="..\Framework\Framework.Time.partial.cs" />
+    </ItemGroup>
+
+</Project>
