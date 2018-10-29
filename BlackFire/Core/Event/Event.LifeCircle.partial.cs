@@ -29,18 +29,12 @@ namespace BlackFire
         /// <summary>
         /// 诞生。
         /// </summary>
-        internal static void Born()
-        {
-            DeSyncQueue();
-        }
+        internal static void Born() => DeSyncQueue();
 
         /// <summary>
         /// 活动。
         /// </summary>
-        internal static void Act()
-        {
-            DeSyncQueue();
-        }
+        internal static void Act() => DeSyncQueue();
 
         /// <summary>
         /// 灭亡。

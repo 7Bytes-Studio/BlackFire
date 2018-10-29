@@ -50,7 +50,7 @@ namespace BlackFire
         /// <summary>
         /// 从池子或者设置的回调产出对象。
         /// </summary>
-        /// <returns></returns>
+        /// <returns>产出的对象。</returns>
         public T Spawn()
         {
             lock (s_Lock)
