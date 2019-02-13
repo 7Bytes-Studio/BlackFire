@@ -18,6 +18,23 @@ namespace BlackFire
         public static class Reflection
         {
 
+            #region Assembly
+
+            /// <summary>是否存在程序集。</summary>
+            /// <param name="asmName">程序集名字。</param>
+            /// <returns>是否包含。</returns>
+            public static bool HasAssembly(string asmName)
+            {
+                foreach (Assembly assembly in AppDomain.CurrentDomain.GetAssemblies())
+                {
+                    if (assembly.GetName().Name == asmName)
+                        return true;
+                }
+                return false;
+            }
+
+            #endregion
+
             #region Type
 
             public static Type GetType(string assemblyName,string typeFullName)
