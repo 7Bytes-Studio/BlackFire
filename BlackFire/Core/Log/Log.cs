@@ -56,7 +56,7 @@ namespace BlackFire
         {
             if (sync)
             {
-                EnSyncQueue(LogLevel.Debug,message);
+                EnSyncQueue(LogLevel.Trace,message);
                 return;
             }
             s_LogCallback.Invoke( LogLevel.Trace,message);
@@ -76,7 +76,7 @@ namespace BlackFire
         {
             if (sync)
             {
-                EnSyncQueue(LogLevel.Debug, message);
+                EnSyncQueue(LogLevel.Info, message);
                 return;
             }
             s_LogCallback.Invoke(LogLevel.Info, message);
@@ -86,7 +86,7 @@ namespace BlackFire
         {
             if (sync)
             {
-                EnSyncQueue(LogLevel.Debug, message);
+                EnSyncQueue(LogLevel.Warn, message);
                 return;
             }
             s_LogCallback.Invoke(LogLevel.Warn, message);
@@ -96,7 +96,7 @@ namespace BlackFire
         {
             if (sync)
             {
-                EnSyncQueue(LogLevel.Debug, message);
+                EnSyncQueue(LogLevel.Error, message);
                 return;
             }
             s_LogCallback.Invoke(LogLevel.Error, message);
@@ -106,7 +106,7 @@ namespace BlackFire
         {
             if (sync)
             {
-                EnSyncQueue(LogLevel.Debug, message);
+                EnSyncQueue(LogLevel.Fatal, message);
                 return;
             }
             s_LogCallback.Invoke(LogLevel.Fatal, message);
